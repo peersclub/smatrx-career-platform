@@ -396,11 +396,11 @@ export async function calculateCredibilityScore(userId: string): Promise<Credibi
 
   // Build comprehensive breakdown
   const breakdown: CredibilityBreakdown = {
-    education: { score: education.score, ...education.breakdown },
-    experience: { score: experience.score, ...experience.breakdown },
-    technical: { score: technical.score, ...technical.breakdown },
-    social: { score: social.score, ...social.breakdown },
-    certifications: { score: certifications.score, ...certifications.breakdown }
+    education: education.breakdown,
+    experience: experience.breakdown,
+    technical: technical.breakdown,
+    social: social.breakdown,
+    certifications: certifications.breakdown
   }
 
   // Calculate badges
@@ -459,7 +459,7 @@ export async function getUserCredibilityScore(userId: string, forceRecalculate =
         certificationScore: existing.certificationScore,
         verificationLevel: existing.verificationLevel as any,
         badges: existing.badges,
-        breakdown: existing.breakdown as CredibilityBreakdown
+        breakdown: existing.breakdown as any as CredibilityBreakdown
       }
     }
   }

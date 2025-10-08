@@ -136,8 +136,8 @@ export async function fetchGitHubUser(accessToken: string): Promise<GitHubUser> 
     publicGists: data.public_gists,
     followers: data.followers,
     following: data.following,
-    createdAt: new Date(data.created_at),
-    updatedAt: new Date(data.updated_at)
+    createdAt: new Date(data.created_at || Date.now()),
+    updatedAt: new Date(data.updated_at || Date.now())
   }
 }
 
@@ -181,9 +181,9 @@ export async function fetchGitHubRepositories(
         isPrivate: repo.private,
         isFork: repo.fork,
         topics: repo.topics || [],
-        createdAt: new Date(repo.created_at),
-        updatedAt: new Date(repo.updated_at),
-        pushedAt: new Date(repo.pushed_at),
+        createdAt: new Date(repo.created_at || Date.now()),
+        updatedAt: new Date(repo.updated_at || Date.now()),
+        pushedAt: repo.pushed_at ? new Date(repo.pushed_at) : new Date(),
         homepageUrl: repo.homepage
       })
     })
@@ -220,7 +220,7 @@ export async function analyzeCommitActivity(
         const commitCount = payload.commits?.length || 1
         totalCommits += commitCount
 
-        const date = new Date(event.created_at).toISOString().split('T')[0]
+        const date = new Date(event.created_at || Date.now()).toISOString().split('T')[0]
         commitsByDay.set(date, (commitsByDay.get(date) || 0) + commitCount)
       }
     })

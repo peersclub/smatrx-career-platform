@@ -261,7 +261,7 @@ export async function createEducationRecord(
         trustScore: validation.trustScore,
         degreeLevel: detectDegreeLevel(education.degree),
         extractedAt: new Date().toISOString()
-      }
+      } as any
     }
   })
 

@@ -6,7 +6,7 @@ import { SkillGapAnalysis, type SkillGap } from '@/components/career-planner/Ski
 import { LearningPathCard, type LearningPath } from '@/components/career-planner/LearningPathCard'
 import { motion } from 'framer-motion'
 import { Compass, RefreshCw, Filter, Info, Sparkles } from 'lucide-react'
-import { Button } from '@/packages/ui/src/components/button'
+import { Button } from '@smatrx/ui'
 import { useState } from 'react'
 
 // Mock data - will be replaced with React Query hooks

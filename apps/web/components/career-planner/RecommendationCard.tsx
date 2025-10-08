@@ -1,7 +1,7 @@
 'use client'
 
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/packages/ui/src/components/card'
-import { Badge } from '@/packages/ui/src/components/badge'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@smatrx/ui'
+import { Badge } from '@smatrx/ui'
 import { motion } from 'framer-motion'
 import {
   TrendingUp,

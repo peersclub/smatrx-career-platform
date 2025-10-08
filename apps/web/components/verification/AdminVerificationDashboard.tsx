@@ -1,8 +1,8 @@
 'use client'
 
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/packages/ui/src/components/card'
-import { Badge } from '@/packages/ui/src/components/badge'
-import { Button } from '@/packages/ui/src/components/button'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@smatrx/ui'
+import { Badge } from '@smatrx/ui'
+import { Button } from '@smatrx/ui'
 import { motion } from 'framer-motion'
 import {
   CheckCircle2,

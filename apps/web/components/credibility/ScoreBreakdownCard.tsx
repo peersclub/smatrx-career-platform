@@ -1,6 +1,6 @@
 'use client'
 
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/packages/ui/src/components/card'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@smatrx/ui'
 import { motion } from 'framer-motion'
 import { GraduationCap, Briefcase, Code, Users, Award, ChevronRight } from 'lucide-react'
 import { useState } from 'react'

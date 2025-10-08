@@ -7,7 +7,7 @@ import { DataCompletenessCard } from '@/components/credibility/DataCompletenessC
 import { CredibilityInsightsCard } from '@/components/credibility/CredibilityInsightsCard'
 import { motion } from 'framer-motion'
 import { RefreshCw, Download, Share2, Info } from 'lucide-react'
-import { Button } from '@/packages/ui/src/components/button'
+import { Button } from '@smatrx/ui'
 import { useState } from 'react'
 
 // Mock data - will be replaced with React Query hooks

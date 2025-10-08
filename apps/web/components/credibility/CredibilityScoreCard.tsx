@@ -1,7 +1,7 @@
 'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/packages/ui/src/components/card'
-import { Badge } from '@/packages/ui/src/components/badge'
+import { Card, CardContent, CardHeader, CardTitle } from '@smatrx/ui'
+import { Badge } from '@smatrx/ui'
 import { motion } from 'framer-motion'
 import { TrendingUp, TrendingDown, Minus, Award, Shield, Star, Crown } from 'lucide-react'
 import { useState, useEffect } from 'react'

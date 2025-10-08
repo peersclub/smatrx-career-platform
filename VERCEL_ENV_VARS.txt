@@ -1,0 +1,137 @@
+# ==================================
+# SMATRX - VERCEL ENVIRONMENT VARIABLES
+# ==================================
+# Copy each variable below into Vercel Dashboard
+# Settings → Environment Variables → Add
+# ==================================
+
+# ============ REQUIRED FOR BASIC FUNCTIONALITY ============
+
+DATABASE_URL
+postgresql://neondb_owner:npg_ZgnQAOs36Uut@ep-crimson-smoke-adotlzd7-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require
+
+DIRECT_URL
+postgresql://neondb_owner:npg_ZgnQAOs36Uut@ep-crimson-smoke-adotlzd7.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require
+
+NEXTAUTH_SECRET
+wYzo5GOd83VC5Gjv2hPQgwvNyW/u0dZbwCCM6VL5WcU=
+
+NEXTAUTH_URL
+https://YOUR-VERCEL-DEPLOYMENT-URL.vercel.app
+(Replace with your actual Vercel URL after first deployment)
+
+
+# ============ REDIS (Create at https://upstash.com first) ============
+
+REDIS_URL
+rediss://default:YOUR_UPSTASH_TOKEN@YOUR_REDIS_HOST.upstash.io:6379
+(Get from Upstash → Your Database → "Node.js" tab)
+
+UPSTASH_REDIS_REST_URL
+https://YOUR_REDIS_HOST.upstash.io
+(Get from Upstash → Your Database → "REST API" section)
+
+UPSTASH_REDIS_REST_TOKEN
+YOUR_REST_TOKEN_HERE
+(Get from Upstash → Your Database → "REST API" section)
+
+
+# ============ OPTIONAL: OAUTH PROVIDERS ============
+
+GITHUB_CLIENT_ID
+your_github_client_id
+
+GITHUB_CLIENT_SECRET
+your_github_client_secret
+
+GOOGLE_CLIENT_ID
+your_google_client_id.apps.googleusercontent.com
+
+GOOGLE_CLIENT_SECRET
+your_google_client_secret
+
+LINKEDIN_CLIENT_ID
+your_linkedin_client_id
+
+LINKEDIN_CLIENT_SECRET
+your_linkedin_client_secret
+
+
+# ============ OPTIONAL: EMAIL NOTIFICATIONS ============
+
+SMTP_HOST
+smtp.sendgrid.net
+
+SMTP_PORT
+587
+
+SMTP_SECURE
+false
+
+SMTP_USER
+apikey
+
+SMTP_PASS
+SG.your_sendgrid_api_key
+
+EMAIL_FROM
+SMATRX <noreply@yourdomain.com>
+
+
+# ============ OPTIONAL: FILE STORAGE ============
+
+AWS_ACCESS_KEY_ID
+your_aws_access_key
+
+AWS_SECRET_ACCESS_KEY
+your_aws_secret_key
+
+AWS_REGION
+us-east-1
+
+AWS_S3_BUCKET
+smatrx-uploads
+
+
+# ============ OPTIONAL: MONITORING ============
+
+SENTRY_DSN
+your_sentry_dsn
+
+NEXT_PUBLIC_POSTHOG_KEY
+your_posthog_key
+
+NEXT_PUBLIC_POSTHOG_HOST
+https://app.posthog.com
+
+
+# ==================================
+# HOW TO ADD TO VERCEL
+# ==================================
+#
+# 1. Go to: https://vercel.com/dashboard
+# 2. Select your project: smatrx-career-platform
+# 3. Click: Settings → Environment Variables
+# 4. For each variable above:
+#    - Name: Copy the variable name (e.g., DATABASE_URL)
+#    - Value: Copy the value below it
+#    - Environments: Check all three boxes (Production, Preview, Development)
+#    - Click "Save"
+#
+# 5. After adding variables, redeploy:
+#    - Go to Deployments tab
+#    - Click "..." on latest deployment
+#    - Click "Redeploy"
+#
+# ==================================
+
+# MINIMUM REQUIRED TO GET STARTED:
+# ✓ DATABASE_URL
+# ✓ DIRECT_URL
+# ✓ NEXTAUTH_SECRET
+# ✓ NEXTAUTH_URL
+# ✓ REDIS_URL (after creating Upstash database)
+# ✓ UPSTASH_REDIS_REST_URL
+# ✓ UPSTASH_REDIS_REST_TOKEN
+
+# Everything else is optional and can be added later!

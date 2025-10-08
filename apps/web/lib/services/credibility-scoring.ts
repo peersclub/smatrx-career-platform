@@ -82,6 +82,7 @@ async function calculateEducationScore(userId: string): Promise<{ score: number;
   return {
     score: educationScore.overallScore,
     breakdown: {
+      score: educationScore.overallScore,
       factors: {
         verifiedDegrees: educationScore.verifiedCount * 20,
         averageGPA: educationScore.averageGPA * 7.5, // Normalize to ~30 points max
@@ -103,6 +104,7 @@ async function calculateExperienceScore(userId: string): Promise<{ score: number
     return {
       score: 0,
       breakdown: {
+        score: 0,
         factors: {
           yearsOfExperience: 0,
           roleLevel: 0,
@@ -138,6 +140,7 @@ async function calculateExperienceScore(userId: string): Promise<{ score: number
   return {
     score: totalScore,
     breakdown: {
+      score: totalScore,
       factors: {
         yearsOfExperience: yearsScore,
         roleLevel: roleScore,
@@ -159,6 +162,7 @@ async function calculateTechnicalScore(userId: string): Promise<{ score: number;
     return {
       score: 0,
       breakdown: {
+        score: 0,
         factors: {
           githubActivity: 0,
           codeQuality: 0,
@@ -194,6 +198,7 @@ async function calculateTechnicalScore(userId: string): Promise<{ score: number;
   return {
     score: totalScore,
     breakdown: {
+      score: totalScore,
       factors: {
         githubActivity: activityScore,
         codeQuality: qualityScore,
@@ -216,6 +221,7 @@ async function calculateSocialScore(userId: string): Promise<{ score: number; br
     return {
       score: 0,
       breakdown: {
+        score: 0,
         factors: {
           totalFollowers: 0,
           engagementRate: 0,
@@ -251,6 +257,7 @@ async function calculateSocialScore(userId: string): Promise<{ score: number; br
   return {
     score: totalScore,
     breakdown: {
+      score: totalScore,
       factors: {
         totalFollowers: followerScore,
         engagementRate: engagementScore,
@@ -271,6 +278,7 @@ async function calculateCertificationScore(userId: string): Promise<{ score: num
   return {
     score: certificationScore.overallScore,
     breakdown: {
+      score: certificationScore.overallScore,
       factors: {
         verifiedCerts: certificationScore.verifiedCount * 10,
         prestigeLevel: certificationScore.trustedIssuers * 12,

@@ -344,7 +344,7 @@ export async function createCertification(
         validation,
         trustScore: validation.trustScore,
         extractedAt: new Date().toISOString()
-      }
+      } as any
     }
   })
 

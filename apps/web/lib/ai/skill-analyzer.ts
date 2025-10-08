@@ -1,8 +1,19 @@
 import OpenAI from 'openai';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// Lazy-load OpenAI client to avoid build-time initialization
+let openaiClient: OpenAI | null = null;
+
+function getOpenAI(): OpenAI {
+  if (!openaiClient) {
+    if (!process.env.OPENAI_API_KEY) {
+      throw new Error('OPENAI_API_KEY environment variable is required');
+    }
+    openaiClient = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+  }
+  return openaiClient;
+}
 
 export interface SkillAnalysisResult {
   skills: Array<{
@@ -49,9 +60,10 @@ Provide a JSON response with:
 2. recommendations: Suggested skills to learn based on current skills
 3. careerInsights: Analysis of strengths, gaps, opportunities, and suggested career roles
 
-Categories can include: Programming Languages, Frameworks & Libraries, Databases, Cloud & DevOps, 
+Categories can include: Programming Languages, Frameworks & Libraries, Databases, Cloud & DevOps,
 Data Science & ML, Design & UX, Project Management, Soft Skills, Domain Knowledge, Tools & Software`;
 
+    const openai = getOpenAI();
     const completion = await openai.chat.completions.create({
       model: 'gpt-4-turbo-preview',
       messages: [
@@ -97,10 +109,11 @@ ${currentSkills.map(s => `- ${s.name} (${s.level})`).join('\n')}
 Target role: ${targetRole}
 Timeframe: ${timeframe} months
 
-Provide a month-by-month learning plan with specific skills to learn, 
+Provide a month-by-month learning plan with specific skills to learn,
 projects to build, and resources (courses, books, tutorials).
 Be specific and practical.`;
 
+    const openai = getOpenAI();
     const completion = await openai.chat.completions.create({
       model: 'gpt-4-turbo-preview',
       messages: [
@@ -150,9 +163,10 @@ ${userSkills.map(s => `- ${s.name}: ${s.level} (${s.yearsExperience} years)`).jo
 Required skills:
 ${targetRole.requiredSkills.map(s => `- ${s.name}: ${s.level} (${s.importance})`).join('\n')}
 
-Provide detailed analysis including readiness score (0-100), strengths, gaps, 
+Provide detailed analysis including readiness score (0-100), strengths, gaps,
 and time estimates to become ready.`;
 
+    const openai = getOpenAI();
     const completion = await openai.chat.completions.create({
       model: 'gpt-4-turbo-preview',
       messages: [

@@ -148,7 +148,6 @@ export const jobOptionsPresets: Record<string, JobsOptions> = {
   userInitiated: {
     priority: JOB_PRIORITIES.CRITICAL,
     attempts: 1, // Don't auto-retry user actions
-    timeout: 30000 // 30 second timeout
   },
 
   backgroundSync: {
@@ -158,13 +157,11 @@ export const jobOptionsPresets: Record<string, JobsOptions> = {
       type: 'exponential',
       delay: 5000
     },
-    timeout: 120000 // 2 minute timeout
   },
 
   credibilityCalculation: {
     priority: JOB_PRIORITIES.HIGH,
     attempts: 3,
-    timeout: 60000, // 1 minute timeout
     backoff: {
       type: 'exponential',
       delay: 3000
@@ -178,13 +175,11 @@ export const jobOptionsPresets: Record<string, JobsOptions> = {
       type: 'exponential',
       delay: 1000
     },
-    timeout: 15000 // 15 second timeout
   },
 
   analytics: {
     priority: JOB_PRIORITIES.LOW,
     attempts: 2,
-    timeout: 300000, // 5 minute timeout for heavy analytics
     backoff: {
       type: 'fixed',
       delay: 60000 // 1 minute between retries

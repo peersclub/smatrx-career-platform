@@ -34,7 +34,9 @@ export async function POST(request: NextRequest) {
     // Extract text based on file type
     if (file.type === 'application/pdf') {
       try {
-        extractedText = await extractTextFromPDF(buffer);
+        // Convert Buffer to ArrayBuffer for PDF parser
+        const arrayBuffer = buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength);
+        extractedText = await extractTextFromPDF(arrayBuffer);
       } catch (error) {
         console.error('PDF parsing error:', error);
         return NextResponse.json({ error: 'Failed to parse PDF. Please try uploading a text file.' }, { status: 400 });

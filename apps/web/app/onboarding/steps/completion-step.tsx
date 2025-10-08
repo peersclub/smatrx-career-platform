@@ -1,14 +1,14 @@
 'use client';
 
 import { Card, Button } from '@smatrx/ui';
-import { 
-  CheckCircle, 
-  Sparkles, 
-  TrendingUp, 
-  Users, 
+import {
+  CheckCircle,
+  Sparkles,
+  TrendingUp,
+  Users,
   Target,
   ArrowRight,
-  Confetti
+  PartyPopper
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 

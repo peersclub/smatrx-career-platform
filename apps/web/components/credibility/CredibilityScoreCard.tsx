@@ -91,7 +91,7 @@ export function CredibilityScoreCard({
 
     if (diffHours < 1) return 'just now'
     if (diffHours === 1) return '1 hour ago'
-    if (diffHours < 24) return `${diffHours} hours ago'
+    if (diffHours < 24) return `${diffHours} hours ago`
     if (diffDays === 1) return '1 day ago'
     if (diffDays < 7) return `${diffDays} days ago`
     return date.toLocaleDateString()

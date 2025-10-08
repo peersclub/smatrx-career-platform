@@ -79,7 +79,7 @@ export class GitHubAnalyzer {
         }
 
         if (repo.topics) {
-          repo.topics.forEach(topic => result.topics.add(topic));
+          repo.topics.forEach((topic: string) => result.topics.add(topic));
         }
 
         // Get detailed language stats
@@ -128,7 +128,7 @@ export class GitHubAnalyzer {
           commits: commitCount,
           lastUpdated: new Date(repo.updated_at),
           topics: repo.topics || [],
-          frameworks: Array.from(repoFrameworks),
+          frameworks: Array.from(detectedItems.frameworks),
         });
 
         // Update recent activity
@@ -208,7 +208,7 @@ export class GitHubAnalyzer {
 
           if ('content' in data && data.content) {
             const content = Buffer.from(data.content, 'base64').toString('utf-8');
-            const detected = detector.call(this, content);
+            const detected = detector(content);
             if (detected instanceof Set) {
               // Old format, assume all are frameworks
               detected.forEach(fw => frameworks.add(fw));

@@ -315,7 +315,7 @@ export class QueueManager {
   async checkHealth(): Promise<{
     healthy: boolean
     issues: string[]
-    metrics: Awaited<ReturnType<typeof this.getAllQueueMetrics>>
+    metrics: any[]
   }> {
     const issues: string[] = []
     const metrics = await this.getAllQueueMetrics()
@@ -351,13 +351,13 @@ export class QueueManager {
     console.log('Closing QueueManager...')
 
     // Close all queues
-    for (const [name, queue] of this.queues) {
+    for (const [name, queue] of Array.from(this.queues.entries())) {
       await queue.close()
       console.log(`Queue "${name}" closed`)
     }
 
     // Close all event listeners
-    for (const [name, events] of this.queueEvents) {
+    for (const [name, events] of Array.from(this.queueEvents.entries())) {
       await events.close()
       console.log(`Events for queue "${name}" closed`)
     }

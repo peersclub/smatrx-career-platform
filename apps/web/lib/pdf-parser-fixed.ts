@@ -5,7 +5,7 @@ export async function extractTextFromPDF(buffer: ArrayBuffer): Promise<string> {
     const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs');
     
     // Disable worker to avoid Next.js issues
-    pdfjsLib.GlobalWorkerOptions.workerSrc = undefined;
+    pdfjsLib.GlobalWorkerOptions.workerSrc = '' as any;
     
     // Create a typed array view of the buffer
     const uint8Array = new Uint8Array(buffer);

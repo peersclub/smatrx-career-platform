@@ -3,6 +3,7 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import LinkedInProvider from "next-auth/providers/linkedin";
+import TwitterProvider from "next-auth/providers/twitter";
 import { prisma } from "./prisma";
 
 export const authOptions: NextAuthOptions = {
@@ -50,6 +51,21 @@ export const authOptions: NextAuthOptions = {
         };
       },
     }),
+    // Twitter OAuth 2.0 with PKCE
+    ...(process.env.TWITTER_CLIENT_ID && process.env.TWITTER_CLIENT_SECRET
+      ? [
+          TwitterProvider({
+            clientId: process.env.TWITTER_CLIENT_ID!,
+            clientSecret: process.env.TWITTER_CLIENT_SECRET!,
+            version: "2.0",
+            authorization: {
+              params: {
+                scope: "tweet.read users.read offline.access",
+              },
+            },
+          }),
+        ]
+      : []),
   ],
   pages: {
     signIn: "/auth/signin",
@@ -66,7 +82,7 @@ export const authOptions: NextAuthOptions = {
     },
     async signIn({ user, account, profile }) {
       // Allow OAuth without email verification
-      if (account?.provider === "github" || account?.provider === "google" || account?.provider === "linkedin") {
+      if (account?.provider === "github" || account?.provider === "google" || account?.provider === "linkedin" || account?.provider === "twitter") {
         return true;
       }
       return true;

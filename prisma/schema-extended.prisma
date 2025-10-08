@@ -1,0 +1,325 @@
+// Extended Prisma Schema for Credibility-First Career Intelligence Platform
+// This file extends the existing schema.prisma with new models
+// Merge this with your main schema.prisma file
+
+// ============================================
+// EDUCATION & ACADEMIC VERIFICATION
+// ============================================
+
+model EducationRecord {
+  id                  String    @id @default(cuid())
+  userId              String
+  institutionName     String
+  degree              String
+  field               String?
+  gpa                 Float?
+  startDate           DateTime
+  endDate             DateTime?
+  verified            Boolean   @default(false)
+  verificationSource  String?   // 'digilocker', 'university-api', 'blockchain', 'manual'
+  verificationDate    DateTime?
+  transcriptUrl       String?   // Encrypted storage URL
+  credentialId        String?   // External credential ID
+  metadata            Json?     // Additional verification data
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([verified])
+}
+
+// ============================================
+// SOCIAL MEDIA PROFILES & ANALYTICS
+// ============================================
+
+model SocialProfile {
+  id              String   @id @default(cuid())
+  userId          String
+  platform        String   // 'twitter', 'instagram', 'youtube', 'tiktok', 'medium', 'stackoverflow'
+  username        String
+  profileUrl      String?
+  verified        Boolean  @default(false)
+  followerCount   Int?
+  followingCount  Int?
+  engagementRate  Float?   // Percentage
+  contentScore    Float?   // AI-assessed authority score (0-100)
+  influenceScore  Float?   // Platform-specific influence metric
+  lastFetchedAt   DateTime
+  metrics         Json     @default("{}")  // Platform-specific metrics
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, platform])
+  @@index([userId])
+  @@index([platform])
+  @@index([verified])
+}
+
+// ============================================
+// CERTIFICATIONS & LEARNING CREDENTIALS
+// ============================================
+
+model Certification {
+  id                  String    @id @default(cuid())
+  userId              String
+  name                String
+  issuer              String    // 'Coursera', 'AWS', 'Google', 'Microsoft', etc.
+  issueDate           DateTime
+  expiryDate          DateTime?
+  credentialId        String?
+  credentialUrl       String?
+  verified            Boolean   @default(false)
+  verificationMethod  String?   // 'api', 'manual', 'blockchain'
+  skillsEarned        String[]  // Array of skill names
+  certificateImageUrl String?
+  metadata            Json?     // Additional cert data
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([issuer])
+  @@index([verified])
+}
+
+// ============================================
+// ENHANCED GITHUB ANALYTICS
+// ============================================
+
+model GitHubProfile {
+  id                 String   @id @default(cuid())
+  userId             String   @unique
+  username           String
+  profileUrl         String?
+  totalRepos         Int      @default(0)
+  totalCommits       Int      @default(0)
+  totalPRs           Int      @default(0)
+  totalIssues        Int      @default(0)
+  totalStars         Int      @default(0)
+  languagesUsed      Json     @default("{}") // { language: percentage }
+  contributionScore  Float?   // 0-100 based on activity
+  consistencyScore   Float?   // Based on contribution graph
+  codeQualityScore   Float?   // From code analysis
+  topRepos           Json?    // Top repos with stats
+  contributionGraph  Json?    // Year of contributions
+  lastFetchedAt      DateTime
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([username])
+}
+
+// ============================================
+// CREDIBILITY SCORING SYSTEM
+// ============================================
+
+model CredibilityScore {
+  id                 String   @id @default(cuid())
+  userId             String   @unique
+  overallScore       Float    @default(0) // 0-100
+  educationScore     Float    @default(0)
+  experienceScore    Float    @default(0)
+  technicalScore     Float    @default(0)
+  socialScore        Float    @default(0)
+  certificationScore Float    @default(0)
+  verificationLevel  String   @default("basic") // 'basic', 'verified', 'premium', 'elite'
+  breakdown          Json     @default("{}") // Detailed scoring breakdown
+  badges             String[] // Earned credibility badges
+  calculatedAt       DateTime @default(now())
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([overallScore(sort: Desc)])
+  @@index([verificationLevel])
+}
+
+// ============================================
+// AI-POWERED CAREER RECOMMENDATIONS
+// ============================================
+
+model CareerSuggestion {
+  id              String   @id @default(cuid())
+  userId          String
+  role            String
+  readinessScore  Float    // 0-100
+  estimatedTime   String?  // '3 months', '1 year'
+  estimatedWeeks  Int?     // Numeric estimate
+  skillGaps       Json     @default("[]") // Array of missing skills
+  matchingSkills  Json     @default("[]") // Skills user already has
+  resources       Json     @default("[]") // Suggested courses, tools, certifications
+  reasoning       String?  // AI explanation
+  priority        Int      @default(3) // 1-5
+  status          String   @default("active") // 'active', 'pursuing', 'achieved', 'dismissed'
+  aiModel         String?  // Which AI model generated this
+  confidence      Float?   // AI confidence score
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user                     User                       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  resourceRecommendations  ResourceRecommendation[]
+
+  @@index([userId])
+  @@index([readinessScore(sort: Desc)])
+  @@index([status])
+  @@index([priority(sort: Desc)])
+}
+
+// ============================================
+// PUBLIC PROFILE SETTINGS
+// ============================================
+
+model PublicProfile {
+  id              String    @id @default(cuid())
+  userId          String    @unique
+  username        String    @unique // smatrx.io/@username
+  slug            String    @unique // URL-friendly version
+  isPublic        Boolean   @default(false)
+  customDomain    String?   @unique // Premium feature
+  theme           String    @default("professional") // 'professional', 'creative', 'minimal'
+  visibleSections Json      @default("{}") // What to show/hide
+  seoTitle        String?
+  seoDescription  String?
+  ogImageUrl      String?   // Open Graph image
+  viewCount       Int       @default(0)
+  shareCount      Int       @default(0)
+  lastViewedAt    DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([username])
+  @@index([slug])
+  @@index([isPublic])
+}
+
+// ============================================
+// PROFILE ANALYTICS & TRACKING
+// ============================================
+
+model ProfileView {
+  id             String   @id @default(cuid())
+  profileUserId  String
+  viewerIp       String?
+  viewerUserAgent String?
+  referrer       String?
+  country        String?
+  city           String?
+  viewedAt       DateTime @default(now())
+
+  user User @relation(fields: [profileUserId], references: [id], onDelete: Cascade)
+
+  @@index([profileUserId])
+  @@index([viewedAt(sort: Desc)])
+}
+
+// ============================================
+// DATA SOURCE SYNC STATUS
+// ============================================
+
+model DataSourceSync {
+  id            String    @id @default(cuid())
+  userId        String
+  source        String    // 'github', 'linkedin', 'twitter', 'education', etc.
+  status        String    @default("pending") // 'pending', 'syncing', 'completed', 'failed'
+  lastSyncAt    DateTime?
+  nextSyncAt    DateTime?
+  syncFrequency String    @default("daily") // 'realtime', 'hourly', 'daily', 'weekly'
+  error         String?
+  metadata      Json?     // Source-specific sync data
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, source])
+  @@index([userId])
+  @@index([status])
+  @@index([nextSyncAt])
+}
+
+// ============================================
+// VERIFICATION REQUESTS
+// ============================================
+
+model VerificationRequest {
+  id            String    @id @default(cuid())
+  userId        String
+  type          String    // 'education', 'certification', 'experience', 'social'
+  entityId      String    // ID of the entity being verified
+  status        String    @default("pending") // 'pending', 'processing', 'approved', 'rejected'
+  method        String?   // 'document', 'api', 'third-party', 'blockchain'
+  documentUrls  String[]  // Uploaded verification documents
+  reviewerNotes String?
+  submittedAt   DateTime  @default(now())
+  reviewedAt    DateTime?
+  reviewedBy    String?   // Admin/reviewer user ID
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status])
+  @@index([type])
+}
+
+// ============================================
+// LEARNING RESOURCE RECOMMENDATIONS
+// ============================================
+
+model ResourceRecommendation {
+  id                  String   @id @default(cuid())
+  userId              String
+  careerSuggestionId  String?  // Link to career suggestion
+  type                String   // 'course', 'certification', 'tool', 'book', 'project'
+  platform            String   // 'coursera', 'udemy', 'youtube', 'linkedin-learning'
+  title               String
+  url                 String?
+  provider            String?
+  duration            String?  // '4 weeks', '20 hours'
+  cost                String?  // 'Free', '$49', '$299'
+  difficulty          String?  // 'beginner', 'intermediate', 'advanced'
+  skillsGained        String[]
+  relevanceScore      Float?   // How relevant to user's goals
+  status              String   @default("suggested") // 'suggested', 'bookmarked', 'in-progress', 'completed', 'dismissed'
+  metadata            Json?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  user             User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  careerSuggestion CareerSuggestion? @relation(fields: [careerSuggestionId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([status])
+  @@index([type])
+  @@index([careerSuggestionId])
+}
+
+// ============================================
+// EXTEND EXISTING USER MODEL
+// Add these relations to your existing User model
+// ============================================
+
+// Add to User model:
+// educationRecords     EducationRecord[]
+// socialProfiles       SocialProfile[]
+// certifications       Certification[]
+// githubProfile        GitHubProfile?
+// credibilityScore     CredibilityScore?
+// careerSuggestions    CareerSuggestion[]
+// publicProfile        PublicProfile?
+// profileViews         ProfileView[]
+// dataSourceSyncs      DataSourceSync[]
+// verificationRequests VerificationRequest[]
+// resourceRecommendations ResourceRecommendation[]

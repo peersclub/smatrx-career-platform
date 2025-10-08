@@ -357,6 +357,196 @@ exports.Prisma.SkillMatchScalarFieldEnum = {
   createdAt: 'createdAt'
 };
 
+exports.Prisma.EducationRecordScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  institutionName: 'institutionName',
+  degree: 'degree',
+  field: 'field',
+  gpa: 'gpa',
+  startDate: 'startDate',
+  endDate: 'endDate',
+  verified: 'verified',
+  verificationSource: 'verificationSource',
+  verificationDate: 'verificationDate',
+  transcriptUrl: 'transcriptUrl',
+  credentialId: 'credentialId',
+  metadata: 'metadata',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.SocialProfileScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  platform: 'platform',
+  username: 'username',
+  profileUrl: 'profileUrl',
+  verified: 'verified',
+  followerCount: 'followerCount',
+  followingCount: 'followingCount',
+  engagementRate: 'engagementRate',
+  contentScore: 'contentScore',
+  influenceScore: 'influenceScore',
+  lastFetchedAt: 'lastFetchedAt',
+  metrics: 'metrics',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.CertificationScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  name: 'name',
+  issuer: 'issuer',
+  issueDate: 'issueDate',
+  expiryDate: 'expiryDate',
+  credentialId: 'credentialId',
+  credentialUrl: 'credentialUrl',
+  verified: 'verified',
+  verificationMethod: 'verificationMethod',
+  skillsEarned: 'skillsEarned',
+  certificateImageUrl: 'certificateImageUrl',
+  metadata: 'metadata',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.GitHubProfileScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  username: 'username',
+  profileUrl: 'profileUrl',
+  totalRepos: 'totalRepos',
+  totalCommits: 'totalCommits',
+  totalPRs: 'totalPRs',
+  totalIssues: 'totalIssues',
+  totalStars: 'totalStars',
+  languagesUsed: 'languagesUsed',
+  contributionScore: 'contributionScore',
+  consistencyScore: 'consistencyScore',
+  codeQualityScore: 'codeQualityScore',
+  topRepos: 'topRepos',
+  contributionGraph: 'contributionGraph',
+  lastFetchedAt: 'lastFetchedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.CredibilityScoreScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  overallScore: 'overallScore',
+  educationScore: 'educationScore',
+  experienceScore: 'experienceScore',
+  technicalScore: 'technicalScore',
+  socialScore: 'socialScore',
+  certificationScore: 'certificationScore',
+  verificationLevel: 'verificationLevel',
+  breakdown: 'breakdown',
+  badges: 'badges',
+  calculatedAt: 'calculatedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.CareerSuggestionScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  role: 'role',
+  readinessScore: 'readinessScore',
+  estimatedTime: 'estimatedTime',
+  estimatedWeeks: 'estimatedWeeks',
+  skillGaps: 'skillGaps',
+  matchingSkills: 'matchingSkills',
+  resources: 'resources',
+  reasoning: 'reasoning',
+  priority: 'priority',
+  status: 'status',
+  aiModel: 'aiModel',
+  confidence: 'confidence',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.PublicProfileScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  username: 'username',
+  slug: 'slug',
+  isPublic: 'isPublic',
+  customDomain: 'customDomain',
+  theme: 'theme',
+  visibleSections: 'visibleSections',
+  seoTitle: 'seoTitle',
+  seoDescription: 'seoDescription',
+  ogImageUrl: 'ogImageUrl',
+  viewCount: 'viewCount',
+  shareCount: 'shareCount',
+  lastViewedAt: 'lastViewedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ProfileViewScalarFieldEnum = {
+  id: 'id',
+  profileUserId: 'profileUserId',
+  viewerIp: 'viewerIp',
+  viewerUserAgent: 'viewerUserAgent',
+  referrer: 'referrer',
+  country: 'country',
+  city: 'city',
+  viewedAt: 'viewedAt'
+};
+
+exports.Prisma.DataSourceSyncScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  source: 'source',
+  status: 'status',
+  lastSyncAt: 'lastSyncAt',
+  nextSyncAt: 'nextSyncAt',
+  syncFrequency: 'syncFrequency',
+  error: 'error',
+  metadata: 'metadata',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.VerificationRequestScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  type: 'type',
+  entityId: 'entityId',
+  status: 'status',
+  method: 'method',
+  documentUrls: 'documentUrls',
+  reviewerNotes: 'reviewerNotes',
+  submittedAt: 'submittedAt',
+  reviewedAt: 'reviewedAt',
+  reviewedBy: 'reviewedBy'
+};
+
+exports.Prisma.ResourceRecommendationScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  careerSuggestionId: 'careerSuggestionId',
+  type: 'type',
+  platform: 'platform',
+  title: 'title',
+  url: 'url',
+  provider: 'provider',
+  duration: 'duration',
+  cost: 'cost',
+  difficulty: 'difficulty',
+  skillsGained: 'skillsGained',
+  relevanceScore: 'relevanceScore',
+  status: 'status',
+  metadata: 'metadata',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -405,7 +595,18 @@ exports.Prisma.ModelName = {
   Achievement: 'Achievement',
   SkillImport: 'SkillImport',
   SkillAnalysis: 'SkillAnalysis',
-  SkillMatch: 'SkillMatch'
+  SkillMatch: 'SkillMatch',
+  EducationRecord: 'EducationRecord',
+  SocialProfile: 'SocialProfile',
+  Certification: 'Certification',
+  GitHubProfile: 'GitHubProfile',
+  CredibilityScore: 'CredibilityScore',
+  CareerSuggestion: 'CareerSuggestion',
+  PublicProfile: 'PublicProfile',
+  ProfileView: 'ProfileView',
+  DataSourceSync: 'DataSourceSync',
+  VerificationRequest: 'VerificationRequest',
+  ResourceRecommendation: 'ResourceRecommendation'
 };
 
 /**

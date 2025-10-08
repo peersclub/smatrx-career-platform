@@ -98,6 +98,61 @@ export type SkillAnalysis = $Result.DefaultSelection<Prisma.$SkillAnalysisPayloa
  * 
  */
 export type SkillMatch = $Result.DefaultSelection<Prisma.$SkillMatchPayload>
+/**
+ * Model EducationRecord
+ * 
+ */
+export type EducationRecord = $Result.DefaultSelection<Prisma.$EducationRecordPayload>
+/**
+ * Model SocialProfile
+ * 
+ */
+export type SocialProfile = $Result.DefaultSelection<Prisma.$SocialProfilePayload>
+/**
+ * Model Certification
+ * 
+ */
+export type Certification = $Result.DefaultSelection<Prisma.$CertificationPayload>
+/**
+ * Model GitHubProfile
+ * 
+ */
+export type GitHubProfile = $Result.DefaultSelection<Prisma.$GitHubProfilePayload>
+/**
+ * Model CredibilityScore
+ * 
+ */
+export type CredibilityScore = $Result.DefaultSelection<Prisma.$CredibilityScorePayload>
+/**
+ * Model CareerSuggestion
+ * 
+ */
+export type CareerSuggestion = $Result.DefaultSelection<Prisma.$CareerSuggestionPayload>
+/**
+ * Model PublicProfile
+ * 
+ */
+export type PublicProfile = $Result.DefaultSelection<Prisma.$PublicProfilePayload>
+/**
+ * Model ProfileView
+ * 
+ */
+export type ProfileView = $Result.DefaultSelection<Prisma.$ProfileViewPayload>
+/**
+ * Model DataSourceSync
+ * 
+ */
+export type DataSourceSync = $Result.DefaultSelection<Prisma.$DataSourceSyncPayload>
+/**
+ * Model VerificationRequest
+ * 
+ */
+export type VerificationRequest = $Result.DefaultSelection<Prisma.$VerificationRequestPayload>
+/**
+ * Model ResourceRecommendation
+ * 
+ */
+export type ResourceRecommendation = $Result.DefaultSelection<Prisma.$ResourceRecommendationPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -386,6 +441,116 @@ export class PrismaClient<
     * ```
     */
   get skillMatch(): Prisma.SkillMatchDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.educationRecord`: Exposes CRUD operations for the **EducationRecord** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more EducationRecords
+    * const educationRecords = await prisma.educationRecord.findMany()
+    * ```
+    */
+  get educationRecord(): Prisma.EducationRecordDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.socialProfile`: Exposes CRUD operations for the **SocialProfile** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more SocialProfiles
+    * const socialProfiles = await prisma.socialProfile.findMany()
+    * ```
+    */
+  get socialProfile(): Prisma.SocialProfileDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.certification`: Exposes CRUD operations for the **Certification** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more Certifications
+    * const certifications = await prisma.certification.findMany()
+    * ```
+    */
+  get certification(): Prisma.CertificationDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.gitHubProfile`: Exposes CRUD operations for the **GitHubProfile** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more GitHubProfiles
+    * const gitHubProfiles = await prisma.gitHubProfile.findMany()
+    * ```
+    */
+  get gitHubProfile(): Prisma.GitHubProfileDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.credibilityScore`: Exposes CRUD operations for the **CredibilityScore** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more CredibilityScores
+    * const credibilityScores = await prisma.credibilityScore.findMany()
+    * ```
+    */
+  get credibilityScore(): Prisma.CredibilityScoreDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.careerSuggestion`: Exposes CRUD operations for the **CareerSuggestion** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more CareerSuggestions
+    * const careerSuggestions = await prisma.careerSuggestion.findMany()
+    * ```
+    */
+  get careerSuggestion(): Prisma.CareerSuggestionDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.publicProfile`: Exposes CRUD operations for the **PublicProfile** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more PublicProfiles
+    * const publicProfiles = await prisma.publicProfile.findMany()
+    * ```
+    */
+  get publicProfile(): Prisma.PublicProfileDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.profileView`: Exposes CRUD operations for the **ProfileView** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ProfileViews
+    * const profileViews = await prisma.profileView.findMany()
+    * ```
+    */
+  get profileView(): Prisma.ProfileViewDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.dataSourceSync`: Exposes CRUD operations for the **DataSourceSync** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more DataSourceSyncs
+    * const dataSourceSyncs = await prisma.dataSourceSync.findMany()
+    * ```
+    */
+  get dataSourceSync(): Prisma.DataSourceSyncDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.verificationRequest`: Exposes CRUD operations for the **VerificationRequest** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more VerificationRequests
+    * const verificationRequests = await prisma.verificationRequest.findMany()
+    * ```
+    */
+  get verificationRequest(): Prisma.VerificationRequestDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.resourceRecommendation`: Exposes CRUD operations for the **ResourceRecommendation** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more ResourceRecommendations
+    * const resourceRecommendations = await prisma.resourceRecommendation.findMany()
+    * ```
+    */
+  get resourceRecommendation(): Prisma.ResourceRecommendationDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -842,7 +1007,18 @@ export namespace Prisma {
     Achievement: 'Achievement',
     SkillImport: 'SkillImport',
     SkillAnalysis: 'SkillAnalysis',
-    SkillMatch: 'SkillMatch'
+    SkillMatch: 'SkillMatch',
+    EducationRecord: 'EducationRecord',
+    SocialProfile: 'SocialProfile',
+    Certification: 'Certification',
+    GitHubProfile: 'GitHubProfile',
+    CredibilityScore: 'CredibilityScore',
+    CareerSuggestion: 'CareerSuggestion',
+    PublicProfile: 'PublicProfile',
+    ProfileView: 'ProfileView',
+    DataSourceSync: 'DataSourceSync',
+    VerificationRequest: 'VerificationRequest',
+    ResourceRecommendation: 'ResourceRecommendation'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -861,7 +1037,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "account" | "session" | "profile" | "skill" | "skillCategory" | "userSkill" | "careerGoal" | "careerRole" | "requiredSkill" | "learningPath" | "milestone" | "progress" | "achievement" | "skillImport" | "skillAnalysis" | "skillMatch"
+      modelProps: "user" | "account" | "session" | "profile" | "skill" | "skillCategory" | "userSkill" | "careerGoal" | "careerRole" | "requiredSkill" | "learningPath" | "milestone" | "progress" | "achievement" | "skillImport" | "skillAnalysis" | "skillMatch" | "educationRecord" | "socialProfile" | "certification" | "gitHubProfile" | "credibilityScore" | "careerSuggestion" | "publicProfile" | "profileView" | "dataSourceSync" | "verificationRequest" | "resourceRecommendation"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -2123,6 +2299,820 @@ export namespace Prisma {
           }
         }
       }
+      EducationRecord: {
+        payload: Prisma.$EducationRecordPayload<ExtArgs>
+        fields: Prisma.EducationRecordFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.EducationRecordFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EducationRecordPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.EducationRecordFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EducationRecordPayload>
+          }
+          findFirst: {
+            args: Prisma.EducationRecordFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EducationRecordPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.EducationRecordFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EducationRecordPayload>
+          }
+          findMany: {
+            args: Prisma.EducationRecordFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EducationRecordPayload>[]
+          }
+          create: {
+            args: Prisma.EducationRecordCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EducationRecordPayload>
+          }
+          createMany: {
+            args: Prisma.EducationRecordCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.EducationRecordCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EducationRecordPayload>[]
+          }
+          delete: {
+            args: Prisma.EducationRecordDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EducationRecordPayload>
+          }
+          update: {
+            args: Prisma.EducationRecordUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EducationRecordPayload>
+          }
+          deleteMany: {
+            args: Prisma.EducationRecordDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.EducationRecordUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.EducationRecordUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EducationRecordPayload>[]
+          }
+          upsert: {
+            args: Prisma.EducationRecordUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EducationRecordPayload>
+          }
+          aggregate: {
+            args: Prisma.EducationRecordAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateEducationRecord>
+          }
+          groupBy: {
+            args: Prisma.EducationRecordGroupByArgs<ExtArgs>
+            result: $Utils.Optional<EducationRecordGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.EducationRecordCountArgs<ExtArgs>
+            result: $Utils.Optional<EducationRecordCountAggregateOutputType> | number
+          }
+        }
+      }
+      SocialProfile: {
+        payload: Prisma.$SocialProfilePayload<ExtArgs>
+        fields: Prisma.SocialProfileFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.SocialProfileFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SocialProfilePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.SocialProfileFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SocialProfilePayload>
+          }
+          findFirst: {
+            args: Prisma.SocialProfileFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SocialProfilePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.SocialProfileFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SocialProfilePayload>
+          }
+          findMany: {
+            args: Prisma.SocialProfileFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SocialProfilePayload>[]
+          }
+          create: {
+            args: Prisma.SocialProfileCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SocialProfilePayload>
+          }
+          createMany: {
+            args: Prisma.SocialProfileCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.SocialProfileCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SocialProfilePayload>[]
+          }
+          delete: {
+            args: Prisma.SocialProfileDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SocialProfilePayload>
+          }
+          update: {
+            args: Prisma.SocialProfileUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SocialProfilePayload>
+          }
+          deleteMany: {
+            args: Prisma.SocialProfileDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.SocialProfileUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.SocialProfileUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SocialProfilePayload>[]
+          }
+          upsert: {
+            args: Prisma.SocialProfileUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SocialProfilePayload>
+          }
+          aggregate: {
+            args: Prisma.SocialProfileAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateSocialProfile>
+          }
+          groupBy: {
+            args: Prisma.SocialProfileGroupByArgs<ExtArgs>
+            result: $Utils.Optional<SocialProfileGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.SocialProfileCountArgs<ExtArgs>
+            result: $Utils.Optional<SocialProfileCountAggregateOutputType> | number
+          }
+        }
+      }
+      Certification: {
+        payload: Prisma.$CertificationPayload<ExtArgs>
+        fields: Prisma.CertificationFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.CertificationFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CertificationPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.CertificationFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CertificationPayload>
+          }
+          findFirst: {
+            args: Prisma.CertificationFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CertificationPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.CertificationFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CertificationPayload>
+          }
+          findMany: {
+            args: Prisma.CertificationFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CertificationPayload>[]
+          }
+          create: {
+            args: Prisma.CertificationCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CertificationPayload>
+          }
+          createMany: {
+            args: Prisma.CertificationCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.CertificationCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CertificationPayload>[]
+          }
+          delete: {
+            args: Prisma.CertificationDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CertificationPayload>
+          }
+          update: {
+            args: Prisma.CertificationUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CertificationPayload>
+          }
+          deleteMany: {
+            args: Prisma.CertificationDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.CertificationUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.CertificationUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CertificationPayload>[]
+          }
+          upsert: {
+            args: Prisma.CertificationUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CertificationPayload>
+          }
+          aggregate: {
+            args: Prisma.CertificationAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateCertification>
+          }
+          groupBy: {
+            args: Prisma.CertificationGroupByArgs<ExtArgs>
+            result: $Utils.Optional<CertificationGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.CertificationCountArgs<ExtArgs>
+            result: $Utils.Optional<CertificationCountAggregateOutputType> | number
+          }
+        }
+      }
+      GitHubProfile: {
+        payload: Prisma.$GitHubProfilePayload<ExtArgs>
+        fields: Prisma.GitHubProfileFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.GitHubProfileFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GitHubProfilePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.GitHubProfileFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GitHubProfilePayload>
+          }
+          findFirst: {
+            args: Prisma.GitHubProfileFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GitHubProfilePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.GitHubProfileFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GitHubProfilePayload>
+          }
+          findMany: {
+            args: Prisma.GitHubProfileFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GitHubProfilePayload>[]
+          }
+          create: {
+            args: Prisma.GitHubProfileCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GitHubProfilePayload>
+          }
+          createMany: {
+            args: Prisma.GitHubProfileCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.GitHubProfileCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GitHubProfilePayload>[]
+          }
+          delete: {
+            args: Prisma.GitHubProfileDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GitHubProfilePayload>
+          }
+          update: {
+            args: Prisma.GitHubProfileUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GitHubProfilePayload>
+          }
+          deleteMany: {
+            args: Prisma.GitHubProfileDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.GitHubProfileUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.GitHubProfileUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GitHubProfilePayload>[]
+          }
+          upsert: {
+            args: Prisma.GitHubProfileUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$GitHubProfilePayload>
+          }
+          aggregate: {
+            args: Prisma.GitHubProfileAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateGitHubProfile>
+          }
+          groupBy: {
+            args: Prisma.GitHubProfileGroupByArgs<ExtArgs>
+            result: $Utils.Optional<GitHubProfileGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.GitHubProfileCountArgs<ExtArgs>
+            result: $Utils.Optional<GitHubProfileCountAggregateOutputType> | number
+          }
+        }
+      }
+      CredibilityScore: {
+        payload: Prisma.$CredibilityScorePayload<ExtArgs>
+        fields: Prisma.CredibilityScoreFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.CredibilityScoreFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CredibilityScorePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.CredibilityScoreFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CredibilityScorePayload>
+          }
+          findFirst: {
+            args: Prisma.CredibilityScoreFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CredibilityScorePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.CredibilityScoreFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CredibilityScorePayload>
+          }
+          findMany: {
+            args: Prisma.CredibilityScoreFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CredibilityScorePayload>[]
+          }
+          create: {
+            args: Prisma.CredibilityScoreCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CredibilityScorePayload>
+          }
+          createMany: {
+            args: Prisma.CredibilityScoreCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.CredibilityScoreCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CredibilityScorePayload>[]
+          }
+          delete: {
+            args: Prisma.CredibilityScoreDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CredibilityScorePayload>
+          }
+          update: {
+            args: Prisma.CredibilityScoreUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CredibilityScorePayload>
+          }
+          deleteMany: {
+            args: Prisma.CredibilityScoreDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.CredibilityScoreUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.CredibilityScoreUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CredibilityScorePayload>[]
+          }
+          upsert: {
+            args: Prisma.CredibilityScoreUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CredibilityScorePayload>
+          }
+          aggregate: {
+            args: Prisma.CredibilityScoreAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateCredibilityScore>
+          }
+          groupBy: {
+            args: Prisma.CredibilityScoreGroupByArgs<ExtArgs>
+            result: $Utils.Optional<CredibilityScoreGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.CredibilityScoreCountArgs<ExtArgs>
+            result: $Utils.Optional<CredibilityScoreCountAggregateOutputType> | number
+          }
+        }
+      }
+      CareerSuggestion: {
+        payload: Prisma.$CareerSuggestionPayload<ExtArgs>
+        fields: Prisma.CareerSuggestionFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.CareerSuggestionFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CareerSuggestionPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.CareerSuggestionFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CareerSuggestionPayload>
+          }
+          findFirst: {
+            args: Prisma.CareerSuggestionFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CareerSuggestionPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.CareerSuggestionFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CareerSuggestionPayload>
+          }
+          findMany: {
+            args: Prisma.CareerSuggestionFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CareerSuggestionPayload>[]
+          }
+          create: {
+            args: Prisma.CareerSuggestionCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CareerSuggestionPayload>
+          }
+          createMany: {
+            args: Prisma.CareerSuggestionCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.CareerSuggestionCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CareerSuggestionPayload>[]
+          }
+          delete: {
+            args: Prisma.CareerSuggestionDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CareerSuggestionPayload>
+          }
+          update: {
+            args: Prisma.CareerSuggestionUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CareerSuggestionPayload>
+          }
+          deleteMany: {
+            args: Prisma.CareerSuggestionDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.CareerSuggestionUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.CareerSuggestionUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CareerSuggestionPayload>[]
+          }
+          upsert: {
+            args: Prisma.CareerSuggestionUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$CareerSuggestionPayload>
+          }
+          aggregate: {
+            args: Prisma.CareerSuggestionAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateCareerSuggestion>
+          }
+          groupBy: {
+            args: Prisma.CareerSuggestionGroupByArgs<ExtArgs>
+            result: $Utils.Optional<CareerSuggestionGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.CareerSuggestionCountArgs<ExtArgs>
+            result: $Utils.Optional<CareerSuggestionCountAggregateOutputType> | number
+          }
+        }
+      }
+      PublicProfile: {
+        payload: Prisma.$PublicProfilePayload<ExtArgs>
+        fields: Prisma.PublicProfileFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.PublicProfileFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PublicProfilePayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.PublicProfileFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PublicProfilePayload>
+          }
+          findFirst: {
+            args: Prisma.PublicProfileFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PublicProfilePayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.PublicProfileFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PublicProfilePayload>
+          }
+          findMany: {
+            args: Prisma.PublicProfileFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PublicProfilePayload>[]
+          }
+          create: {
+            args: Prisma.PublicProfileCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PublicProfilePayload>
+          }
+          createMany: {
+            args: Prisma.PublicProfileCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.PublicProfileCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PublicProfilePayload>[]
+          }
+          delete: {
+            args: Prisma.PublicProfileDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PublicProfilePayload>
+          }
+          update: {
+            args: Prisma.PublicProfileUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PublicProfilePayload>
+          }
+          deleteMany: {
+            args: Prisma.PublicProfileDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.PublicProfileUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.PublicProfileUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PublicProfilePayload>[]
+          }
+          upsert: {
+            args: Prisma.PublicProfileUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$PublicProfilePayload>
+          }
+          aggregate: {
+            args: Prisma.PublicProfileAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregatePublicProfile>
+          }
+          groupBy: {
+            args: Prisma.PublicProfileGroupByArgs<ExtArgs>
+            result: $Utils.Optional<PublicProfileGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.PublicProfileCountArgs<ExtArgs>
+            result: $Utils.Optional<PublicProfileCountAggregateOutputType> | number
+          }
+        }
+      }
+      ProfileView: {
+        payload: Prisma.$ProfileViewPayload<ExtArgs>
+        fields: Prisma.ProfileViewFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ProfileViewFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ProfileViewPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ProfileViewFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ProfileViewPayload>
+          }
+          findFirst: {
+            args: Prisma.ProfileViewFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ProfileViewPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ProfileViewFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ProfileViewPayload>
+          }
+          findMany: {
+            args: Prisma.ProfileViewFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ProfileViewPayload>[]
+          }
+          create: {
+            args: Prisma.ProfileViewCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ProfileViewPayload>
+          }
+          createMany: {
+            args: Prisma.ProfileViewCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ProfileViewCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ProfileViewPayload>[]
+          }
+          delete: {
+            args: Prisma.ProfileViewDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ProfileViewPayload>
+          }
+          update: {
+            args: Prisma.ProfileViewUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ProfileViewPayload>
+          }
+          deleteMany: {
+            args: Prisma.ProfileViewDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ProfileViewUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ProfileViewUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ProfileViewPayload>[]
+          }
+          upsert: {
+            args: Prisma.ProfileViewUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ProfileViewPayload>
+          }
+          aggregate: {
+            args: Prisma.ProfileViewAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateProfileView>
+          }
+          groupBy: {
+            args: Prisma.ProfileViewGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ProfileViewGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ProfileViewCountArgs<ExtArgs>
+            result: $Utils.Optional<ProfileViewCountAggregateOutputType> | number
+          }
+        }
+      }
+      DataSourceSync: {
+        payload: Prisma.$DataSourceSyncPayload<ExtArgs>
+        fields: Prisma.DataSourceSyncFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.DataSourceSyncFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DataSourceSyncPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.DataSourceSyncFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DataSourceSyncPayload>
+          }
+          findFirst: {
+            args: Prisma.DataSourceSyncFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DataSourceSyncPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.DataSourceSyncFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DataSourceSyncPayload>
+          }
+          findMany: {
+            args: Prisma.DataSourceSyncFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DataSourceSyncPayload>[]
+          }
+          create: {
+            args: Prisma.DataSourceSyncCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DataSourceSyncPayload>
+          }
+          createMany: {
+            args: Prisma.DataSourceSyncCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.DataSourceSyncCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DataSourceSyncPayload>[]
+          }
+          delete: {
+            args: Prisma.DataSourceSyncDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DataSourceSyncPayload>
+          }
+          update: {
+            args: Prisma.DataSourceSyncUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DataSourceSyncPayload>
+          }
+          deleteMany: {
+            args: Prisma.DataSourceSyncDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.DataSourceSyncUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.DataSourceSyncUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DataSourceSyncPayload>[]
+          }
+          upsert: {
+            args: Prisma.DataSourceSyncUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$DataSourceSyncPayload>
+          }
+          aggregate: {
+            args: Prisma.DataSourceSyncAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateDataSourceSync>
+          }
+          groupBy: {
+            args: Prisma.DataSourceSyncGroupByArgs<ExtArgs>
+            result: $Utils.Optional<DataSourceSyncGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.DataSourceSyncCountArgs<ExtArgs>
+            result: $Utils.Optional<DataSourceSyncCountAggregateOutputType> | number
+          }
+        }
+      }
+      VerificationRequest: {
+        payload: Prisma.$VerificationRequestPayload<ExtArgs>
+        fields: Prisma.VerificationRequestFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.VerificationRequestFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VerificationRequestPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.VerificationRequestFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VerificationRequestPayload>
+          }
+          findFirst: {
+            args: Prisma.VerificationRequestFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VerificationRequestPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.VerificationRequestFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VerificationRequestPayload>
+          }
+          findMany: {
+            args: Prisma.VerificationRequestFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VerificationRequestPayload>[]
+          }
+          create: {
+            args: Prisma.VerificationRequestCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VerificationRequestPayload>
+          }
+          createMany: {
+            args: Prisma.VerificationRequestCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.VerificationRequestCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VerificationRequestPayload>[]
+          }
+          delete: {
+            args: Prisma.VerificationRequestDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VerificationRequestPayload>
+          }
+          update: {
+            args: Prisma.VerificationRequestUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VerificationRequestPayload>
+          }
+          deleteMany: {
+            args: Prisma.VerificationRequestDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.VerificationRequestUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.VerificationRequestUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VerificationRequestPayload>[]
+          }
+          upsert: {
+            args: Prisma.VerificationRequestUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$VerificationRequestPayload>
+          }
+          aggregate: {
+            args: Prisma.VerificationRequestAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateVerificationRequest>
+          }
+          groupBy: {
+            args: Prisma.VerificationRequestGroupByArgs<ExtArgs>
+            result: $Utils.Optional<VerificationRequestGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.VerificationRequestCountArgs<ExtArgs>
+            result: $Utils.Optional<VerificationRequestCountAggregateOutputType> | number
+          }
+        }
+      }
+      ResourceRecommendation: {
+        payload: Prisma.$ResourceRecommendationPayload<ExtArgs>
+        fields: Prisma.ResourceRecommendationFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.ResourceRecommendationFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ResourceRecommendationPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.ResourceRecommendationFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ResourceRecommendationPayload>
+          }
+          findFirst: {
+            args: Prisma.ResourceRecommendationFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ResourceRecommendationPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.ResourceRecommendationFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ResourceRecommendationPayload>
+          }
+          findMany: {
+            args: Prisma.ResourceRecommendationFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ResourceRecommendationPayload>[]
+          }
+          create: {
+            args: Prisma.ResourceRecommendationCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ResourceRecommendationPayload>
+          }
+          createMany: {
+            args: Prisma.ResourceRecommendationCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.ResourceRecommendationCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ResourceRecommendationPayload>[]
+          }
+          delete: {
+            args: Prisma.ResourceRecommendationDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ResourceRecommendationPayload>
+          }
+          update: {
+            args: Prisma.ResourceRecommendationUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ResourceRecommendationPayload>
+          }
+          deleteMany: {
+            args: Prisma.ResourceRecommendationDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.ResourceRecommendationUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.ResourceRecommendationUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ResourceRecommendationPayload>[]
+          }
+          upsert: {
+            args: Prisma.ResourceRecommendationUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ResourceRecommendationPayload>
+          }
+          aggregate: {
+            args: Prisma.ResourceRecommendationAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateResourceRecommendation>
+          }
+          groupBy: {
+            args: Prisma.ResourceRecommendationGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ResourceRecommendationGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.ResourceRecommendationCountArgs<ExtArgs>
+            result: $Utils.Optional<ResourceRecommendationCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -2236,6 +3226,17 @@ export namespace Prisma {
     skillImport?: SkillImportOmit
     skillAnalysis?: SkillAnalysisOmit
     skillMatch?: SkillMatchOmit
+    educationRecord?: EducationRecordOmit
+    socialProfile?: SocialProfileOmit
+    certification?: CertificationOmit
+    gitHubProfile?: GitHubProfileOmit
+    credibilityScore?: CredibilityScoreOmit
+    careerSuggestion?: CareerSuggestionOmit
+    publicProfile?: PublicProfileOmit
+    profileView?: ProfileViewOmit
+    dataSourceSync?: DataSourceSyncOmit
+    verificationRequest?: VerificationRequestOmit
+    resourceRecommendation?: ResourceRecommendationOmit
   }
 
   /* Types for Logging */
@@ -2325,6 +3326,14 @@ export namespace Prisma {
     achievements: number
     imports: number
     analyses: number
+    educationRecords: number
+    socialProfiles: number
+    certifications: number
+    careerSuggestions: number
+    profileViews: number
+    dataSourceSyncs: number
+    verificationRequests: number
+    resourceRecommendations: number
   }
 
   export type UserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -2337,6 +3346,14 @@ export namespace Prisma {
     achievements?: boolean | UserCountOutputTypeCountAchievementsArgs
     imports?: boolean | UserCountOutputTypeCountImportsArgs
     analyses?: boolean | UserCountOutputTypeCountAnalysesArgs
+    educationRecords?: boolean | UserCountOutputTypeCountEducationRecordsArgs
+    socialProfiles?: boolean | UserCountOutputTypeCountSocialProfilesArgs
+    certifications?: boolean | UserCountOutputTypeCountCertificationsArgs
+    careerSuggestions?: boolean | UserCountOutputTypeCountCareerSuggestionsArgs
+    profileViews?: boolean | UserCountOutputTypeCountProfileViewsArgs
+    dataSourceSyncs?: boolean | UserCountOutputTypeCountDataSourceSyncsArgs
+    verificationRequests?: boolean | UserCountOutputTypeCountVerificationRequestsArgs
+    resourceRecommendations?: boolean | UserCountOutputTypeCountResourceRecommendationsArgs
   }
 
   // Custom InputTypes
@@ -2411,6 +3428,62 @@ export namespace Prisma {
    */
   export type UserCountOutputTypeCountAnalysesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: SkillAnalysisWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountEducationRecordsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: EducationRecordWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountSocialProfilesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: SocialProfileWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountCertificationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CertificationWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountCareerSuggestionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CareerSuggestionWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountProfileViewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ProfileViewWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountDataSourceSyncsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: DataSourceSyncWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountVerificationRequestsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: VerificationRequestWhereInput
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountResourceRecommendationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ResourceRecommendationWhereInput
   }
 
 
@@ -2677,6 +3750,37 @@ export namespace Prisma {
 
 
   /**
+   * Count Type CareerSuggestionCountOutputType
+   */
+
+  export type CareerSuggestionCountOutputType = {
+    resourceRecommendations: number
+  }
+
+  export type CareerSuggestionCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    resourceRecommendations?: boolean | CareerSuggestionCountOutputTypeCountResourceRecommendationsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * CareerSuggestionCountOutputType without action
+   */
+  export type CareerSuggestionCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestionCountOutputType
+     */
+    select?: CareerSuggestionCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * CareerSuggestionCountOutputType without action
+   */
+  export type CareerSuggestionCountOutputTypeCountResourceRecommendationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ResourceRecommendationWhereInput
+  }
+
+
+  /**
    * Models
    */
 
@@ -2870,6 +3974,17 @@ export namespace Prisma {
     achievements?: boolean | User$achievementsArgs<ExtArgs>
     imports?: boolean | User$importsArgs<ExtArgs>
     analyses?: boolean | User$analysesArgs<ExtArgs>
+    educationRecords?: boolean | User$educationRecordsArgs<ExtArgs>
+    socialProfiles?: boolean | User$socialProfilesArgs<ExtArgs>
+    certifications?: boolean | User$certificationsArgs<ExtArgs>
+    githubProfile?: boolean | User$githubProfileArgs<ExtArgs>
+    credibilityScore?: boolean | User$credibilityScoreArgs<ExtArgs>
+    careerSuggestions?: boolean | User$careerSuggestionsArgs<ExtArgs>
+    publicProfile?: boolean | User$publicProfileArgs<ExtArgs>
+    profileViews?: boolean | User$profileViewsArgs<ExtArgs>
+    dataSourceSyncs?: boolean | User$dataSourceSyncsArgs<ExtArgs>
+    verificationRequests?: boolean | User$verificationRequestsArgs<ExtArgs>
+    resourceRecommendations?: boolean | User$resourceRecommendationsArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
@@ -2915,6 +4030,17 @@ export namespace Prisma {
     achievements?: boolean | User$achievementsArgs<ExtArgs>
     imports?: boolean | User$importsArgs<ExtArgs>
     analyses?: boolean | User$analysesArgs<ExtArgs>
+    educationRecords?: boolean | User$educationRecordsArgs<ExtArgs>
+    socialProfiles?: boolean | User$socialProfilesArgs<ExtArgs>
+    certifications?: boolean | User$certificationsArgs<ExtArgs>
+    githubProfile?: boolean | User$githubProfileArgs<ExtArgs>
+    credibilityScore?: boolean | User$credibilityScoreArgs<ExtArgs>
+    careerSuggestions?: boolean | User$careerSuggestionsArgs<ExtArgs>
+    publicProfile?: boolean | User$publicProfileArgs<ExtArgs>
+    profileViews?: boolean | User$profileViewsArgs<ExtArgs>
+    dataSourceSyncs?: boolean | User$dataSourceSyncsArgs<ExtArgs>
+    verificationRequests?: boolean | User$verificationRequestsArgs<ExtArgs>
+    resourceRecommendations?: boolean | User$resourceRecommendationsArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type UserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -2933,6 +4059,17 @@ export namespace Prisma {
       achievements: Prisma.$AchievementPayload<ExtArgs>[]
       imports: Prisma.$SkillImportPayload<ExtArgs>[]
       analyses: Prisma.$SkillAnalysisPayload<ExtArgs>[]
+      educationRecords: Prisma.$EducationRecordPayload<ExtArgs>[]
+      socialProfiles: Prisma.$SocialProfilePayload<ExtArgs>[]
+      certifications: Prisma.$CertificationPayload<ExtArgs>[]
+      githubProfile: Prisma.$GitHubProfilePayload<ExtArgs> | null
+      credibilityScore: Prisma.$CredibilityScorePayload<ExtArgs> | null
+      careerSuggestions: Prisma.$CareerSuggestionPayload<ExtArgs>[]
+      publicProfile: Prisma.$PublicProfilePayload<ExtArgs> | null
+      profileViews: Prisma.$ProfileViewPayload<ExtArgs>[]
+      dataSourceSyncs: Prisma.$DataSourceSyncPayload<ExtArgs>[]
+      verificationRequests: Prisma.$VerificationRequestPayload<ExtArgs>[]
+      resourceRecommendations: Prisma.$ResourceRecommendationPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
@@ -3346,6 +4483,17 @@ export namespace Prisma {
     achievements<T extends User$achievementsArgs<ExtArgs> = {}>(args?: Subset<T, User$achievementsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AchievementPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     imports<T extends User$importsArgs<ExtArgs> = {}>(args?: Subset<T, User$importsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SkillImportPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     analyses<T extends User$analysesArgs<ExtArgs> = {}>(args?: Subset<T, User$analysesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SkillAnalysisPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    educationRecords<T extends User$educationRecordsArgs<ExtArgs> = {}>(args?: Subset<T, User$educationRecordsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EducationRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    socialProfiles<T extends User$socialProfilesArgs<ExtArgs> = {}>(args?: Subset<T, User$socialProfilesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SocialProfilePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    certifications<T extends User$certificationsArgs<ExtArgs> = {}>(args?: Subset<T, User$certificationsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CertificationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    githubProfile<T extends User$githubProfileArgs<ExtArgs> = {}>(args?: Subset<T, User$githubProfileArgs<ExtArgs>>): Prisma__GitHubProfileClient<$Result.GetResult<Prisma.$GitHubProfilePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    credibilityScore<T extends User$credibilityScoreArgs<ExtArgs> = {}>(args?: Subset<T, User$credibilityScoreArgs<ExtArgs>>): Prisma__CredibilityScoreClient<$Result.GetResult<Prisma.$CredibilityScorePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    careerSuggestions<T extends User$careerSuggestionsArgs<ExtArgs> = {}>(args?: Subset<T, User$careerSuggestionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CareerSuggestionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    publicProfile<T extends User$publicProfileArgs<ExtArgs> = {}>(args?: Subset<T, User$publicProfileArgs<ExtArgs>>): Prisma__PublicProfileClient<$Result.GetResult<Prisma.$PublicProfilePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    profileViews<T extends User$profileViewsArgs<ExtArgs> = {}>(args?: Subset<T, User$profileViewsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ProfileViewPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    dataSourceSyncs<T extends User$dataSourceSyncsArgs<ExtArgs> = {}>(args?: Subset<T, User$dataSourceSyncsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DataSourceSyncPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    verificationRequests<T extends User$verificationRequestsArgs<ExtArgs> = {}>(args?: Subset<T, User$verificationRequestsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$VerificationRequestPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    resourceRecommendations<T extends User$resourceRecommendationsArgs<ExtArgs> = {}>(args?: Subset<T, User$resourceRecommendationsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ResourceRecommendationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -4002,6 +5150,255 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: SkillAnalysisScalarFieldEnum | SkillAnalysisScalarFieldEnum[]
+  }
+
+  /**
+   * User.educationRecords
+   */
+  export type User$educationRecordsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EducationRecord
+     */
+    select?: EducationRecordSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EducationRecord
+     */
+    omit?: EducationRecordOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EducationRecordInclude<ExtArgs> | null
+    where?: EducationRecordWhereInput
+    orderBy?: EducationRecordOrderByWithRelationInput | EducationRecordOrderByWithRelationInput[]
+    cursor?: EducationRecordWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: EducationRecordScalarFieldEnum | EducationRecordScalarFieldEnum[]
+  }
+
+  /**
+   * User.socialProfiles
+   */
+  export type User$socialProfilesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SocialProfile
+     */
+    select?: SocialProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SocialProfile
+     */
+    omit?: SocialProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SocialProfileInclude<ExtArgs> | null
+    where?: SocialProfileWhereInput
+    orderBy?: SocialProfileOrderByWithRelationInput | SocialProfileOrderByWithRelationInput[]
+    cursor?: SocialProfileWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: SocialProfileScalarFieldEnum | SocialProfileScalarFieldEnum[]
+  }
+
+  /**
+   * User.certifications
+   */
+  export type User$certificationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Certification
+     */
+    select?: CertificationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Certification
+     */
+    omit?: CertificationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CertificationInclude<ExtArgs> | null
+    where?: CertificationWhereInput
+    orderBy?: CertificationOrderByWithRelationInput | CertificationOrderByWithRelationInput[]
+    cursor?: CertificationWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: CertificationScalarFieldEnum | CertificationScalarFieldEnum[]
+  }
+
+  /**
+   * User.githubProfile
+   */
+  export type User$githubProfileArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GitHubProfile
+     */
+    select?: GitHubProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GitHubProfile
+     */
+    omit?: GitHubProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GitHubProfileInclude<ExtArgs> | null
+    where?: GitHubProfileWhereInput
+  }
+
+  /**
+   * User.credibilityScore
+   */
+  export type User$credibilityScoreArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CredibilityScore
+     */
+    select?: CredibilityScoreSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CredibilityScore
+     */
+    omit?: CredibilityScoreOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CredibilityScoreInclude<ExtArgs> | null
+    where?: CredibilityScoreWhereInput
+  }
+
+  /**
+   * User.careerSuggestions
+   */
+  export type User$careerSuggestionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestion
+     */
+    select?: CareerSuggestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CareerSuggestion
+     */
+    omit?: CareerSuggestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CareerSuggestionInclude<ExtArgs> | null
+    where?: CareerSuggestionWhereInput
+    orderBy?: CareerSuggestionOrderByWithRelationInput | CareerSuggestionOrderByWithRelationInput[]
+    cursor?: CareerSuggestionWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: CareerSuggestionScalarFieldEnum | CareerSuggestionScalarFieldEnum[]
+  }
+
+  /**
+   * User.publicProfile
+   */
+  export type User$publicProfileArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PublicProfile
+     */
+    select?: PublicProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PublicProfile
+     */
+    omit?: PublicProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PublicProfileInclude<ExtArgs> | null
+    where?: PublicProfileWhereInput
+  }
+
+  /**
+   * User.profileViews
+   */
+  export type User$profileViewsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ProfileView
+     */
+    select?: ProfileViewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ProfileView
+     */
+    omit?: ProfileViewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProfileViewInclude<ExtArgs> | null
+    where?: ProfileViewWhereInput
+    orderBy?: ProfileViewOrderByWithRelationInput | ProfileViewOrderByWithRelationInput[]
+    cursor?: ProfileViewWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ProfileViewScalarFieldEnum | ProfileViewScalarFieldEnum[]
+  }
+
+  /**
+   * User.dataSourceSyncs
+   */
+  export type User$dataSourceSyncsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DataSourceSync
+     */
+    select?: DataSourceSyncSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the DataSourceSync
+     */
+    omit?: DataSourceSyncOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DataSourceSyncInclude<ExtArgs> | null
+    where?: DataSourceSyncWhereInput
+    orderBy?: DataSourceSyncOrderByWithRelationInput | DataSourceSyncOrderByWithRelationInput[]
+    cursor?: DataSourceSyncWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: DataSourceSyncScalarFieldEnum | DataSourceSyncScalarFieldEnum[]
+  }
+
+  /**
+   * User.verificationRequests
+   */
+  export type User$verificationRequestsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VerificationRequest
+     */
+    select?: VerificationRequestSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VerificationRequest
+     */
+    omit?: VerificationRequestOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VerificationRequestInclude<ExtArgs> | null
+    where?: VerificationRequestWhereInput
+    orderBy?: VerificationRequestOrderByWithRelationInput | VerificationRequestOrderByWithRelationInput[]
+    cursor?: VerificationRequestWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: VerificationRequestScalarFieldEnum | VerificationRequestScalarFieldEnum[]
+  }
+
+  /**
+   * User.resourceRecommendations
+   */
+  export type User$resourceRecommendationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResourceRecommendation
+     */
+    select?: ResourceRecommendationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ResourceRecommendation
+     */
+    omit?: ResourceRecommendationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResourceRecommendationInclude<ExtArgs> | null
+    where?: ResourceRecommendationWhereInput
+    orderBy?: ResourceRecommendationOrderByWithRelationInput | ResourceRecommendationOrderByWithRelationInput[]
+    cursor?: ResourceRecommendationWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ResourceRecommendationScalarFieldEnum | ResourceRecommendationScalarFieldEnum[]
   }
 
   /**
@@ -23020,6 +24417,13277 @@ export namespace Prisma {
 
 
   /**
+   * Model EducationRecord
+   */
+
+  export type AggregateEducationRecord = {
+    _count: EducationRecordCountAggregateOutputType | null
+    _avg: EducationRecordAvgAggregateOutputType | null
+    _sum: EducationRecordSumAggregateOutputType | null
+    _min: EducationRecordMinAggregateOutputType | null
+    _max: EducationRecordMaxAggregateOutputType | null
+  }
+
+  export type EducationRecordAvgAggregateOutputType = {
+    gpa: number | null
+  }
+
+  export type EducationRecordSumAggregateOutputType = {
+    gpa: number | null
+  }
+
+  export type EducationRecordMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    institutionName: string | null
+    degree: string | null
+    field: string | null
+    gpa: number | null
+    startDate: Date | null
+    endDate: Date | null
+    verified: boolean | null
+    verificationSource: string | null
+    verificationDate: Date | null
+    transcriptUrl: string | null
+    credentialId: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type EducationRecordMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    institutionName: string | null
+    degree: string | null
+    field: string | null
+    gpa: number | null
+    startDate: Date | null
+    endDate: Date | null
+    verified: boolean | null
+    verificationSource: string | null
+    verificationDate: Date | null
+    transcriptUrl: string | null
+    credentialId: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type EducationRecordCountAggregateOutputType = {
+    id: number
+    userId: number
+    institutionName: number
+    degree: number
+    field: number
+    gpa: number
+    startDate: number
+    endDate: number
+    verified: number
+    verificationSource: number
+    verificationDate: number
+    transcriptUrl: number
+    credentialId: number
+    metadata: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type EducationRecordAvgAggregateInputType = {
+    gpa?: true
+  }
+
+  export type EducationRecordSumAggregateInputType = {
+    gpa?: true
+  }
+
+  export type EducationRecordMinAggregateInputType = {
+    id?: true
+    userId?: true
+    institutionName?: true
+    degree?: true
+    field?: true
+    gpa?: true
+    startDate?: true
+    endDate?: true
+    verified?: true
+    verificationSource?: true
+    verificationDate?: true
+    transcriptUrl?: true
+    credentialId?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type EducationRecordMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    institutionName?: true
+    degree?: true
+    field?: true
+    gpa?: true
+    startDate?: true
+    endDate?: true
+    verified?: true
+    verificationSource?: true
+    verificationDate?: true
+    transcriptUrl?: true
+    credentialId?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type EducationRecordCountAggregateInputType = {
+    id?: true
+    userId?: true
+    institutionName?: true
+    degree?: true
+    field?: true
+    gpa?: true
+    startDate?: true
+    endDate?: true
+    verified?: true
+    verificationSource?: true
+    verificationDate?: true
+    transcriptUrl?: true
+    credentialId?: true
+    metadata?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type EducationRecordAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which EducationRecord to aggregate.
+     */
+    where?: EducationRecordWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EducationRecords to fetch.
+     */
+    orderBy?: EducationRecordOrderByWithRelationInput | EducationRecordOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: EducationRecordWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EducationRecords from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EducationRecords.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned EducationRecords
+    **/
+    _count?: true | EducationRecordCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: EducationRecordAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: EducationRecordSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: EducationRecordMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: EducationRecordMaxAggregateInputType
+  }
+
+  export type GetEducationRecordAggregateType<T extends EducationRecordAggregateArgs> = {
+        [P in keyof T & keyof AggregateEducationRecord]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateEducationRecord[P]>
+      : GetScalarType<T[P], AggregateEducationRecord[P]>
+  }
+
+
+
+
+  export type EducationRecordGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: EducationRecordWhereInput
+    orderBy?: EducationRecordOrderByWithAggregationInput | EducationRecordOrderByWithAggregationInput[]
+    by: EducationRecordScalarFieldEnum[] | EducationRecordScalarFieldEnum
+    having?: EducationRecordScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: EducationRecordCountAggregateInputType | true
+    _avg?: EducationRecordAvgAggregateInputType
+    _sum?: EducationRecordSumAggregateInputType
+    _min?: EducationRecordMinAggregateInputType
+    _max?: EducationRecordMaxAggregateInputType
+  }
+
+  export type EducationRecordGroupByOutputType = {
+    id: string
+    userId: string
+    institutionName: string
+    degree: string
+    field: string | null
+    gpa: number | null
+    startDate: Date
+    endDate: Date | null
+    verified: boolean
+    verificationSource: string | null
+    verificationDate: Date | null
+    transcriptUrl: string | null
+    credentialId: string | null
+    metadata: JsonValue | null
+    createdAt: Date
+    updatedAt: Date
+    _count: EducationRecordCountAggregateOutputType | null
+    _avg: EducationRecordAvgAggregateOutputType | null
+    _sum: EducationRecordSumAggregateOutputType | null
+    _min: EducationRecordMinAggregateOutputType | null
+    _max: EducationRecordMaxAggregateOutputType | null
+  }
+
+  type GetEducationRecordGroupByPayload<T extends EducationRecordGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<EducationRecordGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof EducationRecordGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], EducationRecordGroupByOutputType[P]>
+            : GetScalarType<T[P], EducationRecordGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type EducationRecordSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    institutionName?: boolean
+    degree?: boolean
+    field?: boolean
+    gpa?: boolean
+    startDate?: boolean
+    endDate?: boolean
+    verified?: boolean
+    verificationSource?: boolean
+    verificationDate?: boolean
+    transcriptUrl?: boolean
+    credentialId?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["educationRecord"]>
+
+  export type EducationRecordSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    institutionName?: boolean
+    degree?: boolean
+    field?: boolean
+    gpa?: boolean
+    startDate?: boolean
+    endDate?: boolean
+    verified?: boolean
+    verificationSource?: boolean
+    verificationDate?: boolean
+    transcriptUrl?: boolean
+    credentialId?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["educationRecord"]>
+
+  export type EducationRecordSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    institutionName?: boolean
+    degree?: boolean
+    field?: boolean
+    gpa?: boolean
+    startDate?: boolean
+    endDate?: boolean
+    verified?: boolean
+    verificationSource?: boolean
+    verificationDate?: boolean
+    transcriptUrl?: boolean
+    credentialId?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["educationRecord"]>
+
+  export type EducationRecordSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    institutionName?: boolean
+    degree?: boolean
+    field?: boolean
+    gpa?: boolean
+    startDate?: boolean
+    endDate?: boolean
+    verified?: boolean
+    verificationSource?: boolean
+    verificationDate?: boolean
+    transcriptUrl?: boolean
+    credentialId?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type EducationRecordOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "institutionName" | "degree" | "field" | "gpa" | "startDate" | "endDate" | "verified" | "verificationSource" | "verificationDate" | "transcriptUrl" | "credentialId" | "metadata" | "createdAt" | "updatedAt", ExtArgs["result"]["educationRecord"]>
+  export type EducationRecordInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type EducationRecordIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type EducationRecordIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+
+  export type $EducationRecordPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "EducationRecord"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      institutionName: string
+      degree: string
+      field: string | null
+      gpa: number | null
+      startDate: Date
+      endDate: Date | null
+      verified: boolean
+      verificationSource: string | null
+      verificationDate: Date | null
+      transcriptUrl: string | null
+      credentialId: string | null
+      metadata: Prisma.JsonValue | null
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["educationRecord"]>
+    composites: {}
+  }
+
+  type EducationRecordGetPayload<S extends boolean | null | undefined | EducationRecordDefaultArgs> = $Result.GetResult<Prisma.$EducationRecordPayload, S>
+
+  type EducationRecordCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<EducationRecordFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: EducationRecordCountAggregateInputType | true
+    }
+
+  export interface EducationRecordDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['EducationRecord'], meta: { name: 'EducationRecord' } }
+    /**
+     * Find zero or one EducationRecord that matches the filter.
+     * @param {EducationRecordFindUniqueArgs} args - Arguments to find a EducationRecord
+     * @example
+     * // Get one EducationRecord
+     * const educationRecord = await prisma.educationRecord.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends EducationRecordFindUniqueArgs>(args: SelectSubset<T, EducationRecordFindUniqueArgs<ExtArgs>>): Prisma__EducationRecordClient<$Result.GetResult<Prisma.$EducationRecordPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one EducationRecord that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {EducationRecordFindUniqueOrThrowArgs} args - Arguments to find a EducationRecord
+     * @example
+     * // Get one EducationRecord
+     * const educationRecord = await prisma.educationRecord.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends EducationRecordFindUniqueOrThrowArgs>(args: SelectSubset<T, EducationRecordFindUniqueOrThrowArgs<ExtArgs>>): Prisma__EducationRecordClient<$Result.GetResult<Prisma.$EducationRecordPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first EducationRecord that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EducationRecordFindFirstArgs} args - Arguments to find a EducationRecord
+     * @example
+     * // Get one EducationRecord
+     * const educationRecord = await prisma.educationRecord.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends EducationRecordFindFirstArgs>(args?: SelectSubset<T, EducationRecordFindFirstArgs<ExtArgs>>): Prisma__EducationRecordClient<$Result.GetResult<Prisma.$EducationRecordPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first EducationRecord that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EducationRecordFindFirstOrThrowArgs} args - Arguments to find a EducationRecord
+     * @example
+     * // Get one EducationRecord
+     * const educationRecord = await prisma.educationRecord.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends EducationRecordFindFirstOrThrowArgs>(args?: SelectSubset<T, EducationRecordFindFirstOrThrowArgs<ExtArgs>>): Prisma__EducationRecordClient<$Result.GetResult<Prisma.$EducationRecordPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more EducationRecords that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EducationRecordFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all EducationRecords
+     * const educationRecords = await prisma.educationRecord.findMany()
+     * 
+     * // Get first 10 EducationRecords
+     * const educationRecords = await prisma.educationRecord.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const educationRecordWithIdOnly = await prisma.educationRecord.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends EducationRecordFindManyArgs>(args?: SelectSubset<T, EducationRecordFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EducationRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a EducationRecord.
+     * @param {EducationRecordCreateArgs} args - Arguments to create a EducationRecord.
+     * @example
+     * // Create one EducationRecord
+     * const EducationRecord = await prisma.educationRecord.create({
+     *   data: {
+     *     // ... data to create a EducationRecord
+     *   }
+     * })
+     * 
+     */
+    create<T extends EducationRecordCreateArgs>(args: SelectSubset<T, EducationRecordCreateArgs<ExtArgs>>): Prisma__EducationRecordClient<$Result.GetResult<Prisma.$EducationRecordPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many EducationRecords.
+     * @param {EducationRecordCreateManyArgs} args - Arguments to create many EducationRecords.
+     * @example
+     * // Create many EducationRecords
+     * const educationRecord = await prisma.educationRecord.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends EducationRecordCreateManyArgs>(args?: SelectSubset<T, EducationRecordCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many EducationRecords and returns the data saved in the database.
+     * @param {EducationRecordCreateManyAndReturnArgs} args - Arguments to create many EducationRecords.
+     * @example
+     * // Create many EducationRecords
+     * const educationRecord = await prisma.educationRecord.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many EducationRecords and only return the `id`
+     * const educationRecordWithIdOnly = await prisma.educationRecord.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends EducationRecordCreateManyAndReturnArgs>(args?: SelectSubset<T, EducationRecordCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EducationRecordPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a EducationRecord.
+     * @param {EducationRecordDeleteArgs} args - Arguments to delete one EducationRecord.
+     * @example
+     * // Delete one EducationRecord
+     * const EducationRecord = await prisma.educationRecord.delete({
+     *   where: {
+     *     // ... filter to delete one EducationRecord
+     *   }
+     * })
+     * 
+     */
+    delete<T extends EducationRecordDeleteArgs>(args: SelectSubset<T, EducationRecordDeleteArgs<ExtArgs>>): Prisma__EducationRecordClient<$Result.GetResult<Prisma.$EducationRecordPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one EducationRecord.
+     * @param {EducationRecordUpdateArgs} args - Arguments to update one EducationRecord.
+     * @example
+     * // Update one EducationRecord
+     * const educationRecord = await prisma.educationRecord.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends EducationRecordUpdateArgs>(args: SelectSubset<T, EducationRecordUpdateArgs<ExtArgs>>): Prisma__EducationRecordClient<$Result.GetResult<Prisma.$EducationRecordPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more EducationRecords.
+     * @param {EducationRecordDeleteManyArgs} args - Arguments to filter EducationRecords to delete.
+     * @example
+     * // Delete a few EducationRecords
+     * const { count } = await prisma.educationRecord.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends EducationRecordDeleteManyArgs>(args?: SelectSubset<T, EducationRecordDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more EducationRecords.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EducationRecordUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many EducationRecords
+     * const educationRecord = await prisma.educationRecord.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends EducationRecordUpdateManyArgs>(args: SelectSubset<T, EducationRecordUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more EducationRecords and returns the data updated in the database.
+     * @param {EducationRecordUpdateManyAndReturnArgs} args - Arguments to update many EducationRecords.
+     * @example
+     * // Update many EducationRecords
+     * const educationRecord = await prisma.educationRecord.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more EducationRecords and only return the `id`
+     * const educationRecordWithIdOnly = await prisma.educationRecord.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends EducationRecordUpdateManyAndReturnArgs>(args: SelectSubset<T, EducationRecordUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EducationRecordPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one EducationRecord.
+     * @param {EducationRecordUpsertArgs} args - Arguments to update or create a EducationRecord.
+     * @example
+     * // Update or create a EducationRecord
+     * const educationRecord = await prisma.educationRecord.upsert({
+     *   create: {
+     *     // ... data to create a EducationRecord
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the EducationRecord we want to update
+     *   }
+     * })
+     */
+    upsert<T extends EducationRecordUpsertArgs>(args: SelectSubset<T, EducationRecordUpsertArgs<ExtArgs>>): Prisma__EducationRecordClient<$Result.GetResult<Prisma.$EducationRecordPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of EducationRecords.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EducationRecordCountArgs} args - Arguments to filter EducationRecords to count.
+     * @example
+     * // Count the number of EducationRecords
+     * const count = await prisma.educationRecord.count({
+     *   where: {
+     *     // ... the filter for the EducationRecords we want to count
+     *   }
+     * })
+    **/
+    count<T extends EducationRecordCountArgs>(
+      args?: Subset<T, EducationRecordCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], EducationRecordCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a EducationRecord.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EducationRecordAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends EducationRecordAggregateArgs>(args: Subset<T, EducationRecordAggregateArgs>): Prisma.PrismaPromise<GetEducationRecordAggregateType<T>>
+
+    /**
+     * Group by EducationRecord.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {EducationRecordGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends EducationRecordGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: EducationRecordGroupByArgs['orderBy'] }
+        : { orderBy?: EducationRecordGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, EducationRecordGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetEducationRecordGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the EducationRecord model
+   */
+  readonly fields: EducationRecordFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for EducationRecord.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__EducationRecordClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the EducationRecord model
+   */
+  interface EducationRecordFieldRefs {
+    readonly id: FieldRef<"EducationRecord", 'String'>
+    readonly userId: FieldRef<"EducationRecord", 'String'>
+    readonly institutionName: FieldRef<"EducationRecord", 'String'>
+    readonly degree: FieldRef<"EducationRecord", 'String'>
+    readonly field: FieldRef<"EducationRecord", 'String'>
+    readonly gpa: FieldRef<"EducationRecord", 'Float'>
+    readonly startDate: FieldRef<"EducationRecord", 'DateTime'>
+    readonly endDate: FieldRef<"EducationRecord", 'DateTime'>
+    readonly verified: FieldRef<"EducationRecord", 'Boolean'>
+    readonly verificationSource: FieldRef<"EducationRecord", 'String'>
+    readonly verificationDate: FieldRef<"EducationRecord", 'DateTime'>
+    readonly transcriptUrl: FieldRef<"EducationRecord", 'String'>
+    readonly credentialId: FieldRef<"EducationRecord", 'String'>
+    readonly metadata: FieldRef<"EducationRecord", 'Json'>
+    readonly createdAt: FieldRef<"EducationRecord", 'DateTime'>
+    readonly updatedAt: FieldRef<"EducationRecord", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * EducationRecord findUnique
+   */
+  export type EducationRecordFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EducationRecord
+     */
+    select?: EducationRecordSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EducationRecord
+     */
+    omit?: EducationRecordOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EducationRecordInclude<ExtArgs> | null
+    /**
+     * Filter, which EducationRecord to fetch.
+     */
+    where: EducationRecordWhereUniqueInput
+  }
+
+  /**
+   * EducationRecord findUniqueOrThrow
+   */
+  export type EducationRecordFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EducationRecord
+     */
+    select?: EducationRecordSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EducationRecord
+     */
+    omit?: EducationRecordOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EducationRecordInclude<ExtArgs> | null
+    /**
+     * Filter, which EducationRecord to fetch.
+     */
+    where: EducationRecordWhereUniqueInput
+  }
+
+  /**
+   * EducationRecord findFirst
+   */
+  export type EducationRecordFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EducationRecord
+     */
+    select?: EducationRecordSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EducationRecord
+     */
+    omit?: EducationRecordOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EducationRecordInclude<ExtArgs> | null
+    /**
+     * Filter, which EducationRecord to fetch.
+     */
+    where?: EducationRecordWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EducationRecords to fetch.
+     */
+    orderBy?: EducationRecordOrderByWithRelationInput | EducationRecordOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for EducationRecords.
+     */
+    cursor?: EducationRecordWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EducationRecords from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EducationRecords.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of EducationRecords.
+     */
+    distinct?: EducationRecordScalarFieldEnum | EducationRecordScalarFieldEnum[]
+  }
+
+  /**
+   * EducationRecord findFirstOrThrow
+   */
+  export type EducationRecordFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EducationRecord
+     */
+    select?: EducationRecordSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EducationRecord
+     */
+    omit?: EducationRecordOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EducationRecordInclude<ExtArgs> | null
+    /**
+     * Filter, which EducationRecord to fetch.
+     */
+    where?: EducationRecordWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EducationRecords to fetch.
+     */
+    orderBy?: EducationRecordOrderByWithRelationInput | EducationRecordOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for EducationRecords.
+     */
+    cursor?: EducationRecordWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EducationRecords from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EducationRecords.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of EducationRecords.
+     */
+    distinct?: EducationRecordScalarFieldEnum | EducationRecordScalarFieldEnum[]
+  }
+
+  /**
+   * EducationRecord findMany
+   */
+  export type EducationRecordFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EducationRecord
+     */
+    select?: EducationRecordSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EducationRecord
+     */
+    omit?: EducationRecordOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EducationRecordInclude<ExtArgs> | null
+    /**
+     * Filter, which EducationRecords to fetch.
+     */
+    where?: EducationRecordWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of EducationRecords to fetch.
+     */
+    orderBy?: EducationRecordOrderByWithRelationInput | EducationRecordOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing EducationRecords.
+     */
+    cursor?: EducationRecordWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` EducationRecords from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` EducationRecords.
+     */
+    skip?: number
+    distinct?: EducationRecordScalarFieldEnum | EducationRecordScalarFieldEnum[]
+  }
+
+  /**
+   * EducationRecord create
+   */
+  export type EducationRecordCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EducationRecord
+     */
+    select?: EducationRecordSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EducationRecord
+     */
+    omit?: EducationRecordOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EducationRecordInclude<ExtArgs> | null
+    /**
+     * The data needed to create a EducationRecord.
+     */
+    data: XOR<EducationRecordCreateInput, EducationRecordUncheckedCreateInput>
+  }
+
+  /**
+   * EducationRecord createMany
+   */
+  export type EducationRecordCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many EducationRecords.
+     */
+    data: EducationRecordCreateManyInput | EducationRecordCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * EducationRecord createManyAndReturn
+   */
+  export type EducationRecordCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EducationRecord
+     */
+    select?: EducationRecordSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the EducationRecord
+     */
+    omit?: EducationRecordOmit<ExtArgs> | null
+    /**
+     * The data used to create many EducationRecords.
+     */
+    data: EducationRecordCreateManyInput | EducationRecordCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EducationRecordIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * EducationRecord update
+   */
+  export type EducationRecordUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EducationRecord
+     */
+    select?: EducationRecordSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EducationRecord
+     */
+    omit?: EducationRecordOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EducationRecordInclude<ExtArgs> | null
+    /**
+     * The data needed to update a EducationRecord.
+     */
+    data: XOR<EducationRecordUpdateInput, EducationRecordUncheckedUpdateInput>
+    /**
+     * Choose, which EducationRecord to update.
+     */
+    where: EducationRecordWhereUniqueInput
+  }
+
+  /**
+   * EducationRecord updateMany
+   */
+  export type EducationRecordUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update EducationRecords.
+     */
+    data: XOR<EducationRecordUpdateManyMutationInput, EducationRecordUncheckedUpdateManyInput>
+    /**
+     * Filter which EducationRecords to update
+     */
+    where?: EducationRecordWhereInput
+    /**
+     * Limit how many EducationRecords to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * EducationRecord updateManyAndReturn
+   */
+  export type EducationRecordUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EducationRecord
+     */
+    select?: EducationRecordSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the EducationRecord
+     */
+    omit?: EducationRecordOmit<ExtArgs> | null
+    /**
+     * The data used to update EducationRecords.
+     */
+    data: XOR<EducationRecordUpdateManyMutationInput, EducationRecordUncheckedUpdateManyInput>
+    /**
+     * Filter which EducationRecords to update
+     */
+    where?: EducationRecordWhereInput
+    /**
+     * Limit how many EducationRecords to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EducationRecordIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * EducationRecord upsert
+   */
+  export type EducationRecordUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EducationRecord
+     */
+    select?: EducationRecordSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EducationRecord
+     */
+    omit?: EducationRecordOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EducationRecordInclude<ExtArgs> | null
+    /**
+     * The filter to search for the EducationRecord to update in case it exists.
+     */
+    where: EducationRecordWhereUniqueInput
+    /**
+     * In case the EducationRecord found by the `where` argument doesn't exist, create a new EducationRecord with this data.
+     */
+    create: XOR<EducationRecordCreateInput, EducationRecordUncheckedCreateInput>
+    /**
+     * In case the EducationRecord was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<EducationRecordUpdateInput, EducationRecordUncheckedUpdateInput>
+  }
+
+  /**
+   * EducationRecord delete
+   */
+  export type EducationRecordDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EducationRecord
+     */
+    select?: EducationRecordSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EducationRecord
+     */
+    omit?: EducationRecordOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EducationRecordInclude<ExtArgs> | null
+    /**
+     * Filter which EducationRecord to delete.
+     */
+    where: EducationRecordWhereUniqueInput
+  }
+
+  /**
+   * EducationRecord deleteMany
+   */
+  export type EducationRecordDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which EducationRecords to delete
+     */
+    where?: EducationRecordWhereInput
+    /**
+     * Limit how many EducationRecords to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * EducationRecord without action
+   */
+  export type EducationRecordDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the EducationRecord
+     */
+    select?: EducationRecordSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the EducationRecord
+     */
+    omit?: EducationRecordOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EducationRecordInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model SocialProfile
+   */
+
+  export type AggregateSocialProfile = {
+    _count: SocialProfileCountAggregateOutputType | null
+    _avg: SocialProfileAvgAggregateOutputType | null
+    _sum: SocialProfileSumAggregateOutputType | null
+    _min: SocialProfileMinAggregateOutputType | null
+    _max: SocialProfileMaxAggregateOutputType | null
+  }
+
+  export type SocialProfileAvgAggregateOutputType = {
+    followerCount: number | null
+    followingCount: number | null
+    engagementRate: number | null
+    contentScore: number | null
+    influenceScore: number | null
+  }
+
+  export type SocialProfileSumAggregateOutputType = {
+    followerCount: number | null
+    followingCount: number | null
+    engagementRate: number | null
+    contentScore: number | null
+    influenceScore: number | null
+  }
+
+  export type SocialProfileMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    platform: string | null
+    username: string | null
+    profileUrl: string | null
+    verified: boolean | null
+    followerCount: number | null
+    followingCount: number | null
+    engagementRate: number | null
+    contentScore: number | null
+    influenceScore: number | null
+    lastFetchedAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type SocialProfileMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    platform: string | null
+    username: string | null
+    profileUrl: string | null
+    verified: boolean | null
+    followerCount: number | null
+    followingCount: number | null
+    engagementRate: number | null
+    contentScore: number | null
+    influenceScore: number | null
+    lastFetchedAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type SocialProfileCountAggregateOutputType = {
+    id: number
+    userId: number
+    platform: number
+    username: number
+    profileUrl: number
+    verified: number
+    followerCount: number
+    followingCount: number
+    engagementRate: number
+    contentScore: number
+    influenceScore: number
+    lastFetchedAt: number
+    metrics: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type SocialProfileAvgAggregateInputType = {
+    followerCount?: true
+    followingCount?: true
+    engagementRate?: true
+    contentScore?: true
+    influenceScore?: true
+  }
+
+  export type SocialProfileSumAggregateInputType = {
+    followerCount?: true
+    followingCount?: true
+    engagementRate?: true
+    contentScore?: true
+    influenceScore?: true
+  }
+
+  export type SocialProfileMinAggregateInputType = {
+    id?: true
+    userId?: true
+    platform?: true
+    username?: true
+    profileUrl?: true
+    verified?: true
+    followerCount?: true
+    followingCount?: true
+    engagementRate?: true
+    contentScore?: true
+    influenceScore?: true
+    lastFetchedAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type SocialProfileMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    platform?: true
+    username?: true
+    profileUrl?: true
+    verified?: true
+    followerCount?: true
+    followingCount?: true
+    engagementRate?: true
+    contentScore?: true
+    influenceScore?: true
+    lastFetchedAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type SocialProfileCountAggregateInputType = {
+    id?: true
+    userId?: true
+    platform?: true
+    username?: true
+    profileUrl?: true
+    verified?: true
+    followerCount?: true
+    followingCount?: true
+    engagementRate?: true
+    contentScore?: true
+    influenceScore?: true
+    lastFetchedAt?: true
+    metrics?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type SocialProfileAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which SocialProfile to aggregate.
+     */
+    where?: SocialProfileWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of SocialProfiles to fetch.
+     */
+    orderBy?: SocialProfileOrderByWithRelationInput | SocialProfileOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: SocialProfileWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` SocialProfiles from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` SocialProfiles.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned SocialProfiles
+    **/
+    _count?: true | SocialProfileCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: SocialProfileAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: SocialProfileSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: SocialProfileMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: SocialProfileMaxAggregateInputType
+  }
+
+  export type GetSocialProfileAggregateType<T extends SocialProfileAggregateArgs> = {
+        [P in keyof T & keyof AggregateSocialProfile]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateSocialProfile[P]>
+      : GetScalarType<T[P], AggregateSocialProfile[P]>
+  }
+
+
+
+
+  export type SocialProfileGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: SocialProfileWhereInput
+    orderBy?: SocialProfileOrderByWithAggregationInput | SocialProfileOrderByWithAggregationInput[]
+    by: SocialProfileScalarFieldEnum[] | SocialProfileScalarFieldEnum
+    having?: SocialProfileScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: SocialProfileCountAggregateInputType | true
+    _avg?: SocialProfileAvgAggregateInputType
+    _sum?: SocialProfileSumAggregateInputType
+    _min?: SocialProfileMinAggregateInputType
+    _max?: SocialProfileMaxAggregateInputType
+  }
+
+  export type SocialProfileGroupByOutputType = {
+    id: string
+    userId: string
+    platform: string
+    username: string
+    profileUrl: string | null
+    verified: boolean
+    followerCount: number | null
+    followingCount: number | null
+    engagementRate: number | null
+    contentScore: number | null
+    influenceScore: number | null
+    lastFetchedAt: Date
+    metrics: JsonValue
+    createdAt: Date
+    updatedAt: Date
+    _count: SocialProfileCountAggregateOutputType | null
+    _avg: SocialProfileAvgAggregateOutputType | null
+    _sum: SocialProfileSumAggregateOutputType | null
+    _min: SocialProfileMinAggregateOutputType | null
+    _max: SocialProfileMaxAggregateOutputType | null
+  }
+
+  type GetSocialProfileGroupByPayload<T extends SocialProfileGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<SocialProfileGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof SocialProfileGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], SocialProfileGroupByOutputType[P]>
+            : GetScalarType<T[P], SocialProfileGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type SocialProfileSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    platform?: boolean
+    username?: boolean
+    profileUrl?: boolean
+    verified?: boolean
+    followerCount?: boolean
+    followingCount?: boolean
+    engagementRate?: boolean
+    contentScore?: boolean
+    influenceScore?: boolean
+    lastFetchedAt?: boolean
+    metrics?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["socialProfile"]>
+
+  export type SocialProfileSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    platform?: boolean
+    username?: boolean
+    profileUrl?: boolean
+    verified?: boolean
+    followerCount?: boolean
+    followingCount?: boolean
+    engagementRate?: boolean
+    contentScore?: boolean
+    influenceScore?: boolean
+    lastFetchedAt?: boolean
+    metrics?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["socialProfile"]>
+
+  export type SocialProfileSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    platform?: boolean
+    username?: boolean
+    profileUrl?: boolean
+    verified?: boolean
+    followerCount?: boolean
+    followingCount?: boolean
+    engagementRate?: boolean
+    contentScore?: boolean
+    influenceScore?: boolean
+    lastFetchedAt?: boolean
+    metrics?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["socialProfile"]>
+
+  export type SocialProfileSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    platform?: boolean
+    username?: boolean
+    profileUrl?: boolean
+    verified?: boolean
+    followerCount?: boolean
+    followingCount?: boolean
+    engagementRate?: boolean
+    contentScore?: boolean
+    influenceScore?: boolean
+    lastFetchedAt?: boolean
+    metrics?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type SocialProfileOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "platform" | "username" | "profileUrl" | "verified" | "followerCount" | "followingCount" | "engagementRate" | "contentScore" | "influenceScore" | "lastFetchedAt" | "metrics" | "createdAt" | "updatedAt", ExtArgs["result"]["socialProfile"]>
+  export type SocialProfileInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type SocialProfileIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type SocialProfileIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+
+  export type $SocialProfilePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "SocialProfile"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      platform: string
+      username: string
+      profileUrl: string | null
+      verified: boolean
+      followerCount: number | null
+      followingCount: number | null
+      engagementRate: number | null
+      contentScore: number | null
+      influenceScore: number | null
+      lastFetchedAt: Date
+      metrics: Prisma.JsonValue
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["socialProfile"]>
+    composites: {}
+  }
+
+  type SocialProfileGetPayload<S extends boolean | null | undefined | SocialProfileDefaultArgs> = $Result.GetResult<Prisma.$SocialProfilePayload, S>
+
+  type SocialProfileCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<SocialProfileFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: SocialProfileCountAggregateInputType | true
+    }
+
+  export interface SocialProfileDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['SocialProfile'], meta: { name: 'SocialProfile' } }
+    /**
+     * Find zero or one SocialProfile that matches the filter.
+     * @param {SocialProfileFindUniqueArgs} args - Arguments to find a SocialProfile
+     * @example
+     * // Get one SocialProfile
+     * const socialProfile = await prisma.socialProfile.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends SocialProfileFindUniqueArgs>(args: SelectSubset<T, SocialProfileFindUniqueArgs<ExtArgs>>): Prisma__SocialProfileClient<$Result.GetResult<Prisma.$SocialProfilePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one SocialProfile that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {SocialProfileFindUniqueOrThrowArgs} args - Arguments to find a SocialProfile
+     * @example
+     * // Get one SocialProfile
+     * const socialProfile = await prisma.socialProfile.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends SocialProfileFindUniqueOrThrowArgs>(args: SelectSubset<T, SocialProfileFindUniqueOrThrowArgs<ExtArgs>>): Prisma__SocialProfileClient<$Result.GetResult<Prisma.$SocialProfilePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first SocialProfile that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {SocialProfileFindFirstArgs} args - Arguments to find a SocialProfile
+     * @example
+     * // Get one SocialProfile
+     * const socialProfile = await prisma.socialProfile.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends SocialProfileFindFirstArgs>(args?: SelectSubset<T, SocialProfileFindFirstArgs<ExtArgs>>): Prisma__SocialProfileClient<$Result.GetResult<Prisma.$SocialProfilePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first SocialProfile that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {SocialProfileFindFirstOrThrowArgs} args - Arguments to find a SocialProfile
+     * @example
+     * // Get one SocialProfile
+     * const socialProfile = await prisma.socialProfile.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends SocialProfileFindFirstOrThrowArgs>(args?: SelectSubset<T, SocialProfileFindFirstOrThrowArgs<ExtArgs>>): Prisma__SocialProfileClient<$Result.GetResult<Prisma.$SocialProfilePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more SocialProfiles that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {SocialProfileFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all SocialProfiles
+     * const socialProfiles = await prisma.socialProfile.findMany()
+     * 
+     * // Get first 10 SocialProfiles
+     * const socialProfiles = await prisma.socialProfile.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const socialProfileWithIdOnly = await prisma.socialProfile.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends SocialProfileFindManyArgs>(args?: SelectSubset<T, SocialProfileFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SocialProfilePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a SocialProfile.
+     * @param {SocialProfileCreateArgs} args - Arguments to create a SocialProfile.
+     * @example
+     * // Create one SocialProfile
+     * const SocialProfile = await prisma.socialProfile.create({
+     *   data: {
+     *     // ... data to create a SocialProfile
+     *   }
+     * })
+     * 
+     */
+    create<T extends SocialProfileCreateArgs>(args: SelectSubset<T, SocialProfileCreateArgs<ExtArgs>>): Prisma__SocialProfileClient<$Result.GetResult<Prisma.$SocialProfilePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many SocialProfiles.
+     * @param {SocialProfileCreateManyArgs} args - Arguments to create many SocialProfiles.
+     * @example
+     * // Create many SocialProfiles
+     * const socialProfile = await prisma.socialProfile.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends SocialProfileCreateManyArgs>(args?: SelectSubset<T, SocialProfileCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many SocialProfiles and returns the data saved in the database.
+     * @param {SocialProfileCreateManyAndReturnArgs} args - Arguments to create many SocialProfiles.
+     * @example
+     * // Create many SocialProfiles
+     * const socialProfile = await prisma.socialProfile.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many SocialProfiles and only return the `id`
+     * const socialProfileWithIdOnly = await prisma.socialProfile.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends SocialProfileCreateManyAndReturnArgs>(args?: SelectSubset<T, SocialProfileCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SocialProfilePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a SocialProfile.
+     * @param {SocialProfileDeleteArgs} args - Arguments to delete one SocialProfile.
+     * @example
+     * // Delete one SocialProfile
+     * const SocialProfile = await prisma.socialProfile.delete({
+     *   where: {
+     *     // ... filter to delete one SocialProfile
+     *   }
+     * })
+     * 
+     */
+    delete<T extends SocialProfileDeleteArgs>(args: SelectSubset<T, SocialProfileDeleteArgs<ExtArgs>>): Prisma__SocialProfileClient<$Result.GetResult<Prisma.$SocialProfilePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one SocialProfile.
+     * @param {SocialProfileUpdateArgs} args - Arguments to update one SocialProfile.
+     * @example
+     * // Update one SocialProfile
+     * const socialProfile = await prisma.socialProfile.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends SocialProfileUpdateArgs>(args: SelectSubset<T, SocialProfileUpdateArgs<ExtArgs>>): Prisma__SocialProfileClient<$Result.GetResult<Prisma.$SocialProfilePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more SocialProfiles.
+     * @param {SocialProfileDeleteManyArgs} args - Arguments to filter SocialProfiles to delete.
+     * @example
+     * // Delete a few SocialProfiles
+     * const { count } = await prisma.socialProfile.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends SocialProfileDeleteManyArgs>(args?: SelectSubset<T, SocialProfileDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more SocialProfiles.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {SocialProfileUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many SocialProfiles
+     * const socialProfile = await prisma.socialProfile.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends SocialProfileUpdateManyArgs>(args: SelectSubset<T, SocialProfileUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more SocialProfiles and returns the data updated in the database.
+     * @param {SocialProfileUpdateManyAndReturnArgs} args - Arguments to update many SocialProfiles.
+     * @example
+     * // Update many SocialProfiles
+     * const socialProfile = await prisma.socialProfile.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more SocialProfiles and only return the `id`
+     * const socialProfileWithIdOnly = await prisma.socialProfile.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends SocialProfileUpdateManyAndReturnArgs>(args: SelectSubset<T, SocialProfileUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SocialProfilePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one SocialProfile.
+     * @param {SocialProfileUpsertArgs} args - Arguments to update or create a SocialProfile.
+     * @example
+     * // Update or create a SocialProfile
+     * const socialProfile = await prisma.socialProfile.upsert({
+     *   create: {
+     *     // ... data to create a SocialProfile
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the SocialProfile we want to update
+     *   }
+     * })
+     */
+    upsert<T extends SocialProfileUpsertArgs>(args: SelectSubset<T, SocialProfileUpsertArgs<ExtArgs>>): Prisma__SocialProfileClient<$Result.GetResult<Prisma.$SocialProfilePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of SocialProfiles.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {SocialProfileCountArgs} args - Arguments to filter SocialProfiles to count.
+     * @example
+     * // Count the number of SocialProfiles
+     * const count = await prisma.socialProfile.count({
+     *   where: {
+     *     // ... the filter for the SocialProfiles we want to count
+     *   }
+     * })
+    **/
+    count<T extends SocialProfileCountArgs>(
+      args?: Subset<T, SocialProfileCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], SocialProfileCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a SocialProfile.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {SocialProfileAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends SocialProfileAggregateArgs>(args: Subset<T, SocialProfileAggregateArgs>): Prisma.PrismaPromise<GetSocialProfileAggregateType<T>>
+
+    /**
+     * Group by SocialProfile.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {SocialProfileGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends SocialProfileGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: SocialProfileGroupByArgs['orderBy'] }
+        : { orderBy?: SocialProfileGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, SocialProfileGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetSocialProfileGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the SocialProfile model
+   */
+  readonly fields: SocialProfileFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for SocialProfile.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__SocialProfileClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the SocialProfile model
+   */
+  interface SocialProfileFieldRefs {
+    readonly id: FieldRef<"SocialProfile", 'String'>
+    readonly userId: FieldRef<"SocialProfile", 'String'>
+    readonly platform: FieldRef<"SocialProfile", 'String'>
+    readonly username: FieldRef<"SocialProfile", 'String'>
+    readonly profileUrl: FieldRef<"SocialProfile", 'String'>
+    readonly verified: FieldRef<"SocialProfile", 'Boolean'>
+    readonly followerCount: FieldRef<"SocialProfile", 'Int'>
+    readonly followingCount: FieldRef<"SocialProfile", 'Int'>
+    readonly engagementRate: FieldRef<"SocialProfile", 'Float'>
+    readonly contentScore: FieldRef<"SocialProfile", 'Float'>
+    readonly influenceScore: FieldRef<"SocialProfile", 'Float'>
+    readonly lastFetchedAt: FieldRef<"SocialProfile", 'DateTime'>
+    readonly metrics: FieldRef<"SocialProfile", 'Json'>
+    readonly createdAt: FieldRef<"SocialProfile", 'DateTime'>
+    readonly updatedAt: FieldRef<"SocialProfile", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * SocialProfile findUnique
+   */
+  export type SocialProfileFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SocialProfile
+     */
+    select?: SocialProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SocialProfile
+     */
+    omit?: SocialProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SocialProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which SocialProfile to fetch.
+     */
+    where: SocialProfileWhereUniqueInput
+  }
+
+  /**
+   * SocialProfile findUniqueOrThrow
+   */
+  export type SocialProfileFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SocialProfile
+     */
+    select?: SocialProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SocialProfile
+     */
+    omit?: SocialProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SocialProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which SocialProfile to fetch.
+     */
+    where: SocialProfileWhereUniqueInput
+  }
+
+  /**
+   * SocialProfile findFirst
+   */
+  export type SocialProfileFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SocialProfile
+     */
+    select?: SocialProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SocialProfile
+     */
+    omit?: SocialProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SocialProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which SocialProfile to fetch.
+     */
+    where?: SocialProfileWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of SocialProfiles to fetch.
+     */
+    orderBy?: SocialProfileOrderByWithRelationInput | SocialProfileOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for SocialProfiles.
+     */
+    cursor?: SocialProfileWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` SocialProfiles from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` SocialProfiles.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of SocialProfiles.
+     */
+    distinct?: SocialProfileScalarFieldEnum | SocialProfileScalarFieldEnum[]
+  }
+
+  /**
+   * SocialProfile findFirstOrThrow
+   */
+  export type SocialProfileFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SocialProfile
+     */
+    select?: SocialProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SocialProfile
+     */
+    omit?: SocialProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SocialProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which SocialProfile to fetch.
+     */
+    where?: SocialProfileWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of SocialProfiles to fetch.
+     */
+    orderBy?: SocialProfileOrderByWithRelationInput | SocialProfileOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for SocialProfiles.
+     */
+    cursor?: SocialProfileWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` SocialProfiles from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` SocialProfiles.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of SocialProfiles.
+     */
+    distinct?: SocialProfileScalarFieldEnum | SocialProfileScalarFieldEnum[]
+  }
+
+  /**
+   * SocialProfile findMany
+   */
+  export type SocialProfileFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SocialProfile
+     */
+    select?: SocialProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SocialProfile
+     */
+    omit?: SocialProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SocialProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which SocialProfiles to fetch.
+     */
+    where?: SocialProfileWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of SocialProfiles to fetch.
+     */
+    orderBy?: SocialProfileOrderByWithRelationInput | SocialProfileOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing SocialProfiles.
+     */
+    cursor?: SocialProfileWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` SocialProfiles from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` SocialProfiles.
+     */
+    skip?: number
+    distinct?: SocialProfileScalarFieldEnum | SocialProfileScalarFieldEnum[]
+  }
+
+  /**
+   * SocialProfile create
+   */
+  export type SocialProfileCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SocialProfile
+     */
+    select?: SocialProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SocialProfile
+     */
+    omit?: SocialProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SocialProfileInclude<ExtArgs> | null
+    /**
+     * The data needed to create a SocialProfile.
+     */
+    data: XOR<SocialProfileCreateInput, SocialProfileUncheckedCreateInput>
+  }
+
+  /**
+   * SocialProfile createMany
+   */
+  export type SocialProfileCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many SocialProfiles.
+     */
+    data: SocialProfileCreateManyInput | SocialProfileCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * SocialProfile createManyAndReturn
+   */
+  export type SocialProfileCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SocialProfile
+     */
+    select?: SocialProfileSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the SocialProfile
+     */
+    omit?: SocialProfileOmit<ExtArgs> | null
+    /**
+     * The data used to create many SocialProfiles.
+     */
+    data: SocialProfileCreateManyInput | SocialProfileCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SocialProfileIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * SocialProfile update
+   */
+  export type SocialProfileUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SocialProfile
+     */
+    select?: SocialProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SocialProfile
+     */
+    omit?: SocialProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SocialProfileInclude<ExtArgs> | null
+    /**
+     * The data needed to update a SocialProfile.
+     */
+    data: XOR<SocialProfileUpdateInput, SocialProfileUncheckedUpdateInput>
+    /**
+     * Choose, which SocialProfile to update.
+     */
+    where: SocialProfileWhereUniqueInput
+  }
+
+  /**
+   * SocialProfile updateMany
+   */
+  export type SocialProfileUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update SocialProfiles.
+     */
+    data: XOR<SocialProfileUpdateManyMutationInput, SocialProfileUncheckedUpdateManyInput>
+    /**
+     * Filter which SocialProfiles to update
+     */
+    where?: SocialProfileWhereInput
+    /**
+     * Limit how many SocialProfiles to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * SocialProfile updateManyAndReturn
+   */
+  export type SocialProfileUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SocialProfile
+     */
+    select?: SocialProfileSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the SocialProfile
+     */
+    omit?: SocialProfileOmit<ExtArgs> | null
+    /**
+     * The data used to update SocialProfiles.
+     */
+    data: XOR<SocialProfileUpdateManyMutationInput, SocialProfileUncheckedUpdateManyInput>
+    /**
+     * Filter which SocialProfiles to update
+     */
+    where?: SocialProfileWhereInput
+    /**
+     * Limit how many SocialProfiles to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SocialProfileIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * SocialProfile upsert
+   */
+  export type SocialProfileUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SocialProfile
+     */
+    select?: SocialProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SocialProfile
+     */
+    omit?: SocialProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SocialProfileInclude<ExtArgs> | null
+    /**
+     * The filter to search for the SocialProfile to update in case it exists.
+     */
+    where: SocialProfileWhereUniqueInput
+    /**
+     * In case the SocialProfile found by the `where` argument doesn't exist, create a new SocialProfile with this data.
+     */
+    create: XOR<SocialProfileCreateInput, SocialProfileUncheckedCreateInput>
+    /**
+     * In case the SocialProfile was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<SocialProfileUpdateInput, SocialProfileUncheckedUpdateInput>
+  }
+
+  /**
+   * SocialProfile delete
+   */
+  export type SocialProfileDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SocialProfile
+     */
+    select?: SocialProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SocialProfile
+     */
+    omit?: SocialProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SocialProfileInclude<ExtArgs> | null
+    /**
+     * Filter which SocialProfile to delete.
+     */
+    where: SocialProfileWhereUniqueInput
+  }
+
+  /**
+   * SocialProfile deleteMany
+   */
+  export type SocialProfileDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which SocialProfiles to delete
+     */
+    where?: SocialProfileWhereInput
+    /**
+     * Limit how many SocialProfiles to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * SocialProfile without action
+   */
+  export type SocialProfileDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SocialProfile
+     */
+    select?: SocialProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SocialProfile
+     */
+    omit?: SocialProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SocialProfileInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model Certification
+   */
+
+  export type AggregateCertification = {
+    _count: CertificationCountAggregateOutputType | null
+    _min: CertificationMinAggregateOutputType | null
+    _max: CertificationMaxAggregateOutputType | null
+  }
+
+  export type CertificationMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    name: string | null
+    issuer: string | null
+    issueDate: Date | null
+    expiryDate: Date | null
+    credentialId: string | null
+    credentialUrl: string | null
+    verified: boolean | null
+    verificationMethod: string | null
+    certificateImageUrl: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type CertificationMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    name: string | null
+    issuer: string | null
+    issueDate: Date | null
+    expiryDate: Date | null
+    credentialId: string | null
+    credentialUrl: string | null
+    verified: boolean | null
+    verificationMethod: string | null
+    certificateImageUrl: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type CertificationCountAggregateOutputType = {
+    id: number
+    userId: number
+    name: number
+    issuer: number
+    issueDate: number
+    expiryDate: number
+    credentialId: number
+    credentialUrl: number
+    verified: number
+    verificationMethod: number
+    skillsEarned: number
+    certificateImageUrl: number
+    metadata: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type CertificationMinAggregateInputType = {
+    id?: true
+    userId?: true
+    name?: true
+    issuer?: true
+    issueDate?: true
+    expiryDate?: true
+    credentialId?: true
+    credentialUrl?: true
+    verified?: true
+    verificationMethod?: true
+    certificateImageUrl?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type CertificationMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    name?: true
+    issuer?: true
+    issueDate?: true
+    expiryDate?: true
+    credentialId?: true
+    credentialUrl?: true
+    verified?: true
+    verificationMethod?: true
+    certificateImageUrl?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type CertificationCountAggregateInputType = {
+    id?: true
+    userId?: true
+    name?: true
+    issuer?: true
+    issueDate?: true
+    expiryDate?: true
+    credentialId?: true
+    credentialUrl?: true
+    verified?: true
+    verificationMethod?: true
+    skillsEarned?: true
+    certificateImageUrl?: true
+    metadata?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type CertificationAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Certification to aggregate.
+     */
+    where?: CertificationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Certifications to fetch.
+     */
+    orderBy?: CertificationOrderByWithRelationInput | CertificationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: CertificationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Certifications from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Certifications.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned Certifications
+    **/
+    _count?: true | CertificationCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: CertificationMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: CertificationMaxAggregateInputType
+  }
+
+  export type GetCertificationAggregateType<T extends CertificationAggregateArgs> = {
+        [P in keyof T & keyof AggregateCertification]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateCertification[P]>
+      : GetScalarType<T[P], AggregateCertification[P]>
+  }
+
+
+
+
+  export type CertificationGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CertificationWhereInput
+    orderBy?: CertificationOrderByWithAggregationInput | CertificationOrderByWithAggregationInput[]
+    by: CertificationScalarFieldEnum[] | CertificationScalarFieldEnum
+    having?: CertificationScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: CertificationCountAggregateInputType | true
+    _min?: CertificationMinAggregateInputType
+    _max?: CertificationMaxAggregateInputType
+  }
+
+  export type CertificationGroupByOutputType = {
+    id: string
+    userId: string
+    name: string
+    issuer: string
+    issueDate: Date
+    expiryDate: Date | null
+    credentialId: string | null
+    credentialUrl: string | null
+    verified: boolean
+    verificationMethod: string | null
+    skillsEarned: string[]
+    certificateImageUrl: string | null
+    metadata: JsonValue | null
+    createdAt: Date
+    updatedAt: Date
+    _count: CertificationCountAggregateOutputType | null
+    _min: CertificationMinAggregateOutputType | null
+    _max: CertificationMaxAggregateOutputType | null
+  }
+
+  type GetCertificationGroupByPayload<T extends CertificationGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<CertificationGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof CertificationGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], CertificationGroupByOutputType[P]>
+            : GetScalarType<T[P], CertificationGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type CertificationSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    name?: boolean
+    issuer?: boolean
+    issueDate?: boolean
+    expiryDate?: boolean
+    credentialId?: boolean
+    credentialUrl?: boolean
+    verified?: boolean
+    verificationMethod?: boolean
+    skillsEarned?: boolean
+    certificateImageUrl?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["certification"]>
+
+  export type CertificationSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    name?: boolean
+    issuer?: boolean
+    issueDate?: boolean
+    expiryDate?: boolean
+    credentialId?: boolean
+    credentialUrl?: boolean
+    verified?: boolean
+    verificationMethod?: boolean
+    skillsEarned?: boolean
+    certificateImageUrl?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["certification"]>
+
+  export type CertificationSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    name?: boolean
+    issuer?: boolean
+    issueDate?: boolean
+    expiryDate?: boolean
+    credentialId?: boolean
+    credentialUrl?: boolean
+    verified?: boolean
+    verificationMethod?: boolean
+    skillsEarned?: boolean
+    certificateImageUrl?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["certification"]>
+
+  export type CertificationSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    name?: boolean
+    issuer?: boolean
+    issueDate?: boolean
+    expiryDate?: boolean
+    credentialId?: boolean
+    credentialUrl?: boolean
+    verified?: boolean
+    verificationMethod?: boolean
+    skillsEarned?: boolean
+    certificateImageUrl?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type CertificationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "name" | "issuer" | "issueDate" | "expiryDate" | "credentialId" | "credentialUrl" | "verified" | "verificationMethod" | "skillsEarned" | "certificateImageUrl" | "metadata" | "createdAt" | "updatedAt", ExtArgs["result"]["certification"]>
+  export type CertificationInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type CertificationIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type CertificationIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+
+  export type $CertificationPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Certification"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      name: string
+      issuer: string
+      issueDate: Date
+      expiryDate: Date | null
+      credentialId: string | null
+      credentialUrl: string | null
+      verified: boolean
+      verificationMethod: string | null
+      skillsEarned: string[]
+      certificateImageUrl: string | null
+      metadata: Prisma.JsonValue | null
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["certification"]>
+    composites: {}
+  }
+
+  type CertificationGetPayload<S extends boolean | null | undefined | CertificationDefaultArgs> = $Result.GetResult<Prisma.$CertificationPayload, S>
+
+  type CertificationCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<CertificationFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: CertificationCountAggregateInputType | true
+    }
+
+  export interface CertificationDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Certification'], meta: { name: 'Certification' } }
+    /**
+     * Find zero or one Certification that matches the filter.
+     * @param {CertificationFindUniqueArgs} args - Arguments to find a Certification
+     * @example
+     * // Get one Certification
+     * const certification = await prisma.certification.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends CertificationFindUniqueArgs>(args: SelectSubset<T, CertificationFindUniqueArgs<ExtArgs>>): Prisma__CertificationClient<$Result.GetResult<Prisma.$CertificationPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one Certification that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {CertificationFindUniqueOrThrowArgs} args - Arguments to find a Certification
+     * @example
+     * // Get one Certification
+     * const certification = await prisma.certification.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends CertificationFindUniqueOrThrowArgs>(args: SelectSubset<T, CertificationFindUniqueOrThrowArgs<ExtArgs>>): Prisma__CertificationClient<$Result.GetResult<Prisma.$CertificationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Certification that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CertificationFindFirstArgs} args - Arguments to find a Certification
+     * @example
+     * // Get one Certification
+     * const certification = await prisma.certification.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends CertificationFindFirstArgs>(args?: SelectSubset<T, CertificationFindFirstArgs<ExtArgs>>): Prisma__CertificationClient<$Result.GetResult<Prisma.$CertificationPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Certification that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CertificationFindFirstOrThrowArgs} args - Arguments to find a Certification
+     * @example
+     * // Get one Certification
+     * const certification = await prisma.certification.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends CertificationFindFirstOrThrowArgs>(args?: SelectSubset<T, CertificationFindFirstOrThrowArgs<ExtArgs>>): Prisma__CertificationClient<$Result.GetResult<Prisma.$CertificationPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more Certifications that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CertificationFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all Certifications
+     * const certifications = await prisma.certification.findMany()
+     * 
+     * // Get first 10 Certifications
+     * const certifications = await prisma.certification.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const certificationWithIdOnly = await prisma.certification.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends CertificationFindManyArgs>(args?: SelectSubset<T, CertificationFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CertificationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a Certification.
+     * @param {CertificationCreateArgs} args - Arguments to create a Certification.
+     * @example
+     * // Create one Certification
+     * const Certification = await prisma.certification.create({
+     *   data: {
+     *     // ... data to create a Certification
+     *   }
+     * })
+     * 
+     */
+    create<T extends CertificationCreateArgs>(args: SelectSubset<T, CertificationCreateArgs<ExtArgs>>): Prisma__CertificationClient<$Result.GetResult<Prisma.$CertificationPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many Certifications.
+     * @param {CertificationCreateManyArgs} args - Arguments to create many Certifications.
+     * @example
+     * // Create many Certifications
+     * const certification = await prisma.certification.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends CertificationCreateManyArgs>(args?: SelectSubset<T, CertificationCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many Certifications and returns the data saved in the database.
+     * @param {CertificationCreateManyAndReturnArgs} args - Arguments to create many Certifications.
+     * @example
+     * // Create many Certifications
+     * const certification = await prisma.certification.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Certifications and only return the `id`
+     * const certificationWithIdOnly = await prisma.certification.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends CertificationCreateManyAndReturnArgs>(args?: SelectSubset<T, CertificationCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CertificationPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a Certification.
+     * @param {CertificationDeleteArgs} args - Arguments to delete one Certification.
+     * @example
+     * // Delete one Certification
+     * const Certification = await prisma.certification.delete({
+     *   where: {
+     *     // ... filter to delete one Certification
+     *   }
+     * })
+     * 
+     */
+    delete<T extends CertificationDeleteArgs>(args: SelectSubset<T, CertificationDeleteArgs<ExtArgs>>): Prisma__CertificationClient<$Result.GetResult<Prisma.$CertificationPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one Certification.
+     * @param {CertificationUpdateArgs} args - Arguments to update one Certification.
+     * @example
+     * // Update one Certification
+     * const certification = await prisma.certification.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends CertificationUpdateArgs>(args: SelectSubset<T, CertificationUpdateArgs<ExtArgs>>): Prisma__CertificationClient<$Result.GetResult<Prisma.$CertificationPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more Certifications.
+     * @param {CertificationDeleteManyArgs} args - Arguments to filter Certifications to delete.
+     * @example
+     * // Delete a few Certifications
+     * const { count } = await prisma.certification.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends CertificationDeleteManyArgs>(args?: SelectSubset<T, CertificationDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Certifications.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CertificationUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many Certifications
+     * const certification = await prisma.certification.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends CertificationUpdateManyArgs>(args: SelectSubset<T, CertificationUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Certifications and returns the data updated in the database.
+     * @param {CertificationUpdateManyAndReturnArgs} args - Arguments to update many Certifications.
+     * @example
+     * // Update many Certifications
+     * const certification = await prisma.certification.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Certifications and only return the `id`
+     * const certificationWithIdOnly = await prisma.certification.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends CertificationUpdateManyAndReturnArgs>(args: SelectSubset<T, CertificationUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CertificationPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one Certification.
+     * @param {CertificationUpsertArgs} args - Arguments to update or create a Certification.
+     * @example
+     * // Update or create a Certification
+     * const certification = await prisma.certification.upsert({
+     *   create: {
+     *     // ... data to create a Certification
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the Certification we want to update
+     *   }
+     * })
+     */
+    upsert<T extends CertificationUpsertArgs>(args: SelectSubset<T, CertificationUpsertArgs<ExtArgs>>): Prisma__CertificationClient<$Result.GetResult<Prisma.$CertificationPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of Certifications.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CertificationCountArgs} args - Arguments to filter Certifications to count.
+     * @example
+     * // Count the number of Certifications
+     * const count = await prisma.certification.count({
+     *   where: {
+     *     // ... the filter for the Certifications we want to count
+     *   }
+     * })
+    **/
+    count<T extends CertificationCountArgs>(
+      args?: Subset<T, CertificationCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], CertificationCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a Certification.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CertificationAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends CertificationAggregateArgs>(args: Subset<T, CertificationAggregateArgs>): Prisma.PrismaPromise<GetCertificationAggregateType<T>>
+
+    /**
+     * Group by Certification.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CertificationGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends CertificationGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: CertificationGroupByArgs['orderBy'] }
+        : { orderBy?: CertificationGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, CertificationGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCertificationGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the Certification model
+   */
+  readonly fields: CertificationFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for Certification.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__CertificationClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the Certification model
+   */
+  interface CertificationFieldRefs {
+    readonly id: FieldRef<"Certification", 'String'>
+    readonly userId: FieldRef<"Certification", 'String'>
+    readonly name: FieldRef<"Certification", 'String'>
+    readonly issuer: FieldRef<"Certification", 'String'>
+    readonly issueDate: FieldRef<"Certification", 'DateTime'>
+    readonly expiryDate: FieldRef<"Certification", 'DateTime'>
+    readonly credentialId: FieldRef<"Certification", 'String'>
+    readonly credentialUrl: FieldRef<"Certification", 'String'>
+    readonly verified: FieldRef<"Certification", 'Boolean'>
+    readonly verificationMethod: FieldRef<"Certification", 'String'>
+    readonly skillsEarned: FieldRef<"Certification", 'String[]'>
+    readonly certificateImageUrl: FieldRef<"Certification", 'String'>
+    readonly metadata: FieldRef<"Certification", 'Json'>
+    readonly createdAt: FieldRef<"Certification", 'DateTime'>
+    readonly updatedAt: FieldRef<"Certification", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * Certification findUnique
+   */
+  export type CertificationFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Certification
+     */
+    select?: CertificationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Certification
+     */
+    omit?: CertificationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CertificationInclude<ExtArgs> | null
+    /**
+     * Filter, which Certification to fetch.
+     */
+    where: CertificationWhereUniqueInput
+  }
+
+  /**
+   * Certification findUniqueOrThrow
+   */
+  export type CertificationFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Certification
+     */
+    select?: CertificationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Certification
+     */
+    omit?: CertificationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CertificationInclude<ExtArgs> | null
+    /**
+     * Filter, which Certification to fetch.
+     */
+    where: CertificationWhereUniqueInput
+  }
+
+  /**
+   * Certification findFirst
+   */
+  export type CertificationFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Certification
+     */
+    select?: CertificationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Certification
+     */
+    omit?: CertificationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CertificationInclude<ExtArgs> | null
+    /**
+     * Filter, which Certification to fetch.
+     */
+    where?: CertificationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Certifications to fetch.
+     */
+    orderBy?: CertificationOrderByWithRelationInput | CertificationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Certifications.
+     */
+    cursor?: CertificationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Certifications from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Certifications.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Certifications.
+     */
+    distinct?: CertificationScalarFieldEnum | CertificationScalarFieldEnum[]
+  }
+
+  /**
+   * Certification findFirstOrThrow
+   */
+  export type CertificationFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Certification
+     */
+    select?: CertificationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Certification
+     */
+    omit?: CertificationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CertificationInclude<ExtArgs> | null
+    /**
+     * Filter, which Certification to fetch.
+     */
+    where?: CertificationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Certifications to fetch.
+     */
+    orderBy?: CertificationOrderByWithRelationInput | CertificationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Certifications.
+     */
+    cursor?: CertificationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Certifications from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Certifications.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Certifications.
+     */
+    distinct?: CertificationScalarFieldEnum | CertificationScalarFieldEnum[]
+  }
+
+  /**
+   * Certification findMany
+   */
+  export type CertificationFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Certification
+     */
+    select?: CertificationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Certification
+     */
+    omit?: CertificationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CertificationInclude<ExtArgs> | null
+    /**
+     * Filter, which Certifications to fetch.
+     */
+    where?: CertificationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Certifications to fetch.
+     */
+    orderBy?: CertificationOrderByWithRelationInput | CertificationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing Certifications.
+     */
+    cursor?: CertificationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Certifications from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Certifications.
+     */
+    skip?: number
+    distinct?: CertificationScalarFieldEnum | CertificationScalarFieldEnum[]
+  }
+
+  /**
+   * Certification create
+   */
+  export type CertificationCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Certification
+     */
+    select?: CertificationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Certification
+     */
+    omit?: CertificationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CertificationInclude<ExtArgs> | null
+    /**
+     * The data needed to create a Certification.
+     */
+    data: XOR<CertificationCreateInput, CertificationUncheckedCreateInput>
+  }
+
+  /**
+   * Certification createMany
+   */
+  export type CertificationCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many Certifications.
+     */
+    data: CertificationCreateManyInput | CertificationCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * Certification createManyAndReturn
+   */
+  export type CertificationCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Certification
+     */
+    select?: CertificationSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Certification
+     */
+    omit?: CertificationOmit<ExtArgs> | null
+    /**
+     * The data used to create many Certifications.
+     */
+    data: CertificationCreateManyInput | CertificationCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CertificationIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * Certification update
+   */
+  export type CertificationUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Certification
+     */
+    select?: CertificationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Certification
+     */
+    omit?: CertificationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CertificationInclude<ExtArgs> | null
+    /**
+     * The data needed to update a Certification.
+     */
+    data: XOR<CertificationUpdateInput, CertificationUncheckedUpdateInput>
+    /**
+     * Choose, which Certification to update.
+     */
+    where: CertificationWhereUniqueInput
+  }
+
+  /**
+   * Certification updateMany
+   */
+  export type CertificationUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update Certifications.
+     */
+    data: XOR<CertificationUpdateManyMutationInput, CertificationUncheckedUpdateManyInput>
+    /**
+     * Filter which Certifications to update
+     */
+    where?: CertificationWhereInput
+    /**
+     * Limit how many Certifications to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Certification updateManyAndReturn
+   */
+  export type CertificationUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Certification
+     */
+    select?: CertificationSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Certification
+     */
+    omit?: CertificationOmit<ExtArgs> | null
+    /**
+     * The data used to update Certifications.
+     */
+    data: XOR<CertificationUpdateManyMutationInput, CertificationUncheckedUpdateManyInput>
+    /**
+     * Filter which Certifications to update
+     */
+    where?: CertificationWhereInput
+    /**
+     * Limit how many Certifications to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CertificationIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * Certification upsert
+   */
+  export type CertificationUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Certification
+     */
+    select?: CertificationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Certification
+     */
+    omit?: CertificationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CertificationInclude<ExtArgs> | null
+    /**
+     * The filter to search for the Certification to update in case it exists.
+     */
+    where: CertificationWhereUniqueInput
+    /**
+     * In case the Certification found by the `where` argument doesn't exist, create a new Certification with this data.
+     */
+    create: XOR<CertificationCreateInput, CertificationUncheckedCreateInput>
+    /**
+     * In case the Certification was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<CertificationUpdateInput, CertificationUncheckedUpdateInput>
+  }
+
+  /**
+   * Certification delete
+   */
+  export type CertificationDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Certification
+     */
+    select?: CertificationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Certification
+     */
+    omit?: CertificationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CertificationInclude<ExtArgs> | null
+    /**
+     * Filter which Certification to delete.
+     */
+    where: CertificationWhereUniqueInput
+  }
+
+  /**
+   * Certification deleteMany
+   */
+  export type CertificationDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Certifications to delete
+     */
+    where?: CertificationWhereInput
+    /**
+     * Limit how many Certifications to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * Certification without action
+   */
+  export type CertificationDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Certification
+     */
+    select?: CertificationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Certification
+     */
+    omit?: CertificationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CertificationInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model GitHubProfile
+   */
+
+  export type AggregateGitHubProfile = {
+    _count: GitHubProfileCountAggregateOutputType | null
+    _avg: GitHubProfileAvgAggregateOutputType | null
+    _sum: GitHubProfileSumAggregateOutputType | null
+    _min: GitHubProfileMinAggregateOutputType | null
+    _max: GitHubProfileMaxAggregateOutputType | null
+  }
+
+  export type GitHubProfileAvgAggregateOutputType = {
+    totalRepos: number | null
+    totalCommits: number | null
+    totalPRs: number | null
+    totalIssues: number | null
+    totalStars: number | null
+    contributionScore: number | null
+    consistencyScore: number | null
+    codeQualityScore: number | null
+  }
+
+  export type GitHubProfileSumAggregateOutputType = {
+    totalRepos: number | null
+    totalCommits: number | null
+    totalPRs: number | null
+    totalIssues: number | null
+    totalStars: number | null
+    contributionScore: number | null
+    consistencyScore: number | null
+    codeQualityScore: number | null
+  }
+
+  export type GitHubProfileMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    username: string | null
+    profileUrl: string | null
+    totalRepos: number | null
+    totalCommits: number | null
+    totalPRs: number | null
+    totalIssues: number | null
+    totalStars: number | null
+    contributionScore: number | null
+    consistencyScore: number | null
+    codeQualityScore: number | null
+    lastFetchedAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type GitHubProfileMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    username: string | null
+    profileUrl: string | null
+    totalRepos: number | null
+    totalCommits: number | null
+    totalPRs: number | null
+    totalIssues: number | null
+    totalStars: number | null
+    contributionScore: number | null
+    consistencyScore: number | null
+    codeQualityScore: number | null
+    lastFetchedAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type GitHubProfileCountAggregateOutputType = {
+    id: number
+    userId: number
+    username: number
+    profileUrl: number
+    totalRepos: number
+    totalCommits: number
+    totalPRs: number
+    totalIssues: number
+    totalStars: number
+    languagesUsed: number
+    contributionScore: number
+    consistencyScore: number
+    codeQualityScore: number
+    topRepos: number
+    contributionGraph: number
+    lastFetchedAt: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type GitHubProfileAvgAggregateInputType = {
+    totalRepos?: true
+    totalCommits?: true
+    totalPRs?: true
+    totalIssues?: true
+    totalStars?: true
+    contributionScore?: true
+    consistencyScore?: true
+    codeQualityScore?: true
+  }
+
+  export type GitHubProfileSumAggregateInputType = {
+    totalRepos?: true
+    totalCommits?: true
+    totalPRs?: true
+    totalIssues?: true
+    totalStars?: true
+    contributionScore?: true
+    consistencyScore?: true
+    codeQualityScore?: true
+  }
+
+  export type GitHubProfileMinAggregateInputType = {
+    id?: true
+    userId?: true
+    username?: true
+    profileUrl?: true
+    totalRepos?: true
+    totalCommits?: true
+    totalPRs?: true
+    totalIssues?: true
+    totalStars?: true
+    contributionScore?: true
+    consistencyScore?: true
+    codeQualityScore?: true
+    lastFetchedAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type GitHubProfileMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    username?: true
+    profileUrl?: true
+    totalRepos?: true
+    totalCommits?: true
+    totalPRs?: true
+    totalIssues?: true
+    totalStars?: true
+    contributionScore?: true
+    consistencyScore?: true
+    codeQualityScore?: true
+    lastFetchedAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type GitHubProfileCountAggregateInputType = {
+    id?: true
+    userId?: true
+    username?: true
+    profileUrl?: true
+    totalRepos?: true
+    totalCommits?: true
+    totalPRs?: true
+    totalIssues?: true
+    totalStars?: true
+    languagesUsed?: true
+    contributionScore?: true
+    consistencyScore?: true
+    codeQualityScore?: true
+    topRepos?: true
+    contributionGraph?: true
+    lastFetchedAt?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type GitHubProfileAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GitHubProfile to aggregate.
+     */
+    where?: GitHubProfileWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GitHubProfiles to fetch.
+     */
+    orderBy?: GitHubProfileOrderByWithRelationInput | GitHubProfileOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: GitHubProfileWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GitHubProfiles from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GitHubProfiles.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned GitHubProfiles
+    **/
+    _count?: true | GitHubProfileCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: GitHubProfileAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: GitHubProfileSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: GitHubProfileMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: GitHubProfileMaxAggregateInputType
+  }
+
+  export type GetGitHubProfileAggregateType<T extends GitHubProfileAggregateArgs> = {
+        [P in keyof T & keyof AggregateGitHubProfile]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateGitHubProfile[P]>
+      : GetScalarType<T[P], AggregateGitHubProfile[P]>
+  }
+
+
+
+
+  export type GitHubProfileGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: GitHubProfileWhereInput
+    orderBy?: GitHubProfileOrderByWithAggregationInput | GitHubProfileOrderByWithAggregationInput[]
+    by: GitHubProfileScalarFieldEnum[] | GitHubProfileScalarFieldEnum
+    having?: GitHubProfileScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: GitHubProfileCountAggregateInputType | true
+    _avg?: GitHubProfileAvgAggregateInputType
+    _sum?: GitHubProfileSumAggregateInputType
+    _min?: GitHubProfileMinAggregateInputType
+    _max?: GitHubProfileMaxAggregateInputType
+  }
+
+  export type GitHubProfileGroupByOutputType = {
+    id: string
+    userId: string
+    username: string
+    profileUrl: string | null
+    totalRepos: number
+    totalCommits: number
+    totalPRs: number
+    totalIssues: number
+    totalStars: number
+    languagesUsed: JsonValue
+    contributionScore: number | null
+    consistencyScore: number | null
+    codeQualityScore: number | null
+    topRepos: JsonValue | null
+    contributionGraph: JsonValue | null
+    lastFetchedAt: Date
+    createdAt: Date
+    updatedAt: Date
+    _count: GitHubProfileCountAggregateOutputType | null
+    _avg: GitHubProfileAvgAggregateOutputType | null
+    _sum: GitHubProfileSumAggregateOutputType | null
+    _min: GitHubProfileMinAggregateOutputType | null
+    _max: GitHubProfileMaxAggregateOutputType | null
+  }
+
+  type GetGitHubProfileGroupByPayload<T extends GitHubProfileGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<GitHubProfileGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof GitHubProfileGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], GitHubProfileGroupByOutputType[P]>
+            : GetScalarType<T[P], GitHubProfileGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type GitHubProfileSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    username?: boolean
+    profileUrl?: boolean
+    totalRepos?: boolean
+    totalCommits?: boolean
+    totalPRs?: boolean
+    totalIssues?: boolean
+    totalStars?: boolean
+    languagesUsed?: boolean
+    contributionScore?: boolean
+    consistencyScore?: boolean
+    codeQualityScore?: boolean
+    topRepos?: boolean
+    contributionGraph?: boolean
+    lastFetchedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["gitHubProfile"]>
+
+  export type GitHubProfileSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    username?: boolean
+    profileUrl?: boolean
+    totalRepos?: boolean
+    totalCommits?: boolean
+    totalPRs?: boolean
+    totalIssues?: boolean
+    totalStars?: boolean
+    languagesUsed?: boolean
+    contributionScore?: boolean
+    consistencyScore?: boolean
+    codeQualityScore?: boolean
+    topRepos?: boolean
+    contributionGraph?: boolean
+    lastFetchedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["gitHubProfile"]>
+
+  export type GitHubProfileSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    username?: boolean
+    profileUrl?: boolean
+    totalRepos?: boolean
+    totalCommits?: boolean
+    totalPRs?: boolean
+    totalIssues?: boolean
+    totalStars?: boolean
+    languagesUsed?: boolean
+    contributionScore?: boolean
+    consistencyScore?: boolean
+    codeQualityScore?: boolean
+    topRepos?: boolean
+    contributionGraph?: boolean
+    lastFetchedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["gitHubProfile"]>
+
+  export type GitHubProfileSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    username?: boolean
+    profileUrl?: boolean
+    totalRepos?: boolean
+    totalCommits?: boolean
+    totalPRs?: boolean
+    totalIssues?: boolean
+    totalStars?: boolean
+    languagesUsed?: boolean
+    contributionScore?: boolean
+    consistencyScore?: boolean
+    codeQualityScore?: boolean
+    topRepos?: boolean
+    contributionGraph?: boolean
+    lastFetchedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type GitHubProfileOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "username" | "profileUrl" | "totalRepos" | "totalCommits" | "totalPRs" | "totalIssues" | "totalStars" | "languagesUsed" | "contributionScore" | "consistencyScore" | "codeQualityScore" | "topRepos" | "contributionGraph" | "lastFetchedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["gitHubProfile"]>
+  export type GitHubProfileInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type GitHubProfileIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type GitHubProfileIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+
+  export type $GitHubProfilePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "GitHubProfile"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      username: string
+      profileUrl: string | null
+      totalRepos: number
+      totalCommits: number
+      totalPRs: number
+      totalIssues: number
+      totalStars: number
+      languagesUsed: Prisma.JsonValue
+      contributionScore: number | null
+      consistencyScore: number | null
+      codeQualityScore: number | null
+      topRepos: Prisma.JsonValue | null
+      contributionGraph: Prisma.JsonValue | null
+      lastFetchedAt: Date
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["gitHubProfile"]>
+    composites: {}
+  }
+
+  type GitHubProfileGetPayload<S extends boolean | null | undefined | GitHubProfileDefaultArgs> = $Result.GetResult<Prisma.$GitHubProfilePayload, S>
+
+  type GitHubProfileCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<GitHubProfileFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: GitHubProfileCountAggregateInputType | true
+    }
+
+  export interface GitHubProfileDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['GitHubProfile'], meta: { name: 'GitHubProfile' } }
+    /**
+     * Find zero or one GitHubProfile that matches the filter.
+     * @param {GitHubProfileFindUniqueArgs} args - Arguments to find a GitHubProfile
+     * @example
+     * // Get one GitHubProfile
+     * const gitHubProfile = await prisma.gitHubProfile.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends GitHubProfileFindUniqueArgs>(args: SelectSubset<T, GitHubProfileFindUniqueArgs<ExtArgs>>): Prisma__GitHubProfileClient<$Result.GetResult<Prisma.$GitHubProfilePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one GitHubProfile that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {GitHubProfileFindUniqueOrThrowArgs} args - Arguments to find a GitHubProfile
+     * @example
+     * // Get one GitHubProfile
+     * const gitHubProfile = await prisma.gitHubProfile.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends GitHubProfileFindUniqueOrThrowArgs>(args: SelectSubset<T, GitHubProfileFindUniqueOrThrowArgs<ExtArgs>>): Prisma__GitHubProfileClient<$Result.GetResult<Prisma.$GitHubProfilePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GitHubProfile that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GitHubProfileFindFirstArgs} args - Arguments to find a GitHubProfile
+     * @example
+     * // Get one GitHubProfile
+     * const gitHubProfile = await prisma.gitHubProfile.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends GitHubProfileFindFirstArgs>(args?: SelectSubset<T, GitHubProfileFindFirstArgs<ExtArgs>>): Prisma__GitHubProfileClient<$Result.GetResult<Prisma.$GitHubProfilePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first GitHubProfile that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GitHubProfileFindFirstOrThrowArgs} args - Arguments to find a GitHubProfile
+     * @example
+     * // Get one GitHubProfile
+     * const gitHubProfile = await prisma.gitHubProfile.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends GitHubProfileFindFirstOrThrowArgs>(args?: SelectSubset<T, GitHubProfileFindFirstOrThrowArgs<ExtArgs>>): Prisma__GitHubProfileClient<$Result.GetResult<Prisma.$GitHubProfilePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more GitHubProfiles that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GitHubProfileFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all GitHubProfiles
+     * const gitHubProfiles = await prisma.gitHubProfile.findMany()
+     * 
+     * // Get first 10 GitHubProfiles
+     * const gitHubProfiles = await prisma.gitHubProfile.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const gitHubProfileWithIdOnly = await prisma.gitHubProfile.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends GitHubProfileFindManyArgs>(args?: SelectSubset<T, GitHubProfileFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GitHubProfilePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a GitHubProfile.
+     * @param {GitHubProfileCreateArgs} args - Arguments to create a GitHubProfile.
+     * @example
+     * // Create one GitHubProfile
+     * const GitHubProfile = await prisma.gitHubProfile.create({
+     *   data: {
+     *     // ... data to create a GitHubProfile
+     *   }
+     * })
+     * 
+     */
+    create<T extends GitHubProfileCreateArgs>(args: SelectSubset<T, GitHubProfileCreateArgs<ExtArgs>>): Prisma__GitHubProfileClient<$Result.GetResult<Prisma.$GitHubProfilePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many GitHubProfiles.
+     * @param {GitHubProfileCreateManyArgs} args - Arguments to create many GitHubProfiles.
+     * @example
+     * // Create many GitHubProfiles
+     * const gitHubProfile = await prisma.gitHubProfile.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends GitHubProfileCreateManyArgs>(args?: SelectSubset<T, GitHubProfileCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many GitHubProfiles and returns the data saved in the database.
+     * @param {GitHubProfileCreateManyAndReturnArgs} args - Arguments to create many GitHubProfiles.
+     * @example
+     * // Create many GitHubProfiles
+     * const gitHubProfile = await prisma.gitHubProfile.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many GitHubProfiles and only return the `id`
+     * const gitHubProfileWithIdOnly = await prisma.gitHubProfile.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends GitHubProfileCreateManyAndReturnArgs>(args?: SelectSubset<T, GitHubProfileCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GitHubProfilePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a GitHubProfile.
+     * @param {GitHubProfileDeleteArgs} args - Arguments to delete one GitHubProfile.
+     * @example
+     * // Delete one GitHubProfile
+     * const GitHubProfile = await prisma.gitHubProfile.delete({
+     *   where: {
+     *     // ... filter to delete one GitHubProfile
+     *   }
+     * })
+     * 
+     */
+    delete<T extends GitHubProfileDeleteArgs>(args: SelectSubset<T, GitHubProfileDeleteArgs<ExtArgs>>): Prisma__GitHubProfileClient<$Result.GetResult<Prisma.$GitHubProfilePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one GitHubProfile.
+     * @param {GitHubProfileUpdateArgs} args - Arguments to update one GitHubProfile.
+     * @example
+     * // Update one GitHubProfile
+     * const gitHubProfile = await prisma.gitHubProfile.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends GitHubProfileUpdateArgs>(args: SelectSubset<T, GitHubProfileUpdateArgs<ExtArgs>>): Prisma__GitHubProfileClient<$Result.GetResult<Prisma.$GitHubProfilePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more GitHubProfiles.
+     * @param {GitHubProfileDeleteManyArgs} args - Arguments to filter GitHubProfiles to delete.
+     * @example
+     * // Delete a few GitHubProfiles
+     * const { count } = await prisma.gitHubProfile.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends GitHubProfileDeleteManyArgs>(args?: SelectSubset<T, GitHubProfileDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GitHubProfiles.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GitHubProfileUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many GitHubProfiles
+     * const gitHubProfile = await prisma.gitHubProfile.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends GitHubProfileUpdateManyArgs>(args: SelectSubset<T, GitHubProfileUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more GitHubProfiles and returns the data updated in the database.
+     * @param {GitHubProfileUpdateManyAndReturnArgs} args - Arguments to update many GitHubProfiles.
+     * @example
+     * // Update many GitHubProfiles
+     * const gitHubProfile = await prisma.gitHubProfile.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more GitHubProfiles and only return the `id`
+     * const gitHubProfileWithIdOnly = await prisma.gitHubProfile.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends GitHubProfileUpdateManyAndReturnArgs>(args: SelectSubset<T, GitHubProfileUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$GitHubProfilePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one GitHubProfile.
+     * @param {GitHubProfileUpsertArgs} args - Arguments to update or create a GitHubProfile.
+     * @example
+     * // Update or create a GitHubProfile
+     * const gitHubProfile = await prisma.gitHubProfile.upsert({
+     *   create: {
+     *     // ... data to create a GitHubProfile
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the GitHubProfile we want to update
+     *   }
+     * })
+     */
+    upsert<T extends GitHubProfileUpsertArgs>(args: SelectSubset<T, GitHubProfileUpsertArgs<ExtArgs>>): Prisma__GitHubProfileClient<$Result.GetResult<Prisma.$GitHubProfilePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of GitHubProfiles.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GitHubProfileCountArgs} args - Arguments to filter GitHubProfiles to count.
+     * @example
+     * // Count the number of GitHubProfiles
+     * const count = await prisma.gitHubProfile.count({
+     *   where: {
+     *     // ... the filter for the GitHubProfiles we want to count
+     *   }
+     * })
+    **/
+    count<T extends GitHubProfileCountArgs>(
+      args?: Subset<T, GitHubProfileCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], GitHubProfileCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a GitHubProfile.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GitHubProfileAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends GitHubProfileAggregateArgs>(args: Subset<T, GitHubProfileAggregateArgs>): Prisma.PrismaPromise<GetGitHubProfileAggregateType<T>>
+
+    /**
+     * Group by GitHubProfile.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {GitHubProfileGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends GitHubProfileGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: GitHubProfileGroupByArgs['orderBy'] }
+        : { orderBy?: GitHubProfileGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, GitHubProfileGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetGitHubProfileGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the GitHubProfile model
+   */
+  readonly fields: GitHubProfileFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for GitHubProfile.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__GitHubProfileClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the GitHubProfile model
+   */
+  interface GitHubProfileFieldRefs {
+    readonly id: FieldRef<"GitHubProfile", 'String'>
+    readonly userId: FieldRef<"GitHubProfile", 'String'>
+    readonly username: FieldRef<"GitHubProfile", 'String'>
+    readonly profileUrl: FieldRef<"GitHubProfile", 'String'>
+    readonly totalRepos: FieldRef<"GitHubProfile", 'Int'>
+    readonly totalCommits: FieldRef<"GitHubProfile", 'Int'>
+    readonly totalPRs: FieldRef<"GitHubProfile", 'Int'>
+    readonly totalIssues: FieldRef<"GitHubProfile", 'Int'>
+    readonly totalStars: FieldRef<"GitHubProfile", 'Int'>
+    readonly languagesUsed: FieldRef<"GitHubProfile", 'Json'>
+    readonly contributionScore: FieldRef<"GitHubProfile", 'Float'>
+    readonly consistencyScore: FieldRef<"GitHubProfile", 'Float'>
+    readonly codeQualityScore: FieldRef<"GitHubProfile", 'Float'>
+    readonly topRepos: FieldRef<"GitHubProfile", 'Json'>
+    readonly contributionGraph: FieldRef<"GitHubProfile", 'Json'>
+    readonly lastFetchedAt: FieldRef<"GitHubProfile", 'DateTime'>
+    readonly createdAt: FieldRef<"GitHubProfile", 'DateTime'>
+    readonly updatedAt: FieldRef<"GitHubProfile", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * GitHubProfile findUnique
+   */
+  export type GitHubProfileFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GitHubProfile
+     */
+    select?: GitHubProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GitHubProfile
+     */
+    omit?: GitHubProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GitHubProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which GitHubProfile to fetch.
+     */
+    where: GitHubProfileWhereUniqueInput
+  }
+
+  /**
+   * GitHubProfile findUniqueOrThrow
+   */
+  export type GitHubProfileFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GitHubProfile
+     */
+    select?: GitHubProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GitHubProfile
+     */
+    omit?: GitHubProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GitHubProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which GitHubProfile to fetch.
+     */
+    where: GitHubProfileWhereUniqueInput
+  }
+
+  /**
+   * GitHubProfile findFirst
+   */
+  export type GitHubProfileFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GitHubProfile
+     */
+    select?: GitHubProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GitHubProfile
+     */
+    omit?: GitHubProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GitHubProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which GitHubProfile to fetch.
+     */
+    where?: GitHubProfileWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GitHubProfiles to fetch.
+     */
+    orderBy?: GitHubProfileOrderByWithRelationInput | GitHubProfileOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GitHubProfiles.
+     */
+    cursor?: GitHubProfileWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GitHubProfiles from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GitHubProfiles.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GitHubProfiles.
+     */
+    distinct?: GitHubProfileScalarFieldEnum | GitHubProfileScalarFieldEnum[]
+  }
+
+  /**
+   * GitHubProfile findFirstOrThrow
+   */
+  export type GitHubProfileFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GitHubProfile
+     */
+    select?: GitHubProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GitHubProfile
+     */
+    omit?: GitHubProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GitHubProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which GitHubProfile to fetch.
+     */
+    where?: GitHubProfileWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GitHubProfiles to fetch.
+     */
+    orderBy?: GitHubProfileOrderByWithRelationInput | GitHubProfileOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for GitHubProfiles.
+     */
+    cursor?: GitHubProfileWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GitHubProfiles from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GitHubProfiles.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of GitHubProfiles.
+     */
+    distinct?: GitHubProfileScalarFieldEnum | GitHubProfileScalarFieldEnum[]
+  }
+
+  /**
+   * GitHubProfile findMany
+   */
+  export type GitHubProfileFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GitHubProfile
+     */
+    select?: GitHubProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GitHubProfile
+     */
+    omit?: GitHubProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GitHubProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which GitHubProfiles to fetch.
+     */
+    where?: GitHubProfileWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of GitHubProfiles to fetch.
+     */
+    orderBy?: GitHubProfileOrderByWithRelationInput | GitHubProfileOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing GitHubProfiles.
+     */
+    cursor?: GitHubProfileWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` GitHubProfiles from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` GitHubProfiles.
+     */
+    skip?: number
+    distinct?: GitHubProfileScalarFieldEnum | GitHubProfileScalarFieldEnum[]
+  }
+
+  /**
+   * GitHubProfile create
+   */
+  export type GitHubProfileCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GitHubProfile
+     */
+    select?: GitHubProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GitHubProfile
+     */
+    omit?: GitHubProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GitHubProfileInclude<ExtArgs> | null
+    /**
+     * The data needed to create a GitHubProfile.
+     */
+    data: XOR<GitHubProfileCreateInput, GitHubProfileUncheckedCreateInput>
+  }
+
+  /**
+   * GitHubProfile createMany
+   */
+  export type GitHubProfileCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many GitHubProfiles.
+     */
+    data: GitHubProfileCreateManyInput | GitHubProfileCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * GitHubProfile createManyAndReturn
+   */
+  export type GitHubProfileCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GitHubProfile
+     */
+    select?: GitHubProfileSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GitHubProfile
+     */
+    omit?: GitHubProfileOmit<ExtArgs> | null
+    /**
+     * The data used to create many GitHubProfiles.
+     */
+    data: GitHubProfileCreateManyInput | GitHubProfileCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GitHubProfileIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * GitHubProfile update
+   */
+  export type GitHubProfileUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GitHubProfile
+     */
+    select?: GitHubProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GitHubProfile
+     */
+    omit?: GitHubProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GitHubProfileInclude<ExtArgs> | null
+    /**
+     * The data needed to update a GitHubProfile.
+     */
+    data: XOR<GitHubProfileUpdateInput, GitHubProfileUncheckedUpdateInput>
+    /**
+     * Choose, which GitHubProfile to update.
+     */
+    where: GitHubProfileWhereUniqueInput
+  }
+
+  /**
+   * GitHubProfile updateMany
+   */
+  export type GitHubProfileUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update GitHubProfiles.
+     */
+    data: XOR<GitHubProfileUpdateManyMutationInput, GitHubProfileUncheckedUpdateManyInput>
+    /**
+     * Filter which GitHubProfiles to update
+     */
+    where?: GitHubProfileWhereInput
+    /**
+     * Limit how many GitHubProfiles to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * GitHubProfile updateManyAndReturn
+   */
+  export type GitHubProfileUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GitHubProfile
+     */
+    select?: GitHubProfileSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the GitHubProfile
+     */
+    omit?: GitHubProfileOmit<ExtArgs> | null
+    /**
+     * The data used to update GitHubProfiles.
+     */
+    data: XOR<GitHubProfileUpdateManyMutationInput, GitHubProfileUncheckedUpdateManyInput>
+    /**
+     * Filter which GitHubProfiles to update
+     */
+    where?: GitHubProfileWhereInput
+    /**
+     * Limit how many GitHubProfiles to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GitHubProfileIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * GitHubProfile upsert
+   */
+  export type GitHubProfileUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GitHubProfile
+     */
+    select?: GitHubProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GitHubProfile
+     */
+    omit?: GitHubProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GitHubProfileInclude<ExtArgs> | null
+    /**
+     * The filter to search for the GitHubProfile to update in case it exists.
+     */
+    where: GitHubProfileWhereUniqueInput
+    /**
+     * In case the GitHubProfile found by the `where` argument doesn't exist, create a new GitHubProfile with this data.
+     */
+    create: XOR<GitHubProfileCreateInput, GitHubProfileUncheckedCreateInput>
+    /**
+     * In case the GitHubProfile was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<GitHubProfileUpdateInput, GitHubProfileUncheckedUpdateInput>
+  }
+
+  /**
+   * GitHubProfile delete
+   */
+  export type GitHubProfileDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GitHubProfile
+     */
+    select?: GitHubProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GitHubProfile
+     */
+    omit?: GitHubProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GitHubProfileInclude<ExtArgs> | null
+    /**
+     * Filter which GitHubProfile to delete.
+     */
+    where: GitHubProfileWhereUniqueInput
+  }
+
+  /**
+   * GitHubProfile deleteMany
+   */
+  export type GitHubProfileDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which GitHubProfiles to delete
+     */
+    where?: GitHubProfileWhereInput
+    /**
+     * Limit how many GitHubProfiles to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * GitHubProfile without action
+   */
+  export type GitHubProfileDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the GitHubProfile
+     */
+    select?: GitHubProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the GitHubProfile
+     */
+    omit?: GitHubProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: GitHubProfileInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model CredibilityScore
+   */
+
+  export type AggregateCredibilityScore = {
+    _count: CredibilityScoreCountAggregateOutputType | null
+    _avg: CredibilityScoreAvgAggregateOutputType | null
+    _sum: CredibilityScoreSumAggregateOutputType | null
+    _min: CredibilityScoreMinAggregateOutputType | null
+    _max: CredibilityScoreMaxAggregateOutputType | null
+  }
+
+  export type CredibilityScoreAvgAggregateOutputType = {
+    overallScore: number | null
+    educationScore: number | null
+    experienceScore: number | null
+    technicalScore: number | null
+    socialScore: number | null
+    certificationScore: number | null
+  }
+
+  export type CredibilityScoreSumAggregateOutputType = {
+    overallScore: number | null
+    educationScore: number | null
+    experienceScore: number | null
+    technicalScore: number | null
+    socialScore: number | null
+    certificationScore: number | null
+  }
+
+  export type CredibilityScoreMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    overallScore: number | null
+    educationScore: number | null
+    experienceScore: number | null
+    technicalScore: number | null
+    socialScore: number | null
+    certificationScore: number | null
+    verificationLevel: string | null
+    calculatedAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type CredibilityScoreMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    overallScore: number | null
+    educationScore: number | null
+    experienceScore: number | null
+    technicalScore: number | null
+    socialScore: number | null
+    certificationScore: number | null
+    verificationLevel: string | null
+    calculatedAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type CredibilityScoreCountAggregateOutputType = {
+    id: number
+    userId: number
+    overallScore: number
+    educationScore: number
+    experienceScore: number
+    technicalScore: number
+    socialScore: number
+    certificationScore: number
+    verificationLevel: number
+    breakdown: number
+    badges: number
+    calculatedAt: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type CredibilityScoreAvgAggregateInputType = {
+    overallScore?: true
+    educationScore?: true
+    experienceScore?: true
+    technicalScore?: true
+    socialScore?: true
+    certificationScore?: true
+  }
+
+  export type CredibilityScoreSumAggregateInputType = {
+    overallScore?: true
+    educationScore?: true
+    experienceScore?: true
+    technicalScore?: true
+    socialScore?: true
+    certificationScore?: true
+  }
+
+  export type CredibilityScoreMinAggregateInputType = {
+    id?: true
+    userId?: true
+    overallScore?: true
+    educationScore?: true
+    experienceScore?: true
+    technicalScore?: true
+    socialScore?: true
+    certificationScore?: true
+    verificationLevel?: true
+    calculatedAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type CredibilityScoreMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    overallScore?: true
+    educationScore?: true
+    experienceScore?: true
+    technicalScore?: true
+    socialScore?: true
+    certificationScore?: true
+    verificationLevel?: true
+    calculatedAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type CredibilityScoreCountAggregateInputType = {
+    id?: true
+    userId?: true
+    overallScore?: true
+    educationScore?: true
+    experienceScore?: true
+    technicalScore?: true
+    socialScore?: true
+    certificationScore?: true
+    verificationLevel?: true
+    breakdown?: true
+    badges?: true
+    calculatedAt?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type CredibilityScoreAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which CredibilityScore to aggregate.
+     */
+    where?: CredibilityScoreWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CredibilityScores to fetch.
+     */
+    orderBy?: CredibilityScoreOrderByWithRelationInput | CredibilityScoreOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: CredibilityScoreWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CredibilityScores from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CredibilityScores.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned CredibilityScores
+    **/
+    _count?: true | CredibilityScoreCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: CredibilityScoreAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: CredibilityScoreSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: CredibilityScoreMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: CredibilityScoreMaxAggregateInputType
+  }
+
+  export type GetCredibilityScoreAggregateType<T extends CredibilityScoreAggregateArgs> = {
+        [P in keyof T & keyof AggregateCredibilityScore]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateCredibilityScore[P]>
+      : GetScalarType<T[P], AggregateCredibilityScore[P]>
+  }
+
+
+
+
+  export type CredibilityScoreGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CredibilityScoreWhereInput
+    orderBy?: CredibilityScoreOrderByWithAggregationInput | CredibilityScoreOrderByWithAggregationInput[]
+    by: CredibilityScoreScalarFieldEnum[] | CredibilityScoreScalarFieldEnum
+    having?: CredibilityScoreScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: CredibilityScoreCountAggregateInputType | true
+    _avg?: CredibilityScoreAvgAggregateInputType
+    _sum?: CredibilityScoreSumAggregateInputType
+    _min?: CredibilityScoreMinAggregateInputType
+    _max?: CredibilityScoreMaxAggregateInputType
+  }
+
+  export type CredibilityScoreGroupByOutputType = {
+    id: string
+    userId: string
+    overallScore: number
+    educationScore: number
+    experienceScore: number
+    technicalScore: number
+    socialScore: number
+    certificationScore: number
+    verificationLevel: string
+    breakdown: JsonValue
+    badges: string[]
+    calculatedAt: Date
+    createdAt: Date
+    updatedAt: Date
+    _count: CredibilityScoreCountAggregateOutputType | null
+    _avg: CredibilityScoreAvgAggregateOutputType | null
+    _sum: CredibilityScoreSumAggregateOutputType | null
+    _min: CredibilityScoreMinAggregateOutputType | null
+    _max: CredibilityScoreMaxAggregateOutputType | null
+  }
+
+  type GetCredibilityScoreGroupByPayload<T extends CredibilityScoreGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<CredibilityScoreGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof CredibilityScoreGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], CredibilityScoreGroupByOutputType[P]>
+            : GetScalarType<T[P], CredibilityScoreGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type CredibilityScoreSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    overallScore?: boolean
+    educationScore?: boolean
+    experienceScore?: boolean
+    technicalScore?: boolean
+    socialScore?: boolean
+    certificationScore?: boolean
+    verificationLevel?: boolean
+    breakdown?: boolean
+    badges?: boolean
+    calculatedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["credibilityScore"]>
+
+  export type CredibilityScoreSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    overallScore?: boolean
+    educationScore?: boolean
+    experienceScore?: boolean
+    technicalScore?: boolean
+    socialScore?: boolean
+    certificationScore?: boolean
+    verificationLevel?: boolean
+    breakdown?: boolean
+    badges?: boolean
+    calculatedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["credibilityScore"]>
+
+  export type CredibilityScoreSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    overallScore?: boolean
+    educationScore?: boolean
+    experienceScore?: boolean
+    technicalScore?: boolean
+    socialScore?: boolean
+    certificationScore?: boolean
+    verificationLevel?: boolean
+    breakdown?: boolean
+    badges?: boolean
+    calculatedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["credibilityScore"]>
+
+  export type CredibilityScoreSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    overallScore?: boolean
+    educationScore?: boolean
+    experienceScore?: boolean
+    technicalScore?: boolean
+    socialScore?: boolean
+    certificationScore?: boolean
+    verificationLevel?: boolean
+    breakdown?: boolean
+    badges?: boolean
+    calculatedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type CredibilityScoreOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "overallScore" | "educationScore" | "experienceScore" | "technicalScore" | "socialScore" | "certificationScore" | "verificationLevel" | "breakdown" | "badges" | "calculatedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["credibilityScore"]>
+  export type CredibilityScoreInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type CredibilityScoreIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type CredibilityScoreIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+
+  export type $CredibilityScorePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "CredibilityScore"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      overallScore: number
+      educationScore: number
+      experienceScore: number
+      technicalScore: number
+      socialScore: number
+      certificationScore: number
+      verificationLevel: string
+      breakdown: Prisma.JsonValue
+      badges: string[]
+      calculatedAt: Date
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["credibilityScore"]>
+    composites: {}
+  }
+
+  type CredibilityScoreGetPayload<S extends boolean | null | undefined | CredibilityScoreDefaultArgs> = $Result.GetResult<Prisma.$CredibilityScorePayload, S>
+
+  type CredibilityScoreCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<CredibilityScoreFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: CredibilityScoreCountAggregateInputType | true
+    }
+
+  export interface CredibilityScoreDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['CredibilityScore'], meta: { name: 'CredibilityScore' } }
+    /**
+     * Find zero or one CredibilityScore that matches the filter.
+     * @param {CredibilityScoreFindUniqueArgs} args - Arguments to find a CredibilityScore
+     * @example
+     * // Get one CredibilityScore
+     * const credibilityScore = await prisma.credibilityScore.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends CredibilityScoreFindUniqueArgs>(args: SelectSubset<T, CredibilityScoreFindUniqueArgs<ExtArgs>>): Prisma__CredibilityScoreClient<$Result.GetResult<Prisma.$CredibilityScorePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one CredibilityScore that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {CredibilityScoreFindUniqueOrThrowArgs} args - Arguments to find a CredibilityScore
+     * @example
+     * // Get one CredibilityScore
+     * const credibilityScore = await prisma.credibilityScore.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends CredibilityScoreFindUniqueOrThrowArgs>(args: SelectSubset<T, CredibilityScoreFindUniqueOrThrowArgs<ExtArgs>>): Prisma__CredibilityScoreClient<$Result.GetResult<Prisma.$CredibilityScorePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first CredibilityScore that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CredibilityScoreFindFirstArgs} args - Arguments to find a CredibilityScore
+     * @example
+     * // Get one CredibilityScore
+     * const credibilityScore = await prisma.credibilityScore.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends CredibilityScoreFindFirstArgs>(args?: SelectSubset<T, CredibilityScoreFindFirstArgs<ExtArgs>>): Prisma__CredibilityScoreClient<$Result.GetResult<Prisma.$CredibilityScorePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first CredibilityScore that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CredibilityScoreFindFirstOrThrowArgs} args - Arguments to find a CredibilityScore
+     * @example
+     * // Get one CredibilityScore
+     * const credibilityScore = await prisma.credibilityScore.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends CredibilityScoreFindFirstOrThrowArgs>(args?: SelectSubset<T, CredibilityScoreFindFirstOrThrowArgs<ExtArgs>>): Prisma__CredibilityScoreClient<$Result.GetResult<Prisma.$CredibilityScorePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more CredibilityScores that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CredibilityScoreFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all CredibilityScores
+     * const credibilityScores = await prisma.credibilityScore.findMany()
+     * 
+     * // Get first 10 CredibilityScores
+     * const credibilityScores = await prisma.credibilityScore.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const credibilityScoreWithIdOnly = await prisma.credibilityScore.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends CredibilityScoreFindManyArgs>(args?: SelectSubset<T, CredibilityScoreFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CredibilityScorePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a CredibilityScore.
+     * @param {CredibilityScoreCreateArgs} args - Arguments to create a CredibilityScore.
+     * @example
+     * // Create one CredibilityScore
+     * const CredibilityScore = await prisma.credibilityScore.create({
+     *   data: {
+     *     // ... data to create a CredibilityScore
+     *   }
+     * })
+     * 
+     */
+    create<T extends CredibilityScoreCreateArgs>(args: SelectSubset<T, CredibilityScoreCreateArgs<ExtArgs>>): Prisma__CredibilityScoreClient<$Result.GetResult<Prisma.$CredibilityScorePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many CredibilityScores.
+     * @param {CredibilityScoreCreateManyArgs} args - Arguments to create many CredibilityScores.
+     * @example
+     * // Create many CredibilityScores
+     * const credibilityScore = await prisma.credibilityScore.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends CredibilityScoreCreateManyArgs>(args?: SelectSubset<T, CredibilityScoreCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many CredibilityScores and returns the data saved in the database.
+     * @param {CredibilityScoreCreateManyAndReturnArgs} args - Arguments to create many CredibilityScores.
+     * @example
+     * // Create many CredibilityScores
+     * const credibilityScore = await prisma.credibilityScore.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many CredibilityScores and only return the `id`
+     * const credibilityScoreWithIdOnly = await prisma.credibilityScore.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends CredibilityScoreCreateManyAndReturnArgs>(args?: SelectSubset<T, CredibilityScoreCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CredibilityScorePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a CredibilityScore.
+     * @param {CredibilityScoreDeleteArgs} args - Arguments to delete one CredibilityScore.
+     * @example
+     * // Delete one CredibilityScore
+     * const CredibilityScore = await prisma.credibilityScore.delete({
+     *   where: {
+     *     // ... filter to delete one CredibilityScore
+     *   }
+     * })
+     * 
+     */
+    delete<T extends CredibilityScoreDeleteArgs>(args: SelectSubset<T, CredibilityScoreDeleteArgs<ExtArgs>>): Prisma__CredibilityScoreClient<$Result.GetResult<Prisma.$CredibilityScorePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one CredibilityScore.
+     * @param {CredibilityScoreUpdateArgs} args - Arguments to update one CredibilityScore.
+     * @example
+     * // Update one CredibilityScore
+     * const credibilityScore = await prisma.credibilityScore.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends CredibilityScoreUpdateArgs>(args: SelectSubset<T, CredibilityScoreUpdateArgs<ExtArgs>>): Prisma__CredibilityScoreClient<$Result.GetResult<Prisma.$CredibilityScorePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more CredibilityScores.
+     * @param {CredibilityScoreDeleteManyArgs} args - Arguments to filter CredibilityScores to delete.
+     * @example
+     * // Delete a few CredibilityScores
+     * const { count } = await prisma.credibilityScore.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends CredibilityScoreDeleteManyArgs>(args?: SelectSubset<T, CredibilityScoreDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more CredibilityScores.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CredibilityScoreUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many CredibilityScores
+     * const credibilityScore = await prisma.credibilityScore.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends CredibilityScoreUpdateManyArgs>(args: SelectSubset<T, CredibilityScoreUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more CredibilityScores and returns the data updated in the database.
+     * @param {CredibilityScoreUpdateManyAndReturnArgs} args - Arguments to update many CredibilityScores.
+     * @example
+     * // Update many CredibilityScores
+     * const credibilityScore = await prisma.credibilityScore.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more CredibilityScores and only return the `id`
+     * const credibilityScoreWithIdOnly = await prisma.credibilityScore.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends CredibilityScoreUpdateManyAndReturnArgs>(args: SelectSubset<T, CredibilityScoreUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CredibilityScorePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one CredibilityScore.
+     * @param {CredibilityScoreUpsertArgs} args - Arguments to update or create a CredibilityScore.
+     * @example
+     * // Update or create a CredibilityScore
+     * const credibilityScore = await prisma.credibilityScore.upsert({
+     *   create: {
+     *     // ... data to create a CredibilityScore
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the CredibilityScore we want to update
+     *   }
+     * })
+     */
+    upsert<T extends CredibilityScoreUpsertArgs>(args: SelectSubset<T, CredibilityScoreUpsertArgs<ExtArgs>>): Prisma__CredibilityScoreClient<$Result.GetResult<Prisma.$CredibilityScorePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of CredibilityScores.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CredibilityScoreCountArgs} args - Arguments to filter CredibilityScores to count.
+     * @example
+     * // Count the number of CredibilityScores
+     * const count = await prisma.credibilityScore.count({
+     *   where: {
+     *     // ... the filter for the CredibilityScores we want to count
+     *   }
+     * })
+    **/
+    count<T extends CredibilityScoreCountArgs>(
+      args?: Subset<T, CredibilityScoreCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], CredibilityScoreCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a CredibilityScore.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CredibilityScoreAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends CredibilityScoreAggregateArgs>(args: Subset<T, CredibilityScoreAggregateArgs>): Prisma.PrismaPromise<GetCredibilityScoreAggregateType<T>>
+
+    /**
+     * Group by CredibilityScore.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CredibilityScoreGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends CredibilityScoreGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: CredibilityScoreGroupByArgs['orderBy'] }
+        : { orderBy?: CredibilityScoreGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, CredibilityScoreGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCredibilityScoreGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the CredibilityScore model
+   */
+  readonly fields: CredibilityScoreFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for CredibilityScore.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__CredibilityScoreClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the CredibilityScore model
+   */
+  interface CredibilityScoreFieldRefs {
+    readonly id: FieldRef<"CredibilityScore", 'String'>
+    readonly userId: FieldRef<"CredibilityScore", 'String'>
+    readonly overallScore: FieldRef<"CredibilityScore", 'Float'>
+    readonly educationScore: FieldRef<"CredibilityScore", 'Float'>
+    readonly experienceScore: FieldRef<"CredibilityScore", 'Float'>
+    readonly technicalScore: FieldRef<"CredibilityScore", 'Float'>
+    readonly socialScore: FieldRef<"CredibilityScore", 'Float'>
+    readonly certificationScore: FieldRef<"CredibilityScore", 'Float'>
+    readonly verificationLevel: FieldRef<"CredibilityScore", 'String'>
+    readonly breakdown: FieldRef<"CredibilityScore", 'Json'>
+    readonly badges: FieldRef<"CredibilityScore", 'String[]'>
+    readonly calculatedAt: FieldRef<"CredibilityScore", 'DateTime'>
+    readonly createdAt: FieldRef<"CredibilityScore", 'DateTime'>
+    readonly updatedAt: FieldRef<"CredibilityScore", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * CredibilityScore findUnique
+   */
+  export type CredibilityScoreFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CredibilityScore
+     */
+    select?: CredibilityScoreSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CredibilityScore
+     */
+    omit?: CredibilityScoreOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CredibilityScoreInclude<ExtArgs> | null
+    /**
+     * Filter, which CredibilityScore to fetch.
+     */
+    where: CredibilityScoreWhereUniqueInput
+  }
+
+  /**
+   * CredibilityScore findUniqueOrThrow
+   */
+  export type CredibilityScoreFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CredibilityScore
+     */
+    select?: CredibilityScoreSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CredibilityScore
+     */
+    omit?: CredibilityScoreOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CredibilityScoreInclude<ExtArgs> | null
+    /**
+     * Filter, which CredibilityScore to fetch.
+     */
+    where: CredibilityScoreWhereUniqueInput
+  }
+
+  /**
+   * CredibilityScore findFirst
+   */
+  export type CredibilityScoreFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CredibilityScore
+     */
+    select?: CredibilityScoreSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CredibilityScore
+     */
+    omit?: CredibilityScoreOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CredibilityScoreInclude<ExtArgs> | null
+    /**
+     * Filter, which CredibilityScore to fetch.
+     */
+    where?: CredibilityScoreWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CredibilityScores to fetch.
+     */
+    orderBy?: CredibilityScoreOrderByWithRelationInput | CredibilityScoreOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for CredibilityScores.
+     */
+    cursor?: CredibilityScoreWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CredibilityScores from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CredibilityScores.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of CredibilityScores.
+     */
+    distinct?: CredibilityScoreScalarFieldEnum | CredibilityScoreScalarFieldEnum[]
+  }
+
+  /**
+   * CredibilityScore findFirstOrThrow
+   */
+  export type CredibilityScoreFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CredibilityScore
+     */
+    select?: CredibilityScoreSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CredibilityScore
+     */
+    omit?: CredibilityScoreOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CredibilityScoreInclude<ExtArgs> | null
+    /**
+     * Filter, which CredibilityScore to fetch.
+     */
+    where?: CredibilityScoreWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CredibilityScores to fetch.
+     */
+    orderBy?: CredibilityScoreOrderByWithRelationInput | CredibilityScoreOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for CredibilityScores.
+     */
+    cursor?: CredibilityScoreWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CredibilityScores from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CredibilityScores.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of CredibilityScores.
+     */
+    distinct?: CredibilityScoreScalarFieldEnum | CredibilityScoreScalarFieldEnum[]
+  }
+
+  /**
+   * CredibilityScore findMany
+   */
+  export type CredibilityScoreFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CredibilityScore
+     */
+    select?: CredibilityScoreSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CredibilityScore
+     */
+    omit?: CredibilityScoreOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CredibilityScoreInclude<ExtArgs> | null
+    /**
+     * Filter, which CredibilityScores to fetch.
+     */
+    where?: CredibilityScoreWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CredibilityScores to fetch.
+     */
+    orderBy?: CredibilityScoreOrderByWithRelationInput | CredibilityScoreOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing CredibilityScores.
+     */
+    cursor?: CredibilityScoreWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CredibilityScores from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CredibilityScores.
+     */
+    skip?: number
+    distinct?: CredibilityScoreScalarFieldEnum | CredibilityScoreScalarFieldEnum[]
+  }
+
+  /**
+   * CredibilityScore create
+   */
+  export type CredibilityScoreCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CredibilityScore
+     */
+    select?: CredibilityScoreSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CredibilityScore
+     */
+    omit?: CredibilityScoreOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CredibilityScoreInclude<ExtArgs> | null
+    /**
+     * The data needed to create a CredibilityScore.
+     */
+    data: XOR<CredibilityScoreCreateInput, CredibilityScoreUncheckedCreateInput>
+  }
+
+  /**
+   * CredibilityScore createMany
+   */
+  export type CredibilityScoreCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many CredibilityScores.
+     */
+    data: CredibilityScoreCreateManyInput | CredibilityScoreCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * CredibilityScore createManyAndReturn
+   */
+  export type CredibilityScoreCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CredibilityScore
+     */
+    select?: CredibilityScoreSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the CredibilityScore
+     */
+    omit?: CredibilityScoreOmit<ExtArgs> | null
+    /**
+     * The data used to create many CredibilityScores.
+     */
+    data: CredibilityScoreCreateManyInput | CredibilityScoreCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CredibilityScoreIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * CredibilityScore update
+   */
+  export type CredibilityScoreUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CredibilityScore
+     */
+    select?: CredibilityScoreSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CredibilityScore
+     */
+    omit?: CredibilityScoreOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CredibilityScoreInclude<ExtArgs> | null
+    /**
+     * The data needed to update a CredibilityScore.
+     */
+    data: XOR<CredibilityScoreUpdateInput, CredibilityScoreUncheckedUpdateInput>
+    /**
+     * Choose, which CredibilityScore to update.
+     */
+    where: CredibilityScoreWhereUniqueInput
+  }
+
+  /**
+   * CredibilityScore updateMany
+   */
+  export type CredibilityScoreUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update CredibilityScores.
+     */
+    data: XOR<CredibilityScoreUpdateManyMutationInput, CredibilityScoreUncheckedUpdateManyInput>
+    /**
+     * Filter which CredibilityScores to update
+     */
+    where?: CredibilityScoreWhereInput
+    /**
+     * Limit how many CredibilityScores to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * CredibilityScore updateManyAndReturn
+   */
+  export type CredibilityScoreUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CredibilityScore
+     */
+    select?: CredibilityScoreSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the CredibilityScore
+     */
+    omit?: CredibilityScoreOmit<ExtArgs> | null
+    /**
+     * The data used to update CredibilityScores.
+     */
+    data: XOR<CredibilityScoreUpdateManyMutationInput, CredibilityScoreUncheckedUpdateManyInput>
+    /**
+     * Filter which CredibilityScores to update
+     */
+    where?: CredibilityScoreWhereInput
+    /**
+     * Limit how many CredibilityScores to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CredibilityScoreIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * CredibilityScore upsert
+   */
+  export type CredibilityScoreUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CredibilityScore
+     */
+    select?: CredibilityScoreSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CredibilityScore
+     */
+    omit?: CredibilityScoreOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CredibilityScoreInclude<ExtArgs> | null
+    /**
+     * The filter to search for the CredibilityScore to update in case it exists.
+     */
+    where: CredibilityScoreWhereUniqueInput
+    /**
+     * In case the CredibilityScore found by the `where` argument doesn't exist, create a new CredibilityScore with this data.
+     */
+    create: XOR<CredibilityScoreCreateInput, CredibilityScoreUncheckedCreateInput>
+    /**
+     * In case the CredibilityScore was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<CredibilityScoreUpdateInput, CredibilityScoreUncheckedUpdateInput>
+  }
+
+  /**
+   * CredibilityScore delete
+   */
+  export type CredibilityScoreDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CredibilityScore
+     */
+    select?: CredibilityScoreSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CredibilityScore
+     */
+    omit?: CredibilityScoreOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CredibilityScoreInclude<ExtArgs> | null
+    /**
+     * Filter which CredibilityScore to delete.
+     */
+    where: CredibilityScoreWhereUniqueInput
+  }
+
+  /**
+   * CredibilityScore deleteMany
+   */
+  export type CredibilityScoreDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which CredibilityScores to delete
+     */
+    where?: CredibilityScoreWhereInput
+    /**
+     * Limit how many CredibilityScores to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * CredibilityScore without action
+   */
+  export type CredibilityScoreDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CredibilityScore
+     */
+    select?: CredibilityScoreSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CredibilityScore
+     */
+    omit?: CredibilityScoreOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CredibilityScoreInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model CareerSuggestion
+   */
+
+  export type AggregateCareerSuggestion = {
+    _count: CareerSuggestionCountAggregateOutputType | null
+    _avg: CareerSuggestionAvgAggregateOutputType | null
+    _sum: CareerSuggestionSumAggregateOutputType | null
+    _min: CareerSuggestionMinAggregateOutputType | null
+    _max: CareerSuggestionMaxAggregateOutputType | null
+  }
+
+  export type CareerSuggestionAvgAggregateOutputType = {
+    readinessScore: number | null
+    estimatedWeeks: number | null
+    priority: number | null
+    confidence: number | null
+  }
+
+  export type CareerSuggestionSumAggregateOutputType = {
+    readinessScore: number | null
+    estimatedWeeks: number | null
+    priority: number | null
+    confidence: number | null
+  }
+
+  export type CareerSuggestionMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    role: string | null
+    readinessScore: number | null
+    estimatedTime: string | null
+    estimatedWeeks: number | null
+    reasoning: string | null
+    priority: number | null
+    status: string | null
+    aiModel: string | null
+    confidence: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type CareerSuggestionMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    role: string | null
+    readinessScore: number | null
+    estimatedTime: string | null
+    estimatedWeeks: number | null
+    reasoning: string | null
+    priority: number | null
+    status: string | null
+    aiModel: string | null
+    confidence: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type CareerSuggestionCountAggregateOutputType = {
+    id: number
+    userId: number
+    role: number
+    readinessScore: number
+    estimatedTime: number
+    estimatedWeeks: number
+    skillGaps: number
+    matchingSkills: number
+    resources: number
+    reasoning: number
+    priority: number
+    status: number
+    aiModel: number
+    confidence: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type CareerSuggestionAvgAggregateInputType = {
+    readinessScore?: true
+    estimatedWeeks?: true
+    priority?: true
+    confidence?: true
+  }
+
+  export type CareerSuggestionSumAggregateInputType = {
+    readinessScore?: true
+    estimatedWeeks?: true
+    priority?: true
+    confidence?: true
+  }
+
+  export type CareerSuggestionMinAggregateInputType = {
+    id?: true
+    userId?: true
+    role?: true
+    readinessScore?: true
+    estimatedTime?: true
+    estimatedWeeks?: true
+    reasoning?: true
+    priority?: true
+    status?: true
+    aiModel?: true
+    confidence?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type CareerSuggestionMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    role?: true
+    readinessScore?: true
+    estimatedTime?: true
+    estimatedWeeks?: true
+    reasoning?: true
+    priority?: true
+    status?: true
+    aiModel?: true
+    confidence?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type CareerSuggestionCountAggregateInputType = {
+    id?: true
+    userId?: true
+    role?: true
+    readinessScore?: true
+    estimatedTime?: true
+    estimatedWeeks?: true
+    skillGaps?: true
+    matchingSkills?: true
+    resources?: true
+    reasoning?: true
+    priority?: true
+    status?: true
+    aiModel?: true
+    confidence?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type CareerSuggestionAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which CareerSuggestion to aggregate.
+     */
+    where?: CareerSuggestionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CareerSuggestions to fetch.
+     */
+    orderBy?: CareerSuggestionOrderByWithRelationInput | CareerSuggestionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: CareerSuggestionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CareerSuggestions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CareerSuggestions.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned CareerSuggestions
+    **/
+    _count?: true | CareerSuggestionCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: CareerSuggestionAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: CareerSuggestionSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: CareerSuggestionMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: CareerSuggestionMaxAggregateInputType
+  }
+
+  export type GetCareerSuggestionAggregateType<T extends CareerSuggestionAggregateArgs> = {
+        [P in keyof T & keyof AggregateCareerSuggestion]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateCareerSuggestion[P]>
+      : GetScalarType<T[P], AggregateCareerSuggestion[P]>
+  }
+
+
+
+
+  export type CareerSuggestionGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: CareerSuggestionWhereInput
+    orderBy?: CareerSuggestionOrderByWithAggregationInput | CareerSuggestionOrderByWithAggregationInput[]
+    by: CareerSuggestionScalarFieldEnum[] | CareerSuggestionScalarFieldEnum
+    having?: CareerSuggestionScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: CareerSuggestionCountAggregateInputType | true
+    _avg?: CareerSuggestionAvgAggregateInputType
+    _sum?: CareerSuggestionSumAggregateInputType
+    _min?: CareerSuggestionMinAggregateInputType
+    _max?: CareerSuggestionMaxAggregateInputType
+  }
+
+  export type CareerSuggestionGroupByOutputType = {
+    id: string
+    userId: string
+    role: string
+    readinessScore: number
+    estimatedTime: string | null
+    estimatedWeeks: number | null
+    skillGaps: JsonValue
+    matchingSkills: JsonValue
+    resources: JsonValue
+    reasoning: string | null
+    priority: number
+    status: string
+    aiModel: string | null
+    confidence: number | null
+    createdAt: Date
+    updatedAt: Date
+    _count: CareerSuggestionCountAggregateOutputType | null
+    _avg: CareerSuggestionAvgAggregateOutputType | null
+    _sum: CareerSuggestionSumAggregateOutputType | null
+    _min: CareerSuggestionMinAggregateOutputType | null
+    _max: CareerSuggestionMaxAggregateOutputType | null
+  }
+
+  type GetCareerSuggestionGroupByPayload<T extends CareerSuggestionGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<CareerSuggestionGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof CareerSuggestionGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], CareerSuggestionGroupByOutputType[P]>
+            : GetScalarType<T[P], CareerSuggestionGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type CareerSuggestionSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    role?: boolean
+    readinessScore?: boolean
+    estimatedTime?: boolean
+    estimatedWeeks?: boolean
+    skillGaps?: boolean
+    matchingSkills?: boolean
+    resources?: boolean
+    reasoning?: boolean
+    priority?: boolean
+    status?: boolean
+    aiModel?: boolean
+    confidence?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    resourceRecommendations?: boolean | CareerSuggestion$resourceRecommendationsArgs<ExtArgs>
+    _count?: boolean | CareerSuggestionCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["careerSuggestion"]>
+
+  export type CareerSuggestionSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    role?: boolean
+    readinessScore?: boolean
+    estimatedTime?: boolean
+    estimatedWeeks?: boolean
+    skillGaps?: boolean
+    matchingSkills?: boolean
+    resources?: boolean
+    reasoning?: boolean
+    priority?: boolean
+    status?: boolean
+    aiModel?: boolean
+    confidence?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["careerSuggestion"]>
+
+  export type CareerSuggestionSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    role?: boolean
+    readinessScore?: boolean
+    estimatedTime?: boolean
+    estimatedWeeks?: boolean
+    skillGaps?: boolean
+    matchingSkills?: boolean
+    resources?: boolean
+    reasoning?: boolean
+    priority?: boolean
+    status?: boolean
+    aiModel?: boolean
+    confidence?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["careerSuggestion"]>
+
+  export type CareerSuggestionSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    role?: boolean
+    readinessScore?: boolean
+    estimatedTime?: boolean
+    estimatedWeeks?: boolean
+    skillGaps?: boolean
+    matchingSkills?: boolean
+    resources?: boolean
+    reasoning?: boolean
+    priority?: boolean
+    status?: boolean
+    aiModel?: boolean
+    confidence?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type CareerSuggestionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "role" | "readinessScore" | "estimatedTime" | "estimatedWeeks" | "skillGaps" | "matchingSkills" | "resources" | "reasoning" | "priority" | "status" | "aiModel" | "confidence" | "createdAt" | "updatedAt", ExtArgs["result"]["careerSuggestion"]>
+  export type CareerSuggestionInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    resourceRecommendations?: boolean | CareerSuggestion$resourceRecommendationsArgs<ExtArgs>
+    _count?: boolean | CareerSuggestionCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type CareerSuggestionIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type CareerSuggestionIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+
+  export type $CareerSuggestionPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "CareerSuggestion"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+      resourceRecommendations: Prisma.$ResourceRecommendationPayload<ExtArgs>[]
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      role: string
+      readinessScore: number
+      estimatedTime: string | null
+      estimatedWeeks: number | null
+      skillGaps: Prisma.JsonValue
+      matchingSkills: Prisma.JsonValue
+      resources: Prisma.JsonValue
+      reasoning: string | null
+      priority: number
+      status: string
+      aiModel: string | null
+      confidence: number | null
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["careerSuggestion"]>
+    composites: {}
+  }
+
+  type CareerSuggestionGetPayload<S extends boolean | null | undefined | CareerSuggestionDefaultArgs> = $Result.GetResult<Prisma.$CareerSuggestionPayload, S>
+
+  type CareerSuggestionCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<CareerSuggestionFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: CareerSuggestionCountAggregateInputType | true
+    }
+
+  export interface CareerSuggestionDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['CareerSuggestion'], meta: { name: 'CareerSuggestion' } }
+    /**
+     * Find zero or one CareerSuggestion that matches the filter.
+     * @param {CareerSuggestionFindUniqueArgs} args - Arguments to find a CareerSuggestion
+     * @example
+     * // Get one CareerSuggestion
+     * const careerSuggestion = await prisma.careerSuggestion.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends CareerSuggestionFindUniqueArgs>(args: SelectSubset<T, CareerSuggestionFindUniqueArgs<ExtArgs>>): Prisma__CareerSuggestionClient<$Result.GetResult<Prisma.$CareerSuggestionPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one CareerSuggestion that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {CareerSuggestionFindUniqueOrThrowArgs} args - Arguments to find a CareerSuggestion
+     * @example
+     * // Get one CareerSuggestion
+     * const careerSuggestion = await prisma.careerSuggestion.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends CareerSuggestionFindUniqueOrThrowArgs>(args: SelectSubset<T, CareerSuggestionFindUniqueOrThrowArgs<ExtArgs>>): Prisma__CareerSuggestionClient<$Result.GetResult<Prisma.$CareerSuggestionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first CareerSuggestion that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CareerSuggestionFindFirstArgs} args - Arguments to find a CareerSuggestion
+     * @example
+     * // Get one CareerSuggestion
+     * const careerSuggestion = await prisma.careerSuggestion.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends CareerSuggestionFindFirstArgs>(args?: SelectSubset<T, CareerSuggestionFindFirstArgs<ExtArgs>>): Prisma__CareerSuggestionClient<$Result.GetResult<Prisma.$CareerSuggestionPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first CareerSuggestion that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CareerSuggestionFindFirstOrThrowArgs} args - Arguments to find a CareerSuggestion
+     * @example
+     * // Get one CareerSuggestion
+     * const careerSuggestion = await prisma.careerSuggestion.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends CareerSuggestionFindFirstOrThrowArgs>(args?: SelectSubset<T, CareerSuggestionFindFirstOrThrowArgs<ExtArgs>>): Prisma__CareerSuggestionClient<$Result.GetResult<Prisma.$CareerSuggestionPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more CareerSuggestions that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CareerSuggestionFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all CareerSuggestions
+     * const careerSuggestions = await prisma.careerSuggestion.findMany()
+     * 
+     * // Get first 10 CareerSuggestions
+     * const careerSuggestions = await prisma.careerSuggestion.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const careerSuggestionWithIdOnly = await prisma.careerSuggestion.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends CareerSuggestionFindManyArgs>(args?: SelectSubset<T, CareerSuggestionFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CareerSuggestionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a CareerSuggestion.
+     * @param {CareerSuggestionCreateArgs} args - Arguments to create a CareerSuggestion.
+     * @example
+     * // Create one CareerSuggestion
+     * const CareerSuggestion = await prisma.careerSuggestion.create({
+     *   data: {
+     *     // ... data to create a CareerSuggestion
+     *   }
+     * })
+     * 
+     */
+    create<T extends CareerSuggestionCreateArgs>(args: SelectSubset<T, CareerSuggestionCreateArgs<ExtArgs>>): Prisma__CareerSuggestionClient<$Result.GetResult<Prisma.$CareerSuggestionPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many CareerSuggestions.
+     * @param {CareerSuggestionCreateManyArgs} args - Arguments to create many CareerSuggestions.
+     * @example
+     * // Create many CareerSuggestions
+     * const careerSuggestion = await prisma.careerSuggestion.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends CareerSuggestionCreateManyArgs>(args?: SelectSubset<T, CareerSuggestionCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many CareerSuggestions and returns the data saved in the database.
+     * @param {CareerSuggestionCreateManyAndReturnArgs} args - Arguments to create many CareerSuggestions.
+     * @example
+     * // Create many CareerSuggestions
+     * const careerSuggestion = await prisma.careerSuggestion.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many CareerSuggestions and only return the `id`
+     * const careerSuggestionWithIdOnly = await prisma.careerSuggestion.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends CareerSuggestionCreateManyAndReturnArgs>(args?: SelectSubset<T, CareerSuggestionCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CareerSuggestionPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a CareerSuggestion.
+     * @param {CareerSuggestionDeleteArgs} args - Arguments to delete one CareerSuggestion.
+     * @example
+     * // Delete one CareerSuggestion
+     * const CareerSuggestion = await prisma.careerSuggestion.delete({
+     *   where: {
+     *     // ... filter to delete one CareerSuggestion
+     *   }
+     * })
+     * 
+     */
+    delete<T extends CareerSuggestionDeleteArgs>(args: SelectSubset<T, CareerSuggestionDeleteArgs<ExtArgs>>): Prisma__CareerSuggestionClient<$Result.GetResult<Prisma.$CareerSuggestionPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one CareerSuggestion.
+     * @param {CareerSuggestionUpdateArgs} args - Arguments to update one CareerSuggestion.
+     * @example
+     * // Update one CareerSuggestion
+     * const careerSuggestion = await prisma.careerSuggestion.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends CareerSuggestionUpdateArgs>(args: SelectSubset<T, CareerSuggestionUpdateArgs<ExtArgs>>): Prisma__CareerSuggestionClient<$Result.GetResult<Prisma.$CareerSuggestionPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more CareerSuggestions.
+     * @param {CareerSuggestionDeleteManyArgs} args - Arguments to filter CareerSuggestions to delete.
+     * @example
+     * // Delete a few CareerSuggestions
+     * const { count } = await prisma.careerSuggestion.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends CareerSuggestionDeleteManyArgs>(args?: SelectSubset<T, CareerSuggestionDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more CareerSuggestions.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CareerSuggestionUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many CareerSuggestions
+     * const careerSuggestion = await prisma.careerSuggestion.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends CareerSuggestionUpdateManyArgs>(args: SelectSubset<T, CareerSuggestionUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more CareerSuggestions and returns the data updated in the database.
+     * @param {CareerSuggestionUpdateManyAndReturnArgs} args - Arguments to update many CareerSuggestions.
+     * @example
+     * // Update many CareerSuggestions
+     * const careerSuggestion = await prisma.careerSuggestion.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more CareerSuggestions and only return the `id`
+     * const careerSuggestionWithIdOnly = await prisma.careerSuggestion.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends CareerSuggestionUpdateManyAndReturnArgs>(args: SelectSubset<T, CareerSuggestionUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CareerSuggestionPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one CareerSuggestion.
+     * @param {CareerSuggestionUpsertArgs} args - Arguments to update or create a CareerSuggestion.
+     * @example
+     * // Update or create a CareerSuggestion
+     * const careerSuggestion = await prisma.careerSuggestion.upsert({
+     *   create: {
+     *     // ... data to create a CareerSuggestion
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the CareerSuggestion we want to update
+     *   }
+     * })
+     */
+    upsert<T extends CareerSuggestionUpsertArgs>(args: SelectSubset<T, CareerSuggestionUpsertArgs<ExtArgs>>): Prisma__CareerSuggestionClient<$Result.GetResult<Prisma.$CareerSuggestionPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of CareerSuggestions.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CareerSuggestionCountArgs} args - Arguments to filter CareerSuggestions to count.
+     * @example
+     * // Count the number of CareerSuggestions
+     * const count = await prisma.careerSuggestion.count({
+     *   where: {
+     *     // ... the filter for the CareerSuggestions we want to count
+     *   }
+     * })
+    **/
+    count<T extends CareerSuggestionCountArgs>(
+      args?: Subset<T, CareerSuggestionCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], CareerSuggestionCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a CareerSuggestion.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CareerSuggestionAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends CareerSuggestionAggregateArgs>(args: Subset<T, CareerSuggestionAggregateArgs>): Prisma.PrismaPromise<GetCareerSuggestionAggregateType<T>>
+
+    /**
+     * Group by CareerSuggestion.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {CareerSuggestionGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends CareerSuggestionGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: CareerSuggestionGroupByArgs['orderBy'] }
+        : { orderBy?: CareerSuggestionGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, CareerSuggestionGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetCareerSuggestionGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the CareerSuggestion model
+   */
+  readonly fields: CareerSuggestionFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for CareerSuggestion.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__CareerSuggestionClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    resourceRecommendations<T extends CareerSuggestion$resourceRecommendationsArgs<ExtArgs> = {}>(args?: Subset<T, CareerSuggestion$resourceRecommendationsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ResourceRecommendationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the CareerSuggestion model
+   */
+  interface CareerSuggestionFieldRefs {
+    readonly id: FieldRef<"CareerSuggestion", 'String'>
+    readonly userId: FieldRef<"CareerSuggestion", 'String'>
+    readonly role: FieldRef<"CareerSuggestion", 'String'>
+    readonly readinessScore: FieldRef<"CareerSuggestion", 'Float'>
+    readonly estimatedTime: FieldRef<"CareerSuggestion", 'String'>
+    readonly estimatedWeeks: FieldRef<"CareerSuggestion", 'Int'>
+    readonly skillGaps: FieldRef<"CareerSuggestion", 'Json'>
+    readonly matchingSkills: FieldRef<"CareerSuggestion", 'Json'>
+    readonly resources: FieldRef<"CareerSuggestion", 'Json'>
+    readonly reasoning: FieldRef<"CareerSuggestion", 'String'>
+    readonly priority: FieldRef<"CareerSuggestion", 'Int'>
+    readonly status: FieldRef<"CareerSuggestion", 'String'>
+    readonly aiModel: FieldRef<"CareerSuggestion", 'String'>
+    readonly confidence: FieldRef<"CareerSuggestion", 'Float'>
+    readonly createdAt: FieldRef<"CareerSuggestion", 'DateTime'>
+    readonly updatedAt: FieldRef<"CareerSuggestion", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * CareerSuggestion findUnique
+   */
+  export type CareerSuggestionFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestion
+     */
+    select?: CareerSuggestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CareerSuggestion
+     */
+    omit?: CareerSuggestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CareerSuggestionInclude<ExtArgs> | null
+    /**
+     * Filter, which CareerSuggestion to fetch.
+     */
+    where: CareerSuggestionWhereUniqueInput
+  }
+
+  /**
+   * CareerSuggestion findUniqueOrThrow
+   */
+  export type CareerSuggestionFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestion
+     */
+    select?: CareerSuggestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CareerSuggestion
+     */
+    omit?: CareerSuggestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CareerSuggestionInclude<ExtArgs> | null
+    /**
+     * Filter, which CareerSuggestion to fetch.
+     */
+    where: CareerSuggestionWhereUniqueInput
+  }
+
+  /**
+   * CareerSuggestion findFirst
+   */
+  export type CareerSuggestionFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestion
+     */
+    select?: CareerSuggestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CareerSuggestion
+     */
+    omit?: CareerSuggestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CareerSuggestionInclude<ExtArgs> | null
+    /**
+     * Filter, which CareerSuggestion to fetch.
+     */
+    where?: CareerSuggestionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CareerSuggestions to fetch.
+     */
+    orderBy?: CareerSuggestionOrderByWithRelationInput | CareerSuggestionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for CareerSuggestions.
+     */
+    cursor?: CareerSuggestionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CareerSuggestions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CareerSuggestions.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of CareerSuggestions.
+     */
+    distinct?: CareerSuggestionScalarFieldEnum | CareerSuggestionScalarFieldEnum[]
+  }
+
+  /**
+   * CareerSuggestion findFirstOrThrow
+   */
+  export type CareerSuggestionFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestion
+     */
+    select?: CareerSuggestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CareerSuggestion
+     */
+    omit?: CareerSuggestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CareerSuggestionInclude<ExtArgs> | null
+    /**
+     * Filter, which CareerSuggestion to fetch.
+     */
+    where?: CareerSuggestionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CareerSuggestions to fetch.
+     */
+    orderBy?: CareerSuggestionOrderByWithRelationInput | CareerSuggestionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for CareerSuggestions.
+     */
+    cursor?: CareerSuggestionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CareerSuggestions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CareerSuggestions.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of CareerSuggestions.
+     */
+    distinct?: CareerSuggestionScalarFieldEnum | CareerSuggestionScalarFieldEnum[]
+  }
+
+  /**
+   * CareerSuggestion findMany
+   */
+  export type CareerSuggestionFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestion
+     */
+    select?: CareerSuggestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CareerSuggestion
+     */
+    omit?: CareerSuggestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CareerSuggestionInclude<ExtArgs> | null
+    /**
+     * Filter, which CareerSuggestions to fetch.
+     */
+    where?: CareerSuggestionWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of CareerSuggestions to fetch.
+     */
+    orderBy?: CareerSuggestionOrderByWithRelationInput | CareerSuggestionOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing CareerSuggestions.
+     */
+    cursor?: CareerSuggestionWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` CareerSuggestions from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` CareerSuggestions.
+     */
+    skip?: number
+    distinct?: CareerSuggestionScalarFieldEnum | CareerSuggestionScalarFieldEnum[]
+  }
+
+  /**
+   * CareerSuggestion create
+   */
+  export type CareerSuggestionCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestion
+     */
+    select?: CareerSuggestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CareerSuggestion
+     */
+    omit?: CareerSuggestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CareerSuggestionInclude<ExtArgs> | null
+    /**
+     * The data needed to create a CareerSuggestion.
+     */
+    data: XOR<CareerSuggestionCreateInput, CareerSuggestionUncheckedCreateInput>
+  }
+
+  /**
+   * CareerSuggestion createMany
+   */
+  export type CareerSuggestionCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many CareerSuggestions.
+     */
+    data: CareerSuggestionCreateManyInput | CareerSuggestionCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * CareerSuggestion createManyAndReturn
+   */
+  export type CareerSuggestionCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestion
+     */
+    select?: CareerSuggestionSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the CareerSuggestion
+     */
+    omit?: CareerSuggestionOmit<ExtArgs> | null
+    /**
+     * The data used to create many CareerSuggestions.
+     */
+    data: CareerSuggestionCreateManyInput | CareerSuggestionCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CareerSuggestionIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * CareerSuggestion update
+   */
+  export type CareerSuggestionUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestion
+     */
+    select?: CareerSuggestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CareerSuggestion
+     */
+    omit?: CareerSuggestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CareerSuggestionInclude<ExtArgs> | null
+    /**
+     * The data needed to update a CareerSuggestion.
+     */
+    data: XOR<CareerSuggestionUpdateInput, CareerSuggestionUncheckedUpdateInput>
+    /**
+     * Choose, which CareerSuggestion to update.
+     */
+    where: CareerSuggestionWhereUniqueInput
+  }
+
+  /**
+   * CareerSuggestion updateMany
+   */
+  export type CareerSuggestionUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update CareerSuggestions.
+     */
+    data: XOR<CareerSuggestionUpdateManyMutationInput, CareerSuggestionUncheckedUpdateManyInput>
+    /**
+     * Filter which CareerSuggestions to update
+     */
+    where?: CareerSuggestionWhereInput
+    /**
+     * Limit how many CareerSuggestions to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * CareerSuggestion updateManyAndReturn
+   */
+  export type CareerSuggestionUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestion
+     */
+    select?: CareerSuggestionSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the CareerSuggestion
+     */
+    omit?: CareerSuggestionOmit<ExtArgs> | null
+    /**
+     * The data used to update CareerSuggestions.
+     */
+    data: XOR<CareerSuggestionUpdateManyMutationInput, CareerSuggestionUncheckedUpdateManyInput>
+    /**
+     * Filter which CareerSuggestions to update
+     */
+    where?: CareerSuggestionWhereInput
+    /**
+     * Limit how many CareerSuggestions to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CareerSuggestionIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * CareerSuggestion upsert
+   */
+  export type CareerSuggestionUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestion
+     */
+    select?: CareerSuggestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CareerSuggestion
+     */
+    omit?: CareerSuggestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CareerSuggestionInclude<ExtArgs> | null
+    /**
+     * The filter to search for the CareerSuggestion to update in case it exists.
+     */
+    where: CareerSuggestionWhereUniqueInput
+    /**
+     * In case the CareerSuggestion found by the `where` argument doesn't exist, create a new CareerSuggestion with this data.
+     */
+    create: XOR<CareerSuggestionCreateInput, CareerSuggestionUncheckedCreateInput>
+    /**
+     * In case the CareerSuggestion was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<CareerSuggestionUpdateInput, CareerSuggestionUncheckedUpdateInput>
+  }
+
+  /**
+   * CareerSuggestion delete
+   */
+  export type CareerSuggestionDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestion
+     */
+    select?: CareerSuggestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CareerSuggestion
+     */
+    omit?: CareerSuggestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CareerSuggestionInclude<ExtArgs> | null
+    /**
+     * Filter which CareerSuggestion to delete.
+     */
+    where: CareerSuggestionWhereUniqueInput
+  }
+
+  /**
+   * CareerSuggestion deleteMany
+   */
+  export type CareerSuggestionDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which CareerSuggestions to delete
+     */
+    where?: CareerSuggestionWhereInput
+    /**
+     * Limit how many CareerSuggestions to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * CareerSuggestion.resourceRecommendations
+   */
+  export type CareerSuggestion$resourceRecommendationsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResourceRecommendation
+     */
+    select?: ResourceRecommendationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ResourceRecommendation
+     */
+    omit?: ResourceRecommendationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResourceRecommendationInclude<ExtArgs> | null
+    where?: ResourceRecommendationWhereInput
+    orderBy?: ResourceRecommendationOrderByWithRelationInput | ResourceRecommendationOrderByWithRelationInput[]
+    cursor?: ResourceRecommendationWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ResourceRecommendationScalarFieldEnum | ResourceRecommendationScalarFieldEnum[]
+  }
+
+  /**
+   * CareerSuggestion without action
+   */
+  export type CareerSuggestionDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestion
+     */
+    select?: CareerSuggestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CareerSuggestion
+     */
+    omit?: CareerSuggestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CareerSuggestionInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model PublicProfile
+   */
+
+  export type AggregatePublicProfile = {
+    _count: PublicProfileCountAggregateOutputType | null
+    _avg: PublicProfileAvgAggregateOutputType | null
+    _sum: PublicProfileSumAggregateOutputType | null
+    _min: PublicProfileMinAggregateOutputType | null
+    _max: PublicProfileMaxAggregateOutputType | null
+  }
+
+  export type PublicProfileAvgAggregateOutputType = {
+    viewCount: number | null
+    shareCount: number | null
+  }
+
+  export type PublicProfileSumAggregateOutputType = {
+    viewCount: number | null
+    shareCount: number | null
+  }
+
+  export type PublicProfileMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    username: string | null
+    slug: string | null
+    isPublic: boolean | null
+    customDomain: string | null
+    theme: string | null
+    seoTitle: string | null
+    seoDescription: string | null
+    ogImageUrl: string | null
+    viewCount: number | null
+    shareCount: number | null
+    lastViewedAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type PublicProfileMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    username: string | null
+    slug: string | null
+    isPublic: boolean | null
+    customDomain: string | null
+    theme: string | null
+    seoTitle: string | null
+    seoDescription: string | null
+    ogImageUrl: string | null
+    viewCount: number | null
+    shareCount: number | null
+    lastViewedAt: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type PublicProfileCountAggregateOutputType = {
+    id: number
+    userId: number
+    username: number
+    slug: number
+    isPublic: number
+    customDomain: number
+    theme: number
+    visibleSections: number
+    seoTitle: number
+    seoDescription: number
+    ogImageUrl: number
+    viewCount: number
+    shareCount: number
+    lastViewedAt: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type PublicProfileAvgAggregateInputType = {
+    viewCount?: true
+    shareCount?: true
+  }
+
+  export type PublicProfileSumAggregateInputType = {
+    viewCount?: true
+    shareCount?: true
+  }
+
+  export type PublicProfileMinAggregateInputType = {
+    id?: true
+    userId?: true
+    username?: true
+    slug?: true
+    isPublic?: true
+    customDomain?: true
+    theme?: true
+    seoTitle?: true
+    seoDescription?: true
+    ogImageUrl?: true
+    viewCount?: true
+    shareCount?: true
+    lastViewedAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type PublicProfileMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    username?: true
+    slug?: true
+    isPublic?: true
+    customDomain?: true
+    theme?: true
+    seoTitle?: true
+    seoDescription?: true
+    ogImageUrl?: true
+    viewCount?: true
+    shareCount?: true
+    lastViewedAt?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type PublicProfileCountAggregateInputType = {
+    id?: true
+    userId?: true
+    username?: true
+    slug?: true
+    isPublic?: true
+    customDomain?: true
+    theme?: true
+    visibleSections?: true
+    seoTitle?: true
+    seoDescription?: true
+    ogImageUrl?: true
+    viewCount?: true
+    shareCount?: true
+    lastViewedAt?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type PublicProfileAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which PublicProfile to aggregate.
+     */
+    where?: PublicProfileWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PublicProfiles to fetch.
+     */
+    orderBy?: PublicProfileOrderByWithRelationInput | PublicProfileOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: PublicProfileWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PublicProfiles from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PublicProfiles.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned PublicProfiles
+    **/
+    _count?: true | PublicProfileCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: PublicProfileAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: PublicProfileSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: PublicProfileMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: PublicProfileMaxAggregateInputType
+  }
+
+  export type GetPublicProfileAggregateType<T extends PublicProfileAggregateArgs> = {
+        [P in keyof T & keyof AggregatePublicProfile]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregatePublicProfile[P]>
+      : GetScalarType<T[P], AggregatePublicProfile[P]>
+  }
+
+
+
+
+  export type PublicProfileGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: PublicProfileWhereInput
+    orderBy?: PublicProfileOrderByWithAggregationInput | PublicProfileOrderByWithAggregationInput[]
+    by: PublicProfileScalarFieldEnum[] | PublicProfileScalarFieldEnum
+    having?: PublicProfileScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: PublicProfileCountAggregateInputType | true
+    _avg?: PublicProfileAvgAggregateInputType
+    _sum?: PublicProfileSumAggregateInputType
+    _min?: PublicProfileMinAggregateInputType
+    _max?: PublicProfileMaxAggregateInputType
+  }
+
+  export type PublicProfileGroupByOutputType = {
+    id: string
+    userId: string
+    username: string
+    slug: string
+    isPublic: boolean
+    customDomain: string | null
+    theme: string
+    visibleSections: JsonValue
+    seoTitle: string | null
+    seoDescription: string | null
+    ogImageUrl: string | null
+    viewCount: number
+    shareCount: number
+    lastViewedAt: Date | null
+    createdAt: Date
+    updatedAt: Date
+    _count: PublicProfileCountAggregateOutputType | null
+    _avg: PublicProfileAvgAggregateOutputType | null
+    _sum: PublicProfileSumAggregateOutputType | null
+    _min: PublicProfileMinAggregateOutputType | null
+    _max: PublicProfileMaxAggregateOutputType | null
+  }
+
+  type GetPublicProfileGroupByPayload<T extends PublicProfileGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<PublicProfileGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof PublicProfileGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], PublicProfileGroupByOutputType[P]>
+            : GetScalarType<T[P], PublicProfileGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type PublicProfileSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    username?: boolean
+    slug?: boolean
+    isPublic?: boolean
+    customDomain?: boolean
+    theme?: boolean
+    visibleSections?: boolean
+    seoTitle?: boolean
+    seoDescription?: boolean
+    ogImageUrl?: boolean
+    viewCount?: boolean
+    shareCount?: boolean
+    lastViewedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["publicProfile"]>
+
+  export type PublicProfileSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    username?: boolean
+    slug?: boolean
+    isPublic?: boolean
+    customDomain?: boolean
+    theme?: boolean
+    visibleSections?: boolean
+    seoTitle?: boolean
+    seoDescription?: boolean
+    ogImageUrl?: boolean
+    viewCount?: boolean
+    shareCount?: boolean
+    lastViewedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["publicProfile"]>
+
+  export type PublicProfileSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    username?: boolean
+    slug?: boolean
+    isPublic?: boolean
+    customDomain?: boolean
+    theme?: boolean
+    visibleSections?: boolean
+    seoTitle?: boolean
+    seoDescription?: boolean
+    ogImageUrl?: boolean
+    viewCount?: boolean
+    shareCount?: boolean
+    lastViewedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["publicProfile"]>
+
+  export type PublicProfileSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    username?: boolean
+    slug?: boolean
+    isPublic?: boolean
+    customDomain?: boolean
+    theme?: boolean
+    visibleSections?: boolean
+    seoTitle?: boolean
+    seoDescription?: boolean
+    ogImageUrl?: boolean
+    viewCount?: boolean
+    shareCount?: boolean
+    lastViewedAt?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type PublicProfileOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "username" | "slug" | "isPublic" | "customDomain" | "theme" | "visibleSections" | "seoTitle" | "seoDescription" | "ogImageUrl" | "viewCount" | "shareCount" | "lastViewedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["publicProfile"]>
+  export type PublicProfileInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type PublicProfileIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type PublicProfileIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+
+  export type $PublicProfilePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "PublicProfile"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      username: string
+      slug: string
+      isPublic: boolean
+      customDomain: string | null
+      theme: string
+      visibleSections: Prisma.JsonValue
+      seoTitle: string | null
+      seoDescription: string | null
+      ogImageUrl: string | null
+      viewCount: number
+      shareCount: number
+      lastViewedAt: Date | null
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["publicProfile"]>
+    composites: {}
+  }
+
+  type PublicProfileGetPayload<S extends boolean | null | undefined | PublicProfileDefaultArgs> = $Result.GetResult<Prisma.$PublicProfilePayload, S>
+
+  type PublicProfileCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<PublicProfileFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: PublicProfileCountAggregateInputType | true
+    }
+
+  export interface PublicProfileDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['PublicProfile'], meta: { name: 'PublicProfile' } }
+    /**
+     * Find zero or one PublicProfile that matches the filter.
+     * @param {PublicProfileFindUniqueArgs} args - Arguments to find a PublicProfile
+     * @example
+     * // Get one PublicProfile
+     * const publicProfile = await prisma.publicProfile.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends PublicProfileFindUniqueArgs>(args: SelectSubset<T, PublicProfileFindUniqueArgs<ExtArgs>>): Prisma__PublicProfileClient<$Result.GetResult<Prisma.$PublicProfilePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one PublicProfile that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {PublicProfileFindUniqueOrThrowArgs} args - Arguments to find a PublicProfile
+     * @example
+     * // Get one PublicProfile
+     * const publicProfile = await prisma.publicProfile.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends PublicProfileFindUniqueOrThrowArgs>(args: SelectSubset<T, PublicProfileFindUniqueOrThrowArgs<ExtArgs>>): Prisma__PublicProfileClient<$Result.GetResult<Prisma.$PublicProfilePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first PublicProfile that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PublicProfileFindFirstArgs} args - Arguments to find a PublicProfile
+     * @example
+     * // Get one PublicProfile
+     * const publicProfile = await prisma.publicProfile.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends PublicProfileFindFirstArgs>(args?: SelectSubset<T, PublicProfileFindFirstArgs<ExtArgs>>): Prisma__PublicProfileClient<$Result.GetResult<Prisma.$PublicProfilePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first PublicProfile that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PublicProfileFindFirstOrThrowArgs} args - Arguments to find a PublicProfile
+     * @example
+     * // Get one PublicProfile
+     * const publicProfile = await prisma.publicProfile.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends PublicProfileFindFirstOrThrowArgs>(args?: SelectSubset<T, PublicProfileFindFirstOrThrowArgs<ExtArgs>>): Prisma__PublicProfileClient<$Result.GetResult<Prisma.$PublicProfilePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more PublicProfiles that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PublicProfileFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all PublicProfiles
+     * const publicProfiles = await prisma.publicProfile.findMany()
+     * 
+     * // Get first 10 PublicProfiles
+     * const publicProfiles = await prisma.publicProfile.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const publicProfileWithIdOnly = await prisma.publicProfile.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends PublicProfileFindManyArgs>(args?: SelectSubset<T, PublicProfileFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PublicProfilePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a PublicProfile.
+     * @param {PublicProfileCreateArgs} args - Arguments to create a PublicProfile.
+     * @example
+     * // Create one PublicProfile
+     * const PublicProfile = await prisma.publicProfile.create({
+     *   data: {
+     *     // ... data to create a PublicProfile
+     *   }
+     * })
+     * 
+     */
+    create<T extends PublicProfileCreateArgs>(args: SelectSubset<T, PublicProfileCreateArgs<ExtArgs>>): Prisma__PublicProfileClient<$Result.GetResult<Prisma.$PublicProfilePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many PublicProfiles.
+     * @param {PublicProfileCreateManyArgs} args - Arguments to create many PublicProfiles.
+     * @example
+     * // Create many PublicProfiles
+     * const publicProfile = await prisma.publicProfile.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends PublicProfileCreateManyArgs>(args?: SelectSubset<T, PublicProfileCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many PublicProfiles and returns the data saved in the database.
+     * @param {PublicProfileCreateManyAndReturnArgs} args - Arguments to create many PublicProfiles.
+     * @example
+     * // Create many PublicProfiles
+     * const publicProfile = await prisma.publicProfile.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many PublicProfiles and only return the `id`
+     * const publicProfileWithIdOnly = await prisma.publicProfile.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends PublicProfileCreateManyAndReturnArgs>(args?: SelectSubset<T, PublicProfileCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PublicProfilePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a PublicProfile.
+     * @param {PublicProfileDeleteArgs} args - Arguments to delete one PublicProfile.
+     * @example
+     * // Delete one PublicProfile
+     * const PublicProfile = await prisma.publicProfile.delete({
+     *   where: {
+     *     // ... filter to delete one PublicProfile
+     *   }
+     * })
+     * 
+     */
+    delete<T extends PublicProfileDeleteArgs>(args: SelectSubset<T, PublicProfileDeleteArgs<ExtArgs>>): Prisma__PublicProfileClient<$Result.GetResult<Prisma.$PublicProfilePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one PublicProfile.
+     * @param {PublicProfileUpdateArgs} args - Arguments to update one PublicProfile.
+     * @example
+     * // Update one PublicProfile
+     * const publicProfile = await prisma.publicProfile.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends PublicProfileUpdateArgs>(args: SelectSubset<T, PublicProfileUpdateArgs<ExtArgs>>): Prisma__PublicProfileClient<$Result.GetResult<Prisma.$PublicProfilePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more PublicProfiles.
+     * @param {PublicProfileDeleteManyArgs} args - Arguments to filter PublicProfiles to delete.
+     * @example
+     * // Delete a few PublicProfiles
+     * const { count } = await prisma.publicProfile.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends PublicProfileDeleteManyArgs>(args?: SelectSubset<T, PublicProfileDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more PublicProfiles.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PublicProfileUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many PublicProfiles
+     * const publicProfile = await prisma.publicProfile.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends PublicProfileUpdateManyArgs>(args: SelectSubset<T, PublicProfileUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more PublicProfiles and returns the data updated in the database.
+     * @param {PublicProfileUpdateManyAndReturnArgs} args - Arguments to update many PublicProfiles.
+     * @example
+     * // Update many PublicProfiles
+     * const publicProfile = await prisma.publicProfile.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more PublicProfiles and only return the `id`
+     * const publicProfileWithIdOnly = await prisma.publicProfile.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends PublicProfileUpdateManyAndReturnArgs>(args: SelectSubset<T, PublicProfileUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PublicProfilePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one PublicProfile.
+     * @param {PublicProfileUpsertArgs} args - Arguments to update or create a PublicProfile.
+     * @example
+     * // Update or create a PublicProfile
+     * const publicProfile = await prisma.publicProfile.upsert({
+     *   create: {
+     *     // ... data to create a PublicProfile
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the PublicProfile we want to update
+     *   }
+     * })
+     */
+    upsert<T extends PublicProfileUpsertArgs>(args: SelectSubset<T, PublicProfileUpsertArgs<ExtArgs>>): Prisma__PublicProfileClient<$Result.GetResult<Prisma.$PublicProfilePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of PublicProfiles.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PublicProfileCountArgs} args - Arguments to filter PublicProfiles to count.
+     * @example
+     * // Count the number of PublicProfiles
+     * const count = await prisma.publicProfile.count({
+     *   where: {
+     *     // ... the filter for the PublicProfiles we want to count
+     *   }
+     * })
+    **/
+    count<T extends PublicProfileCountArgs>(
+      args?: Subset<T, PublicProfileCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], PublicProfileCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a PublicProfile.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PublicProfileAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends PublicProfileAggregateArgs>(args: Subset<T, PublicProfileAggregateArgs>): Prisma.PrismaPromise<GetPublicProfileAggregateType<T>>
+
+    /**
+     * Group by PublicProfile.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {PublicProfileGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends PublicProfileGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: PublicProfileGroupByArgs['orderBy'] }
+        : { orderBy?: PublicProfileGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, PublicProfileGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPublicProfileGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the PublicProfile model
+   */
+  readonly fields: PublicProfileFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for PublicProfile.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__PublicProfileClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the PublicProfile model
+   */
+  interface PublicProfileFieldRefs {
+    readonly id: FieldRef<"PublicProfile", 'String'>
+    readonly userId: FieldRef<"PublicProfile", 'String'>
+    readonly username: FieldRef<"PublicProfile", 'String'>
+    readonly slug: FieldRef<"PublicProfile", 'String'>
+    readonly isPublic: FieldRef<"PublicProfile", 'Boolean'>
+    readonly customDomain: FieldRef<"PublicProfile", 'String'>
+    readonly theme: FieldRef<"PublicProfile", 'String'>
+    readonly visibleSections: FieldRef<"PublicProfile", 'Json'>
+    readonly seoTitle: FieldRef<"PublicProfile", 'String'>
+    readonly seoDescription: FieldRef<"PublicProfile", 'String'>
+    readonly ogImageUrl: FieldRef<"PublicProfile", 'String'>
+    readonly viewCount: FieldRef<"PublicProfile", 'Int'>
+    readonly shareCount: FieldRef<"PublicProfile", 'Int'>
+    readonly lastViewedAt: FieldRef<"PublicProfile", 'DateTime'>
+    readonly createdAt: FieldRef<"PublicProfile", 'DateTime'>
+    readonly updatedAt: FieldRef<"PublicProfile", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * PublicProfile findUnique
+   */
+  export type PublicProfileFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PublicProfile
+     */
+    select?: PublicProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PublicProfile
+     */
+    omit?: PublicProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PublicProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which PublicProfile to fetch.
+     */
+    where: PublicProfileWhereUniqueInput
+  }
+
+  /**
+   * PublicProfile findUniqueOrThrow
+   */
+  export type PublicProfileFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PublicProfile
+     */
+    select?: PublicProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PublicProfile
+     */
+    omit?: PublicProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PublicProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which PublicProfile to fetch.
+     */
+    where: PublicProfileWhereUniqueInput
+  }
+
+  /**
+   * PublicProfile findFirst
+   */
+  export type PublicProfileFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PublicProfile
+     */
+    select?: PublicProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PublicProfile
+     */
+    omit?: PublicProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PublicProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which PublicProfile to fetch.
+     */
+    where?: PublicProfileWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PublicProfiles to fetch.
+     */
+    orderBy?: PublicProfileOrderByWithRelationInput | PublicProfileOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for PublicProfiles.
+     */
+    cursor?: PublicProfileWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PublicProfiles from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PublicProfiles.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of PublicProfiles.
+     */
+    distinct?: PublicProfileScalarFieldEnum | PublicProfileScalarFieldEnum[]
+  }
+
+  /**
+   * PublicProfile findFirstOrThrow
+   */
+  export type PublicProfileFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PublicProfile
+     */
+    select?: PublicProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PublicProfile
+     */
+    omit?: PublicProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PublicProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which PublicProfile to fetch.
+     */
+    where?: PublicProfileWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PublicProfiles to fetch.
+     */
+    orderBy?: PublicProfileOrderByWithRelationInput | PublicProfileOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for PublicProfiles.
+     */
+    cursor?: PublicProfileWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PublicProfiles from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PublicProfiles.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of PublicProfiles.
+     */
+    distinct?: PublicProfileScalarFieldEnum | PublicProfileScalarFieldEnum[]
+  }
+
+  /**
+   * PublicProfile findMany
+   */
+  export type PublicProfileFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PublicProfile
+     */
+    select?: PublicProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PublicProfile
+     */
+    omit?: PublicProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PublicProfileInclude<ExtArgs> | null
+    /**
+     * Filter, which PublicProfiles to fetch.
+     */
+    where?: PublicProfileWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of PublicProfiles to fetch.
+     */
+    orderBy?: PublicProfileOrderByWithRelationInput | PublicProfileOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing PublicProfiles.
+     */
+    cursor?: PublicProfileWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` PublicProfiles from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` PublicProfiles.
+     */
+    skip?: number
+    distinct?: PublicProfileScalarFieldEnum | PublicProfileScalarFieldEnum[]
+  }
+
+  /**
+   * PublicProfile create
+   */
+  export type PublicProfileCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PublicProfile
+     */
+    select?: PublicProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PublicProfile
+     */
+    omit?: PublicProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PublicProfileInclude<ExtArgs> | null
+    /**
+     * The data needed to create a PublicProfile.
+     */
+    data: XOR<PublicProfileCreateInput, PublicProfileUncheckedCreateInput>
+  }
+
+  /**
+   * PublicProfile createMany
+   */
+  export type PublicProfileCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many PublicProfiles.
+     */
+    data: PublicProfileCreateManyInput | PublicProfileCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * PublicProfile createManyAndReturn
+   */
+  export type PublicProfileCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PublicProfile
+     */
+    select?: PublicProfileSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the PublicProfile
+     */
+    omit?: PublicProfileOmit<ExtArgs> | null
+    /**
+     * The data used to create many PublicProfiles.
+     */
+    data: PublicProfileCreateManyInput | PublicProfileCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PublicProfileIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * PublicProfile update
+   */
+  export type PublicProfileUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PublicProfile
+     */
+    select?: PublicProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PublicProfile
+     */
+    omit?: PublicProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PublicProfileInclude<ExtArgs> | null
+    /**
+     * The data needed to update a PublicProfile.
+     */
+    data: XOR<PublicProfileUpdateInput, PublicProfileUncheckedUpdateInput>
+    /**
+     * Choose, which PublicProfile to update.
+     */
+    where: PublicProfileWhereUniqueInput
+  }
+
+  /**
+   * PublicProfile updateMany
+   */
+  export type PublicProfileUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update PublicProfiles.
+     */
+    data: XOR<PublicProfileUpdateManyMutationInput, PublicProfileUncheckedUpdateManyInput>
+    /**
+     * Filter which PublicProfiles to update
+     */
+    where?: PublicProfileWhereInput
+    /**
+     * Limit how many PublicProfiles to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * PublicProfile updateManyAndReturn
+   */
+  export type PublicProfileUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PublicProfile
+     */
+    select?: PublicProfileSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the PublicProfile
+     */
+    omit?: PublicProfileOmit<ExtArgs> | null
+    /**
+     * The data used to update PublicProfiles.
+     */
+    data: XOR<PublicProfileUpdateManyMutationInput, PublicProfileUncheckedUpdateManyInput>
+    /**
+     * Filter which PublicProfiles to update
+     */
+    where?: PublicProfileWhereInput
+    /**
+     * Limit how many PublicProfiles to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PublicProfileIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * PublicProfile upsert
+   */
+  export type PublicProfileUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PublicProfile
+     */
+    select?: PublicProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PublicProfile
+     */
+    omit?: PublicProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PublicProfileInclude<ExtArgs> | null
+    /**
+     * The filter to search for the PublicProfile to update in case it exists.
+     */
+    where: PublicProfileWhereUniqueInput
+    /**
+     * In case the PublicProfile found by the `where` argument doesn't exist, create a new PublicProfile with this data.
+     */
+    create: XOR<PublicProfileCreateInput, PublicProfileUncheckedCreateInput>
+    /**
+     * In case the PublicProfile was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<PublicProfileUpdateInput, PublicProfileUncheckedUpdateInput>
+  }
+
+  /**
+   * PublicProfile delete
+   */
+  export type PublicProfileDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PublicProfile
+     */
+    select?: PublicProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PublicProfile
+     */
+    omit?: PublicProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PublicProfileInclude<ExtArgs> | null
+    /**
+     * Filter which PublicProfile to delete.
+     */
+    where: PublicProfileWhereUniqueInput
+  }
+
+  /**
+   * PublicProfile deleteMany
+   */
+  export type PublicProfileDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which PublicProfiles to delete
+     */
+    where?: PublicProfileWhereInput
+    /**
+     * Limit how many PublicProfiles to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * PublicProfile without action
+   */
+  export type PublicProfileDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the PublicProfile
+     */
+    select?: PublicProfileSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the PublicProfile
+     */
+    omit?: PublicProfileOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: PublicProfileInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ProfileView
+   */
+
+  export type AggregateProfileView = {
+    _count: ProfileViewCountAggregateOutputType | null
+    _min: ProfileViewMinAggregateOutputType | null
+    _max: ProfileViewMaxAggregateOutputType | null
+  }
+
+  export type ProfileViewMinAggregateOutputType = {
+    id: string | null
+    profileUserId: string | null
+    viewerIp: string | null
+    viewerUserAgent: string | null
+    referrer: string | null
+    country: string | null
+    city: string | null
+    viewedAt: Date | null
+  }
+
+  export type ProfileViewMaxAggregateOutputType = {
+    id: string | null
+    profileUserId: string | null
+    viewerIp: string | null
+    viewerUserAgent: string | null
+    referrer: string | null
+    country: string | null
+    city: string | null
+    viewedAt: Date | null
+  }
+
+  export type ProfileViewCountAggregateOutputType = {
+    id: number
+    profileUserId: number
+    viewerIp: number
+    viewerUserAgent: number
+    referrer: number
+    country: number
+    city: number
+    viewedAt: number
+    _all: number
+  }
+
+
+  export type ProfileViewMinAggregateInputType = {
+    id?: true
+    profileUserId?: true
+    viewerIp?: true
+    viewerUserAgent?: true
+    referrer?: true
+    country?: true
+    city?: true
+    viewedAt?: true
+  }
+
+  export type ProfileViewMaxAggregateInputType = {
+    id?: true
+    profileUserId?: true
+    viewerIp?: true
+    viewerUserAgent?: true
+    referrer?: true
+    country?: true
+    city?: true
+    viewedAt?: true
+  }
+
+  export type ProfileViewCountAggregateInputType = {
+    id?: true
+    profileUserId?: true
+    viewerIp?: true
+    viewerUserAgent?: true
+    referrer?: true
+    country?: true
+    city?: true
+    viewedAt?: true
+    _all?: true
+  }
+
+  export type ProfileViewAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ProfileView to aggregate.
+     */
+    where?: ProfileViewWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ProfileViews to fetch.
+     */
+    orderBy?: ProfileViewOrderByWithRelationInput | ProfileViewOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ProfileViewWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ProfileViews from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ProfileViews.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ProfileViews
+    **/
+    _count?: true | ProfileViewCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ProfileViewMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ProfileViewMaxAggregateInputType
+  }
+
+  export type GetProfileViewAggregateType<T extends ProfileViewAggregateArgs> = {
+        [P in keyof T & keyof AggregateProfileView]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateProfileView[P]>
+      : GetScalarType<T[P], AggregateProfileView[P]>
+  }
+
+
+
+
+  export type ProfileViewGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ProfileViewWhereInput
+    orderBy?: ProfileViewOrderByWithAggregationInput | ProfileViewOrderByWithAggregationInput[]
+    by: ProfileViewScalarFieldEnum[] | ProfileViewScalarFieldEnum
+    having?: ProfileViewScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ProfileViewCountAggregateInputType | true
+    _min?: ProfileViewMinAggregateInputType
+    _max?: ProfileViewMaxAggregateInputType
+  }
+
+  export type ProfileViewGroupByOutputType = {
+    id: string
+    profileUserId: string
+    viewerIp: string | null
+    viewerUserAgent: string | null
+    referrer: string | null
+    country: string | null
+    city: string | null
+    viewedAt: Date
+    _count: ProfileViewCountAggregateOutputType | null
+    _min: ProfileViewMinAggregateOutputType | null
+    _max: ProfileViewMaxAggregateOutputType | null
+  }
+
+  type GetProfileViewGroupByPayload<T extends ProfileViewGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ProfileViewGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ProfileViewGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ProfileViewGroupByOutputType[P]>
+            : GetScalarType<T[P], ProfileViewGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ProfileViewSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    profileUserId?: boolean
+    viewerIp?: boolean
+    viewerUserAgent?: boolean
+    referrer?: boolean
+    country?: boolean
+    city?: boolean
+    viewedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["profileView"]>
+
+  export type ProfileViewSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    profileUserId?: boolean
+    viewerIp?: boolean
+    viewerUserAgent?: boolean
+    referrer?: boolean
+    country?: boolean
+    city?: boolean
+    viewedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["profileView"]>
+
+  export type ProfileViewSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    profileUserId?: boolean
+    viewerIp?: boolean
+    viewerUserAgent?: boolean
+    referrer?: boolean
+    country?: boolean
+    city?: boolean
+    viewedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["profileView"]>
+
+  export type ProfileViewSelectScalar = {
+    id?: boolean
+    profileUserId?: boolean
+    viewerIp?: boolean
+    viewerUserAgent?: boolean
+    referrer?: boolean
+    country?: boolean
+    city?: boolean
+    viewedAt?: boolean
+  }
+
+  export type ProfileViewOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "profileUserId" | "viewerIp" | "viewerUserAgent" | "referrer" | "country" | "city" | "viewedAt", ExtArgs["result"]["profileView"]>
+  export type ProfileViewInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type ProfileViewIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type ProfileViewIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+
+  export type $ProfileViewPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ProfileView"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      profileUserId: string
+      viewerIp: string | null
+      viewerUserAgent: string | null
+      referrer: string | null
+      country: string | null
+      city: string | null
+      viewedAt: Date
+    }, ExtArgs["result"]["profileView"]>
+    composites: {}
+  }
+
+  type ProfileViewGetPayload<S extends boolean | null | undefined | ProfileViewDefaultArgs> = $Result.GetResult<Prisma.$ProfileViewPayload, S>
+
+  type ProfileViewCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ProfileViewFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ProfileViewCountAggregateInputType | true
+    }
+
+  export interface ProfileViewDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ProfileView'], meta: { name: 'ProfileView' } }
+    /**
+     * Find zero or one ProfileView that matches the filter.
+     * @param {ProfileViewFindUniqueArgs} args - Arguments to find a ProfileView
+     * @example
+     * // Get one ProfileView
+     * const profileView = await prisma.profileView.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ProfileViewFindUniqueArgs>(args: SelectSubset<T, ProfileViewFindUniqueArgs<ExtArgs>>): Prisma__ProfileViewClient<$Result.GetResult<Prisma.$ProfileViewPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ProfileView that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ProfileViewFindUniqueOrThrowArgs} args - Arguments to find a ProfileView
+     * @example
+     * // Get one ProfileView
+     * const profileView = await prisma.profileView.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ProfileViewFindUniqueOrThrowArgs>(args: SelectSubset<T, ProfileViewFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ProfileViewClient<$Result.GetResult<Prisma.$ProfileViewPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ProfileView that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ProfileViewFindFirstArgs} args - Arguments to find a ProfileView
+     * @example
+     * // Get one ProfileView
+     * const profileView = await prisma.profileView.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ProfileViewFindFirstArgs>(args?: SelectSubset<T, ProfileViewFindFirstArgs<ExtArgs>>): Prisma__ProfileViewClient<$Result.GetResult<Prisma.$ProfileViewPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ProfileView that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ProfileViewFindFirstOrThrowArgs} args - Arguments to find a ProfileView
+     * @example
+     * // Get one ProfileView
+     * const profileView = await prisma.profileView.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ProfileViewFindFirstOrThrowArgs>(args?: SelectSubset<T, ProfileViewFindFirstOrThrowArgs<ExtArgs>>): Prisma__ProfileViewClient<$Result.GetResult<Prisma.$ProfileViewPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ProfileViews that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ProfileViewFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ProfileViews
+     * const profileViews = await prisma.profileView.findMany()
+     * 
+     * // Get first 10 ProfileViews
+     * const profileViews = await prisma.profileView.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const profileViewWithIdOnly = await prisma.profileView.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ProfileViewFindManyArgs>(args?: SelectSubset<T, ProfileViewFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ProfileViewPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ProfileView.
+     * @param {ProfileViewCreateArgs} args - Arguments to create a ProfileView.
+     * @example
+     * // Create one ProfileView
+     * const ProfileView = await prisma.profileView.create({
+     *   data: {
+     *     // ... data to create a ProfileView
+     *   }
+     * })
+     * 
+     */
+    create<T extends ProfileViewCreateArgs>(args: SelectSubset<T, ProfileViewCreateArgs<ExtArgs>>): Prisma__ProfileViewClient<$Result.GetResult<Prisma.$ProfileViewPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ProfileViews.
+     * @param {ProfileViewCreateManyArgs} args - Arguments to create many ProfileViews.
+     * @example
+     * // Create many ProfileViews
+     * const profileView = await prisma.profileView.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ProfileViewCreateManyArgs>(args?: SelectSubset<T, ProfileViewCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ProfileViews and returns the data saved in the database.
+     * @param {ProfileViewCreateManyAndReturnArgs} args - Arguments to create many ProfileViews.
+     * @example
+     * // Create many ProfileViews
+     * const profileView = await prisma.profileView.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ProfileViews and only return the `id`
+     * const profileViewWithIdOnly = await prisma.profileView.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ProfileViewCreateManyAndReturnArgs>(args?: SelectSubset<T, ProfileViewCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ProfileViewPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ProfileView.
+     * @param {ProfileViewDeleteArgs} args - Arguments to delete one ProfileView.
+     * @example
+     * // Delete one ProfileView
+     * const ProfileView = await prisma.profileView.delete({
+     *   where: {
+     *     // ... filter to delete one ProfileView
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ProfileViewDeleteArgs>(args: SelectSubset<T, ProfileViewDeleteArgs<ExtArgs>>): Prisma__ProfileViewClient<$Result.GetResult<Prisma.$ProfileViewPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ProfileView.
+     * @param {ProfileViewUpdateArgs} args - Arguments to update one ProfileView.
+     * @example
+     * // Update one ProfileView
+     * const profileView = await prisma.profileView.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ProfileViewUpdateArgs>(args: SelectSubset<T, ProfileViewUpdateArgs<ExtArgs>>): Prisma__ProfileViewClient<$Result.GetResult<Prisma.$ProfileViewPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ProfileViews.
+     * @param {ProfileViewDeleteManyArgs} args - Arguments to filter ProfileViews to delete.
+     * @example
+     * // Delete a few ProfileViews
+     * const { count } = await prisma.profileView.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ProfileViewDeleteManyArgs>(args?: SelectSubset<T, ProfileViewDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ProfileViews.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ProfileViewUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ProfileViews
+     * const profileView = await prisma.profileView.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ProfileViewUpdateManyArgs>(args: SelectSubset<T, ProfileViewUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ProfileViews and returns the data updated in the database.
+     * @param {ProfileViewUpdateManyAndReturnArgs} args - Arguments to update many ProfileViews.
+     * @example
+     * // Update many ProfileViews
+     * const profileView = await prisma.profileView.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ProfileViews and only return the `id`
+     * const profileViewWithIdOnly = await prisma.profileView.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ProfileViewUpdateManyAndReturnArgs>(args: SelectSubset<T, ProfileViewUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ProfileViewPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ProfileView.
+     * @param {ProfileViewUpsertArgs} args - Arguments to update or create a ProfileView.
+     * @example
+     * // Update or create a ProfileView
+     * const profileView = await prisma.profileView.upsert({
+     *   create: {
+     *     // ... data to create a ProfileView
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ProfileView we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ProfileViewUpsertArgs>(args: SelectSubset<T, ProfileViewUpsertArgs<ExtArgs>>): Prisma__ProfileViewClient<$Result.GetResult<Prisma.$ProfileViewPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ProfileViews.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ProfileViewCountArgs} args - Arguments to filter ProfileViews to count.
+     * @example
+     * // Count the number of ProfileViews
+     * const count = await prisma.profileView.count({
+     *   where: {
+     *     // ... the filter for the ProfileViews we want to count
+     *   }
+     * })
+    **/
+    count<T extends ProfileViewCountArgs>(
+      args?: Subset<T, ProfileViewCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ProfileViewCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ProfileView.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ProfileViewAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ProfileViewAggregateArgs>(args: Subset<T, ProfileViewAggregateArgs>): Prisma.PrismaPromise<GetProfileViewAggregateType<T>>
+
+    /**
+     * Group by ProfileView.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ProfileViewGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ProfileViewGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ProfileViewGroupByArgs['orderBy'] }
+        : { orderBy?: ProfileViewGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ProfileViewGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetProfileViewGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ProfileView model
+   */
+  readonly fields: ProfileViewFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ProfileView.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ProfileViewClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ProfileView model
+   */
+  interface ProfileViewFieldRefs {
+    readonly id: FieldRef<"ProfileView", 'String'>
+    readonly profileUserId: FieldRef<"ProfileView", 'String'>
+    readonly viewerIp: FieldRef<"ProfileView", 'String'>
+    readonly viewerUserAgent: FieldRef<"ProfileView", 'String'>
+    readonly referrer: FieldRef<"ProfileView", 'String'>
+    readonly country: FieldRef<"ProfileView", 'String'>
+    readonly city: FieldRef<"ProfileView", 'String'>
+    readonly viewedAt: FieldRef<"ProfileView", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ProfileView findUnique
+   */
+  export type ProfileViewFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ProfileView
+     */
+    select?: ProfileViewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ProfileView
+     */
+    omit?: ProfileViewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProfileViewInclude<ExtArgs> | null
+    /**
+     * Filter, which ProfileView to fetch.
+     */
+    where: ProfileViewWhereUniqueInput
+  }
+
+  /**
+   * ProfileView findUniqueOrThrow
+   */
+  export type ProfileViewFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ProfileView
+     */
+    select?: ProfileViewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ProfileView
+     */
+    omit?: ProfileViewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProfileViewInclude<ExtArgs> | null
+    /**
+     * Filter, which ProfileView to fetch.
+     */
+    where: ProfileViewWhereUniqueInput
+  }
+
+  /**
+   * ProfileView findFirst
+   */
+  export type ProfileViewFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ProfileView
+     */
+    select?: ProfileViewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ProfileView
+     */
+    omit?: ProfileViewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProfileViewInclude<ExtArgs> | null
+    /**
+     * Filter, which ProfileView to fetch.
+     */
+    where?: ProfileViewWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ProfileViews to fetch.
+     */
+    orderBy?: ProfileViewOrderByWithRelationInput | ProfileViewOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ProfileViews.
+     */
+    cursor?: ProfileViewWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ProfileViews from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ProfileViews.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ProfileViews.
+     */
+    distinct?: ProfileViewScalarFieldEnum | ProfileViewScalarFieldEnum[]
+  }
+
+  /**
+   * ProfileView findFirstOrThrow
+   */
+  export type ProfileViewFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ProfileView
+     */
+    select?: ProfileViewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ProfileView
+     */
+    omit?: ProfileViewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProfileViewInclude<ExtArgs> | null
+    /**
+     * Filter, which ProfileView to fetch.
+     */
+    where?: ProfileViewWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ProfileViews to fetch.
+     */
+    orderBy?: ProfileViewOrderByWithRelationInput | ProfileViewOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ProfileViews.
+     */
+    cursor?: ProfileViewWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ProfileViews from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ProfileViews.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ProfileViews.
+     */
+    distinct?: ProfileViewScalarFieldEnum | ProfileViewScalarFieldEnum[]
+  }
+
+  /**
+   * ProfileView findMany
+   */
+  export type ProfileViewFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ProfileView
+     */
+    select?: ProfileViewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ProfileView
+     */
+    omit?: ProfileViewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProfileViewInclude<ExtArgs> | null
+    /**
+     * Filter, which ProfileViews to fetch.
+     */
+    where?: ProfileViewWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ProfileViews to fetch.
+     */
+    orderBy?: ProfileViewOrderByWithRelationInput | ProfileViewOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ProfileViews.
+     */
+    cursor?: ProfileViewWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ProfileViews from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ProfileViews.
+     */
+    skip?: number
+    distinct?: ProfileViewScalarFieldEnum | ProfileViewScalarFieldEnum[]
+  }
+
+  /**
+   * ProfileView create
+   */
+  export type ProfileViewCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ProfileView
+     */
+    select?: ProfileViewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ProfileView
+     */
+    omit?: ProfileViewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProfileViewInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ProfileView.
+     */
+    data: XOR<ProfileViewCreateInput, ProfileViewUncheckedCreateInput>
+  }
+
+  /**
+   * ProfileView createMany
+   */
+  export type ProfileViewCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ProfileViews.
+     */
+    data: ProfileViewCreateManyInput | ProfileViewCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ProfileView createManyAndReturn
+   */
+  export type ProfileViewCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ProfileView
+     */
+    select?: ProfileViewSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ProfileView
+     */
+    omit?: ProfileViewOmit<ExtArgs> | null
+    /**
+     * The data used to create many ProfileViews.
+     */
+    data: ProfileViewCreateManyInput | ProfileViewCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProfileViewIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ProfileView update
+   */
+  export type ProfileViewUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ProfileView
+     */
+    select?: ProfileViewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ProfileView
+     */
+    omit?: ProfileViewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProfileViewInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ProfileView.
+     */
+    data: XOR<ProfileViewUpdateInput, ProfileViewUncheckedUpdateInput>
+    /**
+     * Choose, which ProfileView to update.
+     */
+    where: ProfileViewWhereUniqueInput
+  }
+
+  /**
+   * ProfileView updateMany
+   */
+  export type ProfileViewUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ProfileViews.
+     */
+    data: XOR<ProfileViewUpdateManyMutationInput, ProfileViewUncheckedUpdateManyInput>
+    /**
+     * Filter which ProfileViews to update
+     */
+    where?: ProfileViewWhereInput
+    /**
+     * Limit how many ProfileViews to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ProfileView updateManyAndReturn
+   */
+  export type ProfileViewUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ProfileView
+     */
+    select?: ProfileViewSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ProfileView
+     */
+    omit?: ProfileViewOmit<ExtArgs> | null
+    /**
+     * The data used to update ProfileViews.
+     */
+    data: XOR<ProfileViewUpdateManyMutationInput, ProfileViewUncheckedUpdateManyInput>
+    /**
+     * Filter which ProfileViews to update
+     */
+    where?: ProfileViewWhereInput
+    /**
+     * Limit how many ProfileViews to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProfileViewIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ProfileView upsert
+   */
+  export type ProfileViewUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ProfileView
+     */
+    select?: ProfileViewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ProfileView
+     */
+    omit?: ProfileViewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProfileViewInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ProfileView to update in case it exists.
+     */
+    where: ProfileViewWhereUniqueInput
+    /**
+     * In case the ProfileView found by the `where` argument doesn't exist, create a new ProfileView with this data.
+     */
+    create: XOR<ProfileViewCreateInput, ProfileViewUncheckedCreateInput>
+    /**
+     * In case the ProfileView was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ProfileViewUpdateInput, ProfileViewUncheckedUpdateInput>
+  }
+
+  /**
+   * ProfileView delete
+   */
+  export type ProfileViewDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ProfileView
+     */
+    select?: ProfileViewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ProfileView
+     */
+    omit?: ProfileViewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProfileViewInclude<ExtArgs> | null
+    /**
+     * Filter which ProfileView to delete.
+     */
+    where: ProfileViewWhereUniqueInput
+  }
+
+  /**
+   * ProfileView deleteMany
+   */
+  export type ProfileViewDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ProfileViews to delete
+     */
+    where?: ProfileViewWhereInput
+    /**
+     * Limit how many ProfileViews to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ProfileView without action
+   */
+  export type ProfileViewDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ProfileView
+     */
+    select?: ProfileViewSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ProfileView
+     */
+    omit?: ProfileViewOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ProfileViewInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model DataSourceSync
+   */
+
+  export type AggregateDataSourceSync = {
+    _count: DataSourceSyncCountAggregateOutputType | null
+    _min: DataSourceSyncMinAggregateOutputType | null
+    _max: DataSourceSyncMaxAggregateOutputType | null
+  }
+
+  export type DataSourceSyncMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    source: string | null
+    status: string | null
+    lastSyncAt: Date | null
+    nextSyncAt: Date | null
+    syncFrequency: string | null
+    error: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type DataSourceSyncMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    source: string | null
+    status: string | null
+    lastSyncAt: Date | null
+    nextSyncAt: Date | null
+    syncFrequency: string | null
+    error: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type DataSourceSyncCountAggregateOutputType = {
+    id: number
+    userId: number
+    source: number
+    status: number
+    lastSyncAt: number
+    nextSyncAt: number
+    syncFrequency: number
+    error: number
+    metadata: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type DataSourceSyncMinAggregateInputType = {
+    id?: true
+    userId?: true
+    source?: true
+    status?: true
+    lastSyncAt?: true
+    nextSyncAt?: true
+    syncFrequency?: true
+    error?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type DataSourceSyncMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    source?: true
+    status?: true
+    lastSyncAt?: true
+    nextSyncAt?: true
+    syncFrequency?: true
+    error?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type DataSourceSyncCountAggregateInputType = {
+    id?: true
+    userId?: true
+    source?: true
+    status?: true
+    lastSyncAt?: true
+    nextSyncAt?: true
+    syncFrequency?: true
+    error?: true
+    metadata?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type DataSourceSyncAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which DataSourceSync to aggregate.
+     */
+    where?: DataSourceSyncWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of DataSourceSyncs to fetch.
+     */
+    orderBy?: DataSourceSyncOrderByWithRelationInput | DataSourceSyncOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: DataSourceSyncWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` DataSourceSyncs from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` DataSourceSyncs.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned DataSourceSyncs
+    **/
+    _count?: true | DataSourceSyncCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: DataSourceSyncMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: DataSourceSyncMaxAggregateInputType
+  }
+
+  export type GetDataSourceSyncAggregateType<T extends DataSourceSyncAggregateArgs> = {
+        [P in keyof T & keyof AggregateDataSourceSync]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateDataSourceSync[P]>
+      : GetScalarType<T[P], AggregateDataSourceSync[P]>
+  }
+
+
+
+
+  export type DataSourceSyncGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: DataSourceSyncWhereInput
+    orderBy?: DataSourceSyncOrderByWithAggregationInput | DataSourceSyncOrderByWithAggregationInput[]
+    by: DataSourceSyncScalarFieldEnum[] | DataSourceSyncScalarFieldEnum
+    having?: DataSourceSyncScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: DataSourceSyncCountAggregateInputType | true
+    _min?: DataSourceSyncMinAggregateInputType
+    _max?: DataSourceSyncMaxAggregateInputType
+  }
+
+  export type DataSourceSyncGroupByOutputType = {
+    id: string
+    userId: string
+    source: string
+    status: string
+    lastSyncAt: Date | null
+    nextSyncAt: Date | null
+    syncFrequency: string
+    error: string | null
+    metadata: JsonValue | null
+    createdAt: Date
+    updatedAt: Date
+    _count: DataSourceSyncCountAggregateOutputType | null
+    _min: DataSourceSyncMinAggregateOutputType | null
+    _max: DataSourceSyncMaxAggregateOutputType | null
+  }
+
+  type GetDataSourceSyncGroupByPayload<T extends DataSourceSyncGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<DataSourceSyncGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof DataSourceSyncGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], DataSourceSyncGroupByOutputType[P]>
+            : GetScalarType<T[P], DataSourceSyncGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type DataSourceSyncSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    source?: boolean
+    status?: boolean
+    lastSyncAt?: boolean
+    nextSyncAt?: boolean
+    syncFrequency?: boolean
+    error?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["dataSourceSync"]>
+
+  export type DataSourceSyncSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    source?: boolean
+    status?: boolean
+    lastSyncAt?: boolean
+    nextSyncAt?: boolean
+    syncFrequency?: boolean
+    error?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["dataSourceSync"]>
+
+  export type DataSourceSyncSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    source?: boolean
+    status?: boolean
+    lastSyncAt?: boolean
+    nextSyncAt?: boolean
+    syncFrequency?: boolean
+    error?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["dataSourceSync"]>
+
+  export type DataSourceSyncSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    source?: boolean
+    status?: boolean
+    lastSyncAt?: boolean
+    nextSyncAt?: boolean
+    syncFrequency?: boolean
+    error?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type DataSourceSyncOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "source" | "status" | "lastSyncAt" | "nextSyncAt" | "syncFrequency" | "error" | "metadata" | "createdAt" | "updatedAt", ExtArgs["result"]["dataSourceSync"]>
+  export type DataSourceSyncInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type DataSourceSyncIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type DataSourceSyncIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+
+  export type $DataSourceSyncPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "DataSourceSync"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      source: string
+      status: string
+      lastSyncAt: Date | null
+      nextSyncAt: Date | null
+      syncFrequency: string
+      error: string | null
+      metadata: Prisma.JsonValue | null
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["dataSourceSync"]>
+    composites: {}
+  }
+
+  type DataSourceSyncGetPayload<S extends boolean | null | undefined | DataSourceSyncDefaultArgs> = $Result.GetResult<Prisma.$DataSourceSyncPayload, S>
+
+  type DataSourceSyncCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<DataSourceSyncFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: DataSourceSyncCountAggregateInputType | true
+    }
+
+  export interface DataSourceSyncDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['DataSourceSync'], meta: { name: 'DataSourceSync' } }
+    /**
+     * Find zero or one DataSourceSync that matches the filter.
+     * @param {DataSourceSyncFindUniqueArgs} args - Arguments to find a DataSourceSync
+     * @example
+     * // Get one DataSourceSync
+     * const dataSourceSync = await prisma.dataSourceSync.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends DataSourceSyncFindUniqueArgs>(args: SelectSubset<T, DataSourceSyncFindUniqueArgs<ExtArgs>>): Prisma__DataSourceSyncClient<$Result.GetResult<Prisma.$DataSourceSyncPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one DataSourceSync that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {DataSourceSyncFindUniqueOrThrowArgs} args - Arguments to find a DataSourceSync
+     * @example
+     * // Get one DataSourceSync
+     * const dataSourceSync = await prisma.dataSourceSync.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends DataSourceSyncFindUniqueOrThrowArgs>(args: SelectSubset<T, DataSourceSyncFindUniqueOrThrowArgs<ExtArgs>>): Prisma__DataSourceSyncClient<$Result.GetResult<Prisma.$DataSourceSyncPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first DataSourceSync that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DataSourceSyncFindFirstArgs} args - Arguments to find a DataSourceSync
+     * @example
+     * // Get one DataSourceSync
+     * const dataSourceSync = await prisma.dataSourceSync.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends DataSourceSyncFindFirstArgs>(args?: SelectSubset<T, DataSourceSyncFindFirstArgs<ExtArgs>>): Prisma__DataSourceSyncClient<$Result.GetResult<Prisma.$DataSourceSyncPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first DataSourceSync that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DataSourceSyncFindFirstOrThrowArgs} args - Arguments to find a DataSourceSync
+     * @example
+     * // Get one DataSourceSync
+     * const dataSourceSync = await prisma.dataSourceSync.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends DataSourceSyncFindFirstOrThrowArgs>(args?: SelectSubset<T, DataSourceSyncFindFirstOrThrowArgs<ExtArgs>>): Prisma__DataSourceSyncClient<$Result.GetResult<Prisma.$DataSourceSyncPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more DataSourceSyncs that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DataSourceSyncFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all DataSourceSyncs
+     * const dataSourceSyncs = await prisma.dataSourceSync.findMany()
+     * 
+     * // Get first 10 DataSourceSyncs
+     * const dataSourceSyncs = await prisma.dataSourceSync.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const dataSourceSyncWithIdOnly = await prisma.dataSourceSync.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends DataSourceSyncFindManyArgs>(args?: SelectSubset<T, DataSourceSyncFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DataSourceSyncPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a DataSourceSync.
+     * @param {DataSourceSyncCreateArgs} args - Arguments to create a DataSourceSync.
+     * @example
+     * // Create one DataSourceSync
+     * const DataSourceSync = await prisma.dataSourceSync.create({
+     *   data: {
+     *     // ... data to create a DataSourceSync
+     *   }
+     * })
+     * 
+     */
+    create<T extends DataSourceSyncCreateArgs>(args: SelectSubset<T, DataSourceSyncCreateArgs<ExtArgs>>): Prisma__DataSourceSyncClient<$Result.GetResult<Prisma.$DataSourceSyncPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many DataSourceSyncs.
+     * @param {DataSourceSyncCreateManyArgs} args - Arguments to create many DataSourceSyncs.
+     * @example
+     * // Create many DataSourceSyncs
+     * const dataSourceSync = await prisma.dataSourceSync.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends DataSourceSyncCreateManyArgs>(args?: SelectSubset<T, DataSourceSyncCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many DataSourceSyncs and returns the data saved in the database.
+     * @param {DataSourceSyncCreateManyAndReturnArgs} args - Arguments to create many DataSourceSyncs.
+     * @example
+     * // Create many DataSourceSyncs
+     * const dataSourceSync = await prisma.dataSourceSync.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many DataSourceSyncs and only return the `id`
+     * const dataSourceSyncWithIdOnly = await prisma.dataSourceSync.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends DataSourceSyncCreateManyAndReturnArgs>(args?: SelectSubset<T, DataSourceSyncCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DataSourceSyncPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a DataSourceSync.
+     * @param {DataSourceSyncDeleteArgs} args - Arguments to delete one DataSourceSync.
+     * @example
+     * // Delete one DataSourceSync
+     * const DataSourceSync = await prisma.dataSourceSync.delete({
+     *   where: {
+     *     // ... filter to delete one DataSourceSync
+     *   }
+     * })
+     * 
+     */
+    delete<T extends DataSourceSyncDeleteArgs>(args: SelectSubset<T, DataSourceSyncDeleteArgs<ExtArgs>>): Prisma__DataSourceSyncClient<$Result.GetResult<Prisma.$DataSourceSyncPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one DataSourceSync.
+     * @param {DataSourceSyncUpdateArgs} args - Arguments to update one DataSourceSync.
+     * @example
+     * // Update one DataSourceSync
+     * const dataSourceSync = await prisma.dataSourceSync.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends DataSourceSyncUpdateArgs>(args: SelectSubset<T, DataSourceSyncUpdateArgs<ExtArgs>>): Prisma__DataSourceSyncClient<$Result.GetResult<Prisma.$DataSourceSyncPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more DataSourceSyncs.
+     * @param {DataSourceSyncDeleteManyArgs} args - Arguments to filter DataSourceSyncs to delete.
+     * @example
+     * // Delete a few DataSourceSyncs
+     * const { count } = await prisma.dataSourceSync.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends DataSourceSyncDeleteManyArgs>(args?: SelectSubset<T, DataSourceSyncDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more DataSourceSyncs.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DataSourceSyncUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many DataSourceSyncs
+     * const dataSourceSync = await prisma.dataSourceSync.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends DataSourceSyncUpdateManyArgs>(args: SelectSubset<T, DataSourceSyncUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more DataSourceSyncs and returns the data updated in the database.
+     * @param {DataSourceSyncUpdateManyAndReturnArgs} args - Arguments to update many DataSourceSyncs.
+     * @example
+     * // Update many DataSourceSyncs
+     * const dataSourceSync = await prisma.dataSourceSync.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more DataSourceSyncs and only return the `id`
+     * const dataSourceSyncWithIdOnly = await prisma.dataSourceSync.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends DataSourceSyncUpdateManyAndReturnArgs>(args: SelectSubset<T, DataSourceSyncUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$DataSourceSyncPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one DataSourceSync.
+     * @param {DataSourceSyncUpsertArgs} args - Arguments to update or create a DataSourceSync.
+     * @example
+     * // Update or create a DataSourceSync
+     * const dataSourceSync = await prisma.dataSourceSync.upsert({
+     *   create: {
+     *     // ... data to create a DataSourceSync
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the DataSourceSync we want to update
+     *   }
+     * })
+     */
+    upsert<T extends DataSourceSyncUpsertArgs>(args: SelectSubset<T, DataSourceSyncUpsertArgs<ExtArgs>>): Prisma__DataSourceSyncClient<$Result.GetResult<Prisma.$DataSourceSyncPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of DataSourceSyncs.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DataSourceSyncCountArgs} args - Arguments to filter DataSourceSyncs to count.
+     * @example
+     * // Count the number of DataSourceSyncs
+     * const count = await prisma.dataSourceSync.count({
+     *   where: {
+     *     // ... the filter for the DataSourceSyncs we want to count
+     *   }
+     * })
+    **/
+    count<T extends DataSourceSyncCountArgs>(
+      args?: Subset<T, DataSourceSyncCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], DataSourceSyncCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a DataSourceSync.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DataSourceSyncAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends DataSourceSyncAggregateArgs>(args: Subset<T, DataSourceSyncAggregateArgs>): Prisma.PrismaPromise<GetDataSourceSyncAggregateType<T>>
+
+    /**
+     * Group by DataSourceSync.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {DataSourceSyncGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends DataSourceSyncGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: DataSourceSyncGroupByArgs['orderBy'] }
+        : { orderBy?: DataSourceSyncGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, DataSourceSyncGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetDataSourceSyncGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the DataSourceSync model
+   */
+  readonly fields: DataSourceSyncFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for DataSourceSync.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__DataSourceSyncClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the DataSourceSync model
+   */
+  interface DataSourceSyncFieldRefs {
+    readonly id: FieldRef<"DataSourceSync", 'String'>
+    readonly userId: FieldRef<"DataSourceSync", 'String'>
+    readonly source: FieldRef<"DataSourceSync", 'String'>
+    readonly status: FieldRef<"DataSourceSync", 'String'>
+    readonly lastSyncAt: FieldRef<"DataSourceSync", 'DateTime'>
+    readonly nextSyncAt: FieldRef<"DataSourceSync", 'DateTime'>
+    readonly syncFrequency: FieldRef<"DataSourceSync", 'String'>
+    readonly error: FieldRef<"DataSourceSync", 'String'>
+    readonly metadata: FieldRef<"DataSourceSync", 'Json'>
+    readonly createdAt: FieldRef<"DataSourceSync", 'DateTime'>
+    readonly updatedAt: FieldRef<"DataSourceSync", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * DataSourceSync findUnique
+   */
+  export type DataSourceSyncFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DataSourceSync
+     */
+    select?: DataSourceSyncSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the DataSourceSync
+     */
+    omit?: DataSourceSyncOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DataSourceSyncInclude<ExtArgs> | null
+    /**
+     * Filter, which DataSourceSync to fetch.
+     */
+    where: DataSourceSyncWhereUniqueInput
+  }
+
+  /**
+   * DataSourceSync findUniqueOrThrow
+   */
+  export type DataSourceSyncFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DataSourceSync
+     */
+    select?: DataSourceSyncSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the DataSourceSync
+     */
+    omit?: DataSourceSyncOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DataSourceSyncInclude<ExtArgs> | null
+    /**
+     * Filter, which DataSourceSync to fetch.
+     */
+    where: DataSourceSyncWhereUniqueInput
+  }
+
+  /**
+   * DataSourceSync findFirst
+   */
+  export type DataSourceSyncFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DataSourceSync
+     */
+    select?: DataSourceSyncSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the DataSourceSync
+     */
+    omit?: DataSourceSyncOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DataSourceSyncInclude<ExtArgs> | null
+    /**
+     * Filter, which DataSourceSync to fetch.
+     */
+    where?: DataSourceSyncWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of DataSourceSyncs to fetch.
+     */
+    orderBy?: DataSourceSyncOrderByWithRelationInput | DataSourceSyncOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for DataSourceSyncs.
+     */
+    cursor?: DataSourceSyncWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` DataSourceSyncs from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` DataSourceSyncs.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of DataSourceSyncs.
+     */
+    distinct?: DataSourceSyncScalarFieldEnum | DataSourceSyncScalarFieldEnum[]
+  }
+
+  /**
+   * DataSourceSync findFirstOrThrow
+   */
+  export type DataSourceSyncFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DataSourceSync
+     */
+    select?: DataSourceSyncSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the DataSourceSync
+     */
+    omit?: DataSourceSyncOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DataSourceSyncInclude<ExtArgs> | null
+    /**
+     * Filter, which DataSourceSync to fetch.
+     */
+    where?: DataSourceSyncWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of DataSourceSyncs to fetch.
+     */
+    orderBy?: DataSourceSyncOrderByWithRelationInput | DataSourceSyncOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for DataSourceSyncs.
+     */
+    cursor?: DataSourceSyncWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` DataSourceSyncs from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` DataSourceSyncs.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of DataSourceSyncs.
+     */
+    distinct?: DataSourceSyncScalarFieldEnum | DataSourceSyncScalarFieldEnum[]
+  }
+
+  /**
+   * DataSourceSync findMany
+   */
+  export type DataSourceSyncFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DataSourceSync
+     */
+    select?: DataSourceSyncSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the DataSourceSync
+     */
+    omit?: DataSourceSyncOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DataSourceSyncInclude<ExtArgs> | null
+    /**
+     * Filter, which DataSourceSyncs to fetch.
+     */
+    where?: DataSourceSyncWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of DataSourceSyncs to fetch.
+     */
+    orderBy?: DataSourceSyncOrderByWithRelationInput | DataSourceSyncOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing DataSourceSyncs.
+     */
+    cursor?: DataSourceSyncWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` DataSourceSyncs from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` DataSourceSyncs.
+     */
+    skip?: number
+    distinct?: DataSourceSyncScalarFieldEnum | DataSourceSyncScalarFieldEnum[]
+  }
+
+  /**
+   * DataSourceSync create
+   */
+  export type DataSourceSyncCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DataSourceSync
+     */
+    select?: DataSourceSyncSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the DataSourceSync
+     */
+    omit?: DataSourceSyncOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DataSourceSyncInclude<ExtArgs> | null
+    /**
+     * The data needed to create a DataSourceSync.
+     */
+    data: XOR<DataSourceSyncCreateInput, DataSourceSyncUncheckedCreateInput>
+  }
+
+  /**
+   * DataSourceSync createMany
+   */
+  export type DataSourceSyncCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many DataSourceSyncs.
+     */
+    data: DataSourceSyncCreateManyInput | DataSourceSyncCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * DataSourceSync createManyAndReturn
+   */
+  export type DataSourceSyncCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DataSourceSync
+     */
+    select?: DataSourceSyncSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the DataSourceSync
+     */
+    omit?: DataSourceSyncOmit<ExtArgs> | null
+    /**
+     * The data used to create many DataSourceSyncs.
+     */
+    data: DataSourceSyncCreateManyInput | DataSourceSyncCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DataSourceSyncIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * DataSourceSync update
+   */
+  export type DataSourceSyncUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DataSourceSync
+     */
+    select?: DataSourceSyncSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the DataSourceSync
+     */
+    omit?: DataSourceSyncOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DataSourceSyncInclude<ExtArgs> | null
+    /**
+     * The data needed to update a DataSourceSync.
+     */
+    data: XOR<DataSourceSyncUpdateInput, DataSourceSyncUncheckedUpdateInput>
+    /**
+     * Choose, which DataSourceSync to update.
+     */
+    where: DataSourceSyncWhereUniqueInput
+  }
+
+  /**
+   * DataSourceSync updateMany
+   */
+  export type DataSourceSyncUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update DataSourceSyncs.
+     */
+    data: XOR<DataSourceSyncUpdateManyMutationInput, DataSourceSyncUncheckedUpdateManyInput>
+    /**
+     * Filter which DataSourceSyncs to update
+     */
+    where?: DataSourceSyncWhereInput
+    /**
+     * Limit how many DataSourceSyncs to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * DataSourceSync updateManyAndReturn
+   */
+  export type DataSourceSyncUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DataSourceSync
+     */
+    select?: DataSourceSyncSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the DataSourceSync
+     */
+    omit?: DataSourceSyncOmit<ExtArgs> | null
+    /**
+     * The data used to update DataSourceSyncs.
+     */
+    data: XOR<DataSourceSyncUpdateManyMutationInput, DataSourceSyncUncheckedUpdateManyInput>
+    /**
+     * Filter which DataSourceSyncs to update
+     */
+    where?: DataSourceSyncWhereInput
+    /**
+     * Limit how many DataSourceSyncs to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DataSourceSyncIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * DataSourceSync upsert
+   */
+  export type DataSourceSyncUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DataSourceSync
+     */
+    select?: DataSourceSyncSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the DataSourceSync
+     */
+    omit?: DataSourceSyncOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DataSourceSyncInclude<ExtArgs> | null
+    /**
+     * The filter to search for the DataSourceSync to update in case it exists.
+     */
+    where: DataSourceSyncWhereUniqueInput
+    /**
+     * In case the DataSourceSync found by the `where` argument doesn't exist, create a new DataSourceSync with this data.
+     */
+    create: XOR<DataSourceSyncCreateInput, DataSourceSyncUncheckedCreateInput>
+    /**
+     * In case the DataSourceSync was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<DataSourceSyncUpdateInput, DataSourceSyncUncheckedUpdateInput>
+  }
+
+  /**
+   * DataSourceSync delete
+   */
+  export type DataSourceSyncDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DataSourceSync
+     */
+    select?: DataSourceSyncSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the DataSourceSync
+     */
+    omit?: DataSourceSyncOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DataSourceSyncInclude<ExtArgs> | null
+    /**
+     * Filter which DataSourceSync to delete.
+     */
+    where: DataSourceSyncWhereUniqueInput
+  }
+
+  /**
+   * DataSourceSync deleteMany
+   */
+  export type DataSourceSyncDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which DataSourceSyncs to delete
+     */
+    where?: DataSourceSyncWhereInput
+    /**
+     * Limit how many DataSourceSyncs to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * DataSourceSync without action
+   */
+  export type DataSourceSyncDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the DataSourceSync
+     */
+    select?: DataSourceSyncSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the DataSourceSync
+     */
+    omit?: DataSourceSyncOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: DataSourceSyncInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model VerificationRequest
+   */
+
+  export type AggregateVerificationRequest = {
+    _count: VerificationRequestCountAggregateOutputType | null
+    _min: VerificationRequestMinAggregateOutputType | null
+    _max: VerificationRequestMaxAggregateOutputType | null
+  }
+
+  export type VerificationRequestMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    type: string | null
+    entityId: string | null
+    status: string | null
+    method: string | null
+    reviewerNotes: string | null
+    submittedAt: Date | null
+    reviewedAt: Date | null
+    reviewedBy: string | null
+  }
+
+  export type VerificationRequestMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    type: string | null
+    entityId: string | null
+    status: string | null
+    method: string | null
+    reviewerNotes: string | null
+    submittedAt: Date | null
+    reviewedAt: Date | null
+    reviewedBy: string | null
+  }
+
+  export type VerificationRequestCountAggregateOutputType = {
+    id: number
+    userId: number
+    type: number
+    entityId: number
+    status: number
+    method: number
+    documentUrls: number
+    reviewerNotes: number
+    submittedAt: number
+    reviewedAt: number
+    reviewedBy: number
+    _all: number
+  }
+
+
+  export type VerificationRequestMinAggregateInputType = {
+    id?: true
+    userId?: true
+    type?: true
+    entityId?: true
+    status?: true
+    method?: true
+    reviewerNotes?: true
+    submittedAt?: true
+    reviewedAt?: true
+    reviewedBy?: true
+  }
+
+  export type VerificationRequestMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    type?: true
+    entityId?: true
+    status?: true
+    method?: true
+    reviewerNotes?: true
+    submittedAt?: true
+    reviewedAt?: true
+    reviewedBy?: true
+  }
+
+  export type VerificationRequestCountAggregateInputType = {
+    id?: true
+    userId?: true
+    type?: true
+    entityId?: true
+    status?: true
+    method?: true
+    documentUrls?: true
+    reviewerNotes?: true
+    submittedAt?: true
+    reviewedAt?: true
+    reviewedBy?: true
+    _all?: true
+  }
+
+  export type VerificationRequestAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which VerificationRequest to aggregate.
+     */
+    where?: VerificationRequestWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of VerificationRequests to fetch.
+     */
+    orderBy?: VerificationRequestOrderByWithRelationInput | VerificationRequestOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: VerificationRequestWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` VerificationRequests from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` VerificationRequests.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned VerificationRequests
+    **/
+    _count?: true | VerificationRequestCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: VerificationRequestMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: VerificationRequestMaxAggregateInputType
+  }
+
+  export type GetVerificationRequestAggregateType<T extends VerificationRequestAggregateArgs> = {
+        [P in keyof T & keyof AggregateVerificationRequest]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateVerificationRequest[P]>
+      : GetScalarType<T[P], AggregateVerificationRequest[P]>
+  }
+
+
+
+
+  export type VerificationRequestGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: VerificationRequestWhereInput
+    orderBy?: VerificationRequestOrderByWithAggregationInput | VerificationRequestOrderByWithAggregationInput[]
+    by: VerificationRequestScalarFieldEnum[] | VerificationRequestScalarFieldEnum
+    having?: VerificationRequestScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: VerificationRequestCountAggregateInputType | true
+    _min?: VerificationRequestMinAggregateInputType
+    _max?: VerificationRequestMaxAggregateInputType
+  }
+
+  export type VerificationRequestGroupByOutputType = {
+    id: string
+    userId: string
+    type: string
+    entityId: string
+    status: string
+    method: string | null
+    documentUrls: string[]
+    reviewerNotes: string | null
+    submittedAt: Date
+    reviewedAt: Date | null
+    reviewedBy: string | null
+    _count: VerificationRequestCountAggregateOutputType | null
+    _min: VerificationRequestMinAggregateOutputType | null
+    _max: VerificationRequestMaxAggregateOutputType | null
+  }
+
+  type GetVerificationRequestGroupByPayload<T extends VerificationRequestGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<VerificationRequestGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof VerificationRequestGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], VerificationRequestGroupByOutputType[P]>
+            : GetScalarType<T[P], VerificationRequestGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type VerificationRequestSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    type?: boolean
+    entityId?: boolean
+    status?: boolean
+    method?: boolean
+    documentUrls?: boolean
+    reviewerNotes?: boolean
+    submittedAt?: boolean
+    reviewedAt?: boolean
+    reviewedBy?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["verificationRequest"]>
+
+  export type VerificationRequestSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    type?: boolean
+    entityId?: boolean
+    status?: boolean
+    method?: boolean
+    documentUrls?: boolean
+    reviewerNotes?: boolean
+    submittedAt?: boolean
+    reviewedAt?: boolean
+    reviewedBy?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["verificationRequest"]>
+
+  export type VerificationRequestSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    type?: boolean
+    entityId?: boolean
+    status?: boolean
+    method?: boolean
+    documentUrls?: boolean
+    reviewerNotes?: boolean
+    submittedAt?: boolean
+    reviewedAt?: boolean
+    reviewedBy?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["verificationRequest"]>
+
+  export type VerificationRequestSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    type?: boolean
+    entityId?: boolean
+    status?: boolean
+    method?: boolean
+    documentUrls?: boolean
+    reviewerNotes?: boolean
+    submittedAt?: boolean
+    reviewedAt?: boolean
+    reviewedBy?: boolean
+  }
+
+  export type VerificationRequestOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "type" | "entityId" | "status" | "method" | "documentUrls" | "reviewerNotes" | "submittedAt" | "reviewedAt" | "reviewedBy", ExtArgs["result"]["verificationRequest"]>
+  export type VerificationRequestInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type VerificationRequestIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type VerificationRequestIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+
+  export type $VerificationRequestPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "VerificationRequest"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      type: string
+      entityId: string
+      status: string
+      method: string | null
+      documentUrls: string[]
+      reviewerNotes: string | null
+      submittedAt: Date
+      reviewedAt: Date | null
+      reviewedBy: string | null
+    }, ExtArgs["result"]["verificationRequest"]>
+    composites: {}
+  }
+
+  type VerificationRequestGetPayload<S extends boolean | null | undefined | VerificationRequestDefaultArgs> = $Result.GetResult<Prisma.$VerificationRequestPayload, S>
+
+  type VerificationRequestCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<VerificationRequestFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: VerificationRequestCountAggregateInputType | true
+    }
+
+  export interface VerificationRequestDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['VerificationRequest'], meta: { name: 'VerificationRequest' } }
+    /**
+     * Find zero or one VerificationRequest that matches the filter.
+     * @param {VerificationRequestFindUniqueArgs} args - Arguments to find a VerificationRequest
+     * @example
+     * // Get one VerificationRequest
+     * const verificationRequest = await prisma.verificationRequest.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends VerificationRequestFindUniqueArgs>(args: SelectSubset<T, VerificationRequestFindUniqueArgs<ExtArgs>>): Prisma__VerificationRequestClient<$Result.GetResult<Prisma.$VerificationRequestPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one VerificationRequest that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {VerificationRequestFindUniqueOrThrowArgs} args - Arguments to find a VerificationRequest
+     * @example
+     * // Get one VerificationRequest
+     * const verificationRequest = await prisma.verificationRequest.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends VerificationRequestFindUniqueOrThrowArgs>(args: SelectSubset<T, VerificationRequestFindUniqueOrThrowArgs<ExtArgs>>): Prisma__VerificationRequestClient<$Result.GetResult<Prisma.$VerificationRequestPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first VerificationRequest that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {VerificationRequestFindFirstArgs} args - Arguments to find a VerificationRequest
+     * @example
+     * // Get one VerificationRequest
+     * const verificationRequest = await prisma.verificationRequest.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends VerificationRequestFindFirstArgs>(args?: SelectSubset<T, VerificationRequestFindFirstArgs<ExtArgs>>): Prisma__VerificationRequestClient<$Result.GetResult<Prisma.$VerificationRequestPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first VerificationRequest that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {VerificationRequestFindFirstOrThrowArgs} args - Arguments to find a VerificationRequest
+     * @example
+     * // Get one VerificationRequest
+     * const verificationRequest = await prisma.verificationRequest.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends VerificationRequestFindFirstOrThrowArgs>(args?: SelectSubset<T, VerificationRequestFindFirstOrThrowArgs<ExtArgs>>): Prisma__VerificationRequestClient<$Result.GetResult<Prisma.$VerificationRequestPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more VerificationRequests that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {VerificationRequestFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all VerificationRequests
+     * const verificationRequests = await prisma.verificationRequest.findMany()
+     * 
+     * // Get first 10 VerificationRequests
+     * const verificationRequests = await prisma.verificationRequest.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const verificationRequestWithIdOnly = await prisma.verificationRequest.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends VerificationRequestFindManyArgs>(args?: SelectSubset<T, VerificationRequestFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$VerificationRequestPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a VerificationRequest.
+     * @param {VerificationRequestCreateArgs} args - Arguments to create a VerificationRequest.
+     * @example
+     * // Create one VerificationRequest
+     * const VerificationRequest = await prisma.verificationRequest.create({
+     *   data: {
+     *     // ... data to create a VerificationRequest
+     *   }
+     * })
+     * 
+     */
+    create<T extends VerificationRequestCreateArgs>(args: SelectSubset<T, VerificationRequestCreateArgs<ExtArgs>>): Prisma__VerificationRequestClient<$Result.GetResult<Prisma.$VerificationRequestPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many VerificationRequests.
+     * @param {VerificationRequestCreateManyArgs} args - Arguments to create many VerificationRequests.
+     * @example
+     * // Create many VerificationRequests
+     * const verificationRequest = await prisma.verificationRequest.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends VerificationRequestCreateManyArgs>(args?: SelectSubset<T, VerificationRequestCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many VerificationRequests and returns the data saved in the database.
+     * @param {VerificationRequestCreateManyAndReturnArgs} args - Arguments to create many VerificationRequests.
+     * @example
+     * // Create many VerificationRequests
+     * const verificationRequest = await prisma.verificationRequest.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many VerificationRequests and only return the `id`
+     * const verificationRequestWithIdOnly = await prisma.verificationRequest.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends VerificationRequestCreateManyAndReturnArgs>(args?: SelectSubset<T, VerificationRequestCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$VerificationRequestPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a VerificationRequest.
+     * @param {VerificationRequestDeleteArgs} args - Arguments to delete one VerificationRequest.
+     * @example
+     * // Delete one VerificationRequest
+     * const VerificationRequest = await prisma.verificationRequest.delete({
+     *   where: {
+     *     // ... filter to delete one VerificationRequest
+     *   }
+     * })
+     * 
+     */
+    delete<T extends VerificationRequestDeleteArgs>(args: SelectSubset<T, VerificationRequestDeleteArgs<ExtArgs>>): Prisma__VerificationRequestClient<$Result.GetResult<Prisma.$VerificationRequestPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one VerificationRequest.
+     * @param {VerificationRequestUpdateArgs} args - Arguments to update one VerificationRequest.
+     * @example
+     * // Update one VerificationRequest
+     * const verificationRequest = await prisma.verificationRequest.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends VerificationRequestUpdateArgs>(args: SelectSubset<T, VerificationRequestUpdateArgs<ExtArgs>>): Prisma__VerificationRequestClient<$Result.GetResult<Prisma.$VerificationRequestPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more VerificationRequests.
+     * @param {VerificationRequestDeleteManyArgs} args - Arguments to filter VerificationRequests to delete.
+     * @example
+     * // Delete a few VerificationRequests
+     * const { count } = await prisma.verificationRequest.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends VerificationRequestDeleteManyArgs>(args?: SelectSubset<T, VerificationRequestDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more VerificationRequests.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {VerificationRequestUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many VerificationRequests
+     * const verificationRequest = await prisma.verificationRequest.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends VerificationRequestUpdateManyArgs>(args: SelectSubset<T, VerificationRequestUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more VerificationRequests and returns the data updated in the database.
+     * @param {VerificationRequestUpdateManyAndReturnArgs} args - Arguments to update many VerificationRequests.
+     * @example
+     * // Update many VerificationRequests
+     * const verificationRequest = await prisma.verificationRequest.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more VerificationRequests and only return the `id`
+     * const verificationRequestWithIdOnly = await prisma.verificationRequest.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends VerificationRequestUpdateManyAndReturnArgs>(args: SelectSubset<T, VerificationRequestUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$VerificationRequestPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one VerificationRequest.
+     * @param {VerificationRequestUpsertArgs} args - Arguments to update or create a VerificationRequest.
+     * @example
+     * // Update or create a VerificationRequest
+     * const verificationRequest = await prisma.verificationRequest.upsert({
+     *   create: {
+     *     // ... data to create a VerificationRequest
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the VerificationRequest we want to update
+     *   }
+     * })
+     */
+    upsert<T extends VerificationRequestUpsertArgs>(args: SelectSubset<T, VerificationRequestUpsertArgs<ExtArgs>>): Prisma__VerificationRequestClient<$Result.GetResult<Prisma.$VerificationRequestPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of VerificationRequests.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {VerificationRequestCountArgs} args - Arguments to filter VerificationRequests to count.
+     * @example
+     * // Count the number of VerificationRequests
+     * const count = await prisma.verificationRequest.count({
+     *   where: {
+     *     // ... the filter for the VerificationRequests we want to count
+     *   }
+     * })
+    **/
+    count<T extends VerificationRequestCountArgs>(
+      args?: Subset<T, VerificationRequestCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], VerificationRequestCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a VerificationRequest.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {VerificationRequestAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends VerificationRequestAggregateArgs>(args: Subset<T, VerificationRequestAggregateArgs>): Prisma.PrismaPromise<GetVerificationRequestAggregateType<T>>
+
+    /**
+     * Group by VerificationRequest.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {VerificationRequestGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends VerificationRequestGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: VerificationRequestGroupByArgs['orderBy'] }
+        : { orderBy?: VerificationRequestGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, VerificationRequestGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetVerificationRequestGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the VerificationRequest model
+   */
+  readonly fields: VerificationRequestFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for VerificationRequest.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__VerificationRequestClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the VerificationRequest model
+   */
+  interface VerificationRequestFieldRefs {
+    readonly id: FieldRef<"VerificationRequest", 'String'>
+    readonly userId: FieldRef<"VerificationRequest", 'String'>
+    readonly type: FieldRef<"VerificationRequest", 'String'>
+    readonly entityId: FieldRef<"VerificationRequest", 'String'>
+    readonly status: FieldRef<"VerificationRequest", 'String'>
+    readonly method: FieldRef<"VerificationRequest", 'String'>
+    readonly documentUrls: FieldRef<"VerificationRequest", 'String[]'>
+    readonly reviewerNotes: FieldRef<"VerificationRequest", 'String'>
+    readonly submittedAt: FieldRef<"VerificationRequest", 'DateTime'>
+    readonly reviewedAt: FieldRef<"VerificationRequest", 'DateTime'>
+    readonly reviewedBy: FieldRef<"VerificationRequest", 'String'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * VerificationRequest findUnique
+   */
+  export type VerificationRequestFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VerificationRequest
+     */
+    select?: VerificationRequestSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VerificationRequest
+     */
+    omit?: VerificationRequestOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VerificationRequestInclude<ExtArgs> | null
+    /**
+     * Filter, which VerificationRequest to fetch.
+     */
+    where: VerificationRequestWhereUniqueInput
+  }
+
+  /**
+   * VerificationRequest findUniqueOrThrow
+   */
+  export type VerificationRequestFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VerificationRequest
+     */
+    select?: VerificationRequestSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VerificationRequest
+     */
+    omit?: VerificationRequestOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VerificationRequestInclude<ExtArgs> | null
+    /**
+     * Filter, which VerificationRequest to fetch.
+     */
+    where: VerificationRequestWhereUniqueInput
+  }
+
+  /**
+   * VerificationRequest findFirst
+   */
+  export type VerificationRequestFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VerificationRequest
+     */
+    select?: VerificationRequestSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VerificationRequest
+     */
+    omit?: VerificationRequestOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VerificationRequestInclude<ExtArgs> | null
+    /**
+     * Filter, which VerificationRequest to fetch.
+     */
+    where?: VerificationRequestWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of VerificationRequests to fetch.
+     */
+    orderBy?: VerificationRequestOrderByWithRelationInput | VerificationRequestOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for VerificationRequests.
+     */
+    cursor?: VerificationRequestWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` VerificationRequests from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` VerificationRequests.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of VerificationRequests.
+     */
+    distinct?: VerificationRequestScalarFieldEnum | VerificationRequestScalarFieldEnum[]
+  }
+
+  /**
+   * VerificationRequest findFirstOrThrow
+   */
+  export type VerificationRequestFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VerificationRequest
+     */
+    select?: VerificationRequestSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VerificationRequest
+     */
+    omit?: VerificationRequestOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VerificationRequestInclude<ExtArgs> | null
+    /**
+     * Filter, which VerificationRequest to fetch.
+     */
+    where?: VerificationRequestWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of VerificationRequests to fetch.
+     */
+    orderBy?: VerificationRequestOrderByWithRelationInput | VerificationRequestOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for VerificationRequests.
+     */
+    cursor?: VerificationRequestWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` VerificationRequests from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` VerificationRequests.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of VerificationRequests.
+     */
+    distinct?: VerificationRequestScalarFieldEnum | VerificationRequestScalarFieldEnum[]
+  }
+
+  /**
+   * VerificationRequest findMany
+   */
+  export type VerificationRequestFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VerificationRequest
+     */
+    select?: VerificationRequestSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VerificationRequest
+     */
+    omit?: VerificationRequestOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VerificationRequestInclude<ExtArgs> | null
+    /**
+     * Filter, which VerificationRequests to fetch.
+     */
+    where?: VerificationRequestWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of VerificationRequests to fetch.
+     */
+    orderBy?: VerificationRequestOrderByWithRelationInput | VerificationRequestOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing VerificationRequests.
+     */
+    cursor?: VerificationRequestWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` VerificationRequests from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` VerificationRequests.
+     */
+    skip?: number
+    distinct?: VerificationRequestScalarFieldEnum | VerificationRequestScalarFieldEnum[]
+  }
+
+  /**
+   * VerificationRequest create
+   */
+  export type VerificationRequestCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VerificationRequest
+     */
+    select?: VerificationRequestSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VerificationRequest
+     */
+    omit?: VerificationRequestOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VerificationRequestInclude<ExtArgs> | null
+    /**
+     * The data needed to create a VerificationRequest.
+     */
+    data: XOR<VerificationRequestCreateInput, VerificationRequestUncheckedCreateInput>
+  }
+
+  /**
+   * VerificationRequest createMany
+   */
+  export type VerificationRequestCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many VerificationRequests.
+     */
+    data: VerificationRequestCreateManyInput | VerificationRequestCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * VerificationRequest createManyAndReturn
+   */
+  export type VerificationRequestCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VerificationRequest
+     */
+    select?: VerificationRequestSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the VerificationRequest
+     */
+    omit?: VerificationRequestOmit<ExtArgs> | null
+    /**
+     * The data used to create many VerificationRequests.
+     */
+    data: VerificationRequestCreateManyInput | VerificationRequestCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VerificationRequestIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * VerificationRequest update
+   */
+  export type VerificationRequestUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VerificationRequest
+     */
+    select?: VerificationRequestSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VerificationRequest
+     */
+    omit?: VerificationRequestOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VerificationRequestInclude<ExtArgs> | null
+    /**
+     * The data needed to update a VerificationRequest.
+     */
+    data: XOR<VerificationRequestUpdateInput, VerificationRequestUncheckedUpdateInput>
+    /**
+     * Choose, which VerificationRequest to update.
+     */
+    where: VerificationRequestWhereUniqueInput
+  }
+
+  /**
+   * VerificationRequest updateMany
+   */
+  export type VerificationRequestUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update VerificationRequests.
+     */
+    data: XOR<VerificationRequestUpdateManyMutationInput, VerificationRequestUncheckedUpdateManyInput>
+    /**
+     * Filter which VerificationRequests to update
+     */
+    where?: VerificationRequestWhereInput
+    /**
+     * Limit how many VerificationRequests to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * VerificationRequest updateManyAndReturn
+   */
+  export type VerificationRequestUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VerificationRequest
+     */
+    select?: VerificationRequestSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the VerificationRequest
+     */
+    omit?: VerificationRequestOmit<ExtArgs> | null
+    /**
+     * The data used to update VerificationRequests.
+     */
+    data: XOR<VerificationRequestUpdateManyMutationInput, VerificationRequestUncheckedUpdateManyInput>
+    /**
+     * Filter which VerificationRequests to update
+     */
+    where?: VerificationRequestWhereInput
+    /**
+     * Limit how many VerificationRequests to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VerificationRequestIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * VerificationRequest upsert
+   */
+  export type VerificationRequestUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VerificationRequest
+     */
+    select?: VerificationRequestSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VerificationRequest
+     */
+    omit?: VerificationRequestOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VerificationRequestInclude<ExtArgs> | null
+    /**
+     * The filter to search for the VerificationRequest to update in case it exists.
+     */
+    where: VerificationRequestWhereUniqueInput
+    /**
+     * In case the VerificationRequest found by the `where` argument doesn't exist, create a new VerificationRequest with this data.
+     */
+    create: XOR<VerificationRequestCreateInput, VerificationRequestUncheckedCreateInput>
+    /**
+     * In case the VerificationRequest was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<VerificationRequestUpdateInput, VerificationRequestUncheckedUpdateInput>
+  }
+
+  /**
+   * VerificationRequest delete
+   */
+  export type VerificationRequestDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VerificationRequest
+     */
+    select?: VerificationRequestSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VerificationRequest
+     */
+    omit?: VerificationRequestOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VerificationRequestInclude<ExtArgs> | null
+    /**
+     * Filter which VerificationRequest to delete.
+     */
+    where: VerificationRequestWhereUniqueInput
+  }
+
+  /**
+   * VerificationRequest deleteMany
+   */
+  export type VerificationRequestDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which VerificationRequests to delete
+     */
+    where?: VerificationRequestWhereInput
+    /**
+     * Limit how many VerificationRequests to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * VerificationRequest without action
+   */
+  export type VerificationRequestDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the VerificationRequest
+     */
+    select?: VerificationRequestSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the VerificationRequest
+     */
+    omit?: VerificationRequestOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: VerificationRequestInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model ResourceRecommendation
+   */
+
+  export type AggregateResourceRecommendation = {
+    _count: ResourceRecommendationCountAggregateOutputType | null
+    _avg: ResourceRecommendationAvgAggregateOutputType | null
+    _sum: ResourceRecommendationSumAggregateOutputType | null
+    _min: ResourceRecommendationMinAggregateOutputType | null
+    _max: ResourceRecommendationMaxAggregateOutputType | null
+  }
+
+  export type ResourceRecommendationAvgAggregateOutputType = {
+    relevanceScore: number | null
+  }
+
+  export type ResourceRecommendationSumAggregateOutputType = {
+    relevanceScore: number | null
+  }
+
+  export type ResourceRecommendationMinAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    careerSuggestionId: string | null
+    type: string | null
+    platform: string | null
+    title: string | null
+    url: string | null
+    provider: string | null
+    duration: string | null
+    cost: string | null
+    difficulty: string | null
+    relevanceScore: number | null
+    status: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type ResourceRecommendationMaxAggregateOutputType = {
+    id: string | null
+    userId: string | null
+    careerSuggestionId: string | null
+    type: string | null
+    platform: string | null
+    title: string | null
+    url: string | null
+    provider: string | null
+    duration: string | null
+    cost: string | null
+    difficulty: string | null
+    relevanceScore: number | null
+    status: string | null
+    createdAt: Date | null
+    updatedAt: Date | null
+  }
+
+  export type ResourceRecommendationCountAggregateOutputType = {
+    id: number
+    userId: number
+    careerSuggestionId: number
+    type: number
+    platform: number
+    title: number
+    url: number
+    provider: number
+    duration: number
+    cost: number
+    difficulty: number
+    skillsGained: number
+    relevanceScore: number
+    status: number
+    metadata: number
+    createdAt: number
+    updatedAt: number
+    _all: number
+  }
+
+
+  export type ResourceRecommendationAvgAggregateInputType = {
+    relevanceScore?: true
+  }
+
+  export type ResourceRecommendationSumAggregateInputType = {
+    relevanceScore?: true
+  }
+
+  export type ResourceRecommendationMinAggregateInputType = {
+    id?: true
+    userId?: true
+    careerSuggestionId?: true
+    type?: true
+    platform?: true
+    title?: true
+    url?: true
+    provider?: true
+    duration?: true
+    cost?: true
+    difficulty?: true
+    relevanceScore?: true
+    status?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type ResourceRecommendationMaxAggregateInputType = {
+    id?: true
+    userId?: true
+    careerSuggestionId?: true
+    type?: true
+    platform?: true
+    title?: true
+    url?: true
+    provider?: true
+    duration?: true
+    cost?: true
+    difficulty?: true
+    relevanceScore?: true
+    status?: true
+    createdAt?: true
+    updatedAt?: true
+  }
+
+  export type ResourceRecommendationCountAggregateInputType = {
+    id?: true
+    userId?: true
+    careerSuggestionId?: true
+    type?: true
+    platform?: true
+    title?: true
+    url?: true
+    provider?: true
+    duration?: true
+    cost?: true
+    difficulty?: true
+    skillsGained?: true
+    relevanceScore?: true
+    status?: true
+    metadata?: true
+    createdAt?: true
+    updatedAt?: true
+    _all?: true
+  }
+
+  export type ResourceRecommendationAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ResourceRecommendation to aggregate.
+     */
+    where?: ResourceRecommendationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ResourceRecommendations to fetch.
+     */
+    orderBy?: ResourceRecommendationOrderByWithRelationInput | ResourceRecommendationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: ResourceRecommendationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ResourceRecommendations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ResourceRecommendations.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned ResourceRecommendations
+    **/
+    _count?: true | ResourceRecommendationCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: ResourceRecommendationAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ResourceRecommendationSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: ResourceRecommendationMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: ResourceRecommendationMaxAggregateInputType
+  }
+
+  export type GetResourceRecommendationAggregateType<T extends ResourceRecommendationAggregateArgs> = {
+        [P in keyof T & keyof AggregateResourceRecommendation]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateResourceRecommendation[P]>
+      : GetScalarType<T[P], AggregateResourceRecommendation[P]>
+  }
+
+
+
+
+  export type ResourceRecommendationGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ResourceRecommendationWhereInput
+    orderBy?: ResourceRecommendationOrderByWithAggregationInput | ResourceRecommendationOrderByWithAggregationInput[]
+    by: ResourceRecommendationScalarFieldEnum[] | ResourceRecommendationScalarFieldEnum
+    having?: ResourceRecommendationScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: ResourceRecommendationCountAggregateInputType | true
+    _avg?: ResourceRecommendationAvgAggregateInputType
+    _sum?: ResourceRecommendationSumAggregateInputType
+    _min?: ResourceRecommendationMinAggregateInputType
+    _max?: ResourceRecommendationMaxAggregateInputType
+  }
+
+  export type ResourceRecommendationGroupByOutputType = {
+    id: string
+    userId: string
+    careerSuggestionId: string | null
+    type: string
+    platform: string
+    title: string
+    url: string | null
+    provider: string | null
+    duration: string | null
+    cost: string | null
+    difficulty: string | null
+    skillsGained: string[]
+    relevanceScore: number | null
+    status: string
+    metadata: JsonValue | null
+    createdAt: Date
+    updatedAt: Date
+    _count: ResourceRecommendationCountAggregateOutputType | null
+    _avg: ResourceRecommendationAvgAggregateOutputType | null
+    _sum: ResourceRecommendationSumAggregateOutputType | null
+    _min: ResourceRecommendationMinAggregateOutputType | null
+    _max: ResourceRecommendationMaxAggregateOutputType | null
+  }
+
+  type GetResourceRecommendationGroupByPayload<T extends ResourceRecommendationGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<ResourceRecommendationGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof ResourceRecommendationGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], ResourceRecommendationGroupByOutputType[P]>
+            : GetScalarType<T[P], ResourceRecommendationGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type ResourceRecommendationSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    careerSuggestionId?: boolean
+    type?: boolean
+    platform?: boolean
+    title?: boolean
+    url?: boolean
+    provider?: boolean
+    duration?: boolean
+    cost?: boolean
+    difficulty?: boolean
+    skillsGained?: boolean
+    relevanceScore?: boolean
+    status?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    careerSuggestion?: boolean | ResourceRecommendation$careerSuggestionArgs<ExtArgs>
+  }, ExtArgs["result"]["resourceRecommendation"]>
+
+  export type ResourceRecommendationSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    careerSuggestionId?: boolean
+    type?: boolean
+    platform?: boolean
+    title?: boolean
+    url?: boolean
+    provider?: boolean
+    duration?: boolean
+    cost?: boolean
+    difficulty?: boolean
+    skillsGained?: boolean
+    relevanceScore?: boolean
+    status?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    careerSuggestion?: boolean | ResourceRecommendation$careerSuggestionArgs<ExtArgs>
+  }, ExtArgs["result"]["resourceRecommendation"]>
+
+  export type ResourceRecommendationSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id?: boolean
+    userId?: boolean
+    careerSuggestionId?: boolean
+    type?: boolean
+    platform?: boolean
+    title?: boolean
+    url?: boolean
+    provider?: boolean
+    duration?: boolean
+    cost?: boolean
+    difficulty?: boolean
+    skillsGained?: boolean
+    relevanceScore?: boolean
+    status?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    careerSuggestion?: boolean | ResourceRecommendation$careerSuggestionArgs<ExtArgs>
+  }, ExtArgs["result"]["resourceRecommendation"]>
+
+  export type ResourceRecommendationSelectScalar = {
+    id?: boolean
+    userId?: boolean
+    careerSuggestionId?: boolean
+    type?: boolean
+    platform?: boolean
+    title?: boolean
+    url?: boolean
+    provider?: boolean
+    duration?: boolean
+    cost?: boolean
+    difficulty?: boolean
+    skillsGained?: boolean
+    relevanceScore?: boolean
+    status?: boolean
+    metadata?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+  }
+
+  export type ResourceRecommendationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "careerSuggestionId" | "type" | "platform" | "title" | "url" | "provider" | "duration" | "cost" | "difficulty" | "skillsGained" | "relevanceScore" | "status" | "metadata" | "createdAt" | "updatedAt", ExtArgs["result"]["resourceRecommendation"]>
+  export type ResourceRecommendationInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    careerSuggestion?: boolean | ResourceRecommendation$careerSuggestionArgs<ExtArgs>
+  }
+  export type ResourceRecommendationIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    careerSuggestion?: boolean | ResourceRecommendation$careerSuggestionArgs<ExtArgs>
+  }
+  export type ResourceRecommendationIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+    careerSuggestion?: boolean | ResourceRecommendation$careerSuggestionArgs<ExtArgs>
+  }
+
+  export type $ResourceRecommendationPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "ResourceRecommendation"
+    objects: {
+      user: Prisma.$UserPayload<ExtArgs>
+      careerSuggestion: Prisma.$CareerSuggestionPayload<ExtArgs> | null
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id: string
+      userId: string
+      careerSuggestionId: string | null
+      type: string
+      platform: string
+      title: string
+      url: string | null
+      provider: string | null
+      duration: string | null
+      cost: string | null
+      difficulty: string | null
+      skillsGained: string[]
+      relevanceScore: number | null
+      status: string
+      metadata: Prisma.JsonValue | null
+      createdAt: Date
+      updatedAt: Date
+    }, ExtArgs["result"]["resourceRecommendation"]>
+    composites: {}
+  }
+
+  type ResourceRecommendationGetPayload<S extends boolean | null | undefined | ResourceRecommendationDefaultArgs> = $Result.GetResult<Prisma.$ResourceRecommendationPayload, S>
+
+  type ResourceRecommendationCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ResourceRecommendationFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ResourceRecommendationCountAggregateInputType | true
+    }
+
+  export interface ResourceRecommendationDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ResourceRecommendation'], meta: { name: 'ResourceRecommendation' } }
+    /**
+     * Find zero or one ResourceRecommendation that matches the filter.
+     * @param {ResourceRecommendationFindUniqueArgs} args - Arguments to find a ResourceRecommendation
+     * @example
+     * // Get one ResourceRecommendation
+     * const resourceRecommendation = await prisma.resourceRecommendation.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends ResourceRecommendationFindUniqueArgs>(args: SelectSubset<T, ResourceRecommendationFindUniqueArgs<ExtArgs>>): Prisma__ResourceRecommendationClient<$Result.GetResult<Prisma.$ResourceRecommendationPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one ResourceRecommendation that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {ResourceRecommendationFindUniqueOrThrowArgs} args - Arguments to find a ResourceRecommendation
+     * @example
+     * // Get one ResourceRecommendation
+     * const resourceRecommendation = await prisma.resourceRecommendation.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends ResourceRecommendationFindUniqueOrThrowArgs>(args: SelectSubset<T, ResourceRecommendationFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ResourceRecommendationClient<$Result.GetResult<Prisma.$ResourceRecommendationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ResourceRecommendation that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ResourceRecommendationFindFirstArgs} args - Arguments to find a ResourceRecommendation
+     * @example
+     * // Get one ResourceRecommendation
+     * const resourceRecommendation = await prisma.resourceRecommendation.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends ResourceRecommendationFindFirstArgs>(args?: SelectSubset<T, ResourceRecommendationFindFirstArgs<ExtArgs>>): Prisma__ResourceRecommendationClient<$Result.GetResult<Prisma.$ResourceRecommendationPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first ResourceRecommendation that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ResourceRecommendationFindFirstOrThrowArgs} args - Arguments to find a ResourceRecommendation
+     * @example
+     * // Get one ResourceRecommendation
+     * const resourceRecommendation = await prisma.resourceRecommendation.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends ResourceRecommendationFindFirstOrThrowArgs>(args?: SelectSubset<T, ResourceRecommendationFindFirstOrThrowArgs<ExtArgs>>): Prisma__ResourceRecommendationClient<$Result.GetResult<Prisma.$ResourceRecommendationPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more ResourceRecommendations that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ResourceRecommendationFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all ResourceRecommendations
+     * const resourceRecommendations = await prisma.resourceRecommendation.findMany()
+     * 
+     * // Get first 10 ResourceRecommendations
+     * const resourceRecommendations = await prisma.resourceRecommendation.findMany({ take: 10 })
+     * 
+     * // Only select the `id`
+     * const resourceRecommendationWithIdOnly = await prisma.resourceRecommendation.findMany({ select: { id: true } })
+     * 
+     */
+    findMany<T extends ResourceRecommendationFindManyArgs>(args?: SelectSubset<T, ResourceRecommendationFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ResourceRecommendationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a ResourceRecommendation.
+     * @param {ResourceRecommendationCreateArgs} args - Arguments to create a ResourceRecommendation.
+     * @example
+     * // Create one ResourceRecommendation
+     * const ResourceRecommendation = await prisma.resourceRecommendation.create({
+     *   data: {
+     *     // ... data to create a ResourceRecommendation
+     *   }
+     * })
+     * 
+     */
+    create<T extends ResourceRecommendationCreateArgs>(args: SelectSubset<T, ResourceRecommendationCreateArgs<ExtArgs>>): Prisma__ResourceRecommendationClient<$Result.GetResult<Prisma.$ResourceRecommendationPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many ResourceRecommendations.
+     * @param {ResourceRecommendationCreateManyArgs} args - Arguments to create many ResourceRecommendations.
+     * @example
+     * // Create many ResourceRecommendations
+     * const resourceRecommendation = await prisma.resourceRecommendation.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends ResourceRecommendationCreateManyArgs>(args?: SelectSubset<T, ResourceRecommendationCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many ResourceRecommendations and returns the data saved in the database.
+     * @param {ResourceRecommendationCreateManyAndReturnArgs} args - Arguments to create many ResourceRecommendations.
+     * @example
+     * // Create many ResourceRecommendations
+     * const resourceRecommendation = await prisma.resourceRecommendation.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many ResourceRecommendations and only return the `id`
+     * const resourceRecommendationWithIdOnly = await prisma.resourceRecommendation.createManyAndReturn({
+     *   select: { id: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends ResourceRecommendationCreateManyAndReturnArgs>(args?: SelectSubset<T, ResourceRecommendationCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ResourceRecommendationPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a ResourceRecommendation.
+     * @param {ResourceRecommendationDeleteArgs} args - Arguments to delete one ResourceRecommendation.
+     * @example
+     * // Delete one ResourceRecommendation
+     * const ResourceRecommendation = await prisma.resourceRecommendation.delete({
+     *   where: {
+     *     // ... filter to delete one ResourceRecommendation
+     *   }
+     * })
+     * 
+     */
+    delete<T extends ResourceRecommendationDeleteArgs>(args: SelectSubset<T, ResourceRecommendationDeleteArgs<ExtArgs>>): Prisma__ResourceRecommendationClient<$Result.GetResult<Prisma.$ResourceRecommendationPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one ResourceRecommendation.
+     * @param {ResourceRecommendationUpdateArgs} args - Arguments to update one ResourceRecommendation.
+     * @example
+     * // Update one ResourceRecommendation
+     * const resourceRecommendation = await prisma.resourceRecommendation.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends ResourceRecommendationUpdateArgs>(args: SelectSubset<T, ResourceRecommendationUpdateArgs<ExtArgs>>): Prisma__ResourceRecommendationClient<$Result.GetResult<Prisma.$ResourceRecommendationPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more ResourceRecommendations.
+     * @param {ResourceRecommendationDeleteManyArgs} args - Arguments to filter ResourceRecommendations to delete.
+     * @example
+     * // Delete a few ResourceRecommendations
+     * const { count } = await prisma.resourceRecommendation.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends ResourceRecommendationDeleteManyArgs>(args?: SelectSubset<T, ResourceRecommendationDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ResourceRecommendations.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ResourceRecommendationUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many ResourceRecommendations
+     * const resourceRecommendation = await prisma.resourceRecommendation.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends ResourceRecommendationUpdateManyArgs>(args: SelectSubset<T, ResourceRecommendationUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more ResourceRecommendations and returns the data updated in the database.
+     * @param {ResourceRecommendationUpdateManyAndReturnArgs} args - Arguments to update many ResourceRecommendations.
+     * @example
+     * // Update many ResourceRecommendations
+     * const resourceRecommendation = await prisma.resourceRecommendation.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more ResourceRecommendations and only return the `id`
+     * const resourceRecommendationWithIdOnly = await prisma.resourceRecommendation.updateManyAndReturn({
+     *   select: { id: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends ResourceRecommendationUpdateManyAndReturnArgs>(args: SelectSubset<T, ResourceRecommendationUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ResourceRecommendationPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one ResourceRecommendation.
+     * @param {ResourceRecommendationUpsertArgs} args - Arguments to update or create a ResourceRecommendation.
+     * @example
+     * // Update or create a ResourceRecommendation
+     * const resourceRecommendation = await prisma.resourceRecommendation.upsert({
+     *   create: {
+     *     // ... data to create a ResourceRecommendation
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the ResourceRecommendation we want to update
+     *   }
+     * })
+     */
+    upsert<T extends ResourceRecommendationUpsertArgs>(args: SelectSubset<T, ResourceRecommendationUpsertArgs<ExtArgs>>): Prisma__ResourceRecommendationClient<$Result.GetResult<Prisma.$ResourceRecommendationPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of ResourceRecommendations.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ResourceRecommendationCountArgs} args - Arguments to filter ResourceRecommendations to count.
+     * @example
+     * // Count the number of ResourceRecommendations
+     * const count = await prisma.resourceRecommendation.count({
+     *   where: {
+     *     // ... the filter for the ResourceRecommendations we want to count
+     *   }
+     * })
+    **/
+    count<T extends ResourceRecommendationCountArgs>(
+      args?: Subset<T, ResourceRecommendationCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], ResourceRecommendationCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a ResourceRecommendation.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ResourceRecommendationAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends ResourceRecommendationAggregateArgs>(args: Subset<T, ResourceRecommendationAggregateArgs>): Prisma.PrismaPromise<GetResourceRecommendationAggregateType<T>>
+
+    /**
+     * Group by ResourceRecommendation.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {ResourceRecommendationGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends ResourceRecommendationGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: ResourceRecommendationGroupByArgs['orderBy'] }
+        : { orderBy?: ResourceRecommendationGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, ResourceRecommendationGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetResourceRecommendationGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the ResourceRecommendation model
+   */
+  readonly fields: ResourceRecommendationFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for ResourceRecommendation.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__ResourceRecommendationClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    careerSuggestion<T extends ResourceRecommendation$careerSuggestionArgs<ExtArgs> = {}>(args?: Subset<T, ResourceRecommendation$careerSuggestionArgs<ExtArgs>>): Prisma__CareerSuggestionClient<$Result.GetResult<Prisma.$CareerSuggestionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the ResourceRecommendation model
+   */
+  interface ResourceRecommendationFieldRefs {
+    readonly id: FieldRef<"ResourceRecommendation", 'String'>
+    readonly userId: FieldRef<"ResourceRecommendation", 'String'>
+    readonly careerSuggestionId: FieldRef<"ResourceRecommendation", 'String'>
+    readonly type: FieldRef<"ResourceRecommendation", 'String'>
+    readonly platform: FieldRef<"ResourceRecommendation", 'String'>
+    readonly title: FieldRef<"ResourceRecommendation", 'String'>
+    readonly url: FieldRef<"ResourceRecommendation", 'String'>
+    readonly provider: FieldRef<"ResourceRecommendation", 'String'>
+    readonly duration: FieldRef<"ResourceRecommendation", 'String'>
+    readonly cost: FieldRef<"ResourceRecommendation", 'String'>
+    readonly difficulty: FieldRef<"ResourceRecommendation", 'String'>
+    readonly skillsGained: FieldRef<"ResourceRecommendation", 'String[]'>
+    readonly relevanceScore: FieldRef<"ResourceRecommendation", 'Float'>
+    readonly status: FieldRef<"ResourceRecommendation", 'String'>
+    readonly metadata: FieldRef<"ResourceRecommendation", 'Json'>
+    readonly createdAt: FieldRef<"ResourceRecommendation", 'DateTime'>
+    readonly updatedAt: FieldRef<"ResourceRecommendation", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * ResourceRecommendation findUnique
+   */
+  export type ResourceRecommendationFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResourceRecommendation
+     */
+    select?: ResourceRecommendationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ResourceRecommendation
+     */
+    omit?: ResourceRecommendationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResourceRecommendationInclude<ExtArgs> | null
+    /**
+     * Filter, which ResourceRecommendation to fetch.
+     */
+    where: ResourceRecommendationWhereUniqueInput
+  }
+
+  /**
+   * ResourceRecommendation findUniqueOrThrow
+   */
+  export type ResourceRecommendationFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResourceRecommendation
+     */
+    select?: ResourceRecommendationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ResourceRecommendation
+     */
+    omit?: ResourceRecommendationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResourceRecommendationInclude<ExtArgs> | null
+    /**
+     * Filter, which ResourceRecommendation to fetch.
+     */
+    where: ResourceRecommendationWhereUniqueInput
+  }
+
+  /**
+   * ResourceRecommendation findFirst
+   */
+  export type ResourceRecommendationFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResourceRecommendation
+     */
+    select?: ResourceRecommendationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ResourceRecommendation
+     */
+    omit?: ResourceRecommendationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResourceRecommendationInclude<ExtArgs> | null
+    /**
+     * Filter, which ResourceRecommendation to fetch.
+     */
+    where?: ResourceRecommendationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ResourceRecommendations to fetch.
+     */
+    orderBy?: ResourceRecommendationOrderByWithRelationInput | ResourceRecommendationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ResourceRecommendations.
+     */
+    cursor?: ResourceRecommendationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ResourceRecommendations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ResourceRecommendations.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ResourceRecommendations.
+     */
+    distinct?: ResourceRecommendationScalarFieldEnum | ResourceRecommendationScalarFieldEnum[]
+  }
+
+  /**
+   * ResourceRecommendation findFirstOrThrow
+   */
+  export type ResourceRecommendationFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResourceRecommendation
+     */
+    select?: ResourceRecommendationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ResourceRecommendation
+     */
+    omit?: ResourceRecommendationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResourceRecommendationInclude<ExtArgs> | null
+    /**
+     * Filter, which ResourceRecommendation to fetch.
+     */
+    where?: ResourceRecommendationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ResourceRecommendations to fetch.
+     */
+    orderBy?: ResourceRecommendationOrderByWithRelationInput | ResourceRecommendationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for ResourceRecommendations.
+     */
+    cursor?: ResourceRecommendationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ResourceRecommendations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ResourceRecommendations.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of ResourceRecommendations.
+     */
+    distinct?: ResourceRecommendationScalarFieldEnum | ResourceRecommendationScalarFieldEnum[]
+  }
+
+  /**
+   * ResourceRecommendation findMany
+   */
+  export type ResourceRecommendationFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResourceRecommendation
+     */
+    select?: ResourceRecommendationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ResourceRecommendation
+     */
+    omit?: ResourceRecommendationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResourceRecommendationInclude<ExtArgs> | null
+    /**
+     * Filter, which ResourceRecommendations to fetch.
+     */
+    where?: ResourceRecommendationWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of ResourceRecommendations to fetch.
+     */
+    orderBy?: ResourceRecommendationOrderByWithRelationInput | ResourceRecommendationOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing ResourceRecommendations.
+     */
+    cursor?: ResourceRecommendationWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` ResourceRecommendations from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` ResourceRecommendations.
+     */
+    skip?: number
+    distinct?: ResourceRecommendationScalarFieldEnum | ResourceRecommendationScalarFieldEnum[]
+  }
+
+  /**
+   * ResourceRecommendation create
+   */
+  export type ResourceRecommendationCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResourceRecommendation
+     */
+    select?: ResourceRecommendationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ResourceRecommendation
+     */
+    omit?: ResourceRecommendationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResourceRecommendationInclude<ExtArgs> | null
+    /**
+     * The data needed to create a ResourceRecommendation.
+     */
+    data: XOR<ResourceRecommendationCreateInput, ResourceRecommendationUncheckedCreateInput>
+  }
+
+  /**
+   * ResourceRecommendation createMany
+   */
+  export type ResourceRecommendationCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many ResourceRecommendations.
+     */
+    data: ResourceRecommendationCreateManyInput | ResourceRecommendationCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * ResourceRecommendation createManyAndReturn
+   */
+  export type ResourceRecommendationCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResourceRecommendation
+     */
+    select?: ResourceRecommendationSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ResourceRecommendation
+     */
+    omit?: ResourceRecommendationOmit<ExtArgs> | null
+    /**
+     * The data used to create many ResourceRecommendations.
+     */
+    data: ResourceRecommendationCreateManyInput | ResourceRecommendationCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResourceRecommendationIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ResourceRecommendation update
+   */
+  export type ResourceRecommendationUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResourceRecommendation
+     */
+    select?: ResourceRecommendationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ResourceRecommendation
+     */
+    omit?: ResourceRecommendationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResourceRecommendationInclude<ExtArgs> | null
+    /**
+     * The data needed to update a ResourceRecommendation.
+     */
+    data: XOR<ResourceRecommendationUpdateInput, ResourceRecommendationUncheckedUpdateInput>
+    /**
+     * Choose, which ResourceRecommendation to update.
+     */
+    where: ResourceRecommendationWhereUniqueInput
+  }
+
+  /**
+   * ResourceRecommendation updateMany
+   */
+  export type ResourceRecommendationUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update ResourceRecommendations.
+     */
+    data: XOR<ResourceRecommendationUpdateManyMutationInput, ResourceRecommendationUncheckedUpdateManyInput>
+    /**
+     * Filter which ResourceRecommendations to update
+     */
+    where?: ResourceRecommendationWhereInput
+    /**
+     * Limit how many ResourceRecommendations to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * ResourceRecommendation updateManyAndReturn
+   */
+  export type ResourceRecommendationUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResourceRecommendation
+     */
+    select?: ResourceRecommendationSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the ResourceRecommendation
+     */
+    omit?: ResourceRecommendationOmit<ExtArgs> | null
+    /**
+     * The data used to update ResourceRecommendations.
+     */
+    data: XOR<ResourceRecommendationUpdateManyMutationInput, ResourceRecommendationUncheckedUpdateManyInput>
+    /**
+     * Filter which ResourceRecommendations to update
+     */
+    where?: ResourceRecommendationWhereInput
+    /**
+     * Limit how many ResourceRecommendations to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResourceRecommendationIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * ResourceRecommendation upsert
+   */
+  export type ResourceRecommendationUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResourceRecommendation
+     */
+    select?: ResourceRecommendationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ResourceRecommendation
+     */
+    omit?: ResourceRecommendationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResourceRecommendationInclude<ExtArgs> | null
+    /**
+     * The filter to search for the ResourceRecommendation to update in case it exists.
+     */
+    where: ResourceRecommendationWhereUniqueInput
+    /**
+     * In case the ResourceRecommendation found by the `where` argument doesn't exist, create a new ResourceRecommendation with this data.
+     */
+    create: XOR<ResourceRecommendationCreateInput, ResourceRecommendationUncheckedCreateInput>
+    /**
+     * In case the ResourceRecommendation was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<ResourceRecommendationUpdateInput, ResourceRecommendationUncheckedUpdateInput>
+  }
+
+  /**
+   * ResourceRecommendation delete
+   */
+  export type ResourceRecommendationDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResourceRecommendation
+     */
+    select?: ResourceRecommendationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ResourceRecommendation
+     */
+    omit?: ResourceRecommendationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResourceRecommendationInclude<ExtArgs> | null
+    /**
+     * Filter which ResourceRecommendation to delete.
+     */
+    where: ResourceRecommendationWhereUniqueInput
+  }
+
+  /**
+   * ResourceRecommendation deleteMany
+   */
+  export type ResourceRecommendationDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which ResourceRecommendations to delete
+     */
+    where?: ResourceRecommendationWhereInput
+    /**
+     * Limit how many ResourceRecommendations to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * ResourceRecommendation.careerSuggestion
+   */
+  export type ResourceRecommendation$careerSuggestionArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the CareerSuggestion
+     */
+    select?: CareerSuggestionSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the CareerSuggestion
+     */
+    omit?: CareerSuggestionOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: CareerSuggestionInclude<ExtArgs> | null
+    where?: CareerSuggestionWhereInput
+  }
+
+  /**
+   * ResourceRecommendation without action
+   */
+  export type ResourceRecommendationDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the ResourceRecommendation
+     */
+    select?: ResourceRecommendationSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the ResourceRecommendation
+     */
+    omit?: ResourceRecommendationOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ResourceRecommendationInclude<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -23321,6 +37989,229 @@ export namespace Prisma {
   export type SkillMatchScalarFieldEnum = (typeof SkillMatchScalarFieldEnum)[keyof typeof SkillMatchScalarFieldEnum]
 
 
+  export const EducationRecordScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    institutionName: 'institutionName',
+    degree: 'degree',
+    field: 'field',
+    gpa: 'gpa',
+    startDate: 'startDate',
+    endDate: 'endDate',
+    verified: 'verified',
+    verificationSource: 'verificationSource',
+    verificationDate: 'verificationDate',
+    transcriptUrl: 'transcriptUrl',
+    credentialId: 'credentialId',
+    metadata: 'metadata',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type EducationRecordScalarFieldEnum = (typeof EducationRecordScalarFieldEnum)[keyof typeof EducationRecordScalarFieldEnum]
+
+
+  export const SocialProfileScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    platform: 'platform',
+    username: 'username',
+    profileUrl: 'profileUrl',
+    verified: 'verified',
+    followerCount: 'followerCount',
+    followingCount: 'followingCount',
+    engagementRate: 'engagementRate',
+    contentScore: 'contentScore',
+    influenceScore: 'influenceScore',
+    lastFetchedAt: 'lastFetchedAt',
+    metrics: 'metrics',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type SocialProfileScalarFieldEnum = (typeof SocialProfileScalarFieldEnum)[keyof typeof SocialProfileScalarFieldEnum]
+
+
+  export const CertificationScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    name: 'name',
+    issuer: 'issuer',
+    issueDate: 'issueDate',
+    expiryDate: 'expiryDate',
+    credentialId: 'credentialId',
+    credentialUrl: 'credentialUrl',
+    verified: 'verified',
+    verificationMethod: 'verificationMethod',
+    skillsEarned: 'skillsEarned',
+    certificateImageUrl: 'certificateImageUrl',
+    metadata: 'metadata',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type CertificationScalarFieldEnum = (typeof CertificationScalarFieldEnum)[keyof typeof CertificationScalarFieldEnum]
+
+
+  export const GitHubProfileScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    username: 'username',
+    profileUrl: 'profileUrl',
+    totalRepos: 'totalRepos',
+    totalCommits: 'totalCommits',
+    totalPRs: 'totalPRs',
+    totalIssues: 'totalIssues',
+    totalStars: 'totalStars',
+    languagesUsed: 'languagesUsed',
+    contributionScore: 'contributionScore',
+    consistencyScore: 'consistencyScore',
+    codeQualityScore: 'codeQualityScore',
+    topRepos: 'topRepos',
+    contributionGraph: 'contributionGraph',
+    lastFetchedAt: 'lastFetchedAt',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type GitHubProfileScalarFieldEnum = (typeof GitHubProfileScalarFieldEnum)[keyof typeof GitHubProfileScalarFieldEnum]
+
+
+  export const CredibilityScoreScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    overallScore: 'overallScore',
+    educationScore: 'educationScore',
+    experienceScore: 'experienceScore',
+    technicalScore: 'technicalScore',
+    socialScore: 'socialScore',
+    certificationScore: 'certificationScore',
+    verificationLevel: 'verificationLevel',
+    breakdown: 'breakdown',
+    badges: 'badges',
+    calculatedAt: 'calculatedAt',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type CredibilityScoreScalarFieldEnum = (typeof CredibilityScoreScalarFieldEnum)[keyof typeof CredibilityScoreScalarFieldEnum]
+
+
+  export const CareerSuggestionScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    role: 'role',
+    readinessScore: 'readinessScore',
+    estimatedTime: 'estimatedTime',
+    estimatedWeeks: 'estimatedWeeks',
+    skillGaps: 'skillGaps',
+    matchingSkills: 'matchingSkills',
+    resources: 'resources',
+    reasoning: 'reasoning',
+    priority: 'priority',
+    status: 'status',
+    aiModel: 'aiModel',
+    confidence: 'confidence',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type CareerSuggestionScalarFieldEnum = (typeof CareerSuggestionScalarFieldEnum)[keyof typeof CareerSuggestionScalarFieldEnum]
+
+
+  export const PublicProfileScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    username: 'username',
+    slug: 'slug',
+    isPublic: 'isPublic',
+    customDomain: 'customDomain',
+    theme: 'theme',
+    visibleSections: 'visibleSections',
+    seoTitle: 'seoTitle',
+    seoDescription: 'seoDescription',
+    ogImageUrl: 'ogImageUrl',
+    viewCount: 'viewCount',
+    shareCount: 'shareCount',
+    lastViewedAt: 'lastViewedAt',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type PublicProfileScalarFieldEnum = (typeof PublicProfileScalarFieldEnum)[keyof typeof PublicProfileScalarFieldEnum]
+
+
+  export const ProfileViewScalarFieldEnum: {
+    id: 'id',
+    profileUserId: 'profileUserId',
+    viewerIp: 'viewerIp',
+    viewerUserAgent: 'viewerUserAgent',
+    referrer: 'referrer',
+    country: 'country',
+    city: 'city',
+    viewedAt: 'viewedAt'
+  };
+
+  export type ProfileViewScalarFieldEnum = (typeof ProfileViewScalarFieldEnum)[keyof typeof ProfileViewScalarFieldEnum]
+
+
+  export const DataSourceSyncScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    source: 'source',
+    status: 'status',
+    lastSyncAt: 'lastSyncAt',
+    nextSyncAt: 'nextSyncAt',
+    syncFrequency: 'syncFrequency',
+    error: 'error',
+    metadata: 'metadata',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type DataSourceSyncScalarFieldEnum = (typeof DataSourceSyncScalarFieldEnum)[keyof typeof DataSourceSyncScalarFieldEnum]
+
+
+  export const VerificationRequestScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    type: 'type',
+    entityId: 'entityId',
+    status: 'status',
+    method: 'method',
+    documentUrls: 'documentUrls',
+    reviewerNotes: 'reviewerNotes',
+    submittedAt: 'submittedAt',
+    reviewedAt: 'reviewedAt',
+    reviewedBy: 'reviewedBy'
+  };
+
+  export type VerificationRequestScalarFieldEnum = (typeof VerificationRequestScalarFieldEnum)[keyof typeof VerificationRequestScalarFieldEnum]
+
+
+  export const ResourceRecommendationScalarFieldEnum: {
+    id: 'id',
+    userId: 'userId',
+    careerSuggestionId: 'careerSuggestionId',
+    type: 'type',
+    platform: 'platform',
+    title: 'title',
+    url: 'url',
+    provider: 'provider',
+    duration: 'duration',
+    cost: 'cost',
+    difficulty: 'difficulty',
+    skillsGained: 'skillsGained',
+    relevanceScore: 'relevanceScore',
+    status: 'status',
+    metadata: 'metadata',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
+  };
+
+  export type ResourceRecommendationScalarFieldEnum = (typeof ResourceRecommendationScalarFieldEnum)[keyof typeof ResourceRecommendationScalarFieldEnum]
+
+
   export const SortOrder: {
     asc: 'asc',
     desc: 'desc'
@@ -23482,6 +38373,17 @@ export namespace Prisma {
     achievements?: AchievementListRelationFilter
     imports?: SkillImportListRelationFilter
     analyses?: SkillAnalysisListRelationFilter
+    educationRecords?: EducationRecordListRelationFilter
+    socialProfiles?: SocialProfileListRelationFilter
+    certifications?: CertificationListRelationFilter
+    githubProfile?: XOR<GitHubProfileNullableScalarRelationFilter, GitHubProfileWhereInput> | null
+    credibilityScore?: XOR<CredibilityScoreNullableScalarRelationFilter, CredibilityScoreWhereInput> | null
+    careerSuggestions?: CareerSuggestionListRelationFilter
+    publicProfile?: XOR<PublicProfileNullableScalarRelationFilter, PublicProfileWhereInput> | null
+    profileViews?: ProfileViewListRelationFilter
+    dataSourceSyncs?: DataSourceSyncListRelationFilter
+    verificationRequests?: VerificationRequestListRelationFilter
+    resourceRecommendations?: ResourceRecommendationListRelationFilter
   }
 
   export type UserOrderByWithRelationInput = {
@@ -23502,6 +38404,17 @@ export namespace Prisma {
     achievements?: AchievementOrderByRelationAggregateInput
     imports?: SkillImportOrderByRelationAggregateInput
     analyses?: SkillAnalysisOrderByRelationAggregateInput
+    educationRecords?: EducationRecordOrderByRelationAggregateInput
+    socialProfiles?: SocialProfileOrderByRelationAggregateInput
+    certifications?: CertificationOrderByRelationAggregateInput
+    githubProfile?: GitHubProfileOrderByWithRelationInput
+    credibilityScore?: CredibilityScoreOrderByWithRelationInput
+    careerSuggestions?: CareerSuggestionOrderByRelationAggregateInput
+    publicProfile?: PublicProfileOrderByWithRelationInput
+    profileViews?: ProfileViewOrderByRelationAggregateInput
+    dataSourceSyncs?: DataSourceSyncOrderByRelationAggregateInput
+    verificationRequests?: VerificationRequestOrderByRelationAggregateInput
+    resourceRecommendations?: ResourceRecommendationOrderByRelationAggregateInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -23525,6 +38438,17 @@ export namespace Prisma {
     achievements?: AchievementListRelationFilter
     imports?: SkillImportListRelationFilter
     analyses?: SkillAnalysisListRelationFilter
+    educationRecords?: EducationRecordListRelationFilter
+    socialProfiles?: SocialProfileListRelationFilter
+    certifications?: CertificationListRelationFilter
+    githubProfile?: XOR<GitHubProfileNullableScalarRelationFilter, GitHubProfileWhereInput> | null
+    credibilityScore?: XOR<CredibilityScoreNullableScalarRelationFilter, CredibilityScoreWhereInput> | null
+    careerSuggestions?: CareerSuggestionListRelationFilter
+    publicProfile?: XOR<PublicProfileNullableScalarRelationFilter, PublicProfileWhereInput> | null
+    profileViews?: ProfileViewListRelationFilter
+    dataSourceSyncs?: DataSourceSyncListRelationFilter
+    verificationRequests?: VerificationRequestListRelationFilter
+    resourceRecommendations?: ResourceRecommendationListRelationFilter
   }, "id" | "email">
 
   export type UserOrderByWithAggregationInput = {
@@ -25007,6 +39931,1143 @@ export namespace Prisma {
     createdAt?: DateTimeWithAggregatesFilter<"SkillMatch"> | Date | string
   }
 
+  export type EducationRecordWhereInput = {
+    AND?: EducationRecordWhereInput | EducationRecordWhereInput[]
+    OR?: EducationRecordWhereInput[]
+    NOT?: EducationRecordWhereInput | EducationRecordWhereInput[]
+    id?: StringFilter<"EducationRecord"> | string
+    userId?: StringFilter<"EducationRecord"> | string
+    institutionName?: StringFilter<"EducationRecord"> | string
+    degree?: StringFilter<"EducationRecord"> | string
+    field?: StringNullableFilter<"EducationRecord"> | string | null
+    gpa?: FloatNullableFilter<"EducationRecord"> | number | null
+    startDate?: DateTimeFilter<"EducationRecord"> | Date | string
+    endDate?: DateTimeNullableFilter<"EducationRecord"> | Date | string | null
+    verified?: BoolFilter<"EducationRecord"> | boolean
+    verificationSource?: StringNullableFilter<"EducationRecord"> | string | null
+    verificationDate?: DateTimeNullableFilter<"EducationRecord"> | Date | string | null
+    transcriptUrl?: StringNullableFilter<"EducationRecord"> | string | null
+    credentialId?: StringNullableFilter<"EducationRecord"> | string | null
+    metadata?: JsonNullableFilter<"EducationRecord">
+    createdAt?: DateTimeFilter<"EducationRecord"> | Date | string
+    updatedAt?: DateTimeFilter<"EducationRecord"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }
+
+  export type EducationRecordOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    institutionName?: SortOrder
+    degree?: SortOrder
+    field?: SortOrderInput | SortOrder
+    gpa?: SortOrderInput | SortOrder
+    startDate?: SortOrder
+    endDate?: SortOrderInput | SortOrder
+    verified?: SortOrder
+    verificationSource?: SortOrderInput | SortOrder
+    verificationDate?: SortOrderInput | SortOrder
+    transcriptUrl?: SortOrderInput | SortOrder
+    credentialId?: SortOrderInput | SortOrder
+    metadata?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+  }
+
+  export type EducationRecordWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: EducationRecordWhereInput | EducationRecordWhereInput[]
+    OR?: EducationRecordWhereInput[]
+    NOT?: EducationRecordWhereInput | EducationRecordWhereInput[]
+    userId?: StringFilter<"EducationRecord"> | string
+    institutionName?: StringFilter<"EducationRecord"> | string
+    degree?: StringFilter<"EducationRecord"> | string
+    field?: StringNullableFilter<"EducationRecord"> | string | null
+    gpa?: FloatNullableFilter<"EducationRecord"> | number | null
+    startDate?: DateTimeFilter<"EducationRecord"> | Date | string
+    endDate?: DateTimeNullableFilter<"EducationRecord"> | Date | string | null
+    verified?: BoolFilter<"EducationRecord"> | boolean
+    verificationSource?: StringNullableFilter<"EducationRecord"> | string | null
+    verificationDate?: DateTimeNullableFilter<"EducationRecord"> | Date | string | null
+    transcriptUrl?: StringNullableFilter<"EducationRecord"> | string | null
+    credentialId?: StringNullableFilter<"EducationRecord"> | string | null
+    metadata?: JsonNullableFilter<"EducationRecord">
+    createdAt?: DateTimeFilter<"EducationRecord"> | Date | string
+    updatedAt?: DateTimeFilter<"EducationRecord"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }, "id">
+
+  export type EducationRecordOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    institutionName?: SortOrder
+    degree?: SortOrder
+    field?: SortOrderInput | SortOrder
+    gpa?: SortOrderInput | SortOrder
+    startDate?: SortOrder
+    endDate?: SortOrderInput | SortOrder
+    verified?: SortOrder
+    verificationSource?: SortOrderInput | SortOrder
+    verificationDate?: SortOrderInput | SortOrder
+    transcriptUrl?: SortOrderInput | SortOrder
+    credentialId?: SortOrderInput | SortOrder
+    metadata?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: EducationRecordCountOrderByAggregateInput
+    _avg?: EducationRecordAvgOrderByAggregateInput
+    _max?: EducationRecordMaxOrderByAggregateInput
+    _min?: EducationRecordMinOrderByAggregateInput
+    _sum?: EducationRecordSumOrderByAggregateInput
+  }
+
+  export type EducationRecordScalarWhereWithAggregatesInput = {
+    AND?: EducationRecordScalarWhereWithAggregatesInput | EducationRecordScalarWhereWithAggregatesInput[]
+    OR?: EducationRecordScalarWhereWithAggregatesInput[]
+    NOT?: EducationRecordScalarWhereWithAggregatesInput | EducationRecordScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"EducationRecord"> | string
+    userId?: StringWithAggregatesFilter<"EducationRecord"> | string
+    institutionName?: StringWithAggregatesFilter<"EducationRecord"> | string
+    degree?: StringWithAggregatesFilter<"EducationRecord"> | string
+    field?: StringNullableWithAggregatesFilter<"EducationRecord"> | string | null
+    gpa?: FloatNullableWithAggregatesFilter<"EducationRecord"> | number | null
+    startDate?: DateTimeWithAggregatesFilter<"EducationRecord"> | Date | string
+    endDate?: DateTimeNullableWithAggregatesFilter<"EducationRecord"> | Date | string | null
+    verified?: BoolWithAggregatesFilter<"EducationRecord"> | boolean
+    verificationSource?: StringNullableWithAggregatesFilter<"EducationRecord"> | string | null
+    verificationDate?: DateTimeNullableWithAggregatesFilter<"EducationRecord"> | Date | string | null
+    transcriptUrl?: StringNullableWithAggregatesFilter<"EducationRecord"> | string | null
+    credentialId?: StringNullableWithAggregatesFilter<"EducationRecord"> | string | null
+    metadata?: JsonNullableWithAggregatesFilter<"EducationRecord">
+    createdAt?: DateTimeWithAggregatesFilter<"EducationRecord"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"EducationRecord"> | Date | string
+  }
+
+  export type SocialProfileWhereInput = {
+    AND?: SocialProfileWhereInput | SocialProfileWhereInput[]
+    OR?: SocialProfileWhereInput[]
+    NOT?: SocialProfileWhereInput | SocialProfileWhereInput[]
+    id?: StringFilter<"SocialProfile"> | string
+    userId?: StringFilter<"SocialProfile"> | string
+    platform?: StringFilter<"SocialProfile"> | string
+    username?: StringFilter<"SocialProfile"> | string
+    profileUrl?: StringNullableFilter<"SocialProfile"> | string | null
+    verified?: BoolFilter<"SocialProfile"> | boolean
+    followerCount?: IntNullableFilter<"SocialProfile"> | number | null
+    followingCount?: IntNullableFilter<"SocialProfile"> | number | null
+    engagementRate?: FloatNullableFilter<"SocialProfile"> | number | null
+    contentScore?: FloatNullableFilter<"SocialProfile"> | number | null
+    influenceScore?: FloatNullableFilter<"SocialProfile"> | number | null
+    lastFetchedAt?: DateTimeFilter<"SocialProfile"> | Date | string
+    metrics?: JsonFilter<"SocialProfile">
+    createdAt?: DateTimeFilter<"SocialProfile"> | Date | string
+    updatedAt?: DateTimeFilter<"SocialProfile"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }
+
+  export type SocialProfileOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    platform?: SortOrder
+    username?: SortOrder
+    profileUrl?: SortOrderInput | SortOrder
+    verified?: SortOrder
+    followerCount?: SortOrderInput | SortOrder
+    followingCount?: SortOrderInput | SortOrder
+    engagementRate?: SortOrderInput | SortOrder
+    contentScore?: SortOrderInput | SortOrder
+    influenceScore?: SortOrderInput | SortOrder
+    lastFetchedAt?: SortOrder
+    metrics?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+  }
+
+  export type SocialProfileWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    userId_platform?: SocialProfileUserIdPlatformCompoundUniqueInput
+    AND?: SocialProfileWhereInput | SocialProfileWhereInput[]
+    OR?: SocialProfileWhereInput[]
+    NOT?: SocialProfileWhereInput | SocialProfileWhereInput[]
+    userId?: StringFilter<"SocialProfile"> | string
+    platform?: StringFilter<"SocialProfile"> | string
+    username?: StringFilter<"SocialProfile"> | string
+    profileUrl?: StringNullableFilter<"SocialProfile"> | string | null
+    verified?: BoolFilter<"SocialProfile"> | boolean
+    followerCount?: IntNullableFilter<"SocialProfile"> | number | null
+    followingCount?: IntNullableFilter<"SocialProfile"> | number | null
+    engagementRate?: FloatNullableFilter<"SocialProfile"> | number | null
+    contentScore?: FloatNullableFilter<"SocialProfile"> | number | null
+    influenceScore?: FloatNullableFilter<"SocialProfile"> | number | null
+    lastFetchedAt?: DateTimeFilter<"SocialProfile"> | Date | string
+    metrics?: JsonFilter<"SocialProfile">
+    createdAt?: DateTimeFilter<"SocialProfile"> | Date | string
+    updatedAt?: DateTimeFilter<"SocialProfile"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }, "id" | "userId_platform">
+
+  export type SocialProfileOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    platform?: SortOrder
+    username?: SortOrder
+    profileUrl?: SortOrderInput | SortOrder
+    verified?: SortOrder
+    followerCount?: SortOrderInput | SortOrder
+    followingCount?: SortOrderInput | SortOrder
+    engagementRate?: SortOrderInput | SortOrder
+    contentScore?: SortOrderInput | SortOrder
+    influenceScore?: SortOrderInput | SortOrder
+    lastFetchedAt?: SortOrder
+    metrics?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: SocialProfileCountOrderByAggregateInput
+    _avg?: SocialProfileAvgOrderByAggregateInput
+    _max?: SocialProfileMaxOrderByAggregateInput
+    _min?: SocialProfileMinOrderByAggregateInput
+    _sum?: SocialProfileSumOrderByAggregateInput
+  }
+
+  export type SocialProfileScalarWhereWithAggregatesInput = {
+    AND?: SocialProfileScalarWhereWithAggregatesInput | SocialProfileScalarWhereWithAggregatesInput[]
+    OR?: SocialProfileScalarWhereWithAggregatesInput[]
+    NOT?: SocialProfileScalarWhereWithAggregatesInput | SocialProfileScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"SocialProfile"> | string
+    userId?: StringWithAggregatesFilter<"SocialProfile"> | string
+    platform?: StringWithAggregatesFilter<"SocialProfile"> | string
+    username?: StringWithAggregatesFilter<"SocialProfile"> | string
+    profileUrl?: StringNullableWithAggregatesFilter<"SocialProfile"> | string | null
+    verified?: BoolWithAggregatesFilter<"SocialProfile"> | boolean
+    followerCount?: IntNullableWithAggregatesFilter<"SocialProfile"> | number | null
+    followingCount?: IntNullableWithAggregatesFilter<"SocialProfile"> | number | null
+    engagementRate?: FloatNullableWithAggregatesFilter<"SocialProfile"> | number | null
+    contentScore?: FloatNullableWithAggregatesFilter<"SocialProfile"> | number | null
+    influenceScore?: FloatNullableWithAggregatesFilter<"SocialProfile"> | number | null
+    lastFetchedAt?: DateTimeWithAggregatesFilter<"SocialProfile"> | Date | string
+    metrics?: JsonWithAggregatesFilter<"SocialProfile">
+    createdAt?: DateTimeWithAggregatesFilter<"SocialProfile"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"SocialProfile"> | Date | string
+  }
+
+  export type CertificationWhereInput = {
+    AND?: CertificationWhereInput | CertificationWhereInput[]
+    OR?: CertificationWhereInput[]
+    NOT?: CertificationWhereInput | CertificationWhereInput[]
+    id?: StringFilter<"Certification"> | string
+    userId?: StringFilter<"Certification"> | string
+    name?: StringFilter<"Certification"> | string
+    issuer?: StringFilter<"Certification"> | string
+    issueDate?: DateTimeFilter<"Certification"> | Date | string
+    expiryDate?: DateTimeNullableFilter<"Certification"> | Date | string | null
+    credentialId?: StringNullableFilter<"Certification"> | string | null
+    credentialUrl?: StringNullableFilter<"Certification"> | string | null
+    verified?: BoolFilter<"Certification"> | boolean
+    verificationMethod?: StringNullableFilter<"Certification"> | string | null
+    skillsEarned?: StringNullableListFilter<"Certification">
+    certificateImageUrl?: StringNullableFilter<"Certification"> | string | null
+    metadata?: JsonNullableFilter<"Certification">
+    createdAt?: DateTimeFilter<"Certification"> | Date | string
+    updatedAt?: DateTimeFilter<"Certification"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }
+
+  export type CertificationOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    name?: SortOrder
+    issuer?: SortOrder
+    issueDate?: SortOrder
+    expiryDate?: SortOrderInput | SortOrder
+    credentialId?: SortOrderInput | SortOrder
+    credentialUrl?: SortOrderInput | SortOrder
+    verified?: SortOrder
+    verificationMethod?: SortOrderInput | SortOrder
+    skillsEarned?: SortOrder
+    certificateImageUrl?: SortOrderInput | SortOrder
+    metadata?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+  }
+
+  export type CertificationWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: CertificationWhereInput | CertificationWhereInput[]
+    OR?: CertificationWhereInput[]
+    NOT?: CertificationWhereInput | CertificationWhereInput[]
+    userId?: StringFilter<"Certification"> | string
+    name?: StringFilter<"Certification"> | string
+    issuer?: StringFilter<"Certification"> | string
+    issueDate?: DateTimeFilter<"Certification"> | Date | string
+    expiryDate?: DateTimeNullableFilter<"Certification"> | Date | string | null
+    credentialId?: StringNullableFilter<"Certification"> | string | null
+    credentialUrl?: StringNullableFilter<"Certification"> | string | null
+    verified?: BoolFilter<"Certification"> | boolean
+    verificationMethod?: StringNullableFilter<"Certification"> | string | null
+    skillsEarned?: StringNullableListFilter<"Certification">
+    certificateImageUrl?: StringNullableFilter<"Certification"> | string | null
+    metadata?: JsonNullableFilter<"Certification">
+    createdAt?: DateTimeFilter<"Certification"> | Date | string
+    updatedAt?: DateTimeFilter<"Certification"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }, "id">
+
+  export type CertificationOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    name?: SortOrder
+    issuer?: SortOrder
+    issueDate?: SortOrder
+    expiryDate?: SortOrderInput | SortOrder
+    credentialId?: SortOrderInput | SortOrder
+    credentialUrl?: SortOrderInput | SortOrder
+    verified?: SortOrder
+    verificationMethod?: SortOrderInput | SortOrder
+    skillsEarned?: SortOrder
+    certificateImageUrl?: SortOrderInput | SortOrder
+    metadata?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: CertificationCountOrderByAggregateInput
+    _max?: CertificationMaxOrderByAggregateInput
+    _min?: CertificationMinOrderByAggregateInput
+  }
+
+  export type CertificationScalarWhereWithAggregatesInput = {
+    AND?: CertificationScalarWhereWithAggregatesInput | CertificationScalarWhereWithAggregatesInput[]
+    OR?: CertificationScalarWhereWithAggregatesInput[]
+    NOT?: CertificationScalarWhereWithAggregatesInput | CertificationScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"Certification"> | string
+    userId?: StringWithAggregatesFilter<"Certification"> | string
+    name?: StringWithAggregatesFilter<"Certification"> | string
+    issuer?: StringWithAggregatesFilter<"Certification"> | string
+    issueDate?: DateTimeWithAggregatesFilter<"Certification"> | Date | string
+    expiryDate?: DateTimeNullableWithAggregatesFilter<"Certification"> | Date | string | null
+    credentialId?: StringNullableWithAggregatesFilter<"Certification"> | string | null
+    credentialUrl?: StringNullableWithAggregatesFilter<"Certification"> | string | null
+    verified?: BoolWithAggregatesFilter<"Certification"> | boolean
+    verificationMethod?: StringNullableWithAggregatesFilter<"Certification"> | string | null
+    skillsEarned?: StringNullableListFilter<"Certification">
+    certificateImageUrl?: StringNullableWithAggregatesFilter<"Certification"> | string | null
+    metadata?: JsonNullableWithAggregatesFilter<"Certification">
+    createdAt?: DateTimeWithAggregatesFilter<"Certification"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Certification"> | Date | string
+  }
+
+  export type GitHubProfileWhereInput = {
+    AND?: GitHubProfileWhereInput | GitHubProfileWhereInput[]
+    OR?: GitHubProfileWhereInput[]
+    NOT?: GitHubProfileWhereInput | GitHubProfileWhereInput[]
+    id?: StringFilter<"GitHubProfile"> | string
+    userId?: StringFilter<"GitHubProfile"> | string
+    username?: StringFilter<"GitHubProfile"> | string
+    profileUrl?: StringNullableFilter<"GitHubProfile"> | string | null
+    totalRepos?: IntFilter<"GitHubProfile"> | number
+    totalCommits?: IntFilter<"GitHubProfile"> | number
+    totalPRs?: IntFilter<"GitHubProfile"> | number
+    totalIssues?: IntFilter<"GitHubProfile"> | number
+    totalStars?: IntFilter<"GitHubProfile"> | number
+    languagesUsed?: JsonFilter<"GitHubProfile">
+    contributionScore?: FloatNullableFilter<"GitHubProfile"> | number | null
+    consistencyScore?: FloatNullableFilter<"GitHubProfile"> | number | null
+    codeQualityScore?: FloatNullableFilter<"GitHubProfile"> | number | null
+    topRepos?: JsonNullableFilter<"GitHubProfile">
+    contributionGraph?: JsonNullableFilter<"GitHubProfile">
+    lastFetchedAt?: DateTimeFilter<"GitHubProfile"> | Date | string
+    createdAt?: DateTimeFilter<"GitHubProfile"> | Date | string
+    updatedAt?: DateTimeFilter<"GitHubProfile"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }
+
+  export type GitHubProfileOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    username?: SortOrder
+    profileUrl?: SortOrderInput | SortOrder
+    totalRepos?: SortOrder
+    totalCommits?: SortOrder
+    totalPRs?: SortOrder
+    totalIssues?: SortOrder
+    totalStars?: SortOrder
+    languagesUsed?: SortOrder
+    contributionScore?: SortOrderInput | SortOrder
+    consistencyScore?: SortOrderInput | SortOrder
+    codeQualityScore?: SortOrderInput | SortOrder
+    topRepos?: SortOrderInput | SortOrder
+    contributionGraph?: SortOrderInput | SortOrder
+    lastFetchedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+  }
+
+  export type GitHubProfileWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    userId?: string
+    AND?: GitHubProfileWhereInput | GitHubProfileWhereInput[]
+    OR?: GitHubProfileWhereInput[]
+    NOT?: GitHubProfileWhereInput | GitHubProfileWhereInput[]
+    username?: StringFilter<"GitHubProfile"> | string
+    profileUrl?: StringNullableFilter<"GitHubProfile"> | string | null
+    totalRepos?: IntFilter<"GitHubProfile"> | number
+    totalCommits?: IntFilter<"GitHubProfile"> | number
+    totalPRs?: IntFilter<"GitHubProfile"> | number
+    totalIssues?: IntFilter<"GitHubProfile"> | number
+    totalStars?: IntFilter<"GitHubProfile"> | number
+    languagesUsed?: JsonFilter<"GitHubProfile">
+    contributionScore?: FloatNullableFilter<"GitHubProfile"> | number | null
+    consistencyScore?: FloatNullableFilter<"GitHubProfile"> | number | null
+    codeQualityScore?: FloatNullableFilter<"GitHubProfile"> | number | null
+    topRepos?: JsonNullableFilter<"GitHubProfile">
+    contributionGraph?: JsonNullableFilter<"GitHubProfile">
+    lastFetchedAt?: DateTimeFilter<"GitHubProfile"> | Date | string
+    createdAt?: DateTimeFilter<"GitHubProfile"> | Date | string
+    updatedAt?: DateTimeFilter<"GitHubProfile"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }, "id" | "userId">
+
+  export type GitHubProfileOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    username?: SortOrder
+    profileUrl?: SortOrderInput | SortOrder
+    totalRepos?: SortOrder
+    totalCommits?: SortOrder
+    totalPRs?: SortOrder
+    totalIssues?: SortOrder
+    totalStars?: SortOrder
+    languagesUsed?: SortOrder
+    contributionScore?: SortOrderInput | SortOrder
+    consistencyScore?: SortOrderInput | SortOrder
+    codeQualityScore?: SortOrderInput | SortOrder
+    topRepos?: SortOrderInput | SortOrder
+    contributionGraph?: SortOrderInput | SortOrder
+    lastFetchedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: GitHubProfileCountOrderByAggregateInput
+    _avg?: GitHubProfileAvgOrderByAggregateInput
+    _max?: GitHubProfileMaxOrderByAggregateInput
+    _min?: GitHubProfileMinOrderByAggregateInput
+    _sum?: GitHubProfileSumOrderByAggregateInput
+  }
+
+  export type GitHubProfileScalarWhereWithAggregatesInput = {
+    AND?: GitHubProfileScalarWhereWithAggregatesInput | GitHubProfileScalarWhereWithAggregatesInput[]
+    OR?: GitHubProfileScalarWhereWithAggregatesInput[]
+    NOT?: GitHubProfileScalarWhereWithAggregatesInput | GitHubProfileScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"GitHubProfile"> | string
+    userId?: StringWithAggregatesFilter<"GitHubProfile"> | string
+    username?: StringWithAggregatesFilter<"GitHubProfile"> | string
+    profileUrl?: StringNullableWithAggregatesFilter<"GitHubProfile"> | string | null
+    totalRepos?: IntWithAggregatesFilter<"GitHubProfile"> | number
+    totalCommits?: IntWithAggregatesFilter<"GitHubProfile"> | number
+    totalPRs?: IntWithAggregatesFilter<"GitHubProfile"> | number
+    totalIssues?: IntWithAggregatesFilter<"GitHubProfile"> | number
+    totalStars?: IntWithAggregatesFilter<"GitHubProfile"> | number
+    languagesUsed?: JsonWithAggregatesFilter<"GitHubProfile">
+    contributionScore?: FloatNullableWithAggregatesFilter<"GitHubProfile"> | number | null
+    consistencyScore?: FloatNullableWithAggregatesFilter<"GitHubProfile"> | number | null
+    codeQualityScore?: FloatNullableWithAggregatesFilter<"GitHubProfile"> | number | null
+    topRepos?: JsonNullableWithAggregatesFilter<"GitHubProfile">
+    contributionGraph?: JsonNullableWithAggregatesFilter<"GitHubProfile">
+    lastFetchedAt?: DateTimeWithAggregatesFilter<"GitHubProfile"> | Date | string
+    createdAt?: DateTimeWithAggregatesFilter<"GitHubProfile"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"GitHubProfile"> | Date | string
+  }
+
+  export type CredibilityScoreWhereInput = {
+    AND?: CredibilityScoreWhereInput | CredibilityScoreWhereInput[]
+    OR?: CredibilityScoreWhereInput[]
+    NOT?: CredibilityScoreWhereInput | CredibilityScoreWhereInput[]
+    id?: StringFilter<"CredibilityScore"> | string
+    userId?: StringFilter<"CredibilityScore"> | string
+    overallScore?: FloatFilter<"CredibilityScore"> | number
+    educationScore?: FloatFilter<"CredibilityScore"> | number
+    experienceScore?: FloatFilter<"CredibilityScore"> | number
+    technicalScore?: FloatFilter<"CredibilityScore"> | number
+    socialScore?: FloatFilter<"CredibilityScore"> | number
+    certificationScore?: FloatFilter<"CredibilityScore"> | number
+    verificationLevel?: StringFilter<"CredibilityScore"> | string
+    breakdown?: JsonFilter<"CredibilityScore">
+    badges?: StringNullableListFilter<"CredibilityScore">
+    calculatedAt?: DateTimeFilter<"CredibilityScore"> | Date | string
+    createdAt?: DateTimeFilter<"CredibilityScore"> | Date | string
+    updatedAt?: DateTimeFilter<"CredibilityScore"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }
+
+  export type CredibilityScoreOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    overallScore?: SortOrder
+    educationScore?: SortOrder
+    experienceScore?: SortOrder
+    technicalScore?: SortOrder
+    socialScore?: SortOrder
+    certificationScore?: SortOrder
+    verificationLevel?: SortOrder
+    breakdown?: SortOrder
+    badges?: SortOrder
+    calculatedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+  }
+
+  export type CredibilityScoreWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    userId?: string
+    AND?: CredibilityScoreWhereInput | CredibilityScoreWhereInput[]
+    OR?: CredibilityScoreWhereInput[]
+    NOT?: CredibilityScoreWhereInput | CredibilityScoreWhereInput[]
+    overallScore?: FloatFilter<"CredibilityScore"> | number
+    educationScore?: FloatFilter<"CredibilityScore"> | number
+    experienceScore?: FloatFilter<"CredibilityScore"> | number
+    technicalScore?: FloatFilter<"CredibilityScore"> | number
+    socialScore?: FloatFilter<"CredibilityScore"> | number
+    certificationScore?: FloatFilter<"CredibilityScore"> | number
+    verificationLevel?: StringFilter<"CredibilityScore"> | string
+    breakdown?: JsonFilter<"CredibilityScore">
+    badges?: StringNullableListFilter<"CredibilityScore">
+    calculatedAt?: DateTimeFilter<"CredibilityScore"> | Date | string
+    createdAt?: DateTimeFilter<"CredibilityScore"> | Date | string
+    updatedAt?: DateTimeFilter<"CredibilityScore"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }, "id" | "userId">
+
+  export type CredibilityScoreOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    overallScore?: SortOrder
+    educationScore?: SortOrder
+    experienceScore?: SortOrder
+    technicalScore?: SortOrder
+    socialScore?: SortOrder
+    certificationScore?: SortOrder
+    verificationLevel?: SortOrder
+    breakdown?: SortOrder
+    badges?: SortOrder
+    calculatedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: CredibilityScoreCountOrderByAggregateInput
+    _avg?: CredibilityScoreAvgOrderByAggregateInput
+    _max?: CredibilityScoreMaxOrderByAggregateInput
+    _min?: CredibilityScoreMinOrderByAggregateInput
+    _sum?: CredibilityScoreSumOrderByAggregateInput
+  }
+
+  export type CredibilityScoreScalarWhereWithAggregatesInput = {
+    AND?: CredibilityScoreScalarWhereWithAggregatesInput | CredibilityScoreScalarWhereWithAggregatesInput[]
+    OR?: CredibilityScoreScalarWhereWithAggregatesInput[]
+    NOT?: CredibilityScoreScalarWhereWithAggregatesInput | CredibilityScoreScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"CredibilityScore"> | string
+    userId?: StringWithAggregatesFilter<"CredibilityScore"> | string
+    overallScore?: FloatWithAggregatesFilter<"CredibilityScore"> | number
+    educationScore?: FloatWithAggregatesFilter<"CredibilityScore"> | number
+    experienceScore?: FloatWithAggregatesFilter<"CredibilityScore"> | number
+    technicalScore?: FloatWithAggregatesFilter<"CredibilityScore"> | number
+    socialScore?: FloatWithAggregatesFilter<"CredibilityScore"> | number
+    certificationScore?: FloatWithAggregatesFilter<"CredibilityScore"> | number
+    verificationLevel?: StringWithAggregatesFilter<"CredibilityScore"> | string
+    breakdown?: JsonWithAggregatesFilter<"CredibilityScore">
+    badges?: StringNullableListFilter<"CredibilityScore">
+    calculatedAt?: DateTimeWithAggregatesFilter<"CredibilityScore"> | Date | string
+    createdAt?: DateTimeWithAggregatesFilter<"CredibilityScore"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"CredibilityScore"> | Date | string
+  }
+
+  export type CareerSuggestionWhereInput = {
+    AND?: CareerSuggestionWhereInput | CareerSuggestionWhereInput[]
+    OR?: CareerSuggestionWhereInput[]
+    NOT?: CareerSuggestionWhereInput | CareerSuggestionWhereInput[]
+    id?: StringFilter<"CareerSuggestion"> | string
+    userId?: StringFilter<"CareerSuggestion"> | string
+    role?: StringFilter<"CareerSuggestion"> | string
+    readinessScore?: FloatFilter<"CareerSuggestion"> | number
+    estimatedTime?: StringNullableFilter<"CareerSuggestion"> | string | null
+    estimatedWeeks?: IntNullableFilter<"CareerSuggestion"> | number | null
+    skillGaps?: JsonFilter<"CareerSuggestion">
+    matchingSkills?: JsonFilter<"CareerSuggestion">
+    resources?: JsonFilter<"CareerSuggestion">
+    reasoning?: StringNullableFilter<"CareerSuggestion"> | string | null
+    priority?: IntFilter<"CareerSuggestion"> | number
+    status?: StringFilter<"CareerSuggestion"> | string
+    aiModel?: StringNullableFilter<"CareerSuggestion"> | string | null
+    confidence?: FloatNullableFilter<"CareerSuggestion"> | number | null
+    createdAt?: DateTimeFilter<"CareerSuggestion"> | Date | string
+    updatedAt?: DateTimeFilter<"CareerSuggestion"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    resourceRecommendations?: ResourceRecommendationListRelationFilter
+  }
+
+  export type CareerSuggestionOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    role?: SortOrder
+    readinessScore?: SortOrder
+    estimatedTime?: SortOrderInput | SortOrder
+    estimatedWeeks?: SortOrderInput | SortOrder
+    skillGaps?: SortOrder
+    matchingSkills?: SortOrder
+    resources?: SortOrder
+    reasoning?: SortOrderInput | SortOrder
+    priority?: SortOrder
+    status?: SortOrder
+    aiModel?: SortOrderInput | SortOrder
+    confidence?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+    resourceRecommendations?: ResourceRecommendationOrderByRelationAggregateInput
+  }
+
+  export type CareerSuggestionWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: CareerSuggestionWhereInput | CareerSuggestionWhereInput[]
+    OR?: CareerSuggestionWhereInput[]
+    NOT?: CareerSuggestionWhereInput | CareerSuggestionWhereInput[]
+    userId?: StringFilter<"CareerSuggestion"> | string
+    role?: StringFilter<"CareerSuggestion"> | string
+    readinessScore?: FloatFilter<"CareerSuggestion"> | number
+    estimatedTime?: StringNullableFilter<"CareerSuggestion"> | string | null
+    estimatedWeeks?: IntNullableFilter<"CareerSuggestion"> | number | null
+    skillGaps?: JsonFilter<"CareerSuggestion">
+    matchingSkills?: JsonFilter<"CareerSuggestion">
+    resources?: JsonFilter<"CareerSuggestion">
+    reasoning?: StringNullableFilter<"CareerSuggestion"> | string | null
+    priority?: IntFilter<"CareerSuggestion"> | number
+    status?: StringFilter<"CareerSuggestion"> | string
+    aiModel?: StringNullableFilter<"CareerSuggestion"> | string | null
+    confidence?: FloatNullableFilter<"CareerSuggestion"> | number | null
+    createdAt?: DateTimeFilter<"CareerSuggestion"> | Date | string
+    updatedAt?: DateTimeFilter<"CareerSuggestion"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    resourceRecommendations?: ResourceRecommendationListRelationFilter
+  }, "id">
+
+  export type CareerSuggestionOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    role?: SortOrder
+    readinessScore?: SortOrder
+    estimatedTime?: SortOrderInput | SortOrder
+    estimatedWeeks?: SortOrderInput | SortOrder
+    skillGaps?: SortOrder
+    matchingSkills?: SortOrder
+    resources?: SortOrder
+    reasoning?: SortOrderInput | SortOrder
+    priority?: SortOrder
+    status?: SortOrder
+    aiModel?: SortOrderInput | SortOrder
+    confidence?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: CareerSuggestionCountOrderByAggregateInput
+    _avg?: CareerSuggestionAvgOrderByAggregateInput
+    _max?: CareerSuggestionMaxOrderByAggregateInput
+    _min?: CareerSuggestionMinOrderByAggregateInput
+    _sum?: CareerSuggestionSumOrderByAggregateInput
+  }
+
+  export type CareerSuggestionScalarWhereWithAggregatesInput = {
+    AND?: CareerSuggestionScalarWhereWithAggregatesInput | CareerSuggestionScalarWhereWithAggregatesInput[]
+    OR?: CareerSuggestionScalarWhereWithAggregatesInput[]
+    NOT?: CareerSuggestionScalarWhereWithAggregatesInput | CareerSuggestionScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"CareerSuggestion"> | string
+    userId?: StringWithAggregatesFilter<"CareerSuggestion"> | string
+    role?: StringWithAggregatesFilter<"CareerSuggestion"> | string
+    readinessScore?: FloatWithAggregatesFilter<"CareerSuggestion"> | number
+    estimatedTime?: StringNullableWithAggregatesFilter<"CareerSuggestion"> | string | null
+    estimatedWeeks?: IntNullableWithAggregatesFilter<"CareerSuggestion"> | number | null
+    skillGaps?: JsonWithAggregatesFilter<"CareerSuggestion">
+    matchingSkills?: JsonWithAggregatesFilter<"CareerSuggestion">
+    resources?: JsonWithAggregatesFilter<"CareerSuggestion">
+    reasoning?: StringNullableWithAggregatesFilter<"CareerSuggestion"> | string | null
+    priority?: IntWithAggregatesFilter<"CareerSuggestion"> | number
+    status?: StringWithAggregatesFilter<"CareerSuggestion"> | string
+    aiModel?: StringNullableWithAggregatesFilter<"CareerSuggestion"> | string | null
+    confidence?: FloatNullableWithAggregatesFilter<"CareerSuggestion"> | number | null
+    createdAt?: DateTimeWithAggregatesFilter<"CareerSuggestion"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"CareerSuggestion"> | Date | string
+  }
+
+  export type PublicProfileWhereInput = {
+    AND?: PublicProfileWhereInput | PublicProfileWhereInput[]
+    OR?: PublicProfileWhereInput[]
+    NOT?: PublicProfileWhereInput | PublicProfileWhereInput[]
+    id?: StringFilter<"PublicProfile"> | string
+    userId?: StringFilter<"PublicProfile"> | string
+    username?: StringFilter<"PublicProfile"> | string
+    slug?: StringFilter<"PublicProfile"> | string
+    isPublic?: BoolFilter<"PublicProfile"> | boolean
+    customDomain?: StringNullableFilter<"PublicProfile"> | string | null
+    theme?: StringFilter<"PublicProfile"> | string
+    visibleSections?: JsonFilter<"PublicProfile">
+    seoTitle?: StringNullableFilter<"PublicProfile"> | string | null
+    seoDescription?: StringNullableFilter<"PublicProfile"> | string | null
+    ogImageUrl?: StringNullableFilter<"PublicProfile"> | string | null
+    viewCount?: IntFilter<"PublicProfile"> | number
+    shareCount?: IntFilter<"PublicProfile"> | number
+    lastViewedAt?: DateTimeNullableFilter<"PublicProfile"> | Date | string | null
+    createdAt?: DateTimeFilter<"PublicProfile"> | Date | string
+    updatedAt?: DateTimeFilter<"PublicProfile"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }
+
+  export type PublicProfileOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    username?: SortOrder
+    slug?: SortOrder
+    isPublic?: SortOrder
+    customDomain?: SortOrderInput | SortOrder
+    theme?: SortOrder
+    visibleSections?: SortOrder
+    seoTitle?: SortOrderInput | SortOrder
+    seoDescription?: SortOrderInput | SortOrder
+    ogImageUrl?: SortOrderInput | SortOrder
+    viewCount?: SortOrder
+    shareCount?: SortOrder
+    lastViewedAt?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+  }
+
+  export type PublicProfileWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    userId?: string
+    username?: string
+    slug?: string
+    customDomain?: string
+    AND?: PublicProfileWhereInput | PublicProfileWhereInput[]
+    OR?: PublicProfileWhereInput[]
+    NOT?: PublicProfileWhereInput | PublicProfileWhereInput[]
+    isPublic?: BoolFilter<"PublicProfile"> | boolean
+    theme?: StringFilter<"PublicProfile"> | string
+    visibleSections?: JsonFilter<"PublicProfile">
+    seoTitle?: StringNullableFilter<"PublicProfile"> | string | null
+    seoDescription?: StringNullableFilter<"PublicProfile"> | string | null
+    ogImageUrl?: StringNullableFilter<"PublicProfile"> | string | null
+    viewCount?: IntFilter<"PublicProfile"> | number
+    shareCount?: IntFilter<"PublicProfile"> | number
+    lastViewedAt?: DateTimeNullableFilter<"PublicProfile"> | Date | string | null
+    createdAt?: DateTimeFilter<"PublicProfile"> | Date | string
+    updatedAt?: DateTimeFilter<"PublicProfile"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }, "id" | "userId" | "username" | "slug" | "customDomain">
+
+  export type PublicProfileOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    username?: SortOrder
+    slug?: SortOrder
+    isPublic?: SortOrder
+    customDomain?: SortOrderInput | SortOrder
+    theme?: SortOrder
+    visibleSections?: SortOrder
+    seoTitle?: SortOrderInput | SortOrder
+    seoDescription?: SortOrderInput | SortOrder
+    ogImageUrl?: SortOrderInput | SortOrder
+    viewCount?: SortOrder
+    shareCount?: SortOrder
+    lastViewedAt?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: PublicProfileCountOrderByAggregateInput
+    _avg?: PublicProfileAvgOrderByAggregateInput
+    _max?: PublicProfileMaxOrderByAggregateInput
+    _min?: PublicProfileMinOrderByAggregateInput
+    _sum?: PublicProfileSumOrderByAggregateInput
+  }
+
+  export type PublicProfileScalarWhereWithAggregatesInput = {
+    AND?: PublicProfileScalarWhereWithAggregatesInput | PublicProfileScalarWhereWithAggregatesInput[]
+    OR?: PublicProfileScalarWhereWithAggregatesInput[]
+    NOT?: PublicProfileScalarWhereWithAggregatesInput | PublicProfileScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"PublicProfile"> | string
+    userId?: StringWithAggregatesFilter<"PublicProfile"> | string
+    username?: StringWithAggregatesFilter<"PublicProfile"> | string
+    slug?: StringWithAggregatesFilter<"PublicProfile"> | string
+    isPublic?: BoolWithAggregatesFilter<"PublicProfile"> | boolean
+    customDomain?: StringNullableWithAggregatesFilter<"PublicProfile"> | string | null
+    theme?: StringWithAggregatesFilter<"PublicProfile"> | string
+    visibleSections?: JsonWithAggregatesFilter<"PublicProfile">
+    seoTitle?: StringNullableWithAggregatesFilter<"PublicProfile"> | string | null
+    seoDescription?: StringNullableWithAggregatesFilter<"PublicProfile"> | string | null
+    ogImageUrl?: StringNullableWithAggregatesFilter<"PublicProfile"> | string | null
+    viewCount?: IntWithAggregatesFilter<"PublicProfile"> | number
+    shareCount?: IntWithAggregatesFilter<"PublicProfile"> | number
+    lastViewedAt?: DateTimeNullableWithAggregatesFilter<"PublicProfile"> | Date | string | null
+    createdAt?: DateTimeWithAggregatesFilter<"PublicProfile"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"PublicProfile"> | Date | string
+  }
+
+  export type ProfileViewWhereInput = {
+    AND?: ProfileViewWhereInput | ProfileViewWhereInput[]
+    OR?: ProfileViewWhereInput[]
+    NOT?: ProfileViewWhereInput | ProfileViewWhereInput[]
+    id?: StringFilter<"ProfileView"> | string
+    profileUserId?: StringFilter<"ProfileView"> | string
+    viewerIp?: StringNullableFilter<"ProfileView"> | string | null
+    viewerUserAgent?: StringNullableFilter<"ProfileView"> | string | null
+    referrer?: StringNullableFilter<"ProfileView"> | string | null
+    country?: StringNullableFilter<"ProfileView"> | string | null
+    city?: StringNullableFilter<"ProfileView"> | string | null
+    viewedAt?: DateTimeFilter<"ProfileView"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }
+
+  export type ProfileViewOrderByWithRelationInput = {
+    id?: SortOrder
+    profileUserId?: SortOrder
+    viewerIp?: SortOrderInput | SortOrder
+    viewerUserAgent?: SortOrderInput | SortOrder
+    referrer?: SortOrderInput | SortOrder
+    country?: SortOrderInput | SortOrder
+    city?: SortOrderInput | SortOrder
+    viewedAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+  }
+
+  export type ProfileViewWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ProfileViewWhereInput | ProfileViewWhereInput[]
+    OR?: ProfileViewWhereInput[]
+    NOT?: ProfileViewWhereInput | ProfileViewWhereInput[]
+    profileUserId?: StringFilter<"ProfileView"> | string
+    viewerIp?: StringNullableFilter<"ProfileView"> | string | null
+    viewerUserAgent?: StringNullableFilter<"ProfileView"> | string | null
+    referrer?: StringNullableFilter<"ProfileView"> | string | null
+    country?: StringNullableFilter<"ProfileView"> | string | null
+    city?: StringNullableFilter<"ProfileView"> | string | null
+    viewedAt?: DateTimeFilter<"ProfileView"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }, "id">
+
+  export type ProfileViewOrderByWithAggregationInput = {
+    id?: SortOrder
+    profileUserId?: SortOrder
+    viewerIp?: SortOrderInput | SortOrder
+    viewerUserAgent?: SortOrderInput | SortOrder
+    referrer?: SortOrderInput | SortOrder
+    country?: SortOrderInput | SortOrder
+    city?: SortOrderInput | SortOrder
+    viewedAt?: SortOrder
+    _count?: ProfileViewCountOrderByAggregateInput
+    _max?: ProfileViewMaxOrderByAggregateInput
+    _min?: ProfileViewMinOrderByAggregateInput
+  }
+
+  export type ProfileViewScalarWhereWithAggregatesInput = {
+    AND?: ProfileViewScalarWhereWithAggregatesInput | ProfileViewScalarWhereWithAggregatesInput[]
+    OR?: ProfileViewScalarWhereWithAggregatesInput[]
+    NOT?: ProfileViewScalarWhereWithAggregatesInput | ProfileViewScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ProfileView"> | string
+    profileUserId?: StringWithAggregatesFilter<"ProfileView"> | string
+    viewerIp?: StringNullableWithAggregatesFilter<"ProfileView"> | string | null
+    viewerUserAgent?: StringNullableWithAggregatesFilter<"ProfileView"> | string | null
+    referrer?: StringNullableWithAggregatesFilter<"ProfileView"> | string | null
+    country?: StringNullableWithAggregatesFilter<"ProfileView"> | string | null
+    city?: StringNullableWithAggregatesFilter<"ProfileView"> | string | null
+    viewedAt?: DateTimeWithAggregatesFilter<"ProfileView"> | Date | string
+  }
+
+  export type DataSourceSyncWhereInput = {
+    AND?: DataSourceSyncWhereInput | DataSourceSyncWhereInput[]
+    OR?: DataSourceSyncWhereInput[]
+    NOT?: DataSourceSyncWhereInput | DataSourceSyncWhereInput[]
+    id?: StringFilter<"DataSourceSync"> | string
+    userId?: StringFilter<"DataSourceSync"> | string
+    source?: StringFilter<"DataSourceSync"> | string
+    status?: StringFilter<"DataSourceSync"> | string
+    lastSyncAt?: DateTimeNullableFilter<"DataSourceSync"> | Date | string | null
+    nextSyncAt?: DateTimeNullableFilter<"DataSourceSync"> | Date | string | null
+    syncFrequency?: StringFilter<"DataSourceSync"> | string
+    error?: StringNullableFilter<"DataSourceSync"> | string | null
+    metadata?: JsonNullableFilter<"DataSourceSync">
+    createdAt?: DateTimeFilter<"DataSourceSync"> | Date | string
+    updatedAt?: DateTimeFilter<"DataSourceSync"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }
+
+  export type DataSourceSyncOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    source?: SortOrder
+    status?: SortOrder
+    lastSyncAt?: SortOrderInput | SortOrder
+    nextSyncAt?: SortOrderInput | SortOrder
+    syncFrequency?: SortOrder
+    error?: SortOrderInput | SortOrder
+    metadata?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+  }
+
+  export type DataSourceSyncWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    userId_source?: DataSourceSyncUserIdSourceCompoundUniqueInput
+    AND?: DataSourceSyncWhereInput | DataSourceSyncWhereInput[]
+    OR?: DataSourceSyncWhereInput[]
+    NOT?: DataSourceSyncWhereInput | DataSourceSyncWhereInput[]
+    userId?: StringFilter<"DataSourceSync"> | string
+    source?: StringFilter<"DataSourceSync"> | string
+    status?: StringFilter<"DataSourceSync"> | string
+    lastSyncAt?: DateTimeNullableFilter<"DataSourceSync"> | Date | string | null
+    nextSyncAt?: DateTimeNullableFilter<"DataSourceSync"> | Date | string | null
+    syncFrequency?: StringFilter<"DataSourceSync"> | string
+    error?: StringNullableFilter<"DataSourceSync"> | string | null
+    metadata?: JsonNullableFilter<"DataSourceSync">
+    createdAt?: DateTimeFilter<"DataSourceSync"> | Date | string
+    updatedAt?: DateTimeFilter<"DataSourceSync"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }, "id" | "userId_source">
+
+  export type DataSourceSyncOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    source?: SortOrder
+    status?: SortOrder
+    lastSyncAt?: SortOrderInput | SortOrder
+    nextSyncAt?: SortOrderInput | SortOrder
+    syncFrequency?: SortOrder
+    error?: SortOrderInput | SortOrder
+    metadata?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: DataSourceSyncCountOrderByAggregateInput
+    _max?: DataSourceSyncMaxOrderByAggregateInput
+    _min?: DataSourceSyncMinOrderByAggregateInput
+  }
+
+  export type DataSourceSyncScalarWhereWithAggregatesInput = {
+    AND?: DataSourceSyncScalarWhereWithAggregatesInput | DataSourceSyncScalarWhereWithAggregatesInput[]
+    OR?: DataSourceSyncScalarWhereWithAggregatesInput[]
+    NOT?: DataSourceSyncScalarWhereWithAggregatesInput | DataSourceSyncScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"DataSourceSync"> | string
+    userId?: StringWithAggregatesFilter<"DataSourceSync"> | string
+    source?: StringWithAggregatesFilter<"DataSourceSync"> | string
+    status?: StringWithAggregatesFilter<"DataSourceSync"> | string
+    lastSyncAt?: DateTimeNullableWithAggregatesFilter<"DataSourceSync"> | Date | string | null
+    nextSyncAt?: DateTimeNullableWithAggregatesFilter<"DataSourceSync"> | Date | string | null
+    syncFrequency?: StringWithAggregatesFilter<"DataSourceSync"> | string
+    error?: StringNullableWithAggregatesFilter<"DataSourceSync"> | string | null
+    metadata?: JsonNullableWithAggregatesFilter<"DataSourceSync">
+    createdAt?: DateTimeWithAggregatesFilter<"DataSourceSync"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"DataSourceSync"> | Date | string
+  }
+
+  export type VerificationRequestWhereInput = {
+    AND?: VerificationRequestWhereInput | VerificationRequestWhereInput[]
+    OR?: VerificationRequestWhereInput[]
+    NOT?: VerificationRequestWhereInput | VerificationRequestWhereInput[]
+    id?: StringFilter<"VerificationRequest"> | string
+    userId?: StringFilter<"VerificationRequest"> | string
+    type?: StringFilter<"VerificationRequest"> | string
+    entityId?: StringFilter<"VerificationRequest"> | string
+    status?: StringFilter<"VerificationRequest"> | string
+    method?: StringNullableFilter<"VerificationRequest"> | string | null
+    documentUrls?: StringNullableListFilter<"VerificationRequest">
+    reviewerNotes?: StringNullableFilter<"VerificationRequest"> | string | null
+    submittedAt?: DateTimeFilter<"VerificationRequest"> | Date | string
+    reviewedAt?: DateTimeNullableFilter<"VerificationRequest"> | Date | string | null
+    reviewedBy?: StringNullableFilter<"VerificationRequest"> | string | null
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }
+
+  export type VerificationRequestOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    entityId?: SortOrder
+    status?: SortOrder
+    method?: SortOrderInput | SortOrder
+    documentUrls?: SortOrder
+    reviewerNotes?: SortOrderInput | SortOrder
+    submittedAt?: SortOrder
+    reviewedAt?: SortOrderInput | SortOrder
+    reviewedBy?: SortOrderInput | SortOrder
+    user?: UserOrderByWithRelationInput
+  }
+
+  export type VerificationRequestWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: VerificationRequestWhereInput | VerificationRequestWhereInput[]
+    OR?: VerificationRequestWhereInput[]
+    NOT?: VerificationRequestWhereInput | VerificationRequestWhereInput[]
+    userId?: StringFilter<"VerificationRequest"> | string
+    type?: StringFilter<"VerificationRequest"> | string
+    entityId?: StringFilter<"VerificationRequest"> | string
+    status?: StringFilter<"VerificationRequest"> | string
+    method?: StringNullableFilter<"VerificationRequest"> | string | null
+    documentUrls?: StringNullableListFilter<"VerificationRequest">
+    reviewerNotes?: StringNullableFilter<"VerificationRequest"> | string | null
+    submittedAt?: DateTimeFilter<"VerificationRequest"> | Date | string
+    reviewedAt?: DateTimeNullableFilter<"VerificationRequest"> | Date | string | null
+    reviewedBy?: StringNullableFilter<"VerificationRequest"> | string | null
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+  }, "id">
+
+  export type VerificationRequestOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    entityId?: SortOrder
+    status?: SortOrder
+    method?: SortOrderInput | SortOrder
+    documentUrls?: SortOrder
+    reviewerNotes?: SortOrderInput | SortOrder
+    submittedAt?: SortOrder
+    reviewedAt?: SortOrderInput | SortOrder
+    reviewedBy?: SortOrderInput | SortOrder
+    _count?: VerificationRequestCountOrderByAggregateInput
+    _max?: VerificationRequestMaxOrderByAggregateInput
+    _min?: VerificationRequestMinOrderByAggregateInput
+  }
+
+  export type VerificationRequestScalarWhereWithAggregatesInput = {
+    AND?: VerificationRequestScalarWhereWithAggregatesInput | VerificationRequestScalarWhereWithAggregatesInput[]
+    OR?: VerificationRequestScalarWhereWithAggregatesInput[]
+    NOT?: VerificationRequestScalarWhereWithAggregatesInput | VerificationRequestScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"VerificationRequest"> | string
+    userId?: StringWithAggregatesFilter<"VerificationRequest"> | string
+    type?: StringWithAggregatesFilter<"VerificationRequest"> | string
+    entityId?: StringWithAggregatesFilter<"VerificationRequest"> | string
+    status?: StringWithAggregatesFilter<"VerificationRequest"> | string
+    method?: StringNullableWithAggregatesFilter<"VerificationRequest"> | string | null
+    documentUrls?: StringNullableListFilter<"VerificationRequest">
+    reviewerNotes?: StringNullableWithAggregatesFilter<"VerificationRequest"> | string | null
+    submittedAt?: DateTimeWithAggregatesFilter<"VerificationRequest"> | Date | string
+    reviewedAt?: DateTimeNullableWithAggregatesFilter<"VerificationRequest"> | Date | string | null
+    reviewedBy?: StringNullableWithAggregatesFilter<"VerificationRequest"> | string | null
+  }
+
+  export type ResourceRecommendationWhereInput = {
+    AND?: ResourceRecommendationWhereInput | ResourceRecommendationWhereInput[]
+    OR?: ResourceRecommendationWhereInput[]
+    NOT?: ResourceRecommendationWhereInput | ResourceRecommendationWhereInput[]
+    id?: StringFilter<"ResourceRecommendation"> | string
+    userId?: StringFilter<"ResourceRecommendation"> | string
+    careerSuggestionId?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    type?: StringFilter<"ResourceRecommendation"> | string
+    platform?: StringFilter<"ResourceRecommendation"> | string
+    title?: StringFilter<"ResourceRecommendation"> | string
+    url?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    provider?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    duration?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    cost?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    difficulty?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    skillsGained?: StringNullableListFilter<"ResourceRecommendation">
+    relevanceScore?: FloatNullableFilter<"ResourceRecommendation"> | number | null
+    status?: StringFilter<"ResourceRecommendation"> | string
+    metadata?: JsonNullableFilter<"ResourceRecommendation">
+    createdAt?: DateTimeFilter<"ResourceRecommendation"> | Date | string
+    updatedAt?: DateTimeFilter<"ResourceRecommendation"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    careerSuggestion?: XOR<CareerSuggestionNullableScalarRelationFilter, CareerSuggestionWhereInput> | null
+  }
+
+  export type ResourceRecommendationOrderByWithRelationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    careerSuggestionId?: SortOrderInput | SortOrder
+    type?: SortOrder
+    platform?: SortOrder
+    title?: SortOrder
+    url?: SortOrderInput | SortOrder
+    provider?: SortOrderInput | SortOrder
+    duration?: SortOrderInput | SortOrder
+    cost?: SortOrderInput | SortOrder
+    difficulty?: SortOrderInput | SortOrder
+    skillsGained?: SortOrder
+    relevanceScore?: SortOrderInput | SortOrder
+    status?: SortOrder
+    metadata?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    user?: UserOrderByWithRelationInput
+    careerSuggestion?: CareerSuggestionOrderByWithRelationInput
+  }
+
+  export type ResourceRecommendationWhereUniqueInput = Prisma.AtLeast<{
+    id?: string
+    AND?: ResourceRecommendationWhereInput | ResourceRecommendationWhereInput[]
+    OR?: ResourceRecommendationWhereInput[]
+    NOT?: ResourceRecommendationWhereInput | ResourceRecommendationWhereInput[]
+    userId?: StringFilter<"ResourceRecommendation"> | string
+    careerSuggestionId?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    type?: StringFilter<"ResourceRecommendation"> | string
+    platform?: StringFilter<"ResourceRecommendation"> | string
+    title?: StringFilter<"ResourceRecommendation"> | string
+    url?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    provider?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    duration?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    cost?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    difficulty?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    skillsGained?: StringNullableListFilter<"ResourceRecommendation">
+    relevanceScore?: FloatNullableFilter<"ResourceRecommendation"> | number | null
+    status?: StringFilter<"ResourceRecommendation"> | string
+    metadata?: JsonNullableFilter<"ResourceRecommendation">
+    createdAt?: DateTimeFilter<"ResourceRecommendation"> | Date | string
+    updatedAt?: DateTimeFilter<"ResourceRecommendation"> | Date | string
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    careerSuggestion?: XOR<CareerSuggestionNullableScalarRelationFilter, CareerSuggestionWhereInput> | null
+  }, "id">
+
+  export type ResourceRecommendationOrderByWithAggregationInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    careerSuggestionId?: SortOrderInput | SortOrder
+    type?: SortOrder
+    platform?: SortOrder
+    title?: SortOrder
+    url?: SortOrderInput | SortOrder
+    provider?: SortOrderInput | SortOrder
+    duration?: SortOrderInput | SortOrder
+    cost?: SortOrderInput | SortOrder
+    difficulty?: SortOrderInput | SortOrder
+    skillsGained?: SortOrder
+    relevanceScore?: SortOrderInput | SortOrder
+    status?: SortOrder
+    metadata?: SortOrderInput | SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    _count?: ResourceRecommendationCountOrderByAggregateInput
+    _avg?: ResourceRecommendationAvgOrderByAggregateInput
+    _max?: ResourceRecommendationMaxOrderByAggregateInput
+    _min?: ResourceRecommendationMinOrderByAggregateInput
+    _sum?: ResourceRecommendationSumOrderByAggregateInput
+  }
+
+  export type ResourceRecommendationScalarWhereWithAggregatesInput = {
+    AND?: ResourceRecommendationScalarWhereWithAggregatesInput | ResourceRecommendationScalarWhereWithAggregatesInput[]
+    OR?: ResourceRecommendationScalarWhereWithAggregatesInput[]
+    NOT?: ResourceRecommendationScalarWhereWithAggregatesInput | ResourceRecommendationScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"ResourceRecommendation"> | string
+    userId?: StringWithAggregatesFilter<"ResourceRecommendation"> | string
+    careerSuggestionId?: StringNullableWithAggregatesFilter<"ResourceRecommendation"> | string | null
+    type?: StringWithAggregatesFilter<"ResourceRecommendation"> | string
+    platform?: StringWithAggregatesFilter<"ResourceRecommendation"> | string
+    title?: StringWithAggregatesFilter<"ResourceRecommendation"> | string
+    url?: StringNullableWithAggregatesFilter<"ResourceRecommendation"> | string | null
+    provider?: StringNullableWithAggregatesFilter<"ResourceRecommendation"> | string | null
+    duration?: StringNullableWithAggregatesFilter<"ResourceRecommendation"> | string | null
+    cost?: StringNullableWithAggregatesFilter<"ResourceRecommendation"> | string | null
+    difficulty?: StringNullableWithAggregatesFilter<"ResourceRecommendation"> | string | null
+    skillsGained?: StringNullableListFilter<"ResourceRecommendation">
+    relevanceScore?: FloatNullableWithAggregatesFilter<"ResourceRecommendation"> | number | null
+    status?: StringWithAggregatesFilter<"ResourceRecommendation"> | string
+    metadata?: JsonNullableWithAggregatesFilter<"ResourceRecommendation">
+    createdAt?: DateTimeWithAggregatesFilter<"ResourceRecommendation"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"ResourceRecommendation"> | Date | string
+  }
+
   export type UserCreateInput = {
     id?: string
     email?: string | null
@@ -25025,6 +41086,17 @@ export namespace Prisma {
     achievements?: AchievementCreateNestedManyWithoutUserInput
     imports?: SkillImportCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateInput = {
@@ -25045,6 +41117,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
     imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserUpdateInput = {
@@ -25065,6 +41148,17 @@ export namespace Prisma {
     achievements?: AchievementUpdateManyWithoutUserNestedInput
     imports?: SkillImportUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
@@ -25085,6 +41179,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
     imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateManyInput = {
@@ -26732,6 +42837,1328 @@ export namespace Prisma {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
+  export type EducationRecordCreateInput = {
+    id?: string
+    institutionName: string
+    degree: string
+    field?: string | null
+    gpa?: number | null
+    startDate: Date | string
+    endDate?: Date | string | null
+    verified?: boolean
+    verificationSource?: string | null
+    verificationDate?: Date | string | null
+    transcriptUrl?: string | null
+    credentialId?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutEducationRecordsInput
+  }
+
+  export type EducationRecordUncheckedCreateInput = {
+    id?: string
+    userId: string
+    institutionName: string
+    degree: string
+    field?: string | null
+    gpa?: number | null
+    startDate: Date | string
+    endDate?: Date | string | null
+    verified?: boolean
+    verificationSource?: string | null
+    verificationDate?: Date | string | null
+    transcriptUrl?: string | null
+    credentialId?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EducationRecordUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    institutionName?: StringFieldUpdateOperationsInput | string
+    degree?: StringFieldUpdateOperationsInput | string
+    field?: NullableStringFieldUpdateOperationsInput | string | null
+    gpa?: NullableFloatFieldUpdateOperationsInput | number | null
+    startDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    endDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    verificationSource?: NullableStringFieldUpdateOperationsInput | string | null
+    verificationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    transcriptUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    credentialId?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutEducationRecordsNestedInput
+  }
+
+  export type EducationRecordUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    institutionName?: StringFieldUpdateOperationsInput | string
+    degree?: StringFieldUpdateOperationsInput | string
+    field?: NullableStringFieldUpdateOperationsInput | string | null
+    gpa?: NullableFloatFieldUpdateOperationsInput | number | null
+    startDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    endDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    verificationSource?: NullableStringFieldUpdateOperationsInput | string | null
+    verificationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    transcriptUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    credentialId?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EducationRecordCreateManyInput = {
+    id?: string
+    userId: string
+    institutionName: string
+    degree: string
+    field?: string | null
+    gpa?: number | null
+    startDate: Date | string
+    endDate?: Date | string | null
+    verified?: boolean
+    verificationSource?: string | null
+    verificationDate?: Date | string | null
+    transcriptUrl?: string | null
+    credentialId?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EducationRecordUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    institutionName?: StringFieldUpdateOperationsInput | string
+    degree?: StringFieldUpdateOperationsInput | string
+    field?: NullableStringFieldUpdateOperationsInput | string | null
+    gpa?: NullableFloatFieldUpdateOperationsInput | number | null
+    startDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    endDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    verificationSource?: NullableStringFieldUpdateOperationsInput | string | null
+    verificationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    transcriptUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    credentialId?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EducationRecordUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    institutionName?: StringFieldUpdateOperationsInput | string
+    degree?: StringFieldUpdateOperationsInput | string
+    field?: NullableStringFieldUpdateOperationsInput | string | null
+    gpa?: NullableFloatFieldUpdateOperationsInput | number | null
+    startDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    endDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    verificationSource?: NullableStringFieldUpdateOperationsInput | string | null
+    verificationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    transcriptUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    credentialId?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type SocialProfileCreateInput = {
+    id?: string
+    platform: string
+    username: string
+    profileUrl?: string | null
+    verified?: boolean
+    followerCount?: number | null
+    followingCount?: number | null
+    engagementRate?: number | null
+    contentScore?: number | null
+    influenceScore?: number | null
+    lastFetchedAt: Date | string
+    metrics?: JsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutSocialProfilesInput
+  }
+
+  export type SocialProfileUncheckedCreateInput = {
+    id?: string
+    userId: string
+    platform: string
+    username: string
+    profileUrl?: string | null
+    verified?: boolean
+    followerCount?: number | null
+    followingCount?: number | null
+    engagementRate?: number | null
+    contentScore?: number | null
+    influenceScore?: number | null
+    lastFetchedAt: Date | string
+    metrics?: JsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type SocialProfileUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    profileUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    followerCount?: NullableIntFieldUpdateOperationsInput | number | null
+    followingCount?: NullableIntFieldUpdateOperationsInput | number | null
+    engagementRate?: NullableFloatFieldUpdateOperationsInput | number | null
+    contentScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    influenceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    lastFetchedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    metrics?: JsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutSocialProfilesNestedInput
+  }
+
+  export type SocialProfileUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    profileUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    followerCount?: NullableIntFieldUpdateOperationsInput | number | null
+    followingCount?: NullableIntFieldUpdateOperationsInput | number | null
+    engagementRate?: NullableFloatFieldUpdateOperationsInput | number | null
+    contentScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    influenceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    lastFetchedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    metrics?: JsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type SocialProfileCreateManyInput = {
+    id?: string
+    userId: string
+    platform: string
+    username: string
+    profileUrl?: string | null
+    verified?: boolean
+    followerCount?: number | null
+    followingCount?: number | null
+    engagementRate?: number | null
+    contentScore?: number | null
+    influenceScore?: number | null
+    lastFetchedAt: Date | string
+    metrics?: JsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type SocialProfileUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    profileUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    followerCount?: NullableIntFieldUpdateOperationsInput | number | null
+    followingCount?: NullableIntFieldUpdateOperationsInput | number | null
+    engagementRate?: NullableFloatFieldUpdateOperationsInput | number | null
+    contentScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    influenceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    lastFetchedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    metrics?: JsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type SocialProfileUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    profileUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    followerCount?: NullableIntFieldUpdateOperationsInput | number | null
+    followingCount?: NullableIntFieldUpdateOperationsInput | number | null
+    engagementRate?: NullableFloatFieldUpdateOperationsInput | number | null
+    contentScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    influenceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    lastFetchedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    metrics?: JsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CertificationCreateInput = {
+    id?: string
+    name: string
+    issuer: string
+    issueDate: Date | string
+    expiryDate?: Date | string | null
+    credentialId?: string | null
+    credentialUrl?: string | null
+    verified?: boolean
+    verificationMethod?: string | null
+    skillsEarned?: CertificationCreateskillsEarnedInput | string[]
+    certificateImageUrl?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutCertificationsInput
+  }
+
+  export type CertificationUncheckedCreateInput = {
+    id?: string
+    userId: string
+    name: string
+    issuer: string
+    issueDate: Date | string
+    expiryDate?: Date | string | null
+    credentialId?: string | null
+    credentialUrl?: string | null
+    verified?: boolean
+    verificationMethod?: string | null
+    skillsEarned?: CertificationCreateskillsEarnedInput | string[]
+    certificateImageUrl?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CertificationUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    issuer?: StringFieldUpdateOperationsInput | string
+    issueDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    expiryDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    credentialId?: NullableStringFieldUpdateOperationsInput | string | null
+    credentialUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    verificationMethod?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsEarned?: CertificationUpdateskillsEarnedInput | string[]
+    certificateImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutCertificationsNestedInput
+  }
+
+  export type CertificationUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    issuer?: StringFieldUpdateOperationsInput | string
+    issueDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    expiryDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    credentialId?: NullableStringFieldUpdateOperationsInput | string | null
+    credentialUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    verificationMethod?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsEarned?: CertificationUpdateskillsEarnedInput | string[]
+    certificateImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CertificationCreateManyInput = {
+    id?: string
+    userId: string
+    name: string
+    issuer: string
+    issueDate: Date | string
+    expiryDate?: Date | string | null
+    credentialId?: string | null
+    credentialUrl?: string | null
+    verified?: boolean
+    verificationMethod?: string | null
+    skillsEarned?: CertificationCreateskillsEarnedInput | string[]
+    certificateImageUrl?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CertificationUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    issuer?: StringFieldUpdateOperationsInput | string
+    issueDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    expiryDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    credentialId?: NullableStringFieldUpdateOperationsInput | string | null
+    credentialUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    verificationMethod?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsEarned?: CertificationUpdateskillsEarnedInput | string[]
+    certificateImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CertificationUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    issuer?: StringFieldUpdateOperationsInput | string
+    issueDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    expiryDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    credentialId?: NullableStringFieldUpdateOperationsInput | string | null
+    credentialUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    verificationMethod?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsEarned?: CertificationUpdateskillsEarnedInput | string[]
+    certificateImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GitHubProfileCreateInput = {
+    id?: string
+    username: string
+    profileUrl?: string | null
+    totalRepos?: number
+    totalCommits?: number
+    totalPRs?: number
+    totalIssues?: number
+    totalStars?: number
+    languagesUsed?: JsonNullValueInput | InputJsonValue
+    contributionScore?: number | null
+    consistencyScore?: number | null
+    codeQualityScore?: number | null
+    topRepos?: NullableJsonNullValueInput | InputJsonValue
+    contributionGraph?: NullableJsonNullValueInput | InputJsonValue
+    lastFetchedAt: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutGithubProfileInput
+  }
+
+  export type GitHubProfileUncheckedCreateInput = {
+    id?: string
+    userId: string
+    username: string
+    profileUrl?: string | null
+    totalRepos?: number
+    totalCommits?: number
+    totalPRs?: number
+    totalIssues?: number
+    totalStars?: number
+    languagesUsed?: JsonNullValueInput | InputJsonValue
+    contributionScore?: number | null
+    consistencyScore?: number | null
+    codeQualityScore?: number | null
+    topRepos?: NullableJsonNullValueInput | InputJsonValue
+    contributionGraph?: NullableJsonNullValueInput | InputJsonValue
+    lastFetchedAt: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type GitHubProfileUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    profileUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    totalRepos?: IntFieldUpdateOperationsInput | number
+    totalCommits?: IntFieldUpdateOperationsInput | number
+    totalPRs?: IntFieldUpdateOperationsInput | number
+    totalIssues?: IntFieldUpdateOperationsInput | number
+    totalStars?: IntFieldUpdateOperationsInput | number
+    languagesUsed?: JsonNullValueInput | InputJsonValue
+    contributionScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    consistencyScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    codeQualityScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    topRepos?: NullableJsonNullValueInput | InputJsonValue
+    contributionGraph?: NullableJsonNullValueInput | InputJsonValue
+    lastFetchedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutGithubProfileNestedInput
+  }
+
+  export type GitHubProfileUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    profileUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    totalRepos?: IntFieldUpdateOperationsInput | number
+    totalCommits?: IntFieldUpdateOperationsInput | number
+    totalPRs?: IntFieldUpdateOperationsInput | number
+    totalIssues?: IntFieldUpdateOperationsInput | number
+    totalStars?: IntFieldUpdateOperationsInput | number
+    languagesUsed?: JsonNullValueInput | InputJsonValue
+    contributionScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    consistencyScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    codeQualityScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    topRepos?: NullableJsonNullValueInput | InputJsonValue
+    contributionGraph?: NullableJsonNullValueInput | InputJsonValue
+    lastFetchedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GitHubProfileCreateManyInput = {
+    id?: string
+    userId: string
+    username: string
+    profileUrl?: string | null
+    totalRepos?: number
+    totalCommits?: number
+    totalPRs?: number
+    totalIssues?: number
+    totalStars?: number
+    languagesUsed?: JsonNullValueInput | InputJsonValue
+    contributionScore?: number | null
+    consistencyScore?: number | null
+    codeQualityScore?: number | null
+    topRepos?: NullableJsonNullValueInput | InputJsonValue
+    contributionGraph?: NullableJsonNullValueInput | InputJsonValue
+    lastFetchedAt: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type GitHubProfileUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    profileUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    totalRepos?: IntFieldUpdateOperationsInput | number
+    totalCommits?: IntFieldUpdateOperationsInput | number
+    totalPRs?: IntFieldUpdateOperationsInput | number
+    totalIssues?: IntFieldUpdateOperationsInput | number
+    totalStars?: IntFieldUpdateOperationsInput | number
+    languagesUsed?: JsonNullValueInput | InputJsonValue
+    contributionScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    consistencyScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    codeQualityScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    topRepos?: NullableJsonNullValueInput | InputJsonValue
+    contributionGraph?: NullableJsonNullValueInput | InputJsonValue
+    lastFetchedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GitHubProfileUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    profileUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    totalRepos?: IntFieldUpdateOperationsInput | number
+    totalCommits?: IntFieldUpdateOperationsInput | number
+    totalPRs?: IntFieldUpdateOperationsInput | number
+    totalIssues?: IntFieldUpdateOperationsInput | number
+    totalStars?: IntFieldUpdateOperationsInput | number
+    languagesUsed?: JsonNullValueInput | InputJsonValue
+    contributionScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    consistencyScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    codeQualityScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    topRepos?: NullableJsonNullValueInput | InputJsonValue
+    contributionGraph?: NullableJsonNullValueInput | InputJsonValue
+    lastFetchedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CredibilityScoreCreateInput = {
+    id?: string
+    overallScore?: number
+    educationScore?: number
+    experienceScore?: number
+    technicalScore?: number
+    socialScore?: number
+    certificationScore?: number
+    verificationLevel?: string
+    breakdown?: JsonNullValueInput | InputJsonValue
+    badges?: CredibilityScoreCreatebadgesInput | string[]
+    calculatedAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutCredibilityScoreInput
+  }
+
+  export type CredibilityScoreUncheckedCreateInput = {
+    id?: string
+    userId: string
+    overallScore?: number
+    educationScore?: number
+    experienceScore?: number
+    technicalScore?: number
+    socialScore?: number
+    certificationScore?: number
+    verificationLevel?: string
+    breakdown?: JsonNullValueInput | InputJsonValue
+    badges?: CredibilityScoreCreatebadgesInput | string[]
+    calculatedAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CredibilityScoreUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    overallScore?: FloatFieldUpdateOperationsInput | number
+    educationScore?: FloatFieldUpdateOperationsInput | number
+    experienceScore?: FloatFieldUpdateOperationsInput | number
+    technicalScore?: FloatFieldUpdateOperationsInput | number
+    socialScore?: FloatFieldUpdateOperationsInput | number
+    certificationScore?: FloatFieldUpdateOperationsInput | number
+    verificationLevel?: StringFieldUpdateOperationsInput | string
+    breakdown?: JsonNullValueInput | InputJsonValue
+    badges?: CredibilityScoreUpdatebadgesInput | string[]
+    calculatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutCredibilityScoreNestedInput
+  }
+
+  export type CredibilityScoreUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    overallScore?: FloatFieldUpdateOperationsInput | number
+    educationScore?: FloatFieldUpdateOperationsInput | number
+    experienceScore?: FloatFieldUpdateOperationsInput | number
+    technicalScore?: FloatFieldUpdateOperationsInput | number
+    socialScore?: FloatFieldUpdateOperationsInput | number
+    certificationScore?: FloatFieldUpdateOperationsInput | number
+    verificationLevel?: StringFieldUpdateOperationsInput | string
+    breakdown?: JsonNullValueInput | InputJsonValue
+    badges?: CredibilityScoreUpdatebadgesInput | string[]
+    calculatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CredibilityScoreCreateManyInput = {
+    id?: string
+    userId: string
+    overallScore?: number
+    educationScore?: number
+    experienceScore?: number
+    technicalScore?: number
+    socialScore?: number
+    certificationScore?: number
+    verificationLevel?: string
+    breakdown?: JsonNullValueInput | InputJsonValue
+    badges?: CredibilityScoreCreatebadgesInput | string[]
+    calculatedAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CredibilityScoreUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    overallScore?: FloatFieldUpdateOperationsInput | number
+    educationScore?: FloatFieldUpdateOperationsInput | number
+    experienceScore?: FloatFieldUpdateOperationsInput | number
+    technicalScore?: FloatFieldUpdateOperationsInput | number
+    socialScore?: FloatFieldUpdateOperationsInput | number
+    certificationScore?: FloatFieldUpdateOperationsInput | number
+    verificationLevel?: StringFieldUpdateOperationsInput | string
+    breakdown?: JsonNullValueInput | InputJsonValue
+    badges?: CredibilityScoreUpdatebadgesInput | string[]
+    calculatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CredibilityScoreUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    overallScore?: FloatFieldUpdateOperationsInput | number
+    educationScore?: FloatFieldUpdateOperationsInput | number
+    experienceScore?: FloatFieldUpdateOperationsInput | number
+    technicalScore?: FloatFieldUpdateOperationsInput | number
+    socialScore?: FloatFieldUpdateOperationsInput | number
+    certificationScore?: FloatFieldUpdateOperationsInput | number
+    verificationLevel?: StringFieldUpdateOperationsInput | string
+    breakdown?: JsonNullValueInput | InputJsonValue
+    badges?: CredibilityScoreUpdatebadgesInput | string[]
+    calculatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CareerSuggestionCreateInput = {
+    id?: string
+    role: string
+    readinessScore: number
+    estimatedTime?: string | null
+    estimatedWeeks?: number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: string | null
+    priority?: number
+    status?: string
+    aiModel?: string | null
+    confidence?: number | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutCareerSuggestionsInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutCareerSuggestionInput
+  }
+
+  export type CareerSuggestionUncheckedCreateInput = {
+    id?: string
+    userId: string
+    role: string
+    readinessScore: number
+    estimatedTime?: string | null
+    estimatedWeeks?: number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: string | null
+    priority?: number
+    status?: string
+    aiModel?: string | null
+    confidence?: number | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutCareerSuggestionInput
+  }
+
+  export type CareerSuggestionUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    readinessScore?: FloatFieldUpdateOperationsInput | number
+    estimatedTime?: NullableStringFieldUpdateOperationsInput | string | null
+    estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
+    aiModel?: NullableStringFieldUpdateOperationsInput | string | null
+    confidence?: NullableFloatFieldUpdateOperationsInput | number | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutCareerSuggestionsNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutCareerSuggestionNestedInput
+  }
+
+  export type CareerSuggestionUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    readinessScore?: FloatFieldUpdateOperationsInput | number
+    estimatedTime?: NullableStringFieldUpdateOperationsInput | string | null
+    estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
+    aiModel?: NullableStringFieldUpdateOperationsInput | string | null
+    confidence?: NullableFloatFieldUpdateOperationsInput | number | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutCareerSuggestionNestedInput
+  }
+
+  export type CareerSuggestionCreateManyInput = {
+    id?: string
+    userId: string
+    role: string
+    readinessScore: number
+    estimatedTime?: string | null
+    estimatedWeeks?: number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: string | null
+    priority?: number
+    status?: string
+    aiModel?: string | null
+    confidence?: number | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CareerSuggestionUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    readinessScore?: FloatFieldUpdateOperationsInput | number
+    estimatedTime?: NullableStringFieldUpdateOperationsInput | string | null
+    estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
+    aiModel?: NullableStringFieldUpdateOperationsInput | string | null
+    confidence?: NullableFloatFieldUpdateOperationsInput | number | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CareerSuggestionUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    readinessScore?: FloatFieldUpdateOperationsInput | number
+    estimatedTime?: NullableStringFieldUpdateOperationsInput | string | null
+    estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
+    aiModel?: NullableStringFieldUpdateOperationsInput | string | null
+    confidence?: NullableFloatFieldUpdateOperationsInput | number | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PublicProfileCreateInput = {
+    id?: string
+    username: string
+    slug: string
+    isPublic?: boolean
+    customDomain?: string | null
+    theme?: string
+    visibleSections?: JsonNullValueInput | InputJsonValue
+    seoTitle?: string | null
+    seoDescription?: string | null
+    ogImageUrl?: string | null
+    viewCount?: number
+    shareCount?: number
+    lastViewedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutPublicProfileInput
+  }
+
+  export type PublicProfileUncheckedCreateInput = {
+    id?: string
+    userId: string
+    username: string
+    slug: string
+    isPublic?: boolean
+    customDomain?: string | null
+    theme?: string
+    visibleSections?: JsonNullValueInput | InputJsonValue
+    seoTitle?: string | null
+    seoDescription?: string | null
+    ogImageUrl?: string | null
+    viewCount?: number
+    shareCount?: number
+    lastViewedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type PublicProfileUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    isPublic?: BoolFieldUpdateOperationsInput | boolean
+    customDomain?: NullableStringFieldUpdateOperationsInput | string | null
+    theme?: StringFieldUpdateOperationsInput | string
+    visibleSections?: JsonNullValueInput | InputJsonValue
+    seoTitle?: NullableStringFieldUpdateOperationsInput | string | null
+    seoDescription?: NullableStringFieldUpdateOperationsInput | string | null
+    ogImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    viewCount?: IntFieldUpdateOperationsInput | number
+    shareCount?: IntFieldUpdateOperationsInput | number
+    lastViewedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutPublicProfileNestedInput
+  }
+
+  export type PublicProfileUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    isPublic?: BoolFieldUpdateOperationsInput | boolean
+    customDomain?: NullableStringFieldUpdateOperationsInput | string | null
+    theme?: StringFieldUpdateOperationsInput | string
+    visibleSections?: JsonNullValueInput | InputJsonValue
+    seoTitle?: NullableStringFieldUpdateOperationsInput | string | null
+    seoDescription?: NullableStringFieldUpdateOperationsInput | string | null
+    ogImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    viewCount?: IntFieldUpdateOperationsInput | number
+    shareCount?: IntFieldUpdateOperationsInput | number
+    lastViewedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PublicProfileCreateManyInput = {
+    id?: string
+    userId: string
+    username: string
+    slug: string
+    isPublic?: boolean
+    customDomain?: string | null
+    theme?: string
+    visibleSections?: JsonNullValueInput | InputJsonValue
+    seoTitle?: string | null
+    seoDescription?: string | null
+    ogImageUrl?: string | null
+    viewCount?: number
+    shareCount?: number
+    lastViewedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type PublicProfileUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    isPublic?: BoolFieldUpdateOperationsInput | boolean
+    customDomain?: NullableStringFieldUpdateOperationsInput | string | null
+    theme?: StringFieldUpdateOperationsInput | string
+    visibleSections?: JsonNullValueInput | InputJsonValue
+    seoTitle?: NullableStringFieldUpdateOperationsInput | string | null
+    seoDescription?: NullableStringFieldUpdateOperationsInput | string | null
+    ogImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    viewCount?: IntFieldUpdateOperationsInput | number
+    shareCount?: IntFieldUpdateOperationsInput | number
+    lastViewedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PublicProfileUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    isPublic?: BoolFieldUpdateOperationsInput | boolean
+    customDomain?: NullableStringFieldUpdateOperationsInput | string | null
+    theme?: StringFieldUpdateOperationsInput | string
+    visibleSections?: JsonNullValueInput | InputJsonValue
+    seoTitle?: NullableStringFieldUpdateOperationsInput | string | null
+    seoDescription?: NullableStringFieldUpdateOperationsInput | string | null
+    ogImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    viewCount?: IntFieldUpdateOperationsInput | number
+    shareCount?: IntFieldUpdateOperationsInput | number
+    lastViewedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ProfileViewCreateInput = {
+    id?: string
+    viewerIp?: string | null
+    viewerUserAgent?: string | null
+    referrer?: string | null
+    country?: string | null
+    city?: string | null
+    viewedAt?: Date | string
+    user: UserCreateNestedOneWithoutProfileViewsInput
+  }
+
+  export type ProfileViewUncheckedCreateInput = {
+    id?: string
+    profileUserId: string
+    viewerIp?: string | null
+    viewerUserAgent?: string | null
+    referrer?: string | null
+    country?: string | null
+    city?: string | null
+    viewedAt?: Date | string
+  }
+
+  export type ProfileViewUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    viewerIp?: NullableStringFieldUpdateOperationsInput | string | null
+    viewerUserAgent?: NullableStringFieldUpdateOperationsInput | string | null
+    referrer?: NullableStringFieldUpdateOperationsInput | string | null
+    country?: NullableStringFieldUpdateOperationsInput | string | null
+    city?: NullableStringFieldUpdateOperationsInput | string | null
+    viewedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutProfileViewsNestedInput
+  }
+
+  export type ProfileViewUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    profileUserId?: StringFieldUpdateOperationsInput | string
+    viewerIp?: NullableStringFieldUpdateOperationsInput | string | null
+    viewerUserAgent?: NullableStringFieldUpdateOperationsInput | string | null
+    referrer?: NullableStringFieldUpdateOperationsInput | string | null
+    country?: NullableStringFieldUpdateOperationsInput | string | null
+    city?: NullableStringFieldUpdateOperationsInput | string | null
+    viewedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ProfileViewCreateManyInput = {
+    id?: string
+    profileUserId: string
+    viewerIp?: string | null
+    viewerUserAgent?: string | null
+    referrer?: string | null
+    country?: string | null
+    city?: string | null
+    viewedAt?: Date | string
+  }
+
+  export type ProfileViewUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    viewerIp?: NullableStringFieldUpdateOperationsInput | string | null
+    viewerUserAgent?: NullableStringFieldUpdateOperationsInput | string | null
+    referrer?: NullableStringFieldUpdateOperationsInput | string | null
+    country?: NullableStringFieldUpdateOperationsInput | string | null
+    city?: NullableStringFieldUpdateOperationsInput | string | null
+    viewedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ProfileViewUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    profileUserId?: StringFieldUpdateOperationsInput | string
+    viewerIp?: NullableStringFieldUpdateOperationsInput | string | null
+    viewerUserAgent?: NullableStringFieldUpdateOperationsInput | string | null
+    referrer?: NullableStringFieldUpdateOperationsInput | string | null
+    country?: NullableStringFieldUpdateOperationsInput | string | null
+    city?: NullableStringFieldUpdateOperationsInput | string | null
+    viewedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DataSourceSyncCreateInput = {
+    id?: string
+    source: string
+    status?: string
+    lastSyncAt?: Date | string | null
+    nextSyncAt?: Date | string | null
+    syncFrequency?: string
+    error?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutDataSourceSyncsInput
+  }
+
+  export type DataSourceSyncUncheckedCreateInput = {
+    id?: string
+    userId: string
+    source: string
+    status?: string
+    lastSyncAt?: Date | string | null
+    nextSyncAt?: Date | string | null
+    syncFrequency?: string
+    error?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type DataSourceSyncUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    source?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSyncAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    nextSyncAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    syncFrequency?: StringFieldUpdateOperationsInput | string
+    error?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutDataSourceSyncsNestedInput
+  }
+
+  export type DataSourceSyncUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    source?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSyncAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    nextSyncAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    syncFrequency?: StringFieldUpdateOperationsInput | string
+    error?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DataSourceSyncCreateManyInput = {
+    id?: string
+    userId: string
+    source: string
+    status?: string
+    lastSyncAt?: Date | string | null
+    nextSyncAt?: Date | string | null
+    syncFrequency?: string
+    error?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type DataSourceSyncUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    source?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSyncAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    nextSyncAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    syncFrequency?: StringFieldUpdateOperationsInput | string
+    error?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DataSourceSyncUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    source?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSyncAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    nextSyncAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    syncFrequency?: StringFieldUpdateOperationsInput | string
+    error?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type VerificationRequestCreateInput = {
+    id?: string
+    type: string
+    entityId: string
+    status?: string
+    method?: string | null
+    documentUrls?: VerificationRequestCreatedocumentUrlsInput | string[]
+    reviewerNotes?: string | null
+    submittedAt?: Date | string
+    reviewedAt?: Date | string | null
+    reviewedBy?: string | null
+    user: UserCreateNestedOneWithoutVerificationRequestsInput
+  }
+
+  export type VerificationRequestUncheckedCreateInput = {
+    id?: string
+    userId: string
+    type: string
+    entityId: string
+    status?: string
+    method?: string | null
+    documentUrls?: VerificationRequestCreatedocumentUrlsInput | string[]
+    reviewerNotes?: string | null
+    submittedAt?: Date | string
+    reviewedAt?: Date | string | null
+    reviewedBy?: string | null
+  }
+
+  export type VerificationRequestUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    entityId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    method?: NullableStringFieldUpdateOperationsInput | string | null
+    documentUrls?: VerificationRequestUpdatedocumentUrlsInput | string[]
+    reviewerNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    submittedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviewedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    reviewedBy?: NullableStringFieldUpdateOperationsInput | string | null
+    user?: UserUpdateOneRequiredWithoutVerificationRequestsNestedInput
+  }
+
+  export type VerificationRequestUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    entityId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    method?: NullableStringFieldUpdateOperationsInput | string | null
+    documentUrls?: VerificationRequestUpdatedocumentUrlsInput | string[]
+    reviewerNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    submittedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviewedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    reviewedBy?: NullableStringFieldUpdateOperationsInput | string | null
+  }
+
+  export type VerificationRequestCreateManyInput = {
+    id?: string
+    userId: string
+    type: string
+    entityId: string
+    status?: string
+    method?: string | null
+    documentUrls?: VerificationRequestCreatedocumentUrlsInput | string[]
+    reviewerNotes?: string | null
+    submittedAt?: Date | string
+    reviewedAt?: Date | string | null
+    reviewedBy?: string | null
+  }
+
+  export type VerificationRequestUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    entityId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    method?: NullableStringFieldUpdateOperationsInput | string | null
+    documentUrls?: VerificationRequestUpdatedocumentUrlsInput | string[]
+    reviewerNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    submittedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviewedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    reviewedBy?: NullableStringFieldUpdateOperationsInput | string | null
+  }
+
+  export type VerificationRequestUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    entityId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    method?: NullableStringFieldUpdateOperationsInput | string | null
+    documentUrls?: VerificationRequestUpdatedocumentUrlsInput | string[]
+    reviewerNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    submittedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviewedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    reviewedBy?: NullableStringFieldUpdateOperationsInput | string | null
+  }
+
+  export type ResourceRecommendationCreateInput = {
+    id?: string
+    type: string
+    platform: string
+    title: string
+    url?: string | null
+    provider?: string | null
+    duration?: string | null
+    cost?: string | null
+    difficulty?: string | null
+    skillsGained?: ResourceRecommendationCreateskillsGainedInput | string[]
+    relevanceScore?: number | null
+    status?: string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutResourceRecommendationsInput
+    careerSuggestion?: CareerSuggestionCreateNestedOneWithoutResourceRecommendationsInput
+  }
+
+  export type ResourceRecommendationUncheckedCreateInput = {
+    id?: string
+    userId: string
+    careerSuggestionId?: string | null
+    type: string
+    platform: string
+    title: string
+    url?: string | null
+    provider?: string | null
+    duration?: string | null
+    cost?: string | null
+    difficulty?: string | null
+    skillsGained?: ResourceRecommendationCreateskillsGainedInput | string[]
+    relevanceScore?: number | null
+    status?: string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ResourceRecommendationUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    url?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableStringFieldUpdateOperationsInput | string | null
+    cost?: NullableStringFieldUpdateOperationsInput | string | null
+    difficulty?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsGained?: ResourceRecommendationUpdateskillsGainedInput | string[]
+    relevanceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutResourceRecommendationsNestedInput
+    careerSuggestion?: CareerSuggestionUpdateOneWithoutResourceRecommendationsNestedInput
+  }
+
+  export type ResourceRecommendationUncheckedUpdateInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    careerSuggestionId?: NullableStringFieldUpdateOperationsInput | string | null
+    type?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    url?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableStringFieldUpdateOperationsInput | string | null
+    cost?: NullableStringFieldUpdateOperationsInput | string | null
+    difficulty?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsGained?: ResourceRecommendationUpdateskillsGainedInput | string[]
+    relevanceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ResourceRecommendationCreateManyInput = {
+    id?: string
+    userId: string
+    careerSuggestionId?: string | null
+    type: string
+    platform: string
+    title: string
+    url?: string | null
+    provider?: string | null
+    duration?: string | null
+    cost?: string | null
+    difficulty?: string | null
+    skillsGained?: ResourceRecommendationCreateskillsGainedInput | string[]
+    relevanceScore?: number | null
+    status?: string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ResourceRecommendationUpdateManyMutationInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    url?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableStringFieldUpdateOperationsInput | string | null
+    cost?: NullableStringFieldUpdateOperationsInput | string | null
+    difficulty?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsGained?: ResourceRecommendationUpdateskillsGainedInput | string[]
+    relevanceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ResourceRecommendationUncheckedUpdateManyInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    careerSuggestionId?: NullableStringFieldUpdateOperationsInput | string | null
+    type?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    url?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableStringFieldUpdateOperationsInput | string | null
+    cost?: NullableStringFieldUpdateOperationsInput | string | null
+    difficulty?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsGained?: ResourceRecommendationUpdateskillsGainedInput | string[]
+    relevanceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -26843,6 +44270,69 @@ export namespace Prisma {
     none?: SkillAnalysisWhereInput
   }
 
+  export type EducationRecordListRelationFilter = {
+    every?: EducationRecordWhereInput
+    some?: EducationRecordWhereInput
+    none?: EducationRecordWhereInput
+  }
+
+  export type SocialProfileListRelationFilter = {
+    every?: SocialProfileWhereInput
+    some?: SocialProfileWhereInput
+    none?: SocialProfileWhereInput
+  }
+
+  export type CertificationListRelationFilter = {
+    every?: CertificationWhereInput
+    some?: CertificationWhereInput
+    none?: CertificationWhereInput
+  }
+
+  export type GitHubProfileNullableScalarRelationFilter = {
+    is?: GitHubProfileWhereInput | null
+    isNot?: GitHubProfileWhereInput | null
+  }
+
+  export type CredibilityScoreNullableScalarRelationFilter = {
+    is?: CredibilityScoreWhereInput | null
+    isNot?: CredibilityScoreWhereInput | null
+  }
+
+  export type CareerSuggestionListRelationFilter = {
+    every?: CareerSuggestionWhereInput
+    some?: CareerSuggestionWhereInput
+    none?: CareerSuggestionWhereInput
+  }
+
+  export type PublicProfileNullableScalarRelationFilter = {
+    is?: PublicProfileWhereInput | null
+    isNot?: PublicProfileWhereInput | null
+  }
+
+  export type ProfileViewListRelationFilter = {
+    every?: ProfileViewWhereInput
+    some?: ProfileViewWhereInput
+    none?: ProfileViewWhereInput
+  }
+
+  export type DataSourceSyncListRelationFilter = {
+    every?: DataSourceSyncWhereInput
+    some?: DataSourceSyncWhereInput
+    none?: DataSourceSyncWhereInput
+  }
+
+  export type VerificationRequestListRelationFilter = {
+    every?: VerificationRequestWhereInput
+    some?: VerificationRequestWhereInput
+    none?: VerificationRequestWhereInput
+  }
+
+  export type ResourceRecommendationListRelationFilter = {
+    every?: ResourceRecommendationWhereInput
+    some?: ResourceRecommendationWhereInput
+    none?: ResourceRecommendationWhereInput
+  }
+
   export type SortOrderInput = {
     sort: SortOrder
     nulls?: NullsOrder
@@ -26881,6 +44371,38 @@ export namespace Prisma {
   }
 
   export type SkillAnalysisOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type EducationRecordOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type SocialProfileOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type CertificationOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type CareerSuggestionOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ProfileViewOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type DataSourceSyncOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type VerificationRequestOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type ResourceRecommendationOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -28075,6 +45597,653 @@ export namespace Prisma {
     matchScore?: SortOrder
   }
 
+  export type EducationRecordCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    institutionName?: SortOrder
+    degree?: SortOrder
+    field?: SortOrder
+    gpa?: SortOrder
+    startDate?: SortOrder
+    endDate?: SortOrder
+    verified?: SortOrder
+    verificationSource?: SortOrder
+    verificationDate?: SortOrder
+    transcriptUrl?: SortOrder
+    credentialId?: SortOrder
+    metadata?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type EducationRecordAvgOrderByAggregateInput = {
+    gpa?: SortOrder
+  }
+
+  export type EducationRecordMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    institutionName?: SortOrder
+    degree?: SortOrder
+    field?: SortOrder
+    gpa?: SortOrder
+    startDate?: SortOrder
+    endDate?: SortOrder
+    verified?: SortOrder
+    verificationSource?: SortOrder
+    verificationDate?: SortOrder
+    transcriptUrl?: SortOrder
+    credentialId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type EducationRecordMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    institutionName?: SortOrder
+    degree?: SortOrder
+    field?: SortOrder
+    gpa?: SortOrder
+    startDate?: SortOrder
+    endDate?: SortOrder
+    verified?: SortOrder
+    verificationSource?: SortOrder
+    verificationDate?: SortOrder
+    transcriptUrl?: SortOrder
+    credentialId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type EducationRecordSumOrderByAggregateInput = {
+    gpa?: SortOrder
+  }
+
+  export type SocialProfileUserIdPlatformCompoundUniqueInput = {
+    userId: string
+    platform: string
+  }
+
+  export type SocialProfileCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    platform?: SortOrder
+    username?: SortOrder
+    profileUrl?: SortOrder
+    verified?: SortOrder
+    followerCount?: SortOrder
+    followingCount?: SortOrder
+    engagementRate?: SortOrder
+    contentScore?: SortOrder
+    influenceScore?: SortOrder
+    lastFetchedAt?: SortOrder
+    metrics?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type SocialProfileAvgOrderByAggregateInput = {
+    followerCount?: SortOrder
+    followingCount?: SortOrder
+    engagementRate?: SortOrder
+    contentScore?: SortOrder
+    influenceScore?: SortOrder
+  }
+
+  export type SocialProfileMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    platform?: SortOrder
+    username?: SortOrder
+    profileUrl?: SortOrder
+    verified?: SortOrder
+    followerCount?: SortOrder
+    followingCount?: SortOrder
+    engagementRate?: SortOrder
+    contentScore?: SortOrder
+    influenceScore?: SortOrder
+    lastFetchedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type SocialProfileMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    platform?: SortOrder
+    username?: SortOrder
+    profileUrl?: SortOrder
+    verified?: SortOrder
+    followerCount?: SortOrder
+    followingCount?: SortOrder
+    engagementRate?: SortOrder
+    contentScore?: SortOrder
+    influenceScore?: SortOrder
+    lastFetchedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type SocialProfileSumOrderByAggregateInput = {
+    followerCount?: SortOrder
+    followingCount?: SortOrder
+    engagementRate?: SortOrder
+    contentScore?: SortOrder
+    influenceScore?: SortOrder
+  }
+
+  export type CertificationCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    name?: SortOrder
+    issuer?: SortOrder
+    issueDate?: SortOrder
+    expiryDate?: SortOrder
+    credentialId?: SortOrder
+    credentialUrl?: SortOrder
+    verified?: SortOrder
+    verificationMethod?: SortOrder
+    skillsEarned?: SortOrder
+    certificateImageUrl?: SortOrder
+    metadata?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CertificationMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    name?: SortOrder
+    issuer?: SortOrder
+    issueDate?: SortOrder
+    expiryDate?: SortOrder
+    credentialId?: SortOrder
+    credentialUrl?: SortOrder
+    verified?: SortOrder
+    verificationMethod?: SortOrder
+    certificateImageUrl?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CertificationMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    name?: SortOrder
+    issuer?: SortOrder
+    issueDate?: SortOrder
+    expiryDate?: SortOrder
+    credentialId?: SortOrder
+    credentialUrl?: SortOrder
+    verified?: SortOrder
+    verificationMethod?: SortOrder
+    certificateImageUrl?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type GitHubProfileCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    username?: SortOrder
+    profileUrl?: SortOrder
+    totalRepos?: SortOrder
+    totalCommits?: SortOrder
+    totalPRs?: SortOrder
+    totalIssues?: SortOrder
+    totalStars?: SortOrder
+    languagesUsed?: SortOrder
+    contributionScore?: SortOrder
+    consistencyScore?: SortOrder
+    codeQualityScore?: SortOrder
+    topRepos?: SortOrder
+    contributionGraph?: SortOrder
+    lastFetchedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type GitHubProfileAvgOrderByAggregateInput = {
+    totalRepos?: SortOrder
+    totalCommits?: SortOrder
+    totalPRs?: SortOrder
+    totalIssues?: SortOrder
+    totalStars?: SortOrder
+    contributionScore?: SortOrder
+    consistencyScore?: SortOrder
+    codeQualityScore?: SortOrder
+  }
+
+  export type GitHubProfileMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    username?: SortOrder
+    profileUrl?: SortOrder
+    totalRepos?: SortOrder
+    totalCommits?: SortOrder
+    totalPRs?: SortOrder
+    totalIssues?: SortOrder
+    totalStars?: SortOrder
+    contributionScore?: SortOrder
+    consistencyScore?: SortOrder
+    codeQualityScore?: SortOrder
+    lastFetchedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type GitHubProfileMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    username?: SortOrder
+    profileUrl?: SortOrder
+    totalRepos?: SortOrder
+    totalCommits?: SortOrder
+    totalPRs?: SortOrder
+    totalIssues?: SortOrder
+    totalStars?: SortOrder
+    contributionScore?: SortOrder
+    consistencyScore?: SortOrder
+    codeQualityScore?: SortOrder
+    lastFetchedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type GitHubProfileSumOrderByAggregateInput = {
+    totalRepos?: SortOrder
+    totalCommits?: SortOrder
+    totalPRs?: SortOrder
+    totalIssues?: SortOrder
+    totalStars?: SortOrder
+    contributionScore?: SortOrder
+    consistencyScore?: SortOrder
+    codeQualityScore?: SortOrder
+  }
+
+  export type CredibilityScoreCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    overallScore?: SortOrder
+    educationScore?: SortOrder
+    experienceScore?: SortOrder
+    technicalScore?: SortOrder
+    socialScore?: SortOrder
+    certificationScore?: SortOrder
+    verificationLevel?: SortOrder
+    breakdown?: SortOrder
+    badges?: SortOrder
+    calculatedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CredibilityScoreAvgOrderByAggregateInput = {
+    overallScore?: SortOrder
+    educationScore?: SortOrder
+    experienceScore?: SortOrder
+    technicalScore?: SortOrder
+    socialScore?: SortOrder
+    certificationScore?: SortOrder
+  }
+
+  export type CredibilityScoreMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    overallScore?: SortOrder
+    educationScore?: SortOrder
+    experienceScore?: SortOrder
+    technicalScore?: SortOrder
+    socialScore?: SortOrder
+    certificationScore?: SortOrder
+    verificationLevel?: SortOrder
+    calculatedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CredibilityScoreMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    overallScore?: SortOrder
+    educationScore?: SortOrder
+    experienceScore?: SortOrder
+    technicalScore?: SortOrder
+    socialScore?: SortOrder
+    certificationScore?: SortOrder
+    verificationLevel?: SortOrder
+    calculatedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CredibilityScoreSumOrderByAggregateInput = {
+    overallScore?: SortOrder
+    educationScore?: SortOrder
+    experienceScore?: SortOrder
+    technicalScore?: SortOrder
+    socialScore?: SortOrder
+    certificationScore?: SortOrder
+  }
+
+  export type CareerSuggestionCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    role?: SortOrder
+    readinessScore?: SortOrder
+    estimatedTime?: SortOrder
+    estimatedWeeks?: SortOrder
+    skillGaps?: SortOrder
+    matchingSkills?: SortOrder
+    resources?: SortOrder
+    reasoning?: SortOrder
+    priority?: SortOrder
+    status?: SortOrder
+    aiModel?: SortOrder
+    confidence?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CareerSuggestionAvgOrderByAggregateInput = {
+    readinessScore?: SortOrder
+    estimatedWeeks?: SortOrder
+    priority?: SortOrder
+    confidence?: SortOrder
+  }
+
+  export type CareerSuggestionMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    role?: SortOrder
+    readinessScore?: SortOrder
+    estimatedTime?: SortOrder
+    estimatedWeeks?: SortOrder
+    reasoning?: SortOrder
+    priority?: SortOrder
+    status?: SortOrder
+    aiModel?: SortOrder
+    confidence?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CareerSuggestionMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    role?: SortOrder
+    readinessScore?: SortOrder
+    estimatedTime?: SortOrder
+    estimatedWeeks?: SortOrder
+    reasoning?: SortOrder
+    priority?: SortOrder
+    status?: SortOrder
+    aiModel?: SortOrder
+    confidence?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type CareerSuggestionSumOrderByAggregateInput = {
+    readinessScore?: SortOrder
+    estimatedWeeks?: SortOrder
+    priority?: SortOrder
+    confidence?: SortOrder
+  }
+
+  export type PublicProfileCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    username?: SortOrder
+    slug?: SortOrder
+    isPublic?: SortOrder
+    customDomain?: SortOrder
+    theme?: SortOrder
+    visibleSections?: SortOrder
+    seoTitle?: SortOrder
+    seoDescription?: SortOrder
+    ogImageUrl?: SortOrder
+    viewCount?: SortOrder
+    shareCount?: SortOrder
+    lastViewedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type PublicProfileAvgOrderByAggregateInput = {
+    viewCount?: SortOrder
+    shareCount?: SortOrder
+  }
+
+  export type PublicProfileMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    username?: SortOrder
+    slug?: SortOrder
+    isPublic?: SortOrder
+    customDomain?: SortOrder
+    theme?: SortOrder
+    seoTitle?: SortOrder
+    seoDescription?: SortOrder
+    ogImageUrl?: SortOrder
+    viewCount?: SortOrder
+    shareCount?: SortOrder
+    lastViewedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type PublicProfileMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    username?: SortOrder
+    slug?: SortOrder
+    isPublic?: SortOrder
+    customDomain?: SortOrder
+    theme?: SortOrder
+    seoTitle?: SortOrder
+    seoDescription?: SortOrder
+    ogImageUrl?: SortOrder
+    viewCount?: SortOrder
+    shareCount?: SortOrder
+    lastViewedAt?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type PublicProfileSumOrderByAggregateInput = {
+    viewCount?: SortOrder
+    shareCount?: SortOrder
+  }
+
+  export type ProfileViewCountOrderByAggregateInput = {
+    id?: SortOrder
+    profileUserId?: SortOrder
+    viewerIp?: SortOrder
+    viewerUserAgent?: SortOrder
+    referrer?: SortOrder
+    country?: SortOrder
+    city?: SortOrder
+    viewedAt?: SortOrder
+  }
+
+  export type ProfileViewMaxOrderByAggregateInput = {
+    id?: SortOrder
+    profileUserId?: SortOrder
+    viewerIp?: SortOrder
+    viewerUserAgent?: SortOrder
+    referrer?: SortOrder
+    country?: SortOrder
+    city?: SortOrder
+    viewedAt?: SortOrder
+  }
+
+  export type ProfileViewMinOrderByAggregateInput = {
+    id?: SortOrder
+    profileUserId?: SortOrder
+    viewerIp?: SortOrder
+    viewerUserAgent?: SortOrder
+    referrer?: SortOrder
+    country?: SortOrder
+    city?: SortOrder
+    viewedAt?: SortOrder
+  }
+
+  export type DataSourceSyncUserIdSourceCompoundUniqueInput = {
+    userId: string
+    source: string
+  }
+
+  export type DataSourceSyncCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    source?: SortOrder
+    status?: SortOrder
+    lastSyncAt?: SortOrder
+    nextSyncAt?: SortOrder
+    syncFrequency?: SortOrder
+    error?: SortOrder
+    metadata?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type DataSourceSyncMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    source?: SortOrder
+    status?: SortOrder
+    lastSyncAt?: SortOrder
+    nextSyncAt?: SortOrder
+    syncFrequency?: SortOrder
+    error?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type DataSourceSyncMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    source?: SortOrder
+    status?: SortOrder
+    lastSyncAt?: SortOrder
+    nextSyncAt?: SortOrder
+    syncFrequency?: SortOrder
+    error?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type VerificationRequestCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    entityId?: SortOrder
+    status?: SortOrder
+    method?: SortOrder
+    documentUrls?: SortOrder
+    reviewerNotes?: SortOrder
+    submittedAt?: SortOrder
+    reviewedAt?: SortOrder
+    reviewedBy?: SortOrder
+  }
+
+  export type VerificationRequestMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    entityId?: SortOrder
+    status?: SortOrder
+    method?: SortOrder
+    reviewerNotes?: SortOrder
+    submittedAt?: SortOrder
+    reviewedAt?: SortOrder
+    reviewedBy?: SortOrder
+  }
+
+  export type VerificationRequestMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    type?: SortOrder
+    entityId?: SortOrder
+    status?: SortOrder
+    method?: SortOrder
+    reviewerNotes?: SortOrder
+    submittedAt?: SortOrder
+    reviewedAt?: SortOrder
+    reviewedBy?: SortOrder
+  }
+
+  export type CareerSuggestionNullableScalarRelationFilter = {
+    is?: CareerSuggestionWhereInput | null
+    isNot?: CareerSuggestionWhereInput | null
+  }
+
+  export type ResourceRecommendationCountOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    careerSuggestionId?: SortOrder
+    type?: SortOrder
+    platform?: SortOrder
+    title?: SortOrder
+    url?: SortOrder
+    provider?: SortOrder
+    duration?: SortOrder
+    cost?: SortOrder
+    difficulty?: SortOrder
+    skillsGained?: SortOrder
+    relevanceScore?: SortOrder
+    status?: SortOrder
+    metadata?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ResourceRecommendationAvgOrderByAggregateInput = {
+    relevanceScore?: SortOrder
+  }
+
+  export type ResourceRecommendationMaxOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    careerSuggestionId?: SortOrder
+    type?: SortOrder
+    platform?: SortOrder
+    title?: SortOrder
+    url?: SortOrder
+    provider?: SortOrder
+    duration?: SortOrder
+    cost?: SortOrder
+    difficulty?: SortOrder
+    relevanceScore?: SortOrder
+    status?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ResourceRecommendationMinOrderByAggregateInput = {
+    id?: SortOrder
+    userId?: SortOrder
+    careerSuggestionId?: SortOrder
+    type?: SortOrder
+    platform?: SortOrder
+    title?: SortOrder
+    url?: SortOrder
+    provider?: SortOrder
+    duration?: SortOrder
+    cost?: SortOrder
+    difficulty?: SortOrder
+    relevanceScore?: SortOrder
+    status?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+  }
+
+  export type ResourceRecommendationSumOrderByAggregateInput = {
+    relevanceScore?: SortOrder
+  }
+
   export type AccountCreateNestedManyWithoutUserInput = {
     create?: XOR<AccountCreateWithoutUserInput, AccountUncheckedCreateWithoutUserInput> | AccountCreateWithoutUserInput[] | AccountUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AccountCreateOrConnectWithoutUserInput | AccountCreateOrConnectWithoutUserInput[]
@@ -28144,6 +46313,80 @@ export namespace Prisma {
     connect?: SkillAnalysisWhereUniqueInput | SkillAnalysisWhereUniqueInput[]
   }
 
+  export type EducationRecordCreateNestedManyWithoutUserInput = {
+    create?: XOR<EducationRecordCreateWithoutUserInput, EducationRecordUncheckedCreateWithoutUserInput> | EducationRecordCreateWithoutUserInput[] | EducationRecordUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: EducationRecordCreateOrConnectWithoutUserInput | EducationRecordCreateOrConnectWithoutUserInput[]
+    createMany?: EducationRecordCreateManyUserInputEnvelope
+    connect?: EducationRecordWhereUniqueInput | EducationRecordWhereUniqueInput[]
+  }
+
+  export type SocialProfileCreateNestedManyWithoutUserInput = {
+    create?: XOR<SocialProfileCreateWithoutUserInput, SocialProfileUncheckedCreateWithoutUserInput> | SocialProfileCreateWithoutUserInput[] | SocialProfileUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: SocialProfileCreateOrConnectWithoutUserInput | SocialProfileCreateOrConnectWithoutUserInput[]
+    createMany?: SocialProfileCreateManyUserInputEnvelope
+    connect?: SocialProfileWhereUniqueInput | SocialProfileWhereUniqueInput[]
+  }
+
+  export type CertificationCreateNestedManyWithoutUserInput = {
+    create?: XOR<CertificationCreateWithoutUserInput, CertificationUncheckedCreateWithoutUserInput> | CertificationCreateWithoutUserInput[] | CertificationUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: CertificationCreateOrConnectWithoutUserInput | CertificationCreateOrConnectWithoutUserInput[]
+    createMany?: CertificationCreateManyUserInputEnvelope
+    connect?: CertificationWhereUniqueInput | CertificationWhereUniqueInput[]
+  }
+
+  export type GitHubProfileCreateNestedOneWithoutUserInput = {
+    create?: XOR<GitHubProfileCreateWithoutUserInput, GitHubProfileUncheckedCreateWithoutUserInput>
+    connectOrCreate?: GitHubProfileCreateOrConnectWithoutUserInput
+    connect?: GitHubProfileWhereUniqueInput
+  }
+
+  export type CredibilityScoreCreateNestedOneWithoutUserInput = {
+    create?: XOR<CredibilityScoreCreateWithoutUserInput, CredibilityScoreUncheckedCreateWithoutUserInput>
+    connectOrCreate?: CredibilityScoreCreateOrConnectWithoutUserInput
+    connect?: CredibilityScoreWhereUniqueInput
+  }
+
+  export type CareerSuggestionCreateNestedManyWithoutUserInput = {
+    create?: XOR<CareerSuggestionCreateWithoutUserInput, CareerSuggestionUncheckedCreateWithoutUserInput> | CareerSuggestionCreateWithoutUserInput[] | CareerSuggestionUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: CareerSuggestionCreateOrConnectWithoutUserInput | CareerSuggestionCreateOrConnectWithoutUserInput[]
+    createMany?: CareerSuggestionCreateManyUserInputEnvelope
+    connect?: CareerSuggestionWhereUniqueInput | CareerSuggestionWhereUniqueInput[]
+  }
+
+  export type PublicProfileCreateNestedOneWithoutUserInput = {
+    create?: XOR<PublicProfileCreateWithoutUserInput, PublicProfileUncheckedCreateWithoutUserInput>
+    connectOrCreate?: PublicProfileCreateOrConnectWithoutUserInput
+    connect?: PublicProfileWhereUniqueInput
+  }
+
+  export type ProfileViewCreateNestedManyWithoutUserInput = {
+    create?: XOR<ProfileViewCreateWithoutUserInput, ProfileViewUncheckedCreateWithoutUserInput> | ProfileViewCreateWithoutUserInput[] | ProfileViewUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ProfileViewCreateOrConnectWithoutUserInput | ProfileViewCreateOrConnectWithoutUserInput[]
+    createMany?: ProfileViewCreateManyUserInputEnvelope
+    connect?: ProfileViewWhereUniqueInput | ProfileViewWhereUniqueInput[]
+  }
+
+  export type DataSourceSyncCreateNestedManyWithoutUserInput = {
+    create?: XOR<DataSourceSyncCreateWithoutUserInput, DataSourceSyncUncheckedCreateWithoutUserInput> | DataSourceSyncCreateWithoutUserInput[] | DataSourceSyncUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: DataSourceSyncCreateOrConnectWithoutUserInput | DataSourceSyncCreateOrConnectWithoutUserInput[]
+    createMany?: DataSourceSyncCreateManyUserInputEnvelope
+    connect?: DataSourceSyncWhereUniqueInput | DataSourceSyncWhereUniqueInput[]
+  }
+
+  export type VerificationRequestCreateNestedManyWithoutUserInput = {
+    create?: XOR<VerificationRequestCreateWithoutUserInput, VerificationRequestUncheckedCreateWithoutUserInput> | VerificationRequestCreateWithoutUserInput[] | VerificationRequestUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: VerificationRequestCreateOrConnectWithoutUserInput | VerificationRequestCreateOrConnectWithoutUserInput[]
+    createMany?: VerificationRequestCreateManyUserInputEnvelope
+    connect?: VerificationRequestWhereUniqueInput | VerificationRequestWhereUniqueInput[]
+  }
+
+  export type ResourceRecommendationCreateNestedManyWithoutUserInput = {
+    create?: XOR<ResourceRecommendationCreateWithoutUserInput, ResourceRecommendationUncheckedCreateWithoutUserInput> | ResourceRecommendationCreateWithoutUserInput[] | ResourceRecommendationUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ResourceRecommendationCreateOrConnectWithoutUserInput | ResourceRecommendationCreateOrConnectWithoutUserInput[]
+    createMany?: ResourceRecommendationCreateManyUserInputEnvelope
+    connect?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+  }
+
   export type AccountUncheckedCreateNestedManyWithoutUserInput = {
     create?: XOR<AccountCreateWithoutUserInput, AccountUncheckedCreateWithoutUserInput> | AccountCreateWithoutUserInput[] | AccountUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AccountCreateOrConnectWithoutUserInput | AccountCreateOrConnectWithoutUserInput[]
@@ -28211,6 +46454,80 @@ export namespace Prisma {
     connectOrCreate?: SkillAnalysisCreateOrConnectWithoutUserInput | SkillAnalysisCreateOrConnectWithoutUserInput[]
     createMany?: SkillAnalysisCreateManyUserInputEnvelope
     connect?: SkillAnalysisWhereUniqueInput | SkillAnalysisWhereUniqueInput[]
+  }
+
+  export type EducationRecordUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<EducationRecordCreateWithoutUserInput, EducationRecordUncheckedCreateWithoutUserInput> | EducationRecordCreateWithoutUserInput[] | EducationRecordUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: EducationRecordCreateOrConnectWithoutUserInput | EducationRecordCreateOrConnectWithoutUserInput[]
+    createMany?: EducationRecordCreateManyUserInputEnvelope
+    connect?: EducationRecordWhereUniqueInput | EducationRecordWhereUniqueInput[]
+  }
+
+  export type SocialProfileUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<SocialProfileCreateWithoutUserInput, SocialProfileUncheckedCreateWithoutUserInput> | SocialProfileCreateWithoutUserInput[] | SocialProfileUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: SocialProfileCreateOrConnectWithoutUserInput | SocialProfileCreateOrConnectWithoutUserInput[]
+    createMany?: SocialProfileCreateManyUserInputEnvelope
+    connect?: SocialProfileWhereUniqueInput | SocialProfileWhereUniqueInput[]
+  }
+
+  export type CertificationUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<CertificationCreateWithoutUserInput, CertificationUncheckedCreateWithoutUserInput> | CertificationCreateWithoutUserInput[] | CertificationUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: CertificationCreateOrConnectWithoutUserInput | CertificationCreateOrConnectWithoutUserInput[]
+    createMany?: CertificationCreateManyUserInputEnvelope
+    connect?: CertificationWhereUniqueInput | CertificationWhereUniqueInput[]
+  }
+
+  export type GitHubProfileUncheckedCreateNestedOneWithoutUserInput = {
+    create?: XOR<GitHubProfileCreateWithoutUserInput, GitHubProfileUncheckedCreateWithoutUserInput>
+    connectOrCreate?: GitHubProfileCreateOrConnectWithoutUserInput
+    connect?: GitHubProfileWhereUniqueInput
+  }
+
+  export type CredibilityScoreUncheckedCreateNestedOneWithoutUserInput = {
+    create?: XOR<CredibilityScoreCreateWithoutUserInput, CredibilityScoreUncheckedCreateWithoutUserInput>
+    connectOrCreate?: CredibilityScoreCreateOrConnectWithoutUserInput
+    connect?: CredibilityScoreWhereUniqueInput
+  }
+
+  export type CareerSuggestionUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<CareerSuggestionCreateWithoutUserInput, CareerSuggestionUncheckedCreateWithoutUserInput> | CareerSuggestionCreateWithoutUserInput[] | CareerSuggestionUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: CareerSuggestionCreateOrConnectWithoutUserInput | CareerSuggestionCreateOrConnectWithoutUserInput[]
+    createMany?: CareerSuggestionCreateManyUserInputEnvelope
+    connect?: CareerSuggestionWhereUniqueInput | CareerSuggestionWhereUniqueInput[]
+  }
+
+  export type PublicProfileUncheckedCreateNestedOneWithoutUserInput = {
+    create?: XOR<PublicProfileCreateWithoutUserInput, PublicProfileUncheckedCreateWithoutUserInput>
+    connectOrCreate?: PublicProfileCreateOrConnectWithoutUserInput
+    connect?: PublicProfileWhereUniqueInput
+  }
+
+  export type ProfileViewUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<ProfileViewCreateWithoutUserInput, ProfileViewUncheckedCreateWithoutUserInput> | ProfileViewCreateWithoutUserInput[] | ProfileViewUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ProfileViewCreateOrConnectWithoutUserInput | ProfileViewCreateOrConnectWithoutUserInput[]
+    createMany?: ProfileViewCreateManyUserInputEnvelope
+    connect?: ProfileViewWhereUniqueInput | ProfileViewWhereUniqueInput[]
+  }
+
+  export type DataSourceSyncUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<DataSourceSyncCreateWithoutUserInput, DataSourceSyncUncheckedCreateWithoutUserInput> | DataSourceSyncCreateWithoutUserInput[] | DataSourceSyncUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: DataSourceSyncCreateOrConnectWithoutUserInput | DataSourceSyncCreateOrConnectWithoutUserInput[]
+    createMany?: DataSourceSyncCreateManyUserInputEnvelope
+    connect?: DataSourceSyncWhereUniqueInput | DataSourceSyncWhereUniqueInput[]
+  }
+
+  export type VerificationRequestUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<VerificationRequestCreateWithoutUserInput, VerificationRequestUncheckedCreateWithoutUserInput> | VerificationRequestCreateWithoutUserInput[] | VerificationRequestUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: VerificationRequestCreateOrConnectWithoutUserInput | VerificationRequestCreateOrConnectWithoutUserInput[]
+    createMany?: VerificationRequestCreateManyUserInputEnvelope
+    connect?: VerificationRequestWhereUniqueInput | VerificationRequestWhereUniqueInput[]
+  }
+
+  export type ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<ResourceRecommendationCreateWithoutUserInput, ResourceRecommendationUncheckedCreateWithoutUserInput> | ResourceRecommendationCreateWithoutUserInput[] | ResourceRecommendationUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ResourceRecommendationCreateOrConnectWithoutUserInput | ResourceRecommendationCreateOrConnectWithoutUserInput[]
+    createMany?: ResourceRecommendationCreateManyUserInputEnvelope
+    connect?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -28365,6 +46682,148 @@ export namespace Prisma {
     deleteMany?: SkillAnalysisScalarWhereInput | SkillAnalysisScalarWhereInput[]
   }
 
+  export type EducationRecordUpdateManyWithoutUserNestedInput = {
+    create?: XOR<EducationRecordCreateWithoutUserInput, EducationRecordUncheckedCreateWithoutUserInput> | EducationRecordCreateWithoutUserInput[] | EducationRecordUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: EducationRecordCreateOrConnectWithoutUserInput | EducationRecordCreateOrConnectWithoutUserInput[]
+    upsert?: EducationRecordUpsertWithWhereUniqueWithoutUserInput | EducationRecordUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: EducationRecordCreateManyUserInputEnvelope
+    set?: EducationRecordWhereUniqueInput | EducationRecordWhereUniqueInput[]
+    disconnect?: EducationRecordWhereUniqueInput | EducationRecordWhereUniqueInput[]
+    delete?: EducationRecordWhereUniqueInput | EducationRecordWhereUniqueInput[]
+    connect?: EducationRecordWhereUniqueInput | EducationRecordWhereUniqueInput[]
+    update?: EducationRecordUpdateWithWhereUniqueWithoutUserInput | EducationRecordUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: EducationRecordUpdateManyWithWhereWithoutUserInput | EducationRecordUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: EducationRecordScalarWhereInput | EducationRecordScalarWhereInput[]
+  }
+
+  export type SocialProfileUpdateManyWithoutUserNestedInput = {
+    create?: XOR<SocialProfileCreateWithoutUserInput, SocialProfileUncheckedCreateWithoutUserInput> | SocialProfileCreateWithoutUserInput[] | SocialProfileUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: SocialProfileCreateOrConnectWithoutUserInput | SocialProfileCreateOrConnectWithoutUserInput[]
+    upsert?: SocialProfileUpsertWithWhereUniqueWithoutUserInput | SocialProfileUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: SocialProfileCreateManyUserInputEnvelope
+    set?: SocialProfileWhereUniqueInput | SocialProfileWhereUniqueInput[]
+    disconnect?: SocialProfileWhereUniqueInput | SocialProfileWhereUniqueInput[]
+    delete?: SocialProfileWhereUniqueInput | SocialProfileWhereUniqueInput[]
+    connect?: SocialProfileWhereUniqueInput | SocialProfileWhereUniqueInput[]
+    update?: SocialProfileUpdateWithWhereUniqueWithoutUserInput | SocialProfileUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: SocialProfileUpdateManyWithWhereWithoutUserInput | SocialProfileUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: SocialProfileScalarWhereInput | SocialProfileScalarWhereInput[]
+  }
+
+  export type CertificationUpdateManyWithoutUserNestedInput = {
+    create?: XOR<CertificationCreateWithoutUserInput, CertificationUncheckedCreateWithoutUserInput> | CertificationCreateWithoutUserInput[] | CertificationUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: CertificationCreateOrConnectWithoutUserInput | CertificationCreateOrConnectWithoutUserInput[]
+    upsert?: CertificationUpsertWithWhereUniqueWithoutUserInput | CertificationUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: CertificationCreateManyUserInputEnvelope
+    set?: CertificationWhereUniqueInput | CertificationWhereUniqueInput[]
+    disconnect?: CertificationWhereUniqueInput | CertificationWhereUniqueInput[]
+    delete?: CertificationWhereUniqueInput | CertificationWhereUniqueInput[]
+    connect?: CertificationWhereUniqueInput | CertificationWhereUniqueInput[]
+    update?: CertificationUpdateWithWhereUniqueWithoutUserInput | CertificationUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: CertificationUpdateManyWithWhereWithoutUserInput | CertificationUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: CertificationScalarWhereInput | CertificationScalarWhereInput[]
+  }
+
+  export type GitHubProfileUpdateOneWithoutUserNestedInput = {
+    create?: XOR<GitHubProfileCreateWithoutUserInput, GitHubProfileUncheckedCreateWithoutUserInput>
+    connectOrCreate?: GitHubProfileCreateOrConnectWithoutUserInput
+    upsert?: GitHubProfileUpsertWithoutUserInput
+    disconnect?: GitHubProfileWhereInput | boolean
+    delete?: GitHubProfileWhereInput | boolean
+    connect?: GitHubProfileWhereUniqueInput
+    update?: XOR<XOR<GitHubProfileUpdateToOneWithWhereWithoutUserInput, GitHubProfileUpdateWithoutUserInput>, GitHubProfileUncheckedUpdateWithoutUserInput>
+  }
+
+  export type CredibilityScoreUpdateOneWithoutUserNestedInput = {
+    create?: XOR<CredibilityScoreCreateWithoutUserInput, CredibilityScoreUncheckedCreateWithoutUserInput>
+    connectOrCreate?: CredibilityScoreCreateOrConnectWithoutUserInput
+    upsert?: CredibilityScoreUpsertWithoutUserInput
+    disconnect?: CredibilityScoreWhereInput | boolean
+    delete?: CredibilityScoreWhereInput | boolean
+    connect?: CredibilityScoreWhereUniqueInput
+    update?: XOR<XOR<CredibilityScoreUpdateToOneWithWhereWithoutUserInput, CredibilityScoreUpdateWithoutUserInput>, CredibilityScoreUncheckedUpdateWithoutUserInput>
+  }
+
+  export type CareerSuggestionUpdateManyWithoutUserNestedInput = {
+    create?: XOR<CareerSuggestionCreateWithoutUserInput, CareerSuggestionUncheckedCreateWithoutUserInput> | CareerSuggestionCreateWithoutUserInput[] | CareerSuggestionUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: CareerSuggestionCreateOrConnectWithoutUserInput | CareerSuggestionCreateOrConnectWithoutUserInput[]
+    upsert?: CareerSuggestionUpsertWithWhereUniqueWithoutUserInput | CareerSuggestionUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: CareerSuggestionCreateManyUserInputEnvelope
+    set?: CareerSuggestionWhereUniqueInput | CareerSuggestionWhereUniqueInput[]
+    disconnect?: CareerSuggestionWhereUniqueInput | CareerSuggestionWhereUniqueInput[]
+    delete?: CareerSuggestionWhereUniqueInput | CareerSuggestionWhereUniqueInput[]
+    connect?: CareerSuggestionWhereUniqueInput | CareerSuggestionWhereUniqueInput[]
+    update?: CareerSuggestionUpdateWithWhereUniqueWithoutUserInput | CareerSuggestionUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: CareerSuggestionUpdateManyWithWhereWithoutUserInput | CareerSuggestionUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: CareerSuggestionScalarWhereInput | CareerSuggestionScalarWhereInput[]
+  }
+
+  export type PublicProfileUpdateOneWithoutUserNestedInput = {
+    create?: XOR<PublicProfileCreateWithoutUserInput, PublicProfileUncheckedCreateWithoutUserInput>
+    connectOrCreate?: PublicProfileCreateOrConnectWithoutUserInput
+    upsert?: PublicProfileUpsertWithoutUserInput
+    disconnect?: PublicProfileWhereInput | boolean
+    delete?: PublicProfileWhereInput | boolean
+    connect?: PublicProfileWhereUniqueInput
+    update?: XOR<XOR<PublicProfileUpdateToOneWithWhereWithoutUserInput, PublicProfileUpdateWithoutUserInput>, PublicProfileUncheckedUpdateWithoutUserInput>
+  }
+
+  export type ProfileViewUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ProfileViewCreateWithoutUserInput, ProfileViewUncheckedCreateWithoutUserInput> | ProfileViewCreateWithoutUserInput[] | ProfileViewUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ProfileViewCreateOrConnectWithoutUserInput | ProfileViewCreateOrConnectWithoutUserInput[]
+    upsert?: ProfileViewUpsertWithWhereUniqueWithoutUserInput | ProfileViewUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ProfileViewCreateManyUserInputEnvelope
+    set?: ProfileViewWhereUniqueInput | ProfileViewWhereUniqueInput[]
+    disconnect?: ProfileViewWhereUniqueInput | ProfileViewWhereUniqueInput[]
+    delete?: ProfileViewWhereUniqueInput | ProfileViewWhereUniqueInput[]
+    connect?: ProfileViewWhereUniqueInput | ProfileViewWhereUniqueInput[]
+    update?: ProfileViewUpdateWithWhereUniqueWithoutUserInput | ProfileViewUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ProfileViewUpdateManyWithWhereWithoutUserInput | ProfileViewUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ProfileViewScalarWhereInput | ProfileViewScalarWhereInput[]
+  }
+
+  export type DataSourceSyncUpdateManyWithoutUserNestedInput = {
+    create?: XOR<DataSourceSyncCreateWithoutUserInput, DataSourceSyncUncheckedCreateWithoutUserInput> | DataSourceSyncCreateWithoutUserInput[] | DataSourceSyncUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: DataSourceSyncCreateOrConnectWithoutUserInput | DataSourceSyncCreateOrConnectWithoutUserInput[]
+    upsert?: DataSourceSyncUpsertWithWhereUniqueWithoutUserInput | DataSourceSyncUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: DataSourceSyncCreateManyUserInputEnvelope
+    set?: DataSourceSyncWhereUniqueInput | DataSourceSyncWhereUniqueInput[]
+    disconnect?: DataSourceSyncWhereUniqueInput | DataSourceSyncWhereUniqueInput[]
+    delete?: DataSourceSyncWhereUniqueInput | DataSourceSyncWhereUniqueInput[]
+    connect?: DataSourceSyncWhereUniqueInput | DataSourceSyncWhereUniqueInput[]
+    update?: DataSourceSyncUpdateWithWhereUniqueWithoutUserInput | DataSourceSyncUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: DataSourceSyncUpdateManyWithWhereWithoutUserInput | DataSourceSyncUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: DataSourceSyncScalarWhereInput | DataSourceSyncScalarWhereInput[]
+  }
+
+  export type VerificationRequestUpdateManyWithoutUserNestedInput = {
+    create?: XOR<VerificationRequestCreateWithoutUserInput, VerificationRequestUncheckedCreateWithoutUserInput> | VerificationRequestCreateWithoutUserInput[] | VerificationRequestUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: VerificationRequestCreateOrConnectWithoutUserInput | VerificationRequestCreateOrConnectWithoutUserInput[]
+    upsert?: VerificationRequestUpsertWithWhereUniqueWithoutUserInput | VerificationRequestUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: VerificationRequestCreateManyUserInputEnvelope
+    set?: VerificationRequestWhereUniqueInput | VerificationRequestWhereUniqueInput[]
+    disconnect?: VerificationRequestWhereUniqueInput | VerificationRequestWhereUniqueInput[]
+    delete?: VerificationRequestWhereUniqueInput | VerificationRequestWhereUniqueInput[]
+    connect?: VerificationRequestWhereUniqueInput | VerificationRequestWhereUniqueInput[]
+    update?: VerificationRequestUpdateWithWhereUniqueWithoutUserInput | VerificationRequestUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: VerificationRequestUpdateManyWithWhereWithoutUserInput | VerificationRequestUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: VerificationRequestScalarWhereInput | VerificationRequestScalarWhereInput[]
+  }
+
+  export type ResourceRecommendationUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ResourceRecommendationCreateWithoutUserInput, ResourceRecommendationUncheckedCreateWithoutUserInput> | ResourceRecommendationCreateWithoutUserInput[] | ResourceRecommendationUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ResourceRecommendationCreateOrConnectWithoutUserInput | ResourceRecommendationCreateOrConnectWithoutUserInput[]
+    upsert?: ResourceRecommendationUpsertWithWhereUniqueWithoutUserInput | ResourceRecommendationUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ResourceRecommendationCreateManyUserInputEnvelope
+    set?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    disconnect?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    delete?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    connect?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    update?: ResourceRecommendationUpdateWithWhereUniqueWithoutUserInput | ResourceRecommendationUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ResourceRecommendationUpdateManyWithWhereWithoutUserInput | ResourceRecommendationUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ResourceRecommendationScalarWhereInput | ResourceRecommendationScalarWhereInput[]
+  }
+
   export type AccountUncheckedUpdateManyWithoutUserNestedInput = {
     create?: XOR<AccountCreateWithoutUserInput, AccountUncheckedCreateWithoutUserInput> | AccountCreateWithoutUserInput[] | AccountUncheckedCreateWithoutUserInput[]
     connectOrCreate?: AccountCreateOrConnectWithoutUserInput | AccountCreateOrConnectWithoutUserInput[]
@@ -28499,6 +46958,148 @@ export namespace Prisma {
     update?: SkillAnalysisUpdateWithWhereUniqueWithoutUserInput | SkillAnalysisUpdateWithWhereUniqueWithoutUserInput[]
     updateMany?: SkillAnalysisUpdateManyWithWhereWithoutUserInput | SkillAnalysisUpdateManyWithWhereWithoutUserInput[]
     deleteMany?: SkillAnalysisScalarWhereInput | SkillAnalysisScalarWhereInput[]
+  }
+
+  export type EducationRecordUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<EducationRecordCreateWithoutUserInput, EducationRecordUncheckedCreateWithoutUserInput> | EducationRecordCreateWithoutUserInput[] | EducationRecordUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: EducationRecordCreateOrConnectWithoutUserInput | EducationRecordCreateOrConnectWithoutUserInput[]
+    upsert?: EducationRecordUpsertWithWhereUniqueWithoutUserInput | EducationRecordUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: EducationRecordCreateManyUserInputEnvelope
+    set?: EducationRecordWhereUniqueInput | EducationRecordWhereUniqueInput[]
+    disconnect?: EducationRecordWhereUniqueInput | EducationRecordWhereUniqueInput[]
+    delete?: EducationRecordWhereUniqueInput | EducationRecordWhereUniqueInput[]
+    connect?: EducationRecordWhereUniqueInput | EducationRecordWhereUniqueInput[]
+    update?: EducationRecordUpdateWithWhereUniqueWithoutUserInput | EducationRecordUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: EducationRecordUpdateManyWithWhereWithoutUserInput | EducationRecordUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: EducationRecordScalarWhereInput | EducationRecordScalarWhereInput[]
+  }
+
+  export type SocialProfileUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<SocialProfileCreateWithoutUserInput, SocialProfileUncheckedCreateWithoutUserInput> | SocialProfileCreateWithoutUserInput[] | SocialProfileUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: SocialProfileCreateOrConnectWithoutUserInput | SocialProfileCreateOrConnectWithoutUserInput[]
+    upsert?: SocialProfileUpsertWithWhereUniqueWithoutUserInput | SocialProfileUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: SocialProfileCreateManyUserInputEnvelope
+    set?: SocialProfileWhereUniqueInput | SocialProfileWhereUniqueInput[]
+    disconnect?: SocialProfileWhereUniqueInput | SocialProfileWhereUniqueInput[]
+    delete?: SocialProfileWhereUniqueInput | SocialProfileWhereUniqueInput[]
+    connect?: SocialProfileWhereUniqueInput | SocialProfileWhereUniqueInput[]
+    update?: SocialProfileUpdateWithWhereUniqueWithoutUserInput | SocialProfileUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: SocialProfileUpdateManyWithWhereWithoutUserInput | SocialProfileUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: SocialProfileScalarWhereInput | SocialProfileScalarWhereInput[]
+  }
+
+  export type CertificationUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<CertificationCreateWithoutUserInput, CertificationUncheckedCreateWithoutUserInput> | CertificationCreateWithoutUserInput[] | CertificationUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: CertificationCreateOrConnectWithoutUserInput | CertificationCreateOrConnectWithoutUserInput[]
+    upsert?: CertificationUpsertWithWhereUniqueWithoutUserInput | CertificationUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: CertificationCreateManyUserInputEnvelope
+    set?: CertificationWhereUniqueInput | CertificationWhereUniqueInput[]
+    disconnect?: CertificationWhereUniqueInput | CertificationWhereUniqueInput[]
+    delete?: CertificationWhereUniqueInput | CertificationWhereUniqueInput[]
+    connect?: CertificationWhereUniqueInput | CertificationWhereUniqueInput[]
+    update?: CertificationUpdateWithWhereUniqueWithoutUserInput | CertificationUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: CertificationUpdateManyWithWhereWithoutUserInput | CertificationUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: CertificationScalarWhereInput | CertificationScalarWhereInput[]
+  }
+
+  export type GitHubProfileUncheckedUpdateOneWithoutUserNestedInput = {
+    create?: XOR<GitHubProfileCreateWithoutUserInput, GitHubProfileUncheckedCreateWithoutUserInput>
+    connectOrCreate?: GitHubProfileCreateOrConnectWithoutUserInput
+    upsert?: GitHubProfileUpsertWithoutUserInput
+    disconnect?: GitHubProfileWhereInput | boolean
+    delete?: GitHubProfileWhereInput | boolean
+    connect?: GitHubProfileWhereUniqueInput
+    update?: XOR<XOR<GitHubProfileUpdateToOneWithWhereWithoutUserInput, GitHubProfileUpdateWithoutUserInput>, GitHubProfileUncheckedUpdateWithoutUserInput>
+  }
+
+  export type CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput = {
+    create?: XOR<CredibilityScoreCreateWithoutUserInput, CredibilityScoreUncheckedCreateWithoutUserInput>
+    connectOrCreate?: CredibilityScoreCreateOrConnectWithoutUserInput
+    upsert?: CredibilityScoreUpsertWithoutUserInput
+    disconnect?: CredibilityScoreWhereInput | boolean
+    delete?: CredibilityScoreWhereInput | boolean
+    connect?: CredibilityScoreWhereUniqueInput
+    update?: XOR<XOR<CredibilityScoreUpdateToOneWithWhereWithoutUserInput, CredibilityScoreUpdateWithoutUserInput>, CredibilityScoreUncheckedUpdateWithoutUserInput>
+  }
+
+  export type CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<CareerSuggestionCreateWithoutUserInput, CareerSuggestionUncheckedCreateWithoutUserInput> | CareerSuggestionCreateWithoutUserInput[] | CareerSuggestionUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: CareerSuggestionCreateOrConnectWithoutUserInput | CareerSuggestionCreateOrConnectWithoutUserInput[]
+    upsert?: CareerSuggestionUpsertWithWhereUniqueWithoutUserInput | CareerSuggestionUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: CareerSuggestionCreateManyUserInputEnvelope
+    set?: CareerSuggestionWhereUniqueInput | CareerSuggestionWhereUniqueInput[]
+    disconnect?: CareerSuggestionWhereUniqueInput | CareerSuggestionWhereUniqueInput[]
+    delete?: CareerSuggestionWhereUniqueInput | CareerSuggestionWhereUniqueInput[]
+    connect?: CareerSuggestionWhereUniqueInput | CareerSuggestionWhereUniqueInput[]
+    update?: CareerSuggestionUpdateWithWhereUniqueWithoutUserInput | CareerSuggestionUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: CareerSuggestionUpdateManyWithWhereWithoutUserInput | CareerSuggestionUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: CareerSuggestionScalarWhereInput | CareerSuggestionScalarWhereInput[]
+  }
+
+  export type PublicProfileUncheckedUpdateOneWithoutUserNestedInput = {
+    create?: XOR<PublicProfileCreateWithoutUserInput, PublicProfileUncheckedCreateWithoutUserInput>
+    connectOrCreate?: PublicProfileCreateOrConnectWithoutUserInput
+    upsert?: PublicProfileUpsertWithoutUserInput
+    disconnect?: PublicProfileWhereInput | boolean
+    delete?: PublicProfileWhereInput | boolean
+    connect?: PublicProfileWhereUniqueInput
+    update?: XOR<XOR<PublicProfileUpdateToOneWithWhereWithoutUserInput, PublicProfileUpdateWithoutUserInput>, PublicProfileUncheckedUpdateWithoutUserInput>
+  }
+
+  export type ProfileViewUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ProfileViewCreateWithoutUserInput, ProfileViewUncheckedCreateWithoutUserInput> | ProfileViewCreateWithoutUserInput[] | ProfileViewUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ProfileViewCreateOrConnectWithoutUserInput | ProfileViewCreateOrConnectWithoutUserInput[]
+    upsert?: ProfileViewUpsertWithWhereUniqueWithoutUserInput | ProfileViewUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ProfileViewCreateManyUserInputEnvelope
+    set?: ProfileViewWhereUniqueInput | ProfileViewWhereUniqueInput[]
+    disconnect?: ProfileViewWhereUniqueInput | ProfileViewWhereUniqueInput[]
+    delete?: ProfileViewWhereUniqueInput | ProfileViewWhereUniqueInput[]
+    connect?: ProfileViewWhereUniqueInput | ProfileViewWhereUniqueInput[]
+    update?: ProfileViewUpdateWithWhereUniqueWithoutUserInput | ProfileViewUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ProfileViewUpdateManyWithWhereWithoutUserInput | ProfileViewUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ProfileViewScalarWhereInput | ProfileViewScalarWhereInput[]
+  }
+
+  export type DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<DataSourceSyncCreateWithoutUserInput, DataSourceSyncUncheckedCreateWithoutUserInput> | DataSourceSyncCreateWithoutUserInput[] | DataSourceSyncUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: DataSourceSyncCreateOrConnectWithoutUserInput | DataSourceSyncCreateOrConnectWithoutUserInput[]
+    upsert?: DataSourceSyncUpsertWithWhereUniqueWithoutUserInput | DataSourceSyncUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: DataSourceSyncCreateManyUserInputEnvelope
+    set?: DataSourceSyncWhereUniqueInput | DataSourceSyncWhereUniqueInput[]
+    disconnect?: DataSourceSyncWhereUniqueInput | DataSourceSyncWhereUniqueInput[]
+    delete?: DataSourceSyncWhereUniqueInput | DataSourceSyncWhereUniqueInput[]
+    connect?: DataSourceSyncWhereUniqueInput | DataSourceSyncWhereUniqueInput[]
+    update?: DataSourceSyncUpdateWithWhereUniqueWithoutUserInput | DataSourceSyncUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: DataSourceSyncUpdateManyWithWhereWithoutUserInput | DataSourceSyncUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: DataSourceSyncScalarWhereInput | DataSourceSyncScalarWhereInput[]
+  }
+
+  export type VerificationRequestUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<VerificationRequestCreateWithoutUserInput, VerificationRequestUncheckedCreateWithoutUserInput> | VerificationRequestCreateWithoutUserInput[] | VerificationRequestUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: VerificationRequestCreateOrConnectWithoutUserInput | VerificationRequestCreateOrConnectWithoutUserInput[]
+    upsert?: VerificationRequestUpsertWithWhereUniqueWithoutUserInput | VerificationRequestUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: VerificationRequestCreateManyUserInputEnvelope
+    set?: VerificationRequestWhereUniqueInput | VerificationRequestWhereUniqueInput[]
+    disconnect?: VerificationRequestWhereUniqueInput | VerificationRequestWhereUniqueInput[]
+    delete?: VerificationRequestWhereUniqueInput | VerificationRequestWhereUniqueInput[]
+    connect?: VerificationRequestWhereUniqueInput | VerificationRequestWhereUniqueInput[]
+    update?: VerificationRequestUpdateWithWhereUniqueWithoutUserInput | VerificationRequestUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: VerificationRequestUpdateManyWithWhereWithoutUserInput | VerificationRequestUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: VerificationRequestScalarWhereInput | VerificationRequestScalarWhereInput[]
+  }
+
+  export type ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ResourceRecommendationCreateWithoutUserInput, ResourceRecommendationUncheckedCreateWithoutUserInput> | ResourceRecommendationCreateWithoutUserInput[] | ResourceRecommendationUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ResourceRecommendationCreateOrConnectWithoutUserInput | ResourceRecommendationCreateOrConnectWithoutUserInput[]
+    upsert?: ResourceRecommendationUpsertWithWhereUniqueWithoutUserInput | ResourceRecommendationUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ResourceRecommendationCreateManyUserInputEnvelope
+    set?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    disconnect?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    delete?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    connect?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    update?: ResourceRecommendationUpdateWithWhereUniqueWithoutUserInput | ResourceRecommendationUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ResourceRecommendationUpdateManyWithWhereWithoutUserInput | ResourceRecommendationUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ResourceRecommendationScalarWhereInput | ResourceRecommendationScalarWhereInput[]
   }
 
   export type UserCreateNestedOneWithoutAccountsInput = {
@@ -29449,6 +48050,254 @@ export namespace Prisma {
     update?: XOR<XOR<CareerGoalUpdateToOneWithWhereWithoutSkillMatchesInput, CareerGoalUpdateWithoutSkillMatchesInput>, CareerGoalUncheckedUpdateWithoutSkillMatchesInput>
   }
 
+  export type UserCreateNestedOneWithoutEducationRecordsInput = {
+    create?: XOR<UserCreateWithoutEducationRecordsInput, UserUncheckedCreateWithoutEducationRecordsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutEducationRecordsInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutEducationRecordsNestedInput = {
+    create?: XOR<UserCreateWithoutEducationRecordsInput, UserUncheckedCreateWithoutEducationRecordsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutEducationRecordsInput
+    upsert?: UserUpsertWithoutEducationRecordsInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutEducationRecordsInput, UserUpdateWithoutEducationRecordsInput>, UserUncheckedUpdateWithoutEducationRecordsInput>
+  }
+
+  export type UserCreateNestedOneWithoutSocialProfilesInput = {
+    create?: XOR<UserCreateWithoutSocialProfilesInput, UserUncheckedCreateWithoutSocialProfilesInput>
+    connectOrCreate?: UserCreateOrConnectWithoutSocialProfilesInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutSocialProfilesNestedInput = {
+    create?: XOR<UserCreateWithoutSocialProfilesInput, UserUncheckedCreateWithoutSocialProfilesInput>
+    connectOrCreate?: UserCreateOrConnectWithoutSocialProfilesInput
+    upsert?: UserUpsertWithoutSocialProfilesInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutSocialProfilesInput, UserUpdateWithoutSocialProfilesInput>, UserUncheckedUpdateWithoutSocialProfilesInput>
+  }
+
+  export type CertificationCreateskillsEarnedInput = {
+    set: string[]
+  }
+
+  export type UserCreateNestedOneWithoutCertificationsInput = {
+    create?: XOR<UserCreateWithoutCertificationsInput, UserUncheckedCreateWithoutCertificationsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutCertificationsInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type CertificationUpdateskillsEarnedInput = {
+    set?: string[]
+    push?: string | string[]
+  }
+
+  export type UserUpdateOneRequiredWithoutCertificationsNestedInput = {
+    create?: XOR<UserCreateWithoutCertificationsInput, UserUncheckedCreateWithoutCertificationsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutCertificationsInput
+    upsert?: UserUpsertWithoutCertificationsInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutCertificationsInput, UserUpdateWithoutCertificationsInput>, UserUncheckedUpdateWithoutCertificationsInput>
+  }
+
+  export type UserCreateNestedOneWithoutGithubProfileInput = {
+    create?: XOR<UserCreateWithoutGithubProfileInput, UserUncheckedCreateWithoutGithubProfileInput>
+    connectOrCreate?: UserCreateOrConnectWithoutGithubProfileInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutGithubProfileNestedInput = {
+    create?: XOR<UserCreateWithoutGithubProfileInput, UserUncheckedCreateWithoutGithubProfileInput>
+    connectOrCreate?: UserCreateOrConnectWithoutGithubProfileInput
+    upsert?: UserUpsertWithoutGithubProfileInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutGithubProfileInput, UserUpdateWithoutGithubProfileInput>, UserUncheckedUpdateWithoutGithubProfileInput>
+  }
+
+  export type CredibilityScoreCreatebadgesInput = {
+    set: string[]
+  }
+
+  export type UserCreateNestedOneWithoutCredibilityScoreInput = {
+    create?: XOR<UserCreateWithoutCredibilityScoreInput, UserUncheckedCreateWithoutCredibilityScoreInput>
+    connectOrCreate?: UserCreateOrConnectWithoutCredibilityScoreInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type CredibilityScoreUpdatebadgesInput = {
+    set?: string[]
+    push?: string | string[]
+  }
+
+  export type UserUpdateOneRequiredWithoutCredibilityScoreNestedInput = {
+    create?: XOR<UserCreateWithoutCredibilityScoreInput, UserUncheckedCreateWithoutCredibilityScoreInput>
+    connectOrCreate?: UserCreateOrConnectWithoutCredibilityScoreInput
+    upsert?: UserUpsertWithoutCredibilityScoreInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutCredibilityScoreInput, UserUpdateWithoutCredibilityScoreInput>, UserUncheckedUpdateWithoutCredibilityScoreInput>
+  }
+
+  export type UserCreateNestedOneWithoutCareerSuggestionsInput = {
+    create?: XOR<UserCreateWithoutCareerSuggestionsInput, UserUncheckedCreateWithoutCareerSuggestionsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutCareerSuggestionsInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type ResourceRecommendationCreateNestedManyWithoutCareerSuggestionInput = {
+    create?: XOR<ResourceRecommendationCreateWithoutCareerSuggestionInput, ResourceRecommendationUncheckedCreateWithoutCareerSuggestionInput> | ResourceRecommendationCreateWithoutCareerSuggestionInput[] | ResourceRecommendationUncheckedCreateWithoutCareerSuggestionInput[]
+    connectOrCreate?: ResourceRecommendationCreateOrConnectWithoutCareerSuggestionInput | ResourceRecommendationCreateOrConnectWithoutCareerSuggestionInput[]
+    createMany?: ResourceRecommendationCreateManyCareerSuggestionInputEnvelope
+    connect?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+  }
+
+  export type ResourceRecommendationUncheckedCreateNestedManyWithoutCareerSuggestionInput = {
+    create?: XOR<ResourceRecommendationCreateWithoutCareerSuggestionInput, ResourceRecommendationUncheckedCreateWithoutCareerSuggestionInput> | ResourceRecommendationCreateWithoutCareerSuggestionInput[] | ResourceRecommendationUncheckedCreateWithoutCareerSuggestionInput[]
+    connectOrCreate?: ResourceRecommendationCreateOrConnectWithoutCareerSuggestionInput | ResourceRecommendationCreateOrConnectWithoutCareerSuggestionInput[]
+    createMany?: ResourceRecommendationCreateManyCareerSuggestionInputEnvelope
+    connect?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+  }
+
+  export type UserUpdateOneRequiredWithoutCareerSuggestionsNestedInput = {
+    create?: XOR<UserCreateWithoutCareerSuggestionsInput, UserUncheckedCreateWithoutCareerSuggestionsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutCareerSuggestionsInput
+    upsert?: UserUpsertWithoutCareerSuggestionsInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutCareerSuggestionsInput, UserUpdateWithoutCareerSuggestionsInput>, UserUncheckedUpdateWithoutCareerSuggestionsInput>
+  }
+
+  export type ResourceRecommendationUpdateManyWithoutCareerSuggestionNestedInput = {
+    create?: XOR<ResourceRecommendationCreateWithoutCareerSuggestionInput, ResourceRecommendationUncheckedCreateWithoutCareerSuggestionInput> | ResourceRecommendationCreateWithoutCareerSuggestionInput[] | ResourceRecommendationUncheckedCreateWithoutCareerSuggestionInput[]
+    connectOrCreate?: ResourceRecommendationCreateOrConnectWithoutCareerSuggestionInput | ResourceRecommendationCreateOrConnectWithoutCareerSuggestionInput[]
+    upsert?: ResourceRecommendationUpsertWithWhereUniqueWithoutCareerSuggestionInput | ResourceRecommendationUpsertWithWhereUniqueWithoutCareerSuggestionInput[]
+    createMany?: ResourceRecommendationCreateManyCareerSuggestionInputEnvelope
+    set?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    disconnect?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    delete?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    connect?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    update?: ResourceRecommendationUpdateWithWhereUniqueWithoutCareerSuggestionInput | ResourceRecommendationUpdateWithWhereUniqueWithoutCareerSuggestionInput[]
+    updateMany?: ResourceRecommendationUpdateManyWithWhereWithoutCareerSuggestionInput | ResourceRecommendationUpdateManyWithWhereWithoutCareerSuggestionInput[]
+    deleteMany?: ResourceRecommendationScalarWhereInput | ResourceRecommendationScalarWhereInput[]
+  }
+
+  export type ResourceRecommendationUncheckedUpdateManyWithoutCareerSuggestionNestedInput = {
+    create?: XOR<ResourceRecommendationCreateWithoutCareerSuggestionInput, ResourceRecommendationUncheckedCreateWithoutCareerSuggestionInput> | ResourceRecommendationCreateWithoutCareerSuggestionInput[] | ResourceRecommendationUncheckedCreateWithoutCareerSuggestionInput[]
+    connectOrCreate?: ResourceRecommendationCreateOrConnectWithoutCareerSuggestionInput | ResourceRecommendationCreateOrConnectWithoutCareerSuggestionInput[]
+    upsert?: ResourceRecommendationUpsertWithWhereUniqueWithoutCareerSuggestionInput | ResourceRecommendationUpsertWithWhereUniqueWithoutCareerSuggestionInput[]
+    createMany?: ResourceRecommendationCreateManyCareerSuggestionInputEnvelope
+    set?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    disconnect?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    delete?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    connect?: ResourceRecommendationWhereUniqueInput | ResourceRecommendationWhereUniqueInput[]
+    update?: ResourceRecommendationUpdateWithWhereUniqueWithoutCareerSuggestionInput | ResourceRecommendationUpdateWithWhereUniqueWithoutCareerSuggestionInput[]
+    updateMany?: ResourceRecommendationUpdateManyWithWhereWithoutCareerSuggestionInput | ResourceRecommendationUpdateManyWithWhereWithoutCareerSuggestionInput[]
+    deleteMany?: ResourceRecommendationScalarWhereInput | ResourceRecommendationScalarWhereInput[]
+  }
+
+  export type UserCreateNestedOneWithoutPublicProfileInput = {
+    create?: XOR<UserCreateWithoutPublicProfileInput, UserUncheckedCreateWithoutPublicProfileInput>
+    connectOrCreate?: UserCreateOrConnectWithoutPublicProfileInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutPublicProfileNestedInput = {
+    create?: XOR<UserCreateWithoutPublicProfileInput, UserUncheckedCreateWithoutPublicProfileInput>
+    connectOrCreate?: UserCreateOrConnectWithoutPublicProfileInput
+    upsert?: UserUpsertWithoutPublicProfileInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutPublicProfileInput, UserUpdateWithoutPublicProfileInput>, UserUncheckedUpdateWithoutPublicProfileInput>
+  }
+
+  export type UserCreateNestedOneWithoutProfileViewsInput = {
+    create?: XOR<UserCreateWithoutProfileViewsInput, UserUncheckedCreateWithoutProfileViewsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutProfileViewsInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutProfileViewsNestedInput = {
+    create?: XOR<UserCreateWithoutProfileViewsInput, UserUncheckedCreateWithoutProfileViewsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutProfileViewsInput
+    upsert?: UserUpsertWithoutProfileViewsInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutProfileViewsInput, UserUpdateWithoutProfileViewsInput>, UserUncheckedUpdateWithoutProfileViewsInput>
+  }
+
+  export type UserCreateNestedOneWithoutDataSourceSyncsInput = {
+    create?: XOR<UserCreateWithoutDataSourceSyncsInput, UserUncheckedCreateWithoutDataSourceSyncsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutDataSourceSyncsInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type UserUpdateOneRequiredWithoutDataSourceSyncsNestedInput = {
+    create?: XOR<UserCreateWithoutDataSourceSyncsInput, UserUncheckedCreateWithoutDataSourceSyncsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutDataSourceSyncsInput
+    upsert?: UserUpsertWithoutDataSourceSyncsInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutDataSourceSyncsInput, UserUpdateWithoutDataSourceSyncsInput>, UserUncheckedUpdateWithoutDataSourceSyncsInput>
+  }
+
+  export type VerificationRequestCreatedocumentUrlsInput = {
+    set: string[]
+  }
+
+  export type UserCreateNestedOneWithoutVerificationRequestsInput = {
+    create?: XOR<UserCreateWithoutVerificationRequestsInput, UserUncheckedCreateWithoutVerificationRequestsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutVerificationRequestsInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type VerificationRequestUpdatedocumentUrlsInput = {
+    set?: string[]
+    push?: string | string[]
+  }
+
+  export type UserUpdateOneRequiredWithoutVerificationRequestsNestedInput = {
+    create?: XOR<UserCreateWithoutVerificationRequestsInput, UserUncheckedCreateWithoutVerificationRequestsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutVerificationRequestsInput
+    upsert?: UserUpsertWithoutVerificationRequestsInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutVerificationRequestsInput, UserUpdateWithoutVerificationRequestsInput>, UserUncheckedUpdateWithoutVerificationRequestsInput>
+  }
+
+  export type ResourceRecommendationCreateskillsGainedInput = {
+    set: string[]
+  }
+
+  export type UserCreateNestedOneWithoutResourceRecommendationsInput = {
+    create?: XOR<UserCreateWithoutResourceRecommendationsInput, UserUncheckedCreateWithoutResourceRecommendationsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutResourceRecommendationsInput
+    connect?: UserWhereUniqueInput
+  }
+
+  export type CareerSuggestionCreateNestedOneWithoutResourceRecommendationsInput = {
+    create?: XOR<CareerSuggestionCreateWithoutResourceRecommendationsInput, CareerSuggestionUncheckedCreateWithoutResourceRecommendationsInput>
+    connectOrCreate?: CareerSuggestionCreateOrConnectWithoutResourceRecommendationsInput
+    connect?: CareerSuggestionWhereUniqueInput
+  }
+
+  export type ResourceRecommendationUpdateskillsGainedInput = {
+    set?: string[]
+    push?: string | string[]
+  }
+
+  export type UserUpdateOneRequiredWithoutResourceRecommendationsNestedInput = {
+    create?: XOR<UserCreateWithoutResourceRecommendationsInput, UserUncheckedCreateWithoutResourceRecommendationsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutResourceRecommendationsInput
+    upsert?: UserUpsertWithoutResourceRecommendationsInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutResourceRecommendationsInput, UserUpdateWithoutResourceRecommendationsInput>, UserUncheckedUpdateWithoutResourceRecommendationsInput>
+  }
+
+  export type CareerSuggestionUpdateOneWithoutResourceRecommendationsNestedInput = {
+    create?: XOR<CareerSuggestionCreateWithoutResourceRecommendationsInput, CareerSuggestionUncheckedCreateWithoutResourceRecommendationsInput>
+    connectOrCreate?: CareerSuggestionCreateOrConnectWithoutResourceRecommendationsInput
+    upsert?: CareerSuggestionUpsertWithoutResourceRecommendationsInput
+    disconnect?: CareerSuggestionWhereInput | boolean
+    delete?: CareerSuggestionWhereInput | boolean
+    connect?: CareerSuggestionWhereUniqueInput
+    update?: XOR<XOR<CareerSuggestionUpdateToOneWithWhereWithoutResourceRecommendationsInput, CareerSuggestionUpdateWithoutResourceRecommendationsInput>, CareerSuggestionUncheckedUpdateWithoutResourceRecommendationsInput>
+  }
+
   export type NestedStringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -30109,6 +48958,461 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type EducationRecordCreateWithoutUserInput = {
+    id?: string
+    institutionName: string
+    degree: string
+    field?: string | null
+    gpa?: number | null
+    startDate: Date | string
+    endDate?: Date | string | null
+    verified?: boolean
+    verificationSource?: string | null
+    verificationDate?: Date | string | null
+    transcriptUrl?: string | null
+    credentialId?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EducationRecordUncheckedCreateWithoutUserInput = {
+    id?: string
+    institutionName: string
+    degree: string
+    field?: string | null
+    gpa?: number | null
+    startDate: Date | string
+    endDate?: Date | string | null
+    verified?: boolean
+    verificationSource?: string | null
+    verificationDate?: Date | string | null
+    transcriptUrl?: string | null
+    credentialId?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type EducationRecordCreateOrConnectWithoutUserInput = {
+    where: EducationRecordWhereUniqueInput
+    create: XOR<EducationRecordCreateWithoutUserInput, EducationRecordUncheckedCreateWithoutUserInput>
+  }
+
+  export type EducationRecordCreateManyUserInputEnvelope = {
+    data: EducationRecordCreateManyUserInput | EducationRecordCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type SocialProfileCreateWithoutUserInput = {
+    id?: string
+    platform: string
+    username: string
+    profileUrl?: string | null
+    verified?: boolean
+    followerCount?: number | null
+    followingCount?: number | null
+    engagementRate?: number | null
+    contentScore?: number | null
+    influenceScore?: number | null
+    lastFetchedAt: Date | string
+    metrics?: JsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type SocialProfileUncheckedCreateWithoutUserInput = {
+    id?: string
+    platform: string
+    username: string
+    profileUrl?: string | null
+    verified?: boolean
+    followerCount?: number | null
+    followingCount?: number | null
+    engagementRate?: number | null
+    contentScore?: number | null
+    influenceScore?: number | null
+    lastFetchedAt: Date | string
+    metrics?: JsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type SocialProfileCreateOrConnectWithoutUserInput = {
+    where: SocialProfileWhereUniqueInput
+    create: XOR<SocialProfileCreateWithoutUserInput, SocialProfileUncheckedCreateWithoutUserInput>
+  }
+
+  export type SocialProfileCreateManyUserInputEnvelope = {
+    data: SocialProfileCreateManyUserInput | SocialProfileCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type CertificationCreateWithoutUserInput = {
+    id?: string
+    name: string
+    issuer: string
+    issueDate: Date | string
+    expiryDate?: Date | string | null
+    credentialId?: string | null
+    credentialUrl?: string | null
+    verified?: boolean
+    verificationMethod?: string | null
+    skillsEarned?: CertificationCreateskillsEarnedInput | string[]
+    certificateImageUrl?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CertificationUncheckedCreateWithoutUserInput = {
+    id?: string
+    name: string
+    issuer: string
+    issueDate: Date | string
+    expiryDate?: Date | string | null
+    credentialId?: string | null
+    credentialUrl?: string | null
+    verified?: boolean
+    verificationMethod?: string | null
+    skillsEarned?: CertificationCreateskillsEarnedInput | string[]
+    certificateImageUrl?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CertificationCreateOrConnectWithoutUserInput = {
+    where: CertificationWhereUniqueInput
+    create: XOR<CertificationCreateWithoutUserInput, CertificationUncheckedCreateWithoutUserInput>
+  }
+
+  export type CertificationCreateManyUserInputEnvelope = {
+    data: CertificationCreateManyUserInput | CertificationCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type GitHubProfileCreateWithoutUserInput = {
+    id?: string
+    username: string
+    profileUrl?: string | null
+    totalRepos?: number
+    totalCommits?: number
+    totalPRs?: number
+    totalIssues?: number
+    totalStars?: number
+    languagesUsed?: JsonNullValueInput | InputJsonValue
+    contributionScore?: number | null
+    consistencyScore?: number | null
+    codeQualityScore?: number | null
+    topRepos?: NullableJsonNullValueInput | InputJsonValue
+    contributionGraph?: NullableJsonNullValueInput | InputJsonValue
+    lastFetchedAt: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type GitHubProfileUncheckedCreateWithoutUserInput = {
+    id?: string
+    username: string
+    profileUrl?: string | null
+    totalRepos?: number
+    totalCommits?: number
+    totalPRs?: number
+    totalIssues?: number
+    totalStars?: number
+    languagesUsed?: JsonNullValueInput | InputJsonValue
+    contributionScore?: number | null
+    consistencyScore?: number | null
+    codeQualityScore?: number | null
+    topRepos?: NullableJsonNullValueInput | InputJsonValue
+    contributionGraph?: NullableJsonNullValueInput | InputJsonValue
+    lastFetchedAt: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type GitHubProfileCreateOrConnectWithoutUserInput = {
+    where: GitHubProfileWhereUniqueInput
+    create: XOR<GitHubProfileCreateWithoutUserInput, GitHubProfileUncheckedCreateWithoutUserInput>
+  }
+
+  export type CredibilityScoreCreateWithoutUserInput = {
+    id?: string
+    overallScore?: number
+    educationScore?: number
+    experienceScore?: number
+    technicalScore?: number
+    socialScore?: number
+    certificationScore?: number
+    verificationLevel?: string
+    breakdown?: JsonNullValueInput | InputJsonValue
+    badges?: CredibilityScoreCreatebadgesInput | string[]
+    calculatedAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CredibilityScoreUncheckedCreateWithoutUserInput = {
+    id?: string
+    overallScore?: number
+    educationScore?: number
+    experienceScore?: number
+    technicalScore?: number
+    socialScore?: number
+    certificationScore?: number
+    verificationLevel?: string
+    breakdown?: JsonNullValueInput | InputJsonValue
+    badges?: CredibilityScoreCreatebadgesInput | string[]
+    calculatedAt?: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CredibilityScoreCreateOrConnectWithoutUserInput = {
+    where: CredibilityScoreWhereUniqueInput
+    create: XOR<CredibilityScoreCreateWithoutUserInput, CredibilityScoreUncheckedCreateWithoutUserInput>
+  }
+
+  export type CareerSuggestionCreateWithoutUserInput = {
+    id?: string
+    role: string
+    readinessScore: number
+    estimatedTime?: string | null
+    estimatedWeeks?: number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: string | null
+    priority?: number
+    status?: string
+    aiModel?: string | null
+    confidence?: number | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutCareerSuggestionInput
+  }
+
+  export type CareerSuggestionUncheckedCreateWithoutUserInput = {
+    id?: string
+    role: string
+    readinessScore: number
+    estimatedTime?: string | null
+    estimatedWeeks?: number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: string | null
+    priority?: number
+    status?: string
+    aiModel?: string | null
+    confidence?: number | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutCareerSuggestionInput
+  }
+
+  export type CareerSuggestionCreateOrConnectWithoutUserInput = {
+    where: CareerSuggestionWhereUniqueInput
+    create: XOR<CareerSuggestionCreateWithoutUserInput, CareerSuggestionUncheckedCreateWithoutUserInput>
+  }
+
+  export type CareerSuggestionCreateManyUserInputEnvelope = {
+    data: CareerSuggestionCreateManyUserInput | CareerSuggestionCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type PublicProfileCreateWithoutUserInput = {
+    id?: string
+    username: string
+    slug: string
+    isPublic?: boolean
+    customDomain?: string | null
+    theme?: string
+    visibleSections?: JsonNullValueInput | InputJsonValue
+    seoTitle?: string | null
+    seoDescription?: string | null
+    ogImageUrl?: string | null
+    viewCount?: number
+    shareCount?: number
+    lastViewedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type PublicProfileUncheckedCreateWithoutUserInput = {
+    id?: string
+    username: string
+    slug: string
+    isPublic?: boolean
+    customDomain?: string | null
+    theme?: string
+    visibleSections?: JsonNullValueInput | InputJsonValue
+    seoTitle?: string | null
+    seoDescription?: string | null
+    ogImageUrl?: string | null
+    viewCount?: number
+    shareCount?: number
+    lastViewedAt?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type PublicProfileCreateOrConnectWithoutUserInput = {
+    where: PublicProfileWhereUniqueInput
+    create: XOR<PublicProfileCreateWithoutUserInput, PublicProfileUncheckedCreateWithoutUserInput>
+  }
+
+  export type ProfileViewCreateWithoutUserInput = {
+    id?: string
+    viewerIp?: string | null
+    viewerUserAgent?: string | null
+    referrer?: string | null
+    country?: string | null
+    city?: string | null
+    viewedAt?: Date | string
+  }
+
+  export type ProfileViewUncheckedCreateWithoutUserInput = {
+    id?: string
+    viewerIp?: string | null
+    viewerUserAgent?: string | null
+    referrer?: string | null
+    country?: string | null
+    city?: string | null
+    viewedAt?: Date | string
+  }
+
+  export type ProfileViewCreateOrConnectWithoutUserInput = {
+    where: ProfileViewWhereUniqueInput
+    create: XOR<ProfileViewCreateWithoutUserInput, ProfileViewUncheckedCreateWithoutUserInput>
+  }
+
+  export type ProfileViewCreateManyUserInputEnvelope = {
+    data: ProfileViewCreateManyUserInput | ProfileViewCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type DataSourceSyncCreateWithoutUserInput = {
+    id?: string
+    source: string
+    status?: string
+    lastSyncAt?: Date | string | null
+    nextSyncAt?: Date | string | null
+    syncFrequency?: string
+    error?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type DataSourceSyncUncheckedCreateWithoutUserInput = {
+    id?: string
+    source: string
+    status?: string
+    lastSyncAt?: Date | string | null
+    nextSyncAt?: Date | string | null
+    syncFrequency?: string
+    error?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type DataSourceSyncCreateOrConnectWithoutUserInput = {
+    where: DataSourceSyncWhereUniqueInput
+    create: XOR<DataSourceSyncCreateWithoutUserInput, DataSourceSyncUncheckedCreateWithoutUserInput>
+  }
+
+  export type DataSourceSyncCreateManyUserInputEnvelope = {
+    data: DataSourceSyncCreateManyUserInput | DataSourceSyncCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type VerificationRequestCreateWithoutUserInput = {
+    id?: string
+    type: string
+    entityId: string
+    status?: string
+    method?: string | null
+    documentUrls?: VerificationRequestCreatedocumentUrlsInput | string[]
+    reviewerNotes?: string | null
+    submittedAt?: Date | string
+    reviewedAt?: Date | string | null
+    reviewedBy?: string | null
+  }
+
+  export type VerificationRequestUncheckedCreateWithoutUserInput = {
+    id?: string
+    type: string
+    entityId: string
+    status?: string
+    method?: string | null
+    documentUrls?: VerificationRequestCreatedocumentUrlsInput | string[]
+    reviewerNotes?: string | null
+    submittedAt?: Date | string
+    reviewedAt?: Date | string | null
+    reviewedBy?: string | null
+  }
+
+  export type VerificationRequestCreateOrConnectWithoutUserInput = {
+    where: VerificationRequestWhereUniqueInput
+    create: XOR<VerificationRequestCreateWithoutUserInput, VerificationRequestUncheckedCreateWithoutUserInput>
+  }
+
+  export type VerificationRequestCreateManyUserInputEnvelope = {
+    data: VerificationRequestCreateManyUserInput | VerificationRequestCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ResourceRecommendationCreateWithoutUserInput = {
+    id?: string
+    type: string
+    platform: string
+    title: string
+    url?: string | null
+    provider?: string | null
+    duration?: string | null
+    cost?: string | null
+    difficulty?: string | null
+    skillsGained?: ResourceRecommendationCreateskillsGainedInput | string[]
+    relevanceScore?: number | null
+    status?: string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    careerSuggestion?: CareerSuggestionCreateNestedOneWithoutResourceRecommendationsInput
+  }
+
+  export type ResourceRecommendationUncheckedCreateWithoutUserInput = {
+    id?: string
+    careerSuggestionId?: string | null
+    type: string
+    platform: string
+    title: string
+    url?: string | null
+    provider?: string | null
+    duration?: string | null
+    cost?: string | null
+    difficulty?: string | null
+    skillsGained?: ResourceRecommendationCreateskillsGainedInput | string[]
+    relevanceScore?: number | null
+    status?: string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ResourceRecommendationCreateOrConnectWithoutUserInput = {
+    where: ResourceRecommendationWhereUniqueInput
+    create: XOR<ResourceRecommendationCreateWithoutUserInput, ResourceRecommendationUncheckedCreateWithoutUserInput>
+  }
+
+  export type ResourceRecommendationCreateManyUserInputEnvelope = {
+    data: ResourceRecommendationCreateManyUserInput | ResourceRecommendationCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
   export type AccountUpsertWithWhereUniqueWithoutUserInput = {
     where: AccountWhereUniqueInput
     update: XOR<AccountUpdateWithoutUserInput, AccountUncheckedUpdateWithoutUserInput>
@@ -30464,6 +49768,432 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"SkillAnalysis"> | Date | string
   }
 
+  export type EducationRecordUpsertWithWhereUniqueWithoutUserInput = {
+    where: EducationRecordWhereUniqueInput
+    update: XOR<EducationRecordUpdateWithoutUserInput, EducationRecordUncheckedUpdateWithoutUserInput>
+    create: XOR<EducationRecordCreateWithoutUserInput, EducationRecordUncheckedCreateWithoutUserInput>
+  }
+
+  export type EducationRecordUpdateWithWhereUniqueWithoutUserInput = {
+    where: EducationRecordWhereUniqueInput
+    data: XOR<EducationRecordUpdateWithoutUserInput, EducationRecordUncheckedUpdateWithoutUserInput>
+  }
+
+  export type EducationRecordUpdateManyWithWhereWithoutUserInput = {
+    where: EducationRecordScalarWhereInput
+    data: XOR<EducationRecordUpdateManyMutationInput, EducationRecordUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type EducationRecordScalarWhereInput = {
+    AND?: EducationRecordScalarWhereInput | EducationRecordScalarWhereInput[]
+    OR?: EducationRecordScalarWhereInput[]
+    NOT?: EducationRecordScalarWhereInput | EducationRecordScalarWhereInput[]
+    id?: StringFilter<"EducationRecord"> | string
+    userId?: StringFilter<"EducationRecord"> | string
+    institutionName?: StringFilter<"EducationRecord"> | string
+    degree?: StringFilter<"EducationRecord"> | string
+    field?: StringNullableFilter<"EducationRecord"> | string | null
+    gpa?: FloatNullableFilter<"EducationRecord"> | number | null
+    startDate?: DateTimeFilter<"EducationRecord"> | Date | string
+    endDate?: DateTimeNullableFilter<"EducationRecord"> | Date | string | null
+    verified?: BoolFilter<"EducationRecord"> | boolean
+    verificationSource?: StringNullableFilter<"EducationRecord"> | string | null
+    verificationDate?: DateTimeNullableFilter<"EducationRecord"> | Date | string | null
+    transcriptUrl?: StringNullableFilter<"EducationRecord"> | string | null
+    credentialId?: StringNullableFilter<"EducationRecord"> | string | null
+    metadata?: JsonNullableFilter<"EducationRecord">
+    createdAt?: DateTimeFilter<"EducationRecord"> | Date | string
+    updatedAt?: DateTimeFilter<"EducationRecord"> | Date | string
+  }
+
+  export type SocialProfileUpsertWithWhereUniqueWithoutUserInput = {
+    where: SocialProfileWhereUniqueInput
+    update: XOR<SocialProfileUpdateWithoutUserInput, SocialProfileUncheckedUpdateWithoutUserInput>
+    create: XOR<SocialProfileCreateWithoutUserInput, SocialProfileUncheckedCreateWithoutUserInput>
+  }
+
+  export type SocialProfileUpdateWithWhereUniqueWithoutUserInput = {
+    where: SocialProfileWhereUniqueInput
+    data: XOR<SocialProfileUpdateWithoutUserInput, SocialProfileUncheckedUpdateWithoutUserInput>
+  }
+
+  export type SocialProfileUpdateManyWithWhereWithoutUserInput = {
+    where: SocialProfileScalarWhereInput
+    data: XOR<SocialProfileUpdateManyMutationInput, SocialProfileUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type SocialProfileScalarWhereInput = {
+    AND?: SocialProfileScalarWhereInput | SocialProfileScalarWhereInput[]
+    OR?: SocialProfileScalarWhereInput[]
+    NOT?: SocialProfileScalarWhereInput | SocialProfileScalarWhereInput[]
+    id?: StringFilter<"SocialProfile"> | string
+    userId?: StringFilter<"SocialProfile"> | string
+    platform?: StringFilter<"SocialProfile"> | string
+    username?: StringFilter<"SocialProfile"> | string
+    profileUrl?: StringNullableFilter<"SocialProfile"> | string | null
+    verified?: BoolFilter<"SocialProfile"> | boolean
+    followerCount?: IntNullableFilter<"SocialProfile"> | number | null
+    followingCount?: IntNullableFilter<"SocialProfile"> | number | null
+    engagementRate?: FloatNullableFilter<"SocialProfile"> | number | null
+    contentScore?: FloatNullableFilter<"SocialProfile"> | number | null
+    influenceScore?: FloatNullableFilter<"SocialProfile"> | number | null
+    lastFetchedAt?: DateTimeFilter<"SocialProfile"> | Date | string
+    metrics?: JsonFilter<"SocialProfile">
+    createdAt?: DateTimeFilter<"SocialProfile"> | Date | string
+    updatedAt?: DateTimeFilter<"SocialProfile"> | Date | string
+  }
+
+  export type CertificationUpsertWithWhereUniqueWithoutUserInput = {
+    where: CertificationWhereUniqueInput
+    update: XOR<CertificationUpdateWithoutUserInput, CertificationUncheckedUpdateWithoutUserInput>
+    create: XOR<CertificationCreateWithoutUserInput, CertificationUncheckedCreateWithoutUserInput>
+  }
+
+  export type CertificationUpdateWithWhereUniqueWithoutUserInput = {
+    where: CertificationWhereUniqueInput
+    data: XOR<CertificationUpdateWithoutUserInput, CertificationUncheckedUpdateWithoutUserInput>
+  }
+
+  export type CertificationUpdateManyWithWhereWithoutUserInput = {
+    where: CertificationScalarWhereInput
+    data: XOR<CertificationUpdateManyMutationInput, CertificationUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type CertificationScalarWhereInput = {
+    AND?: CertificationScalarWhereInput | CertificationScalarWhereInput[]
+    OR?: CertificationScalarWhereInput[]
+    NOT?: CertificationScalarWhereInput | CertificationScalarWhereInput[]
+    id?: StringFilter<"Certification"> | string
+    userId?: StringFilter<"Certification"> | string
+    name?: StringFilter<"Certification"> | string
+    issuer?: StringFilter<"Certification"> | string
+    issueDate?: DateTimeFilter<"Certification"> | Date | string
+    expiryDate?: DateTimeNullableFilter<"Certification"> | Date | string | null
+    credentialId?: StringNullableFilter<"Certification"> | string | null
+    credentialUrl?: StringNullableFilter<"Certification"> | string | null
+    verified?: BoolFilter<"Certification"> | boolean
+    verificationMethod?: StringNullableFilter<"Certification"> | string | null
+    skillsEarned?: StringNullableListFilter<"Certification">
+    certificateImageUrl?: StringNullableFilter<"Certification"> | string | null
+    metadata?: JsonNullableFilter<"Certification">
+    createdAt?: DateTimeFilter<"Certification"> | Date | string
+    updatedAt?: DateTimeFilter<"Certification"> | Date | string
+  }
+
+  export type GitHubProfileUpsertWithoutUserInput = {
+    update: XOR<GitHubProfileUpdateWithoutUserInput, GitHubProfileUncheckedUpdateWithoutUserInput>
+    create: XOR<GitHubProfileCreateWithoutUserInput, GitHubProfileUncheckedCreateWithoutUserInput>
+    where?: GitHubProfileWhereInput
+  }
+
+  export type GitHubProfileUpdateToOneWithWhereWithoutUserInput = {
+    where?: GitHubProfileWhereInput
+    data: XOR<GitHubProfileUpdateWithoutUserInput, GitHubProfileUncheckedUpdateWithoutUserInput>
+  }
+
+  export type GitHubProfileUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    profileUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    totalRepos?: IntFieldUpdateOperationsInput | number
+    totalCommits?: IntFieldUpdateOperationsInput | number
+    totalPRs?: IntFieldUpdateOperationsInput | number
+    totalIssues?: IntFieldUpdateOperationsInput | number
+    totalStars?: IntFieldUpdateOperationsInput | number
+    languagesUsed?: JsonNullValueInput | InputJsonValue
+    contributionScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    consistencyScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    codeQualityScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    topRepos?: NullableJsonNullValueInput | InputJsonValue
+    contributionGraph?: NullableJsonNullValueInput | InputJsonValue
+    lastFetchedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type GitHubProfileUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    profileUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    totalRepos?: IntFieldUpdateOperationsInput | number
+    totalCommits?: IntFieldUpdateOperationsInput | number
+    totalPRs?: IntFieldUpdateOperationsInput | number
+    totalIssues?: IntFieldUpdateOperationsInput | number
+    totalStars?: IntFieldUpdateOperationsInput | number
+    languagesUsed?: JsonNullValueInput | InputJsonValue
+    contributionScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    consistencyScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    codeQualityScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    topRepos?: NullableJsonNullValueInput | InputJsonValue
+    contributionGraph?: NullableJsonNullValueInput | InputJsonValue
+    lastFetchedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CredibilityScoreUpsertWithoutUserInput = {
+    update: XOR<CredibilityScoreUpdateWithoutUserInput, CredibilityScoreUncheckedUpdateWithoutUserInput>
+    create: XOR<CredibilityScoreCreateWithoutUserInput, CredibilityScoreUncheckedCreateWithoutUserInput>
+    where?: CredibilityScoreWhereInput
+  }
+
+  export type CredibilityScoreUpdateToOneWithWhereWithoutUserInput = {
+    where?: CredibilityScoreWhereInput
+    data: XOR<CredibilityScoreUpdateWithoutUserInput, CredibilityScoreUncheckedUpdateWithoutUserInput>
+  }
+
+  export type CredibilityScoreUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    overallScore?: FloatFieldUpdateOperationsInput | number
+    educationScore?: FloatFieldUpdateOperationsInput | number
+    experienceScore?: FloatFieldUpdateOperationsInput | number
+    technicalScore?: FloatFieldUpdateOperationsInput | number
+    socialScore?: FloatFieldUpdateOperationsInput | number
+    certificationScore?: FloatFieldUpdateOperationsInput | number
+    verificationLevel?: StringFieldUpdateOperationsInput | string
+    breakdown?: JsonNullValueInput | InputJsonValue
+    badges?: CredibilityScoreUpdatebadgesInput | string[]
+    calculatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CredibilityScoreUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    overallScore?: FloatFieldUpdateOperationsInput | number
+    educationScore?: FloatFieldUpdateOperationsInput | number
+    experienceScore?: FloatFieldUpdateOperationsInput | number
+    technicalScore?: FloatFieldUpdateOperationsInput | number
+    socialScore?: FloatFieldUpdateOperationsInput | number
+    certificationScore?: FloatFieldUpdateOperationsInput | number
+    verificationLevel?: StringFieldUpdateOperationsInput | string
+    breakdown?: JsonNullValueInput | InputJsonValue
+    badges?: CredibilityScoreUpdatebadgesInput | string[]
+    calculatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CareerSuggestionUpsertWithWhereUniqueWithoutUserInput = {
+    where: CareerSuggestionWhereUniqueInput
+    update: XOR<CareerSuggestionUpdateWithoutUserInput, CareerSuggestionUncheckedUpdateWithoutUserInput>
+    create: XOR<CareerSuggestionCreateWithoutUserInput, CareerSuggestionUncheckedCreateWithoutUserInput>
+  }
+
+  export type CareerSuggestionUpdateWithWhereUniqueWithoutUserInput = {
+    where: CareerSuggestionWhereUniqueInput
+    data: XOR<CareerSuggestionUpdateWithoutUserInput, CareerSuggestionUncheckedUpdateWithoutUserInput>
+  }
+
+  export type CareerSuggestionUpdateManyWithWhereWithoutUserInput = {
+    where: CareerSuggestionScalarWhereInput
+    data: XOR<CareerSuggestionUpdateManyMutationInput, CareerSuggestionUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type CareerSuggestionScalarWhereInput = {
+    AND?: CareerSuggestionScalarWhereInput | CareerSuggestionScalarWhereInput[]
+    OR?: CareerSuggestionScalarWhereInput[]
+    NOT?: CareerSuggestionScalarWhereInput | CareerSuggestionScalarWhereInput[]
+    id?: StringFilter<"CareerSuggestion"> | string
+    userId?: StringFilter<"CareerSuggestion"> | string
+    role?: StringFilter<"CareerSuggestion"> | string
+    readinessScore?: FloatFilter<"CareerSuggestion"> | number
+    estimatedTime?: StringNullableFilter<"CareerSuggestion"> | string | null
+    estimatedWeeks?: IntNullableFilter<"CareerSuggestion"> | number | null
+    skillGaps?: JsonFilter<"CareerSuggestion">
+    matchingSkills?: JsonFilter<"CareerSuggestion">
+    resources?: JsonFilter<"CareerSuggestion">
+    reasoning?: StringNullableFilter<"CareerSuggestion"> | string | null
+    priority?: IntFilter<"CareerSuggestion"> | number
+    status?: StringFilter<"CareerSuggestion"> | string
+    aiModel?: StringNullableFilter<"CareerSuggestion"> | string | null
+    confidence?: FloatNullableFilter<"CareerSuggestion"> | number | null
+    createdAt?: DateTimeFilter<"CareerSuggestion"> | Date | string
+    updatedAt?: DateTimeFilter<"CareerSuggestion"> | Date | string
+  }
+
+  export type PublicProfileUpsertWithoutUserInput = {
+    update: XOR<PublicProfileUpdateWithoutUserInput, PublicProfileUncheckedUpdateWithoutUserInput>
+    create: XOR<PublicProfileCreateWithoutUserInput, PublicProfileUncheckedCreateWithoutUserInput>
+    where?: PublicProfileWhereInput
+  }
+
+  export type PublicProfileUpdateToOneWithWhereWithoutUserInput = {
+    where?: PublicProfileWhereInput
+    data: XOR<PublicProfileUpdateWithoutUserInput, PublicProfileUncheckedUpdateWithoutUserInput>
+  }
+
+  export type PublicProfileUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    isPublic?: BoolFieldUpdateOperationsInput | boolean
+    customDomain?: NullableStringFieldUpdateOperationsInput | string | null
+    theme?: StringFieldUpdateOperationsInput | string
+    visibleSections?: JsonNullValueInput | InputJsonValue
+    seoTitle?: NullableStringFieldUpdateOperationsInput | string | null
+    seoDescription?: NullableStringFieldUpdateOperationsInput | string | null
+    ogImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    viewCount?: IntFieldUpdateOperationsInput | number
+    shareCount?: IntFieldUpdateOperationsInput | number
+    lastViewedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type PublicProfileUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    slug?: StringFieldUpdateOperationsInput | string
+    isPublic?: BoolFieldUpdateOperationsInput | boolean
+    customDomain?: NullableStringFieldUpdateOperationsInput | string | null
+    theme?: StringFieldUpdateOperationsInput | string
+    visibleSections?: JsonNullValueInput | InputJsonValue
+    seoTitle?: NullableStringFieldUpdateOperationsInput | string | null
+    seoDescription?: NullableStringFieldUpdateOperationsInput | string | null
+    ogImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    viewCount?: IntFieldUpdateOperationsInput | number
+    shareCount?: IntFieldUpdateOperationsInput | number
+    lastViewedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ProfileViewUpsertWithWhereUniqueWithoutUserInput = {
+    where: ProfileViewWhereUniqueInput
+    update: XOR<ProfileViewUpdateWithoutUserInput, ProfileViewUncheckedUpdateWithoutUserInput>
+    create: XOR<ProfileViewCreateWithoutUserInput, ProfileViewUncheckedCreateWithoutUserInput>
+  }
+
+  export type ProfileViewUpdateWithWhereUniqueWithoutUserInput = {
+    where: ProfileViewWhereUniqueInput
+    data: XOR<ProfileViewUpdateWithoutUserInput, ProfileViewUncheckedUpdateWithoutUserInput>
+  }
+
+  export type ProfileViewUpdateManyWithWhereWithoutUserInput = {
+    where: ProfileViewScalarWhereInput
+    data: XOR<ProfileViewUpdateManyMutationInput, ProfileViewUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type ProfileViewScalarWhereInput = {
+    AND?: ProfileViewScalarWhereInput | ProfileViewScalarWhereInput[]
+    OR?: ProfileViewScalarWhereInput[]
+    NOT?: ProfileViewScalarWhereInput | ProfileViewScalarWhereInput[]
+    id?: StringFilter<"ProfileView"> | string
+    profileUserId?: StringFilter<"ProfileView"> | string
+    viewerIp?: StringNullableFilter<"ProfileView"> | string | null
+    viewerUserAgent?: StringNullableFilter<"ProfileView"> | string | null
+    referrer?: StringNullableFilter<"ProfileView"> | string | null
+    country?: StringNullableFilter<"ProfileView"> | string | null
+    city?: StringNullableFilter<"ProfileView"> | string | null
+    viewedAt?: DateTimeFilter<"ProfileView"> | Date | string
+  }
+
+  export type DataSourceSyncUpsertWithWhereUniqueWithoutUserInput = {
+    where: DataSourceSyncWhereUniqueInput
+    update: XOR<DataSourceSyncUpdateWithoutUserInput, DataSourceSyncUncheckedUpdateWithoutUserInput>
+    create: XOR<DataSourceSyncCreateWithoutUserInput, DataSourceSyncUncheckedCreateWithoutUserInput>
+  }
+
+  export type DataSourceSyncUpdateWithWhereUniqueWithoutUserInput = {
+    where: DataSourceSyncWhereUniqueInput
+    data: XOR<DataSourceSyncUpdateWithoutUserInput, DataSourceSyncUncheckedUpdateWithoutUserInput>
+  }
+
+  export type DataSourceSyncUpdateManyWithWhereWithoutUserInput = {
+    where: DataSourceSyncScalarWhereInput
+    data: XOR<DataSourceSyncUpdateManyMutationInput, DataSourceSyncUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type DataSourceSyncScalarWhereInput = {
+    AND?: DataSourceSyncScalarWhereInput | DataSourceSyncScalarWhereInput[]
+    OR?: DataSourceSyncScalarWhereInput[]
+    NOT?: DataSourceSyncScalarWhereInput | DataSourceSyncScalarWhereInput[]
+    id?: StringFilter<"DataSourceSync"> | string
+    userId?: StringFilter<"DataSourceSync"> | string
+    source?: StringFilter<"DataSourceSync"> | string
+    status?: StringFilter<"DataSourceSync"> | string
+    lastSyncAt?: DateTimeNullableFilter<"DataSourceSync"> | Date | string | null
+    nextSyncAt?: DateTimeNullableFilter<"DataSourceSync"> | Date | string | null
+    syncFrequency?: StringFilter<"DataSourceSync"> | string
+    error?: StringNullableFilter<"DataSourceSync"> | string | null
+    metadata?: JsonNullableFilter<"DataSourceSync">
+    createdAt?: DateTimeFilter<"DataSourceSync"> | Date | string
+    updatedAt?: DateTimeFilter<"DataSourceSync"> | Date | string
+  }
+
+  export type VerificationRequestUpsertWithWhereUniqueWithoutUserInput = {
+    where: VerificationRequestWhereUniqueInput
+    update: XOR<VerificationRequestUpdateWithoutUserInput, VerificationRequestUncheckedUpdateWithoutUserInput>
+    create: XOR<VerificationRequestCreateWithoutUserInput, VerificationRequestUncheckedCreateWithoutUserInput>
+  }
+
+  export type VerificationRequestUpdateWithWhereUniqueWithoutUserInput = {
+    where: VerificationRequestWhereUniqueInput
+    data: XOR<VerificationRequestUpdateWithoutUserInput, VerificationRequestUncheckedUpdateWithoutUserInput>
+  }
+
+  export type VerificationRequestUpdateManyWithWhereWithoutUserInput = {
+    where: VerificationRequestScalarWhereInput
+    data: XOR<VerificationRequestUpdateManyMutationInput, VerificationRequestUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type VerificationRequestScalarWhereInput = {
+    AND?: VerificationRequestScalarWhereInput | VerificationRequestScalarWhereInput[]
+    OR?: VerificationRequestScalarWhereInput[]
+    NOT?: VerificationRequestScalarWhereInput | VerificationRequestScalarWhereInput[]
+    id?: StringFilter<"VerificationRequest"> | string
+    userId?: StringFilter<"VerificationRequest"> | string
+    type?: StringFilter<"VerificationRequest"> | string
+    entityId?: StringFilter<"VerificationRequest"> | string
+    status?: StringFilter<"VerificationRequest"> | string
+    method?: StringNullableFilter<"VerificationRequest"> | string | null
+    documentUrls?: StringNullableListFilter<"VerificationRequest">
+    reviewerNotes?: StringNullableFilter<"VerificationRequest"> | string | null
+    submittedAt?: DateTimeFilter<"VerificationRequest"> | Date | string
+    reviewedAt?: DateTimeNullableFilter<"VerificationRequest"> | Date | string | null
+    reviewedBy?: StringNullableFilter<"VerificationRequest"> | string | null
+  }
+
+  export type ResourceRecommendationUpsertWithWhereUniqueWithoutUserInput = {
+    where: ResourceRecommendationWhereUniqueInput
+    update: XOR<ResourceRecommendationUpdateWithoutUserInput, ResourceRecommendationUncheckedUpdateWithoutUserInput>
+    create: XOR<ResourceRecommendationCreateWithoutUserInput, ResourceRecommendationUncheckedCreateWithoutUserInput>
+  }
+
+  export type ResourceRecommendationUpdateWithWhereUniqueWithoutUserInput = {
+    where: ResourceRecommendationWhereUniqueInput
+    data: XOR<ResourceRecommendationUpdateWithoutUserInput, ResourceRecommendationUncheckedUpdateWithoutUserInput>
+  }
+
+  export type ResourceRecommendationUpdateManyWithWhereWithoutUserInput = {
+    where: ResourceRecommendationScalarWhereInput
+    data: XOR<ResourceRecommendationUpdateManyMutationInput, ResourceRecommendationUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type ResourceRecommendationScalarWhereInput = {
+    AND?: ResourceRecommendationScalarWhereInput | ResourceRecommendationScalarWhereInput[]
+    OR?: ResourceRecommendationScalarWhereInput[]
+    NOT?: ResourceRecommendationScalarWhereInput | ResourceRecommendationScalarWhereInput[]
+    id?: StringFilter<"ResourceRecommendation"> | string
+    userId?: StringFilter<"ResourceRecommendation"> | string
+    careerSuggestionId?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    type?: StringFilter<"ResourceRecommendation"> | string
+    platform?: StringFilter<"ResourceRecommendation"> | string
+    title?: StringFilter<"ResourceRecommendation"> | string
+    url?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    provider?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    duration?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    cost?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    difficulty?: StringNullableFilter<"ResourceRecommendation"> | string | null
+    skillsGained?: StringNullableListFilter<"ResourceRecommendation">
+    relevanceScore?: FloatNullableFilter<"ResourceRecommendation"> | number | null
+    status?: StringFilter<"ResourceRecommendation"> | string
+    metadata?: JsonNullableFilter<"ResourceRecommendation">
+    createdAt?: DateTimeFilter<"ResourceRecommendation"> | Date | string
+    updatedAt?: DateTimeFilter<"ResourceRecommendation"> | Date | string
+  }
+
   export type UserCreateWithoutAccountsInput = {
     id?: string
     email?: string | null
@@ -30481,6 +50211,17 @@ export namespace Prisma {
     achievements?: AchievementCreateNestedManyWithoutUserInput
     imports?: SkillImportCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutAccountsInput = {
@@ -30500,6 +50241,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
     imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutAccountsInput = {
@@ -30535,6 +50287,17 @@ export namespace Prisma {
     achievements?: AchievementUpdateManyWithoutUserNestedInput
     imports?: SkillImportUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutAccountsInput = {
@@ -30554,6 +50317,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
     imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutSessionsInput = {
@@ -30573,6 +50347,17 @@ export namespace Prisma {
     achievements?: AchievementCreateNestedManyWithoutUserInput
     imports?: SkillImportCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutSessionsInput = {
@@ -30592,6 +50377,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
     imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutSessionsInput = {
@@ -30627,6 +50423,17 @@ export namespace Prisma {
     achievements?: AchievementUpdateManyWithoutUserNestedInput
     imports?: SkillImportUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutSessionsInput = {
@@ -30646,6 +50453,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
     imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutProfileInput = {
@@ -30665,6 +50483,17 @@ export namespace Prisma {
     achievements?: AchievementCreateNestedManyWithoutUserInput
     imports?: SkillImportCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutProfileInput = {
@@ -30684,6 +50513,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
     imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutProfileInput = {
@@ -30719,6 +50559,17 @@ export namespace Prisma {
     achievements?: AchievementUpdateManyWithoutUserNestedInput
     imports?: SkillImportUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutProfileInput = {
@@ -30738,6 +50589,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
     imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type SkillCategoryCreateWithoutSkillsInput = {
@@ -31156,6 +51018,17 @@ export namespace Prisma {
     achievements?: AchievementCreateNestedManyWithoutUserInput
     imports?: SkillImportCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutSkillsInput = {
@@ -31175,6 +51048,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
     imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutSkillsInput = {
@@ -31245,6 +51129,17 @@ export namespace Prisma {
     achievements?: AchievementUpdateManyWithoutUserNestedInput
     imports?: SkillImportUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutSkillsInput = {
@@ -31264,6 +51159,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
     imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type SkillUpsertWithoutUserSkillsInput = {
@@ -31324,6 +51230,17 @@ export namespace Prisma {
     achievements?: AchievementCreateNestedManyWithoutUserInput
     imports?: SkillImportCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutCareerGoalsInput = {
@@ -31343,6 +51260,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
     imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutCareerGoalsInput = {
@@ -31487,6 +51415,17 @@ export namespace Prisma {
     achievements?: AchievementUpdateManyWithoutUserNestedInput
     imports?: SkillImportUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutCareerGoalsInput = {
@@ -31506,6 +51445,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
     imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type CareerRoleUpsertWithoutCareerGoalsInput = {
@@ -31872,6 +51822,17 @@ export namespace Prisma {
     achievements?: AchievementCreateNestedManyWithoutUserInput
     imports?: SkillImportCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutLearningPathsInput = {
@@ -31891,6 +51852,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
     imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutLearningPathsInput = {
@@ -32051,6 +52023,17 @@ export namespace Prisma {
     achievements?: AchievementUpdateManyWithoutUserNestedInput
     imports?: SkillImportUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutLearningPathsInput = {
@@ -32070,6 +52053,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
     imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type CareerGoalUpsertWithoutLearningPathsInput = {
@@ -32324,6 +52318,17 @@ export namespace Prisma {
     achievements?: AchievementCreateNestedManyWithoutUserInput
     imports?: SkillImportCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutProgressInput = {
@@ -32343,6 +52348,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
     imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutProgressInput = {
@@ -32454,6 +52470,17 @@ export namespace Prisma {
     achievements?: AchievementUpdateManyWithoutUserNestedInput
     imports?: SkillImportUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutProgressInput = {
@@ -32473,6 +52500,17 @@ export namespace Prisma {
     achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
     imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type LearningPathUpsertWithoutProgressInput = {
@@ -32580,6 +52618,17 @@ export namespace Prisma {
     progress?: ProgressCreateNestedManyWithoutUserInput
     imports?: SkillImportCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutAchievementsInput = {
@@ -32599,6 +52648,17 @@ export namespace Prisma {
     progress?: ProgressUncheckedCreateNestedManyWithoutUserInput
     imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutAchievementsInput = {
@@ -32634,6 +52694,17 @@ export namespace Prisma {
     progress?: ProgressUpdateManyWithoutUserNestedInput
     imports?: SkillImportUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutAchievementsInput = {
@@ -32653,6 +52724,17 @@ export namespace Prisma {
     progress?: ProgressUncheckedUpdateManyWithoutUserNestedInput
     imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutImportsInput = {
@@ -32672,6 +52754,17 @@ export namespace Prisma {
     progress?: ProgressCreateNestedManyWithoutUserInput
     achievements?: AchievementCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutImportsInput = {
@@ -32691,6 +52784,17 @@ export namespace Prisma {
     progress?: ProgressUncheckedCreateNestedManyWithoutUserInput
     achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
     analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutImportsInput = {
@@ -32726,6 +52830,17 @@ export namespace Prisma {
     progress?: ProgressUpdateManyWithoutUserNestedInput
     achievements?: AchievementUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutImportsInput = {
@@ -32745,6 +52860,17 @@ export namespace Prisma {
     progress?: ProgressUncheckedUpdateManyWithoutUserNestedInput
     achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
     analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateWithoutAnalysesInput = {
@@ -32764,6 +52890,17 @@ export namespace Prisma {
     progress?: ProgressCreateNestedManyWithoutUserInput
     achievements?: AchievementCreateNestedManyWithoutUserInput
     imports?: SkillImportCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateWithoutAnalysesInput = {
@@ -32783,6 +52920,17 @@ export namespace Prisma {
     progress?: ProgressUncheckedCreateNestedManyWithoutUserInput
     achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
     imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserCreateOrConnectWithoutAnalysesInput = {
@@ -32848,6 +52996,17 @@ export namespace Prisma {
     progress?: ProgressUpdateManyWithoutUserNestedInput
     achievements?: AchievementUpdateManyWithoutUserNestedInput
     imports?: SkillImportUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateWithoutAnalysesInput = {
@@ -32867,6 +53026,17 @@ export namespace Prisma {
     progress?: ProgressUncheckedUpdateManyWithoutUserNestedInput
     achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
     imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type SkillMatchUpsertWithWhereUniqueWithoutAnalysisInput = {
@@ -33025,6 +53195,1658 @@ export namespace Prisma {
     learningPaths?: LearningPathUncheckedUpdateManyWithoutGoalNestedInput
   }
 
+  export type UserCreateWithoutEducationRecordsInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountCreateNestedManyWithoutUserInput
+    sessions?: SessionCreateNestedManyWithoutUserInput
+    profile?: ProfileCreateNestedOneWithoutUserInput
+    skills?: UserSkillCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathCreateNestedManyWithoutUserInput
+    progress?: ProgressCreateNestedManyWithoutUserInput
+    achievements?: AchievementCreateNestedManyWithoutUserInput
+    imports?: SkillImportCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutEducationRecordsInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
+    profile?: ProfileUncheckedCreateNestedOneWithoutUserInput
+    skills?: UserSkillUncheckedCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalUncheckedCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathUncheckedCreateNestedManyWithoutUserInput
+    progress?: ProgressUncheckedCreateNestedManyWithoutUserInput
+    achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
+    imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutEducationRecordsInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutEducationRecordsInput, UserUncheckedCreateWithoutEducationRecordsInput>
+  }
+
+  export type UserUpsertWithoutEducationRecordsInput = {
+    update: XOR<UserUpdateWithoutEducationRecordsInput, UserUncheckedUpdateWithoutEducationRecordsInput>
+    create: XOR<UserCreateWithoutEducationRecordsInput, UserUncheckedCreateWithoutEducationRecordsInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutEducationRecordsInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutEducationRecordsInput, UserUncheckedUpdateWithoutEducationRecordsInput>
+  }
+
+  export type UserUpdateWithoutEducationRecordsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUpdateManyWithoutUserNestedInput
+    sessions?: SessionUpdateManyWithoutUserNestedInput
+    profile?: ProfileUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUpdateManyWithoutUserNestedInput
+    progress?: ProgressUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutEducationRecordsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
+    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
+    profile?: ProfileUncheckedUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUncheckedUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUncheckedUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUncheckedUpdateManyWithoutUserNestedInput
+    progress?: ProgressUncheckedUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserCreateWithoutSocialProfilesInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountCreateNestedManyWithoutUserInput
+    sessions?: SessionCreateNestedManyWithoutUserInput
+    profile?: ProfileCreateNestedOneWithoutUserInput
+    skills?: UserSkillCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathCreateNestedManyWithoutUserInput
+    progress?: ProgressCreateNestedManyWithoutUserInput
+    achievements?: AchievementCreateNestedManyWithoutUserInput
+    imports?: SkillImportCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutSocialProfilesInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
+    profile?: ProfileUncheckedCreateNestedOneWithoutUserInput
+    skills?: UserSkillUncheckedCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalUncheckedCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathUncheckedCreateNestedManyWithoutUserInput
+    progress?: ProgressUncheckedCreateNestedManyWithoutUserInput
+    achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
+    imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutSocialProfilesInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutSocialProfilesInput, UserUncheckedCreateWithoutSocialProfilesInput>
+  }
+
+  export type UserUpsertWithoutSocialProfilesInput = {
+    update: XOR<UserUpdateWithoutSocialProfilesInput, UserUncheckedUpdateWithoutSocialProfilesInput>
+    create: XOR<UserCreateWithoutSocialProfilesInput, UserUncheckedCreateWithoutSocialProfilesInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutSocialProfilesInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutSocialProfilesInput, UserUncheckedUpdateWithoutSocialProfilesInput>
+  }
+
+  export type UserUpdateWithoutSocialProfilesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUpdateManyWithoutUserNestedInput
+    sessions?: SessionUpdateManyWithoutUserNestedInput
+    profile?: ProfileUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUpdateManyWithoutUserNestedInput
+    progress?: ProgressUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutSocialProfilesInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
+    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
+    profile?: ProfileUncheckedUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUncheckedUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUncheckedUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUncheckedUpdateManyWithoutUserNestedInput
+    progress?: ProgressUncheckedUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserCreateWithoutCertificationsInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountCreateNestedManyWithoutUserInput
+    sessions?: SessionCreateNestedManyWithoutUserInput
+    profile?: ProfileCreateNestedOneWithoutUserInput
+    skills?: UserSkillCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathCreateNestedManyWithoutUserInput
+    progress?: ProgressCreateNestedManyWithoutUserInput
+    achievements?: AchievementCreateNestedManyWithoutUserInput
+    imports?: SkillImportCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutCertificationsInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
+    profile?: ProfileUncheckedCreateNestedOneWithoutUserInput
+    skills?: UserSkillUncheckedCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalUncheckedCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathUncheckedCreateNestedManyWithoutUserInput
+    progress?: ProgressUncheckedCreateNestedManyWithoutUserInput
+    achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
+    imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutCertificationsInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutCertificationsInput, UserUncheckedCreateWithoutCertificationsInput>
+  }
+
+  export type UserUpsertWithoutCertificationsInput = {
+    update: XOR<UserUpdateWithoutCertificationsInput, UserUncheckedUpdateWithoutCertificationsInput>
+    create: XOR<UserCreateWithoutCertificationsInput, UserUncheckedCreateWithoutCertificationsInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutCertificationsInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutCertificationsInput, UserUncheckedUpdateWithoutCertificationsInput>
+  }
+
+  export type UserUpdateWithoutCertificationsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUpdateManyWithoutUserNestedInput
+    sessions?: SessionUpdateManyWithoutUserNestedInput
+    profile?: ProfileUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUpdateManyWithoutUserNestedInput
+    progress?: ProgressUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutCertificationsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
+    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
+    profile?: ProfileUncheckedUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUncheckedUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUncheckedUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUncheckedUpdateManyWithoutUserNestedInput
+    progress?: ProgressUncheckedUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserCreateWithoutGithubProfileInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountCreateNestedManyWithoutUserInput
+    sessions?: SessionCreateNestedManyWithoutUserInput
+    profile?: ProfileCreateNestedOneWithoutUserInput
+    skills?: UserSkillCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathCreateNestedManyWithoutUserInput
+    progress?: ProgressCreateNestedManyWithoutUserInput
+    achievements?: AchievementCreateNestedManyWithoutUserInput
+    imports?: SkillImportCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutGithubProfileInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
+    profile?: ProfileUncheckedCreateNestedOneWithoutUserInput
+    skills?: UserSkillUncheckedCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalUncheckedCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathUncheckedCreateNestedManyWithoutUserInput
+    progress?: ProgressUncheckedCreateNestedManyWithoutUserInput
+    achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
+    imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutGithubProfileInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutGithubProfileInput, UserUncheckedCreateWithoutGithubProfileInput>
+  }
+
+  export type UserUpsertWithoutGithubProfileInput = {
+    update: XOR<UserUpdateWithoutGithubProfileInput, UserUncheckedUpdateWithoutGithubProfileInput>
+    create: XOR<UserCreateWithoutGithubProfileInput, UserUncheckedCreateWithoutGithubProfileInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutGithubProfileInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutGithubProfileInput, UserUncheckedUpdateWithoutGithubProfileInput>
+  }
+
+  export type UserUpdateWithoutGithubProfileInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUpdateManyWithoutUserNestedInput
+    sessions?: SessionUpdateManyWithoutUserNestedInput
+    profile?: ProfileUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUpdateManyWithoutUserNestedInput
+    progress?: ProgressUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutGithubProfileInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
+    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
+    profile?: ProfileUncheckedUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUncheckedUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUncheckedUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUncheckedUpdateManyWithoutUserNestedInput
+    progress?: ProgressUncheckedUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserCreateWithoutCredibilityScoreInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountCreateNestedManyWithoutUserInput
+    sessions?: SessionCreateNestedManyWithoutUserInput
+    profile?: ProfileCreateNestedOneWithoutUserInput
+    skills?: UserSkillCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathCreateNestedManyWithoutUserInput
+    progress?: ProgressCreateNestedManyWithoutUserInput
+    achievements?: AchievementCreateNestedManyWithoutUserInput
+    imports?: SkillImportCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutCredibilityScoreInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
+    profile?: ProfileUncheckedCreateNestedOneWithoutUserInput
+    skills?: UserSkillUncheckedCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalUncheckedCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathUncheckedCreateNestedManyWithoutUserInput
+    progress?: ProgressUncheckedCreateNestedManyWithoutUserInput
+    achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
+    imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutCredibilityScoreInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutCredibilityScoreInput, UserUncheckedCreateWithoutCredibilityScoreInput>
+  }
+
+  export type UserUpsertWithoutCredibilityScoreInput = {
+    update: XOR<UserUpdateWithoutCredibilityScoreInput, UserUncheckedUpdateWithoutCredibilityScoreInput>
+    create: XOR<UserCreateWithoutCredibilityScoreInput, UserUncheckedCreateWithoutCredibilityScoreInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutCredibilityScoreInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutCredibilityScoreInput, UserUncheckedUpdateWithoutCredibilityScoreInput>
+  }
+
+  export type UserUpdateWithoutCredibilityScoreInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUpdateManyWithoutUserNestedInput
+    sessions?: SessionUpdateManyWithoutUserNestedInput
+    profile?: ProfileUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUpdateManyWithoutUserNestedInput
+    progress?: ProgressUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutCredibilityScoreInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
+    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
+    profile?: ProfileUncheckedUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUncheckedUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUncheckedUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUncheckedUpdateManyWithoutUserNestedInput
+    progress?: ProgressUncheckedUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserCreateWithoutCareerSuggestionsInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountCreateNestedManyWithoutUserInput
+    sessions?: SessionCreateNestedManyWithoutUserInput
+    profile?: ProfileCreateNestedOneWithoutUserInput
+    skills?: UserSkillCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathCreateNestedManyWithoutUserInput
+    progress?: ProgressCreateNestedManyWithoutUserInput
+    achievements?: AchievementCreateNestedManyWithoutUserInput
+    imports?: SkillImportCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutCareerSuggestionsInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
+    profile?: ProfileUncheckedCreateNestedOneWithoutUserInput
+    skills?: UserSkillUncheckedCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalUncheckedCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathUncheckedCreateNestedManyWithoutUserInput
+    progress?: ProgressUncheckedCreateNestedManyWithoutUserInput
+    achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
+    imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutCareerSuggestionsInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutCareerSuggestionsInput, UserUncheckedCreateWithoutCareerSuggestionsInput>
+  }
+
+  export type ResourceRecommendationCreateWithoutCareerSuggestionInput = {
+    id?: string
+    type: string
+    platform: string
+    title: string
+    url?: string | null
+    provider?: string | null
+    duration?: string | null
+    cost?: string | null
+    difficulty?: string | null
+    skillsGained?: ResourceRecommendationCreateskillsGainedInput | string[]
+    relevanceScore?: number | null
+    status?: string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutResourceRecommendationsInput
+  }
+
+  export type ResourceRecommendationUncheckedCreateWithoutCareerSuggestionInput = {
+    id?: string
+    userId: string
+    type: string
+    platform: string
+    title: string
+    url?: string | null
+    provider?: string | null
+    duration?: string | null
+    cost?: string | null
+    difficulty?: string | null
+    skillsGained?: ResourceRecommendationCreateskillsGainedInput | string[]
+    relevanceScore?: number | null
+    status?: string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ResourceRecommendationCreateOrConnectWithoutCareerSuggestionInput = {
+    where: ResourceRecommendationWhereUniqueInput
+    create: XOR<ResourceRecommendationCreateWithoutCareerSuggestionInput, ResourceRecommendationUncheckedCreateWithoutCareerSuggestionInput>
+  }
+
+  export type ResourceRecommendationCreateManyCareerSuggestionInputEnvelope = {
+    data: ResourceRecommendationCreateManyCareerSuggestionInput | ResourceRecommendationCreateManyCareerSuggestionInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type UserUpsertWithoutCareerSuggestionsInput = {
+    update: XOR<UserUpdateWithoutCareerSuggestionsInput, UserUncheckedUpdateWithoutCareerSuggestionsInput>
+    create: XOR<UserCreateWithoutCareerSuggestionsInput, UserUncheckedCreateWithoutCareerSuggestionsInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutCareerSuggestionsInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutCareerSuggestionsInput, UserUncheckedUpdateWithoutCareerSuggestionsInput>
+  }
+
+  export type UserUpdateWithoutCareerSuggestionsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUpdateManyWithoutUserNestedInput
+    sessions?: SessionUpdateManyWithoutUserNestedInput
+    profile?: ProfileUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUpdateManyWithoutUserNestedInput
+    progress?: ProgressUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutCareerSuggestionsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
+    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
+    profile?: ProfileUncheckedUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUncheckedUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUncheckedUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUncheckedUpdateManyWithoutUserNestedInput
+    progress?: ProgressUncheckedUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type ResourceRecommendationUpsertWithWhereUniqueWithoutCareerSuggestionInput = {
+    where: ResourceRecommendationWhereUniqueInput
+    update: XOR<ResourceRecommendationUpdateWithoutCareerSuggestionInput, ResourceRecommendationUncheckedUpdateWithoutCareerSuggestionInput>
+    create: XOR<ResourceRecommendationCreateWithoutCareerSuggestionInput, ResourceRecommendationUncheckedCreateWithoutCareerSuggestionInput>
+  }
+
+  export type ResourceRecommendationUpdateWithWhereUniqueWithoutCareerSuggestionInput = {
+    where: ResourceRecommendationWhereUniqueInput
+    data: XOR<ResourceRecommendationUpdateWithoutCareerSuggestionInput, ResourceRecommendationUncheckedUpdateWithoutCareerSuggestionInput>
+  }
+
+  export type ResourceRecommendationUpdateManyWithWhereWithoutCareerSuggestionInput = {
+    where: ResourceRecommendationScalarWhereInput
+    data: XOR<ResourceRecommendationUpdateManyMutationInput, ResourceRecommendationUncheckedUpdateManyWithoutCareerSuggestionInput>
+  }
+
+  export type UserCreateWithoutPublicProfileInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountCreateNestedManyWithoutUserInput
+    sessions?: SessionCreateNestedManyWithoutUserInput
+    profile?: ProfileCreateNestedOneWithoutUserInput
+    skills?: UserSkillCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathCreateNestedManyWithoutUserInput
+    progress?: ProgressCreateNestedManyWithoutUserInput
+    achievements?: AchievementCreateNestedManyWithoutUserInput
+    imports?: SkillImportCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutPublicProfileInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
+    profile?: ProfileUncheckedCreateNestedOneWithoutUserInput
+    skills?: UserSkillUncheckedCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalUncheckedCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathUncheckedCreateNestedManyWithoutUserInput
+    progress?: ProgressUncheckedCreateNestedManyWithoutUserInput
+    achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
+    imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutPublicProfileInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutPublicProfileInput, UserUncheckedCreateWithoutPublicProfileInput>
+  }
+
+  export type UserUpsertWithoutPublicProfileInput = {
+    update: XOR<UserUpdateWithoutPublicProfileInput, UserUncheckedUpdateWithoutPublicProfileInput>
+    create: XOR<UserCreateWithoutPublicProfileInput, UserUncheckedCreateWithoutPublicProfileInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutPublicProfileInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutPublicProfileInput, UserUncheckedUpdateWithoutPublicProfileInput>
+  }
+
+  export type UserUpdateWithoutPublicProfileInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUpdateManyWithoutUserNestedInput
+    sessions?: SessionUpdateManyWithoutUserNestedInput
+    profile?: ProfileUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUpdateManyWithoutUserNestedInput
+    progress?: ProgressUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutPublicProfileInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
+    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
+    profile?: ProfileUncheckedUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUncheckedUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUncheckedUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUncheckedUpdateManyWithoutUserNestedInput
+    progress?: ProgressUncheckedUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserCreateWithoutProfileViewsInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountCreateNestedManyWithoutUserInput
+    sessions?: SessionCreateNestedManyWithoutUserInput
+    profile?: ProfileCreateNestedOneWithoutUserInput
+    skills?: UserSkillCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathCreateNestedManyWithoutUserInput
+    progress?: ProgressCreateNestedManyWithoutUserInput
+    achievements?: AchievementCreateNestedManyWithoutUserInput
+    imports?: SkillImportCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutProfileViewsInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
+    profile?: ProfileUncheckedCreateNestedOneWithoutUserInput
+    skills?: UserSkillUncheckedCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalUncheckedCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathUncheckedCreateNestedManyWithoutUserInput
+    progress?: ProgressUncheckedCreateNestedManyWithoutUserInput
+    achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
+    imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutProfileViewsInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutProfileViewsInput, UserUncheckedCreateWithoutProfileViewsInput>
+  }
+
+  export type UserUpsertWithoutProfileViewsInput = {
+    update: XOR<UserUpdateWithoutProfileViewsInput, UserUncheckedUpdateWithoutProfileViewsInput>
+    create: XOR<UserCreateWithoutProfileViewsInput, UserUncheckedCreateWithoutProfileViewsInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutProfileViewsInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutProfileViewsInput, UserUncheckedUpdateWithoutProfileViewsInput>
+  }
+
+  export type UserUpdateWithoutProfileViewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUpdateManyWithoutUserNestedInput
+    sessions?: SessionUpdateManyWithoutUserNestedInput
+    profile?: ProfileUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUpdateManyWithoutUserNestedInput
+    progress?: ProgressUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutProfileViewsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
+    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
+    profile?: ProfileUncheckedUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUncheckedUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUncheckedUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUncheckedUpdateManyWithoutUserNestedInput
+    progress?: ProgressUncheckedUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserCreateWithoutDataSourceSyncsInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountCreateNestedManyWithoutUserInput
+    sessions?: SessionCreateNestedManyWithoutUserInput
+    profile?: ProfileCreateNestedOneWithoutUserInput
+    skills?: UserSkillCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathCreateNestedManyWithoutUserInput
+    progress?: ProgressCreateNestedManyWithoutUserInput
+    achievements?: AchievementCreateNestedManyWithoutUserInput
+    imports?: SkillImportCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutDataSourceSyncsInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
+    profile?: ProfileUncheckedCreateNestedOneWithoutUserInput
+    skills?: UserSkillUncheckedCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalUncheckedCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathUncheckedCreateNestedManyWithoutUserInput
+    progress?: ProgressUncheckedCreateNestedManyWithoutUserInput
+    achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
+    imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutDataSourceSyncsInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutDataSourceSyncsInput, UserUncheckedCreateWithoutDataSourceSyncsInput>
+  }
+
+  export type UserUpsertWithoutDataSourceSyncsInput = {
+    update: XOR<UserUpdateWithoutDataSourceSyncsInput, UserUncheckedUpdateWithoutDataSourceSyncsInput>
+    create: XOR<UserCreateWithoutDataSourceSyncsInput, UserUncheckedCreateWithoutDataSourceSyncsInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutDataSourceSyncsInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutDataSourceSyncsInput, UserUncheckedUpdateWithoutDataSourceSyncsInput>
+  }
+
+  export type UserUpdateWithoutDataSourceSyncsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUpdateManyWithoutUserNestedInput
+    sessions?: SessionUpdateManyWithoutUserNestedInput
+    profile?: ProfileUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUpdateManyWithoutUserNestedInput
+    progress?: ProgressUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutDataSourceSyncsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
+    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
+    profile?: ProfileUncheckedUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUncheckedUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUncheckedUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUncheckedUpdateManyWithoutUserNestedInput
+    progress?: ProgressUncheckedUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserCreateWithoutVerificationRequestsInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountCreateNestedManyWithoutUserInput
+    sessions?: SessionCreateNestedManyWithoutUserInput
+    profile?: ProfileCreateNestedOneWithoutUserInput
+    skills?: UserSkillCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathCreateNestedManyWithoutUserInput
+    progress?: ProgressCreateNestedManyWithoutUserInput
+    achievements?: AchievementCreateNestedManyWithoutUserInput
+    imports?: SkillImportCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutVerificationRequestsInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
+    profile?: ProfileUncheckedCreateNestedOneWithoutUserInput
+    skills?: UserSkillUncheckedCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalUncheckedCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathUncheckedCreateNestedManyWithoutUserInput
+    progress?: ProgressUncheckedCreateNestedManyWithoutUserInput
+    achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
+    imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    resourceRecommendations?: ResourceRecommendationUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutVerificationRequestsInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutVerificationRequestsInput, UserUncheckedCreateWithoutVerificationRequestsInput>
+  }
+
+  export type UserUpsertWithoutVerificationRequestsInput = {
+    update: XOR<UserUpdateWithoutVerificationRequestsInput, UserUncheckedUpdateWithoutVerificationRequestsInput>
+    create: XOR<UserCreateWithoutVerificationRequestsInput, UserUncheckedCreateWithoutVerificationRequestsInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutVerificationRequestsInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutVerificationRequestsInput, UserUncheckedUpdateWithoutVerificationRequestsInput>
+  }
+
+  export type UserUpdateWithoutVerificationRequestsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUpdateManyWithoutUserNestedInput
+    sessions?: SessionUpdateManyWithoutUserNestedInput
+    profile?: ProfileUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUpdateManyWithoutUserNestedInput
+    progress?: ProgressUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutVerificationRequestsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
+    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
+    profile?: ProfileUncheckedUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUncheckedUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUncheckedUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUncheckedUpdateManyWithoutUserNestedInput
+    progress?: ProgressUncheckedUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserCreateWithoutResourceRecommendationsInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountCreateNestedManyWithoutUserInput
+    sessions?: SessionCreateNestedManyWithoutUserInput
+    profile?: ProfileCreateNestedOneWithoutUserInput
+    skills?: UserSkillCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathCreateNestedManyWithoutUserInput
+    progress?: ProgressCreateNestedManyWithoutUserInput
+    achievements?: AchievementCreateNestedManyWithoutUserInput
+    imports?: SkillImportCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileCreateNestedManyWithoutUserInput
+    certifications?: CertificationCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestCreateNestedManyWithoutUserInput
+  }
+
+  export type UserUncheckedCreateWithoutResourceRecommendationsInput = {
+    id?: string
+    email?: string | null
+    name?: string | null
+    image?: string | null
+    emailVerified?: Date | string | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    accounts?: AccountUncheckedCreateNestedManyWithoutUserInput
+    sessions?: SessionUncheckedCreateNestedManyWithoutUserInput
+    profile?: ProfileUncheckedCreateNestedOneWithoutUserInput
+    skills?: UserSkillUncheckedCreateNestedManyWithoutUserInput
+    careerGoals?: CareerGoalUncheckedCreateNestedManyWithoutUserInput
+    learningPaths?: LearningPathUncheckedCreateNestedManyWithoutUserInput
+    progress?: ProgressUncheckedCreateNestedManyWithoutUserInput
+    achievements?: AchievementUncheckedCreateNestedManyWithoutUserInput
+    imports?: SkillImportUncheckedCreateNestedManyWithoutUserInput
+    analyses?: SkillAnalysisUncheckedCreateNestedManyWithoutUserInput
+    educationRecords?: EducationRecordUncheckedCreateNestedManyWithoutUserInput
+    socialProfiles?: SocialProfileUncheckedCreateNestedManyWithoutUserInput
+    certifications?: CertificationUncheckedCreateNestedManyWithoutUserInput
+    githubProfile?: GitHubProfileUncheckedCreateNestedOneWithoutUserInput
+    credibilityScore?: CredibilityScoreUncheckedCreateNestedOneWithoutUserInput
+    careerSuggestions?: CareerSuggestionUncheckedCreateNestedManyWithoutUserInput
+    publicProfile?: PublicProfileUncheckedCreateNestedOneWithoutUserInput
+    profileViews?: ProfileViewUncheckedCreateNestedManyWithoutUserInput
+    dataSourceSyncs?: DataSourceSyncUncheckedCreateNestedManyWithoutUserInput
+    verificationRequests?: VerificationRequestUncheckedCreateNestedManyWithoutUserInput
+  }
+
+  export type UserCreateOrConnectWithoutResourceRecommendationsInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutResourceRecommendationsInput, UserUncheckedCreateWithoutResourceRecommendationsInput>
+  }
+
+  export type CareerSuggestionCreateWithoutResourceRecommendationsInput = {
+    id?: string
+    role: string
+    readinessScore: number
+    estimatedTime?: string | null
+    estimatedWeeks?: number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: string | null
+    priority?: number
+    status?: string
+    aiModel?: string | null
+    confidence?: number | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    user: UserCreateNestedOneWithoutCareerSuggestionsInput
+  }
+
+  export type CareerSuggestionUncheckedCreateWithoutResourceRecommendationsInput = {
+    id?: string
+    userId: string
+    role: string
+    readinessScore: number
+    estimatedTime?: string | null
+    estimatedWeeks?: number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: string | null
+    priority?: number
+    status?: string
+    aiModel?: string | null
+    confidence?: number | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CareerSuggestionCreateOrConnectWithoutResourceRecommendationsInput = {
+    where: CareerSuggestionWhereUniqueInput
+    create: XOR<CareerSuggestionCreateWithoutResourceRecommendationsInput, CareerSuggestionUncheckedCreateWithoutResourceRecommendationsInput>
+  }
+
+  export type UserUpsertWithoutResourceRecommendationsInput = {
+    update: XOR<UserUpdateWithoutResourceRecommendationsInput, UserUncheckedUpdateWithoutResourceRecommendationsInput>
+    create: XOR<UserCreateWithoutResourceRecommendationsInput, UserUncheckedCreateWithoutResourceRecommendationsInput>
+    where?: UserWhereInput
+  }
+
+  export type UserUpdateToOneWithWhereWithoutResourceRecommendationsInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutResourceRecommendationsInput, UserUncheckedUpdateWithoutResourceRecommendationsInput>
+  }
+
+  export type UserUpdateWithoutResourceRecommendationsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUpdateManyWithoutUserNestedInput
+    sessions?: SessionUpdateManyWithoutUserNestedInput
+    profile?: ProfileUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUpdateManyWithoutUserNestedInput
+    progress?: ProgressUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUpdateManyWithoutUserNestedInput
+  }
+
+  export type UserUncheckedUpdateWithoutResourceRecommendationsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    email?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    image?: NullableStringFieldUpdateOperationsInput | string | null
+    emailVerified?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    accounts?: AccountUncheckedUpdateManyWithoutUserNestedInput
+    sessions?: SessionUncheckedUpdateManyWithoutUserNestedInput
+    profile?: ProfileUncheckedUpdateOneWithoutUserNestedInput
+    skills?: UserSkillUncheckedUpdateManyWithoutUserNestedInput
+    careerGoals?: CareerGoalUncheckedUpdateManyWithoutUserNestedInput
+    learningPaths?: LearningPathUncheckedUpdateManyWithoutUserNestedInput
+    progress?: ProgressUncheckedUpdateManyWithoutUserNestedInput
+    achievements?: AchievementUncheckedUpdateManyWithoutUserNestedInput
+    imports?: SkillImportUncheckedUpdateManyWithoutUserNestedInput
+    analyses?: SkillAnalysisUncheckedUpdateManyWithoutUserNestedInput
+    educationRecords?: EducationRecordUncheckedUpdateManyWithoutUserNestedInput
+    socialProfiles?: SocialProfileUncheckedUpdateManyWithoutUserNestedInput
+    certifications?: CertificationUncheckedUpdateManyWithoutUserNestedInput
+    githubProfile?: GitHubProfileUncheckedUpdateOneWithoutUserNestedInput
+    credibilityScore?: CredibilityScoreUncheckedUpdateOneWithoutUserNestedInput
+    careerSuggestions?: CareerSuggestionUncheckedUpdateManyWithoutUserNestedInput
+    publicProfile?: PublicProfileUncheckedUpdateOneWithoutUserNestedInput
+    profileViews?: ProfileViewUncheckedUpdateManyWithoutUserNestedInput
+    dataSourceSyncs?: DataSourceSyncUncheckedUpdateManyWithoutUserNestedInput
+    verificationRequests?: VerificationRequestUncheckedUpdateManyWithoutUserNestedInput
+  }
+
+  export type CareerSuggestionUpsertWithoutResourceRecommendationsInput = {
+    update: XOR<CareerSuggestionUpdateWithoutResourceRecommendationsInput, CareerSuggestionUncheckedUpdateWithoutResourceRecommendationsInput>
+    create: XOR<CareerSuggestionCreateWithoutResourceRecommendationsInput, CareerSuggestionUncheckedCreateWithoutResourceRecommendationsInput>
+    where?: CareerSuggestionWhereInput
+  }
+
+  export type CareerSuggestionUpdateToOneWithWhereWithoutResourceRecommendationsInput = {
+    where?: CareerSuggestionWhereInput
+    data: XOR<CareerSuggestionUpdateWithoutResourceRecommendationsInput, CareerSuggestionUncheckedUpdateWithoutResourceRecommendationsInput>
+  }
+
+  export type CareerSuggestionUpdateWithoutResourceRecommendationsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    readinessScore?: FloatFieldUpdateOperationsInput | number
+    estimatedTime?: NullableStringFieldUpdateOperationsInput | string | null
+    estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
+    aiModel?: NullableStringFieldUpdateOperationsInput | string | null
+    confidence?: NullableFloatFieldUpdateOperationsInput | number | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutCareerSuggestionsNestedInput
+  }
+
+  export type CareerSuggestionUncheckedUpdateWithoutResourceRecommendationsInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    readinessScore?: FloatFieldUpdateOperationsInput | number
+    estimatedTime?: NullableStringFieldUpdateOperationsInput | string | null
+    estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
+    aiModel?: NullableStringFieldUpdateOperationsInput | string | null
+    confidence?: NullableFloatFieldUpdateOperationsInput | number | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type AccountCreateManyUserInput = {
     id?: string
     type: string
@@ -33135,6 +54957,131 @@ export namespace Prisma {
     recommendations?: NullableJsonNullValueInput | InputJsonValue
     marketInsights?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: Date | string
+  }
+
+  export type EducationRecordCreateManyUserInput = {
+    id?: string
+    institutionName: string
+    degree: string
+    field?: string | null
+    gpa?: number | null
+    startDate: Date | string
+    endDate?: Date | string | null
+    verified?: boolean
+    verificationSource?: string | null
+    verificationDate?: Date | string | null
+    transcriptUrl?: string | null
+    credentialId?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type SocialProfileCreateManyUserInput = {
+    id?: string
+    platform: string
+    username: string
+    profileUrl?: string | null
+    verified?: boolean
+    followerCount?: number | null
+    followingCount?: number | null
+    engagementRate?: number | null
+    contentScore?: number | null
+    influenceScore?: number | null
+    lastFetchedAt: Date | string
+    metrics?: JsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CertificationCreateManyUserInput = {
+    id?: string
+    name: string
+    issuer: string
+    issueDate: Date | string
+    expiryDate?: Date | string | null
+    credentialId?: string | null
+    credentialUrl?: string | null
+    verified?: boolean
+    verificationMethod?: string | null
+    skillsEarned?: CertificationCreateskillsEarnedInput | string[]
+    certificateImageUrl?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type CareerSuggestionCreateManyUserInput = {
+    id?: string
+    role: string
+    readinessScore: number
+    estimatedTime?: string | null
+    estimatedWeeks?: number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: string | null
+    priority?: number
+    status?: string
+    aiModel?: string | null
+    confidence?: number | null
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ProfileViewCreateManyUserInput = {
+    id?: string
+    viewerIp?: string | null
+    viewerUserAgent?: string | null
+    referrer?: string | null
+    country?: string | null
+    city?: string | null
+    viewedAt?: Date | string
+  }
+
+  export type DataSourceSyncCreateManyUserInput = {
+    id?: string
+    source: string
+    status?: string
+    lastSyncAt?: Date | string | null
+    nextSyncAt?: Date | string | null
+    syncFrequency?: string
+    error?: string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type VerificationRequestCreateManyUserInput = {
+    id?: string
+    type: string
+    entityId: string
+    status?: string
+    method?: string | null
+    documentUrls?: VerificationRequestCreatedocumentUrlsInput | string[]
+    reviewerNotes?: string | null
+    submittedAt?: Date | string
+    reviewedAt?: Date | string | null
+    reviewedBy?: string | null
+  }
+
+  export type ResourceRecommendationCreateManyUserInput = {
+    id?: string
+    careerSuggestionId?: string | null
+    type: string
+    platform: string
+    title: string
+    url?: string | null
+    provider?: string | null
+    duration?: string | null
+    cost?: string | null
+    difficulty?: string | null
+    skillsGained?: ResourceRecommendationCreateskillsGainedInput | string[]
+    relevanceScore?: number | null
+    status?: string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type AccountUpdateWithoutUserInput = {
@@ -33481,6 +55428,383 @@ export namespace Prisma {
     recommendations?: NullableJsonNullValueInput | InputJsonValue
     marketInsights?: NullableJsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EducationRecordUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    institutionName?: StringFieldUpdateOperationsInput | string
+    degree?: StringFieldUpdateOperationsInput | string
+    field?: NullableStringFieldUpdateOperationsInput | string | null
+    gpa?: NullableFloatFieldUpdateOperationsInput | number | null
+    startDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    endDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    verificationSource?: NullableStringFieldUpdateOperationsInput | string | null
+    verificationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    transcriptUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    credentialId?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EducationRecordUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    institutionName?: StringFieldUpdateOperationsInput | string
+    degree?: StringFieldUpdateOperationsInput | string
+    field?: NullableStringFieldUpdateOperationsInput | string | null
+    gpa?: NullableFloatFieldUpdateOperationsInput | number | null
+    startDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    endDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    verificationSource?: NullableStringFieldUpdateOperationsInput | string | null
+    verificationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    transcriptUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    credentialId?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type EducationRecordUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    institutionName?: StringFieldUpdateOperationsInput | string
+    degree?: StringFieldUpdateOperationsInput | string
+    field?: NullableStringFieldUpdateOperationsInput | string | null
+    gpa?: NullableFloatFieldUpdateOperationsInput | number | null
+    startDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    endDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    verificationSource?: NullableStringFieldUpdateOperationsInput | string | null
+    verificationDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    transcriptUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    credentialId?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type SocialProfileUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    profileUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    followerCount?: NullableIntFieldUpdateOperationsInput | number | null
+    followingCount?: NullableIntFieldUpdateOperationsInput | number | null
+    engagementRate?: NullableFloatFieldUpdateOperationsInput | number | null
+    contentScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    influenceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    lastFetchedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    metrics?: JsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type SocialProfileUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    profileUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    followerCount?: NullableIntFieldUpdateOperationsInput | number | null
+    followingCount?: NullableIntFieldUpdateOperationsInput | number | null
+    engagementRate?: NullableFloatFieldUpdateOperationsInput | number | null
+    contentScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    influenceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    lastFetchedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    metrics?: JsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type SocialProfileUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    username?: StringFieldUpdateOperationsInput | string
+    profileUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    followerCount?: NullableIntFieldUpdateOperationsInput | number | null
+    followingCount?: NullableIntFieldUpdateOperationsInput | number | null
+    engagementRate?: NullableFloatFieldUpdateOperationsInput | number | null
+    contentScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    influenceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    lastFetchedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    metrics?: JsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CertificationUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    issuer?: StringFieldUpdateOperationsInput | string
+    issueDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    expiryDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    credentialId?: NullableStringFieldUpdateOperationsInput | string | null
+    credentialUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    verificationMethod?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsEarned?: CertificationUpdateskillsEarnedInput | string[]
+    certificateImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CertificationUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    issuer?: StringFieldUpdateOperationsInput | string
+    issueDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    expiryDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    credentialId?: NullableStringFieldUpdateOperationsInput | string | null
+    credentialUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    verificationMethod?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsEarned?: CertificationUpdateskillsEarnedInput | string[]
+    certificateImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CertificationUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    issuer?: StringFieldUpdateOperationsInput | string
+    issueDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    expiryDate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    credentialId?: NullableStringFieldUpdateOperationsInput | string | null
+    credentialUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    verified?: BoolFieldUpdateOperationsInput | boolean
+    verificationMethod?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsEarned?: CertificationUpdateskillsEarnedInput | string[]
+    certificateImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type CareerSuggestionUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    readinessScore?: FloatFieldUpdateOperationsInput | number
+    estimatedTime?: NullableStringFieldUpdateOperationsInput | string | null
+    estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
+    aiModel?: NullableStringFieldUpdateOperationsInput | string | null
+    confidence?: NullableFloatFieldUpdateOperationsInput | number | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    resourceRecommendations?: ResourceRecommendationUpdateManyWithoutCareerSuggestionNestedInput
+  }
+
+  export type CareerSuggestionUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    readinessScore?: FloatFieldUpdateOperationsInput | number
+    estimatedTime?: NullableStringFieldUpdateOperationsInput | string | null
+    estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
+    aiModel?: NullableStringFieldUpdateOperationsInput | string | null
+    confidence?: NullableFloatFieldUpdateOperationsInput | number | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    resourceRecommendations?: ResourceRecommendationUncheckedUpdateManyWithoutCareerSuggestionNestedInput
+  }
+
+  export type CareerSuggestionUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    readinessScore?: FloatFieldUpdateOperationsInput | number
+    estimatedTime?: NullableStringFieldUpdateOperationsInput | string | null
+    estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    skillGaps?: JsonNullValueInput | InputJsonValue
+    matchingSkills?: JsonNullValueInput | InputJsonValue
+    resources?: JsonNullValueInput | InputJsonValue
+    reasoning?: NullableStringFieldUpdateOperationsInput | string | null
+    priority?: IntFieldUpdateOperationsInput | number
+    status?: StringFieldUpdateOperationsInput | string
+    aiModel?: NullableStringFieldUpdateOperationsInput | string | null
+    confidence?: NullableFloatFieldUpdateOperationsInput | number | null
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ProfileViewUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    viewerIp?: NullableStringFieldUpdateOperationsInput | string | null
+    viewerUserAgent?: NullableStringFieldUpdateOperationsInput | string | null
+    referrer?: NullableStringFieldUpdateOperationsInput | string | null
+    country?: NullableStringFieldUpdateOperationsInput | string | null
+    city?: NullableStringFieldUpdateOperationsInput | string | null
+    viewedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ProfileViewUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    viewerIp?: NullableStringFieldUpdateOperationsInput | string | null
+    viewerUserAgent?: NullableStringFieldUpdateOperationsInput | string | null
+    referrer?: NullableStringFieldUpdateOperationsInput | string | null
+    country?: NullableStringFieldUpdateOperationsInput | string | null
+    city?: NullableStringFieldUpdateOperationsInput | string | null
+    viewedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ProfileViewUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    viewerIp?: NullableStringFieldUpdateOperationsInput | string | null
+    viewerUserAgent?: NullableStringFieldUpdateOperationsInput | string | null
+    referrer?: NullableStringFieldUpdateOperationsInput | string | null
+    country?: NullableStringFieldUpdateOperationsInput | string | null
+    city?: NullableStringFieldUpdateOperationsInput | string | null
+    viewedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DataSourceSyncUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    source?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSyncAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    nextSyncAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    syncFrequency?: StringFieldUpdateOperationsInput | string
+    error?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DataSourceSyncUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    source?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSyncAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    nextSyncAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    syncFrequency?: StringFieldUpdateOperationsInput | string
+    error?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type DataSourceSyncUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    source?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    lastSyncAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    nextSyncAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    syncFrequency?: StringFieldUpdateOperationsInput | string
+    error?: NullableStringFieldUpdateOperationsInput | string | null
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type VerificationRequestUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    entityId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    method?: NullableStringFieldUpdateOperationsInput | string | null
+    documentUrls?: VerificationRequestUpdatedocumentUrlsInput | string[]
+    reviewerNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    submittedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviewedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    reviewedBy?: NullableStringFieldUpdateOperationsInput | string | null
+  }
+
+  export type VerificationRequestUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    entityId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    method?: NullableStringFieldUpdateOperationsInput | string | null
+    documentUrls?: VerificationRequestUpdatedocumentUrlsInput | string[]
+    reviewerNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    submittedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviewedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    reviewedBy?: NullableStringFieldUpdateOperationsInput | string | null
+  }
+
+  export type VerificationRequestUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    entityId?: StringFieldUpdateOperationsInput | string
+    status?: StringFieldUpdateOperationsInput | string
+    method?: NullableStringFieldUpdateOperationsInput | string | null
+    documentUrls?: VerificationRequestUpdatedocumentUrlsInput | string[]
+    reviewerNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    submittedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    reviewedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    reviewedBy?: NullableStringFieldUpdateOperationsInput | string | null
+  }
+
+  export type ResourceRecommendationUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    url?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableStringFieldUpdateOperationsInput | string | null
+    cost?: NullableStringFieldUpdateOperationsInput | string | null
+    difficulty?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsGained?: ResourceRecommendationUpdateskillsGainedInput | string[]
+    relevanceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    careerSuggestion?: CareerSuggestionUpdateOneWithoutResourceRecommendationsNestedInput
+  }
+
+  export type ResourceRecommendationUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    careerSuggestionId?: NullableStringFieldUpdateOperationsInput | string | null
+    type?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    url?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableStringFieldUpdateOperationsInput | string | null
+    cost?: NullableStringFieldUpdateOperationsInput | string | null
+    difficulty?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsGained?: ResourceRecommendationUpdateskillsGainedInput | string[]
+    relevanceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ResourceRecommendationUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    careerSuggestionId?: NullableStringFieldUpdateOperationsInput | string | null
+    type?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    url?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableStringFieldUpdateOperationsInput | string | null
+    cost?: NullableStringFieldUpdateOperationsInput | string | null
+    difficulty?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsGained?: ResourceRecommendationUpdateskillsGainedInput | string[]
+    relevanceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type UserSkillCreateManySkillInput = {
@@ -34115,6 +56439,82 @@ export namespace Prisma {
     strengths?: JsonNullValueInput | InputJsonValue
     readiness?: JsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ResourceRecommendationCreateManyCareerSuggestionInput = {
+    id?: string
+    userId: string
+    type: string
+    platform: string
+    title: string
+    url?: string | null
+    provider?: string | null
+    duration?: string | null
+    cost?: string | null
+    difficulty?: string | null
+    skillsGained?: ResourceRecommendationCreateskillsGainedInput | string[]
+    relevanceScore?: number | null
+    status?: string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: Date | string
+    updatedAt?: Date | string
+  }
+
+  export type ResourceRecommendationUpdateWithoutCareerSuggestionInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    url?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableStringFieldUpdateOperationsInput | string | null
+    cost?: NullableStringFieldUpdateOperationsInput | string | null
+    difficulty?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsGained?: ResourceRecommendationUpdateskillsGainedInput | string[]
+    relevanceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    user?: UserUpdateOneRequiredWithoutResourceRecommendationsNestedInput
+  }
+
+  export type ResourceRecommendationUncheckedUpdateWithoutCareerSuggestionInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    url?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableStringFieldUpdateOperationsInput | string | null
+    cost?: NullableStringFieldUpdateOperationsInput | string | null
+    difficulty?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsGained?: ResourceRecommendationUpdateskillsGainedInput | string[]
+    relevanceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ResourceRecommendationUncheckedUpdateManyWithoutCareerSuggestionInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    userId?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    platform?: StringFieldUpdateOperationsInput | string
+    title?: StringFieldUpdateOperationsInput | string
+    url?: NullableStringFieldUpdateOperationsInput | string | null
+    provider?: NullableStringFieldUpdateOperationsInput | string | null
+    duration?: NullableStringFieldUpdateOperationsInput | string | null
+    cost?: NullableStringFieldUpdateOperationsInput | string | null
+    difficulty?: NullableStringFieldUpdateOperationsInput | string | null
+    skillsGained?: ResourceRecommendationUpdateskillsGainedInput | string[]
+    relevanceScore?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+    metadata?: NullableJsonNullValueInput | InputJsonValue
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
 

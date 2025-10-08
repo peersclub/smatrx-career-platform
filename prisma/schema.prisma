@@ -33,6 +33,19 @@ model User {
   imports       SkillImport[]
   analyses      SkillAnalysis[]
 
+  // New Credibility Platform Relations
+  educationRecords        EducationRecord[]
+  socialProfiles          SocialProfile[]
+  certifications          Certification[]
+  githubProfile           GitHubProfile?
+  credibilityScore        CredibilityScore?
+  careerSuggestions       CareerSuggestion[]
+  publicProfile           PublicProfile?
+  profileViews            ProfileView[]
+  dataSourceSyncs         DataSourceSync[]
+  verificationRequests    VerificationRequest[]
+  resourceRecommendations ResourceRecommendation[]
+
   @@index([email])
 }
 
@@ -359,4 +372,279 @@ model SkillMatch {
 
   @@index([analysisId])
   @@index([goalId])
+}
+
+// ============================================
+// CREDIBILITY PLATFORM MODELS
+// ============================================
+
+// Education & Academic Verification
+model EducationRecord {
+  id                  String    @id @default(cuid())
+  userId              String
+  institutionName     String
+  degree              String
+  field               String?
+  gpa                 Float?
+  startDate           DateTime
+  endDate             DateTime?
+  verified            Boolean   @default(false)
+  verificationSource  String?
+  verificationDate    DateTime?
+  transcriptUrl       String?
+  credentialId        String?
+  metadata            Json?
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([verified])
+}
+
+// Social Media Profiles & Analytics
+model SocialProfile {
+  id              String   @id @default(cuid())
+  userId          String
+  platform        String
+  username        String
+  profileUrl      String?
+  verified        Boolean  @default(false)
+  followerCount   Int?
+  followingCount  Int?
+  engagementRate  Float?
+  contentScore    Float?
+  influenceScore  Float?
+  lastFetchedAt   DateTime
+  metrics         Json     @default("{}")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, platform])
+  @@index([userId])
+  @@index([platform])
+  @@index([verified])
+}
+
+// Certifications & Learning Credentials
+model Certification {
+  id                  String    @id @default(cuid())
+  userId              String
+  name                String
+  issuer              String
+  issueDate           DateTime
+  expiryDate          DateTime?
+  credentialId        String?
+  credentialUrl       String?
+  verified            Boolean   @default(false)
+  verificationMethod  String?
+  skillsEarned        String[]
+  certificateImageUrl String?
+  metadata            Json?
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([issuer])
+  @@index([verified])
+}
+
+// Enhanced GitHub Analytics
+model GitHubProfile {
+  id                 String   @id @default(cuid())
+  userId             String   @unique
+  username           String
+  profileUrl         String?
+  totalRepos         Int      @default(0)
+  totalCommits       Int      @default(0)
+  totalPRs           Int      @default(0)
+  totalIssues        Int      @default(0)
+  totalStars         Int      @default(0)
+  languagesUsed      Json     @default("{}")
+  contributionScore  Float?
+  consistencyScore   Float?
+  codeQualityScore   Float?
+  topRepos           Json?
+  contributionGraph  Json?
+  lastFetchedAt      DateTime
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([username])
+}
+
+// Credibility Scoring System
+model CredibilityScore {
+  id                 String   @id @default(cuid())
+  userId             String   @unique
+  overallScore       Float    @default(0)
+  educationScore     Float    @default(0)
+  experienceScore    Float    @default(0)
+  technicalScore     Float    @default(0)
+  socialScore        Float    @default(0)
+  certificationScore Float    @default(0)
+  verificationLevel  String   @default("basic")
+  breakdown          Json     @default("{}")
+  badges             String[]
+  calculatedAt       DateTime @default(now())
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([overallScore(sort: Desc)])
+  @@index([verificationLevel])
+}
+
+// AI-Powered Career Recommendations
+model CareerSuggestion {
+  id              String   @id @default(cuid())
+  userId          String
+  role            String
+  readinessScore  Float
+  estimatedTime   String?
+  estimatedWeeks  Int?
+  skillGaps       Json     @default("[]")
+  matchingSkills  Json     @default("[]")
+  resources       Json     @default("[]")
+  reasoning       String?
+  priority        Int      @default(3)
+  status          String   @default("active")
+  aiModel         String?
+  confidence      Float?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user                     User                       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  resourceRecommendations  ResourceRecommendation[]
+
+  @@index([userId])
+  @@index([readinessScore(sort: Desc)])
+  @@index([status])
+  @@index([priority(sort: Desc)])
+}
+
+// Public Profile Settings
+model PublicProfile {
+  id              String    @id @default(cuid())
+  userId          String    @unique
+  username        String    @unique
+  slug            String    @unique
+  isPublic        Boolean   @default(false)
+  customDomain    String?   @unique
+  theme           String    @default("professional")
+  visibleSections Json      @default("{}")
+  seoTitle        String?
+  seoDescription  String?
+  ogImageUrl      String?
+  viewCount       Int       @default(0)
+  shareCount      Int       @default(0)
+  lastViewedAt    DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([username])
+  @@index([slug])
+  @@index([isPublic])
+}
+
+// Profile Analytics & Tracking
+model ProfileView {
+  id             String   @id @default(cuid())
+  profileUserId  String
+  viewerIp       String?
+  viewerUserAgent String?
+  referrer       String?
+  country        String?
+  city           String?
+  viewedAt       DateTime @default(now())
+
+  user User @relation(fields: [profileUserId], references: [id], onDelete: Cascade)
+
+  @@index([profileUserId])
+  @@index([viewedAt(sort: Desc)])
+}
+
+// Data Source Sync Status
+model DataSourceSync {
+  id            String    @id @default(cuid())
+  userId        String
+  source        String
+  status        String    @default("pending")
+  lastSyncAt    DateTime?
+  nextSyncAt    DateTime?
+  syncFrequency String    @default("daily")
+  error         String?
+  metadata      Json?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, source])
+  @@index([userId])
+  @@index([status])
+  @@index([nextSyncAt])
+}
+
+// Verification Requests
+model VerificationRequest {
+  id            String    @id @default(cuid())
+  userId        String
+  type          String
+  entityId      String
+  status        String    @default("pending")
+  method        String?
+  documentUrls  String[]
+  reviewerNotes String?
+  submittedAt   DateTime  @default(now())
+  reviewedAt    DateTime?
+  reviewedBy    String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status])
+  @@index([type])
+}
+
+// Learning Resource Recommendations
+model ResourceRecommendation {
+  id                  String   @id @default(cuid())
+  userId              String
+  careerSuggestionId  String?
+  type                String
+  platform            String
+  title               String
+  url                 String?
+  provider            String?
+  duration            String?
+  cost                String?
+  difficulty          String?
+  skillsGained        String[]
+  relevanceScore      Float?
+  status              String   @default("suggested")
+  metadata            Json?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  user             User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  careerSuggestion CareerSuggestion? @relation(fields: [careerSuggestionId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([status])
+  @@index([type])
+  @@index([careerSuggestionId])
 }

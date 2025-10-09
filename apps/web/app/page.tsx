@@ -30,7 +30,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-                SMATRX
+                Credably
               </span>
             </div>
             <div className="flex items-center gap-4">
@@ -391,7 +391,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <p className="text-gray-300 mb-2">
-                    "SMATRX showed me I was only 2 skills away from a senior role. 
+                    "Credably showed me I was only 2 skills away from a senior role. 
                     3 months later, I got promoted with a 35% raise."
                   </p>
                   <p className="text-sm text-gray-500">
@@ -409,7 +409,7 @@ export default function HomePage() {
                 <div>
                   <p className="text-gray-300 mb-2">
                     "As a bootcamp grad, I didn't know what to learn next. 
-                    SMATRX gave me a clear path and I landed my dream job."
+                    Credably gave me a clear path and I landed my dream job."
                   </p>
                   <p className="text-sm text-gray-500">
                     <span className="font-semibold">Sarah Park</span> • Frontend Developer at Stripe
@@ -445,7 +445,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-                SMATRX
+                Credably
               </span>
               <p className="text-sm text-gray-500 mt-2">
                 AI-powered career transformation
@@ -463,8 +463,8 @@ export default function HomePage() {
               <h4 className="font-semibold mb-4">Resources</h4>
               <ul className="space-y-2 text-sm text-gray-500">
                 <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
-                <li><Link href="/careers" className="hover:text-white">Career Guides</Link></li>
-                <li><Link href="/api" className="hover:text-white">API</Link></li>
+                <li><Link href="/career-guides" className="hover:text-white">Career Guides</Link></li>
+                <li><Link href="/api-docs" className="hover:text-white">API</Link></li>
               </ul>
             </div>
             <div>
@@ -477,7 +477,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
-            © 2024 SMATRX. All rights reserved.
+            © 2024 Credably. All rights reserved.
           </div>
         </div>
       </footer>

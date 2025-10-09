@@ -403,9 +403,11 @@ export default function SkillsInsights({ skills, userId }: SkillsInsightsProps) 
           <p className="text-sm text-purple-300 mb-3">
             Want personalized learning paths based on your goals?
           </p>
-          <Button variant="outline" className="w-full gap-2">
-            Create Learning Plan <ArrowRight className="w-4 h-4" />
-          </Button>
+          <div className="flex justify-center">
+            <Button variant="outline" className="gap-2">
+              Create Learning Plan <ArrowRight className="w-4 h-4" />
+            </Button>
+          </div>
         </div>
       </Card>
     </div>

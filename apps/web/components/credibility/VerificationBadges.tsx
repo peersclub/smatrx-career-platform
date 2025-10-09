@@ -38,40 +38,40 @@ const badgeIcons = {
 
 const badgeColors = {
   lightning: {
-    bg: 'bg-blue-500',
-    light: 'bg-blue-100',
-    text: 'text-blue-700',
-    glow: 'shadow-blue-500/50'
+    bg: 'bg-white',
+    light: 'bg-gray-800/50',
+    text: 'text-gray-400',
+    glow: 'shadow-gray-500/50'
   },
   graduation: {
-    bg: 'bg-yellow-500',
-    light: 'bg-yellow-100',
-    text: 'text-yellow-700',
-    glow: 'shadow-yellow-500/50'
+    bg: 'bg-white',
+    light: 'bg-gray-800/50',
+    text: 'text-gray-400',
+    glow: 'shadow-gray-500/50'
   },
   checkmark: {
-    bg: 'bg-green-500',
-    light: 'bg-green-100',
-    text: 'text-green-700',
-    glow: 'shadow-green-500/50'
+    bg: 'bg-white',
+    light: 'bg-gray-800/50',
+    text: 'text-gray-400',
+    glow: 'shadow-gray-500/50'
   },
   globe: {
-    bg: 'bg-purple-500',
-    light: 'bg-purple-100',
-    text: 'text-purple-700',
-    glow: 'shadow-purple-500/50'
+    bg: 'bg-white',
+    light: 'bg-gray-800/50',
+    text: 'text-gray-400',
+    glow: 'shadow-gray-500/50'
   },
   diamond: {
-    bg: 'bg-cyan-500',
-    light: 'bg-cyan-100',
-    text: 'text-cyan-700',
-    glow: 'shadow-cyan-500/50'
+    bg: 'bg-white',
+    light: 'bg-gray-800/50',
+    text: 'text-gray-400',
+    glow: 'shadow-gray-500/50'
   },
   calendar: {
-    bg: 'bg-orange-500',
-    light: 'bg-orange-100',
-    text: 'text-orange-700',
-    glow: 'shadow-orange-500/50'
+    bg: 'bg-white',
+    light: 'bg-gray-800/50',
+    text: 'text-gray-400',
+    glow: 'shadow-gray-500/50'
   }
 }
 
@@ -145,7 +145,7 @@ export function VerificationBadges({ badges, className }: VerificationBadgesProp
                             delay: index * 0.1 + 0.3
                           }}
                         >
-                          <CheckCircle className="w-4 h-4 text-green-500" />
+                          <CheckCircle className="w-4 h-4 text-white" />
                         </motion.div>
                       )}
                       {!badge.earned && (
@@ -189,7 +189,7 @@ export function VerificationBadges({ badges, className }: VerificationBadgesProp
                     {/* Earned indicator */}
                     {badge.earned && (
                       <motion.div
-                        className="mt-2 text-xs font-medium text-green-600"
+                        className="mt-2 text-xs font-medium text-white"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: index * 0.1 + 0.4 }}

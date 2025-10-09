@@ -11,7 +11,6 @@ import {
   Sparkles,
   ChevronRight,
   Star,
-  Users,
   MapPin,
   Briefcase,
   ArrowRight,
@@ -59,67 +58,59 @@ interface RecommendationCardProps {
 const levelConfig = {
   junior: {
     label: 'Junior',
-    color: 'bg-blue-100 text-blue-700',
-    icon: '👶'
+    color: 'bg-gray-800 text-gray-300 border border-gray-700'
   },
   mid: {
     label: 'Mid-level',
-    color: 'bg-green-100 text-green-700',
-    icon: '🚀'
+    color: 'bg-gray-800 text-gray-300 border border-gray-700'
   },
   senior: {
     label: 'Senior',
-    color: 'bg-purple-100 text-purple-700',
-    icon: '⭐'
+    color: 'bg-gray-800 text-gray-300 border border-gray-700'
   },
   lead: {
     label: 'Lead',
-    color: 'bg-orange-100 text-orange-700',
-    icon: '👑'
+    color: 'bg-gray-800 text-gray-300 border border-gray-700'
   },
   principal: {
     label: 'Principal',
-    color: 'bg-red-100 text-red-700',
-    icon: '💎'
+    color: 'bg-gray-800 text-gray-300 border border-gray-700'
   }
 }
 
 const growthPotentialConfig = {
   high: {
     label: 'High Growth',
-    color: 'text-green-600',
+    color: 'text-white',
     icon: TrendingUp,
-    bg: 'bg-green-50'
+    bg: 'bg-gray-800/50'
   },
   medium: {
     label: 'Medium Growth',
-    color: 'text-yellow-600',
+    color: 'text-white',
     icon: TrendingUp,
-    bg: 'bg-yellow-50'
+    bg: 'bg-gray-800/50'
   },
   low: {
     label: 'Low Growth',
-    color: 'text-gray-600',
+    color: 'text-gray-400',
     icon: TrendingUp,
-    bg: 'bg-gray-50'
+    bg: 'bg-gray-800/50'
   }
 }
 
 const demandTrendConfig = {
   increasing: {
-    label: 'Demand Increasing',
-    color: 'text-green-600',
-    icon: '📈'
+    label: 'Increasing',
+    color: 'text-white'
   },
   stable: {
-    label: 'Demand Stable',
-    color: 'text-blue-600',
-    icon: '➡️'
+    label: 'Stable',
+    color: 'text-gray-300'
   },
   decreasing: {
-    label: 'Demand Decreasing',
-    color: 'text-orange-600',
-    icon: '📉'
+    label: 'Decreasing',
+    color: 'text-gray-400'
   }
 }
 
@@ -147,10 +138,10 @@ export function RecommendationCard({
   }
 
   const getMatchColor = (score: number) => {
-    if (score >= 80) return 'text-green-600'
-    if (score >= 60) return 'text-blue-600'
-    if (score >= 40) return 'text-yellow-600'
-    return 'text-gray-600'
+    if (score >= 80) return 'text-white'
+    if (score >= 60) return 'text-white'
+    if (score >= 40) return 'text-gray-300'
+    return 'text-gray-400'
   }
 
   const getMatchLabel = (score: number) => {
@@ -177,7 +168,7 @@ export function RecommendationCard({
             <div className="flex items-center gap-2 mb-2">
               <CardTitle className="text-xl">{recommendation.role}</CardTitle>
               {recommendation.aiGenerated && (
-                <Badge variant="secondary" className="text-xs">
+                <Badge variant="secondary" className="text-xs bg-gray-800/50 text-gray-300">
                   <Sparkles className="w-3 h-3 mr-1" />
                   AI
                 </Badge>
@@ -193,9 +184,9 @@ export function RecommendationCard({
 
             <div className="flex flex-wrap gap-2 mt-2">
               <Badge className={levelConf.color}>
-                {levelConf.icon} {levelConf.label}
+                {levelConf.label}
               </Badge>
-              <Badge variant="outline" className="text-xs">
+              <Badge variant="outline" className="text-xs text-gray-300 border-gray-700">
                 <MapPin className="w-3 h-3 mr-1" />
                 {recommendation.location}
               </Badge>
@@ -209,7 +200,7 @@ export function RecommendationCard({
             >
               {recommendation.matchScore}%
             </div>
-            <div className="text-xs text-gray-500">{getMatchLabel(recommendation.matchScore)}</div>
+            <div className="text-xs text-gray-400">{getMatchLabel(recommendation.matchScore)}</div>
           </div>
         </div>
       </CardHeader>
@@ -218,11 +209,11 @@ export function RecommendationCard({
         {/* Key metrics */}
         <div className="grid grid-cols-2 gap-4">
           {/* Salary */}
-          <div className="flex items-center gap-2 p-3 bg-green-50 rounded-lg">
-            <DollarSign className="w-5 h-5 text-green-600" />
+          <div className="flex items-center gap-2 p-3 bg-gray-800/50 border border-gray-700 rounded-lg">
+            <DollarSign className="w-5 h-5 text-gray-400" />
             <div>
-              <div className="text-xs text-gray-600">Salary Range</div>
-              <div className="text-sm font-semibold text-gray-900">
+              <div className="text-xs text-gray-400">Salary Range</div>
+              <div className="text-sm font-semibold text-white">
                 {formatSalary(recommendation.salaryRange.min, recommendation.salaryRange.currency)} -{' '}
                 {formatSalary(recommendation.salaryRange.max, recommendation.salaryRange.currency)}
               </div>
@@ -230,21 +221,21 @@ export function RecommendationCard({
           </div>
 
           {/* Time to ready */}
-          <div className="flex items-center gap-2 p-3 bg-blue-50 rounded-lg">
-            <Clock className="w-5 h-5 text-blue-600" />
+          <div className="flex items-center gap-2 p-3 bg-gray-800/50 border border-gray-700 rounded-lg">
+            <Clock className="w-5 h-5 text-gray-400" />
             <div>
-              <div className="text-xs text-gray-600">Time to Ready</div>
-              <div className="text-sm font-semibold text-gray-900">
+              <div className="text-xs text-gray-400">Time to Ready</div>
+              <div className="text-sm font-semibold text-white">
                 {recommendation.timeToReady}
               </div>
             </div>
           </div>
 
           {/* Growth potential */}
-          <div className={`flex items-center gap-2 p-3 ${growthConf.bg} rounded-lg`}>
-            <GrowthIcon className={`w-5 h-5 ${growthConf.color}`} />
+          <div className={`flex items-center gap-2 p-3 ${growthConf.bg} border border-gray-700 rounded-lg`}>
+            <GrowthIcon className={`w-5 h-5 text-gray-400`} />
             <div>
-              <div className="text-xs text-gray-600">Growth Potential</div>
+              <div className="text-xs text-gray-400">Growth Potential</div>
               <div className={`text-sm font-semibold ${growthConf.color}`}>
                 {growthConf.label}
               </div>
@@ -252,10 +243,10 @@ export function RecommendationCard({
           </div>
 
           {/* Demand trend */}
-          <div className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg">
-            <span className="text-xl">{demandConf.icon}</span>
+          <div className="flex items-center gap-2 p-3 bg-gray-800/50 border border-gray-700 rounded-lg">
+            <TrendingUp className="w-5 h-5 text-gray-400" />
             <div>
-              <div className="text-xs text-gray-600">Market Demand</div>
+              <div className="text-xs text-gray-400">Market Demand</div>
               <div className={`text-sm font-semibold ${demandConf.color}`}>
                 {demandConf.label}
               </div>
@@ -265,8 +256,8 @@ export function RecommendationCard({
 
         {/* Why this matches */}
         <div>
-          <h4 className="font-semibold text-sm mb-2 flex items-center gap-2">
-            <Target className="w-4 h-4 text-purple-600" />
+          <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-white">
+            <Target className="w-4 h-4 text-gray-400" />
             Why This Matches You
           </h4>
           <ul className="space-y-1">
@@ -276,9 +267,9 @@ export function RecommendationCard({
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="text-sm text-gray-700 flex items-start gap-2"
+                className="text-sm text-gray-300 flex items-start gap-2"
               >
-                <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" />
                 {reason}
               </motion.li>
             ))}
@@ -288,24 +279,18 @@ export function RecommendationCard({
         {/* Skill coverage */}
         <div>
           <div className="flex items-center justify-between mb-2">
-            <h4 className="font-semibold text-sm flex items-center gap-2">
-              <Star className="w-4 h-4 text-yellow-500" />
+            <h4 className="font-semibold text-sm flex items-center gap-2 text-white">
+              <Star className="w-4 h-4 text-gray-400" />
               Skill Coverage
             </h4>
-            <span className="text-sm text-gray-600">
+            <span className="text-sm text-gray-400">
               {skillsHave}/{skillsTotal} skills
             </span>
           </div>
 
-          <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-3">
+          <div className="h-2 bg-gray-700 rounded-full overflow-hidden mb-3">
             <motion.div
-              className={`h-full ${
-                skillCoverage >= 75
-                  ? 'bg-green-500'
-                  : skillCoverage >= 50
-                  ? 'bg-blue-500'
-                  : 'bg-yellow-500'
-              }`}
+              className="h-full bg-white"
               initial={{ width: 0 }}
               animate={{ width: `${skillCoverage}%` }}
               transition={{ duration: 1, ease: 'easeOut' }}
@@ -315,7 +300,7 @@ export function RecommendationCard({
           {/* Expandable skills list */}
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-sm text-purple-600 hover:text-purple-700 font-medium flex items-center gap-1"
+            className="text-sm text-purple-400 hover:text-purple-300 font-medium flex items-center gap-1"
           >
             {isExpanded ? 'Hide' : 'Show'} required skills
             <ChevronRight
@@ -333,20 +318,20 @@ export function RecommendationCard({
               {recommendation.requiredSkills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-between text-sm p-2 bg-gray-50 rounded"
+                  className="flex items-center justify-between text-sm p-2 bg-gray-800/50 rounded"
                 >
                   <div className="flex items-center gap-2">
                     {skill.hasSkill ? (
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
+                      <CheckCircle2 className="w-4 h-4 text-gray-400" />
                     ) : (
-                      <AlertCircle className="w-4 h-4 text-orange-500" />
+                      <AlertCircle className="w-4 h-4 text-gray-500" />
                     )}
-                    <span className={skill.hasSkill ? 'text-gray-900' : 'text-gray-600'}>
+                    <span className={skill.hasSkill ? 'text-white' : 'text-gray-400'}>
                       {skill.skill}
                     </span>
                   </div>
                   {skill.hasSkill && skill.proficiency && (
-                    <span className="text-xs text-gray-500">{skill.proficiency}%</span>
+                    <span className="text-xs text-gray-400">{skill.proficiency}%</span>
                   )}
                 </div>
               ))}
@@ -355,10 +340,10 @@ export function RecommendationCard({
         </div>
 
         {/* Action buttons */}
-        <div className="flex gap-3 pt-4 border-t">
+        <div className="flex justify-center gap-3 pt-4 border-t border-gray-700">
           <button
             onClick={() => onExplore?.(recommendation.id)}
-            className="flex-1 px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-700 transition-colors flex items-center justify-center gap-2"
+            className="px-6 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2"
           >
             Explore Details
             <ArrowRight className="w-4 h-4" />
@@ -366,10 +351,10 @@ export function RecommendationCard({
           <button
             onClick={handleSave}
             disabled={isSaved}
-            className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors flex items-center gap-2 ${
+            className={`px-6 py-2 text-sm font-medium rounded-lg transition-colors flex items-center gap-2 ${
               isSaved
-                ? 'bg-green-100 text-green-700 cursor-not-allowed'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                ? 'bg-gray-800 text-white cursor-not-allowed border border-gray-700'
+                : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700 border border-gray-700'
             }`}
           >
             {isSaved ? (

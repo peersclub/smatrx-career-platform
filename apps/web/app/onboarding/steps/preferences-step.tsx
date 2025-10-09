@@ -2,7 +2,19 @@
 
 import { useState } from 'react';
 import { Card, Button } from '@smatrx/ui';
-import { ArrowRight, ArrowLeft, Briefcase, Home, DollarSign } from 'lucide-react';
+import { 
+  ArrowRight, 
+  ArrowLeft, 
+  Briefcase, 
+  Home, 
+  DollarSign,
+  Clock,
+  FileText,
+  Rocket,
+  Globe,
+  Building,
+  Landmark
+} from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 interface PreferencesStepProps {
@@ -28,16 +40,16 @@ export default function PreferencesStep({ user, onComplete, onSkip, onBack }: Pr
   });
 
   const availabilityOptions = [
-    { value: 'full-time', label: 'Full-time', icon: '💼' },
-    { value: 'part-time', label: 'Part-time', icon: '⏰' },
-    { value: 'contract', label: 'Contract', icon: '📄' },
-    { value: 'freelance', label: 'Freelance', icon: '🚀' },
+    { value: 'full-time', label: 'Full-time', Icon: Briefcase },
+    { value: 'part-time', label: 'Part-time', Icon: Clock },
+    { value: 'contract', label: 'Contract', Icon: FileText },
+    { value: 'freelance', label: 'Freelance', Icon: Rocket },
   ];
 
   const remoteOptions = [
-    { value: 'remote', label: 'Remote Only', icon: '🌍' },
-    { value: 'hybrid', label: 'Hybrid', icon: '🏢' },
-    { value: 'onsite', label: 'Onsite Only', icon: '🏛️' },
+    { value: 'remote', label: 'Remote Only', Icon: Globe },
+    { value: 'hybrid', label: 'Hybrid', Icon: Building },
+    { value: 'onsite', label: 'Onsite Only', Icon: Landmark },
   ];
 
   const locationOptions = [
@@ -106,21 +118,24 @@ export default function PreferencesStep({ user, onComplete, onSkip, onBack }: Pr
             <h3 className="font-semibold">Availability</h3>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            {availabilityOptions.map((option) => (
-              <button
-                key={option.value}
-                type="button"
-                onClick={() => setFormData({ ...formData, availability: option.value })}
-                className={`p-3 rounded-lg border text-sm transition-all ${
-                  formData.availability === option.value
-                    ? 'bg-purple-900/30 border-purple-500 text-purple-300'
-                    : 'bg-gray-900/30 border-gray-700 hover:border-gray-600'
-                }`}
-              >
-                <span className="text-lg mr-2">{option.icon}</span>
-                {option.label}
-              </button>
-            ))}
+            {availabilityOptions.map((option) => {
+              const OptionIcon = option.Icon;
+              return (
+                <button
+                  key={option.value}
+                  type="button"
+                  onClick={() => setFormData({ ...formData, availability: option.value })}
+                  className={`p-3 rounded-lg border text-sm transition-all flex items-center gap-2 ${
+                    formData.availability === option.value
+                      ? 'bg-purple-900/30 border-purple-500 text-purple-300'
+                      : 'bg-gray-900/30 border-gray-700 hover:border-gray-600'
+                  }`}
+                >
+                  <OptionIcon className="w-4 h-4" />
+                  {option.label}
+                </button>
+              );
+            })}
           </div>
         </Card>
 
@@ -131,21 +146,24 @@ export default function PreferencesStep({ user, onComplete, onSkip, onBack }: Pr
             <h3 className="font-semibold">Work Location</h3>
           </div>
           <div className="space-y-3">
-            {remoteOptions.map((option) => (
-              <button
-                key={option.value}
-                type="button"
-                onClick={() => setFormData({ ...formData, remotePreference: option.value })}
-                className={`w-full p-3 rounded-lg border text-sm transition-all text-left ${
-                  formData.remotePreference === option.value
-                    ? 'bg-pink-900/30 border-pink-500 text-pink-300'
-                    : 'bg-gray-900/30 border-gray-700 hover:border-gray-600'
-                }`}
-              >
-                <span className="text-lg mr-2">{option.icon}</span>
-                {option.label}
-              </button>
-            ))}
+            {remoteOptions.map((option) => {
+              const OptionIcon = option.Icon;
+              return (
+                <button
+                  key={option.value}
+                  type="button"
+                  onClick={() => setFormData({ ...formData, remotePreference: option.value })}
+                  className={`w-full p-3 rounded-lg border text-sm transition-all text-left flex items-center gap-2 ${
+                    formData.remotePreference === option.value
+                      ? 'bg-pink-900/30 border-pink-500 text-pink-300'
+                      : 'bg-gray-900/30 border-gray-700 hover:border-gray-600'
+                  }`}
+                >
+                  <OptionIcon className="w-4 h-4" />
+                  {option.label}
+                </button>
+              );
+            })}
           </div>
         </Card>
 

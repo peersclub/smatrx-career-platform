@@ -113,11 +113,11 @@ export function CurrentProfileCard({
       <CardHeader>
         <div className="flex items-start justify-between">
           <div className="flex-1">
-            <CardTitle className="flex items-center gap-2">
-              <User className="w-5 h-5 text-purple-600" />
+            <CardTitle className="flex items-center gap-2 text-white">
+              <User className="w-5 h-5 text-purple-400" />
               Your Career Profile
             </CardTitle>
-            <CardDescription>
+            <CardDescription className="text-gray-400">
               {targetRole
                 ? 'Current position vs. target role'
                 : 'Your current professional profile'}
@@ -125,7 +125,7 @@ export function CurrentProfileCard({
           </div>
           <button
             onClick={onEditProfile}
-            className="text-sm text-purple-600 hover:text-purple-700 font-medium"
+            className="text-sm text-purple-400 hover:text-purple-300 font-medium"
           >
             Edit Profile
           </button>
@@ -135,24 +135,24 @@ export function CurrentProfileCard({
       <CardContent className="space-y-6">
         {/* Current Role Section */}
         <div>
-          <h4 className="text-xs font-semibold text-gray-500 uppercase mb-3">
+          <h4 className="text-xs font-semibold text-gray-400 uppercase mb-3">
             Current Position
           </h4>
 
           <div className="space-y-3">
             {/* Role and company */}
             <div className="flex items-start gap-3">
-              <div className="p-2 bg-purple-100 rounded-lg">
-                <Briefcase className="w-5 h-5 text-purple-600" />
+              <div className="p-2 bg-purple-900/30 rounded-lg">
+                <Briefcase className="w-5 h-5 text-purple-400" />
               </div>
               <div className="flex-1">
-                <div className="font-semibold text-gray-900">{profile.currentRole}</div>
-                <div className="text-sm text-gray-600">{profile.currentCompany}</div>
+                <div className="font-semibold text-white">{profile.currentRole}</div>
+                <div className="text-sm text-gray-300">{profile.currentCompany}</div>
                 <div className="flex gap-2 mt-2">
-                  <Badge variant="outline" className="text-xs">
+                  <Badge variant="outline" className="text-xs text-gray-300 border-gray-700">
                     {levelLabels[profile.currentLevel]}
                   </Badge>
-                  <Badge variant="outline" className="text-xs">
+                  <Badge variant="outline" className="text-xs text-gray-300 border-gray-700">
                     <Calendar className="w-3 h-3 mr-1" />
                     {profile.yearsOfExperience} years exp.
                   </Badge>
@@ -162,20 +162,20 @@ export function CurrentProfileCard({
 
             {/* Location and salary */}
             <div className="grid grid-cols-2 gap-3">
-              <div className="flex items-center gap-2 p-2 bg-gray-50 rounded-lg">
-                <MapPin className="w-4 h-4 text-gray-600" />
+              <div className="flex items-center gap-2 p-2 bg-gray-800/50 rounded-lg">
+                <MapPin className="w-4 h-4 text-gray-400" />
                 <div>
-                  <div className="text-xs text-gray-500">Location</div>
-                  <div className="text-sm font-medium">{profile.location}</div>
+                  <div className="text-xs text-gray-400">Location</div>
+                  <div className="text-sm font-medium text-white">{profile.location}</div>
                 </div>
               </div>
 
               {profile.currentSalary && (
-                <div className="flex items-center gap-2 p-2 bg-gray-50 rounded-lg">
-                  <DollarSign className="w-4 h-4 text-gray-600" />
+                <div className="flex items-center gap-2 p-2 bg-gray-800/50 rounded-lg">
+                  <DollarSign className="w-4 h-4 text-gray-400" />
                   <div>
-                    <div className="text-xs text-gray-500">Salary</div>
-                    <div className="text-sm font-medium">
+                    <div className="text-xs text-gray-400">Salary</div>
+                    <div className="text-sm font-medium text-white">
                       {formatSalary(profile.currentSalary, profile.currency)}
                     </div>
                   </div>
@@ -185,7 +185,7 @@ export function CurrentProfileCard({
 
             {/* Top skills */}
             <div>
-              <div className="text-xs font-medium text-gray-700 mb-2">Top Skills</div>
+              <div className="text-xs font-medium text-gray-300 mb-2">Top Skills</div>
               <div className="flex flex-wrap gap-2">
                 {profile.topSkills.slice(0, 5).map((skill, index) => (
                   <motion.div
@@ -194,7 +194,7 @@ export function CurrentProfileCard({
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
                   >
-                    <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-200">
+                    <Badge className="bg-purple-900/30 text-purple-300 hover:bg-purple-800/50">
                       {skill.skill} ({skill.proficiency}%)
                     </Badge>
                   </motion.div>
@@ -204,14 +204,14 @@ export function CurrentProfileCard({
 
             {/* Education */}
             {profile.education.length > 0 && (
-              <div className="flex items-start gap-3 p-3 bg-blue-50 rounded-lg">
-                <GraduationCap className="w-5 h-5 text-blue-600 mt-0.5" />
+              <div className="flex items-start gap-3 p-3 bg-blue-900/20 border border-blue-800 rounded-lg">
+                <GraduationCap className="w-5 h-5 text-blue-400 mt-0.5" />
                 <div>
-                  <div className="text-xs font-medium text-blue-900 mb-1">Education</div>
+                  <div className="text-xs font-medium text-blue-300 mb-1">Education</div>
                   {profile.education.map((edu, index) => (
-                    <div key={index} className="text-sm text-blue-800">
+                    <div key={index} className="text-sm text-blue-200">
                       {edu.degree} in {edu.field}
-                      <div className="text-xs text-blue-600">
+                      <div className="text-xs text-blue-400">
                         {edu.institution} • {edu.year}
                       </div>
                     </div>
@@ -226,13 +226,13 @@ export function CurrentProfileCard({
         {targetRole ? (
           <div>
             <div className="flex items-center justify-between mb-3">
-              <h4 className="text-xs font-semibold text-gray-500 uppercase flex items-center gap-2">
+              <h4 className="text-xs font-semibold text-gray-400 uppercase flex items-center gap-2">
                 <Target className="w-4 h-4" />
                 Target Role
               </h4>
               <button
                 onClick={onSetGoal}
-                className="text-xs text-purple-600 hover:text-purple-700 font-medium"
+                className="text-xs text-purple-400 hover:text-purple-300 font-medium"
               >
                 Change Goal
               </button>
@@ -240,23 +240,23 @@ export function CurrentProfileCard({
 
             <div className="space-y-3">
               {/* Target role info */}
-              <div className="flex items-start gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
-                <div className="p-2 bg-green-100 rounded-lg">
-                  <Target className="w-5 h-5 text-green-600" />
+              <div className="flex items-start gap-3 p-3 bg-green-900/20 border border-green-800 rounded-lg">
+                <div className="p-2 bg-green-900/30 rounded-lg">
+                  <Target className="w-5 h-5 text-green-400" />
                 </div>
                 <div className="flex-1">
-                  <div className="font-semibold text-green-900">{targetRole.role}</div>
+                  <div className="font-semibold text-green-200">{targetRole.role}</div>
                   <div className="flex gap-2 mt-2 flex-wrap">
-                    <Badge className="bg-green-100 text-green-700">
+                    <Badge className="bg-green-900/30 text-green-300">
                       {levelLabels[targetRole.level]}
                     </Badge>
                     {targetRole.targetCompanySize && (
-                      <Badge variant="outline" className="text-xs">
+                      <Badge variant="outline" className="text-xs text-gray-300 border-gray-700">
                         {companySizeLabels[targetRole.targetCompanySize]}
                       </Badge>
                     )}
                     {targetRole.targetIndustry && (
-                      <Badge variant="outline" className="text-xs">
+                      <Badge variant="outline" className="text-xs text-gray-300 border-gray-700">
                         {targetRole.targetIndustry}
                       </Badge>
                     )}
@@ -266,12 +266,12 @@ export function CurrentProfileCard({
 
               {/* Level progression visualization */}
               {(progression.isProgression || progression.isLateral) && (
-                <div className="p-3 bg-purple-50 rounded-lg">
+                <div className="p-3 bg-purple-900/20 border border-purple-800 rounded-lg">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-medium text-purple-900">
+                    <span className="text-xs font-medium text-purple-300">
                       Career Progression
                     </span>
-                    <span className="text-xs text-purple-700">
+                    <span className="text-xs text-purple-200">
                       {progression.isProgression
                         ? `${progression.levelsToGo} level${
                             progression.levelsToGo > 1 ? 's' : ''
@@ -298,10 +298,10 @@ export function CurrentProfileCard({
                                   : isTarget
                                   ? 'bg-green-600 border-green-600'
                                   : isPassed
-                                  ? 'bg-gray-300 border-gray-300'
+                                  ? 'bg-gray-600 border-gray-600'
                                   : isInProgress
-                                  ? 'bg-purple-100 border-purple-300'
-                                  : 'bg-white border-gray-300'
+                                  ? 'bg-purple-500/30 border-purple-500'
+                                  : 'bg-gray-800/30 border-gray-700'
                               }`}
                               initial={{ scale: 0 }}
                               animate={{ scale: 1 }}
@@ -320,7 +320,7 @@ export function CurrentProfileCard({
                                 />
                               )}
                             </motion.div>
-                            <div className="text-xs mt-1 text-center text-gray-600">
+                            <div className="text-xs mt-1 text-center text-gray-400">
                               {levelLabels[level as keyof typeof levelLabels]}
                             </div>
                           </div>
@@ -329,7 +329,7 @@ export function CurrentProfileCard({
                               className={`w-4 h-4 flex-shrink-0 ${
                                 index < progression.targetIndex
                                   ? 'text-purple-400'
-                                  : 'text-gray-300'
+                                  : 'text-gray-600'
                               }`}
                             />
                           )}
@@ -343,11 +343,11 @@ export function CurrentProfileCard({
               {/* Target salary and timeline */}
               <div className="grid grid-cols-2 gap-3">
                 {targetRole.targetSalary && (
-                  <div className="flex items-center gap-2 p-2 bg-green-50 rounded-lg">
-                    <DollarSign className="w-4 h-4 text-green-600" />
+                  <div className="flex items-center gap-2 p-2 bg-green-900/20 border border-green-800 rounded-lg">
+                    <DollarSign className="w-4 h-4 text-green-400" />
                     <div>
-                      <div className="text-xs text-green-600">Target Salary</div>
-                      <div className="text-sm font-medium text-green-900">
+                      <div className="text-xs text-green-400">Target Salary</div>
+                      <div className="text-sm font-medium text-green-300">
                         {formatSalary(targetRole.targetSalary.min, profile.currency)} -{' '}
                         {formatSalary(targetRole.targetSalary.max, profile.currency)}
                       </div>
@@ -355,11 +355,11 @@ export function CurrentProfileCard({
                   </div>
                 )}
 
-                <div className="flex items-center gap-2 p-2 bg-blue-50 rounded-lg">
-                  <TrendingUp className="w-4 h-4 text-blue-600" />
+                <div className="flex items-center gap-2 p-2 bg-blue-900/20 border border-blue-800 rounded-lg">
+                  <TrendingUp className="w-4 h-4 text-blue-400" />
                   <div>
-                    <div className="text-xs text-blue-600">Timeframe</div>
-                    <div className="text-sm font-medium text-blue-900">
+                    <div className="text-xs text-blue-400">Timeframe</div>
+                    <div className="text-sm font-medium text-blue-300">
                       {targetRole.timeframe}
                     </div>
                   </div>
@@ -368,11 +368,11 @@ export function CurrentProfileCard({
 
               {targetRole.preferredLocation &&
                 targetRole.preferredLocation !== profile.location && (
-                  <div className="flex items-center gap-2 p-2 bg-yellow-50 border border-yellow-200 rounded-lg">
-                    <MapPin className="w-4 h-4 text-yellow-600" />
+                  <div className="flex items-center gap-2 p-2 bg-yellow-900/20 border border-yellow-800 rounded-lg">
+                    <MapPin className="w-4 h-4 text-yellow-400" />
                     <div className="text-sm">
-                      <span className="text-yellow-900 font-medium">Relocation: </span>
-                      <span className="text-yellow-700">{targetRole.preferredLocation}</span>
+                      <span className="text-yellow-300 font-medium">Relocation: </span>
+                      <span className="text-yellow-400">{targetRole.preferredLocation}</span>
                     </div>
                   </div>
                 )}
@@ -380,11 +380,11 @@ export function CurrentProfileCard({
           </div>
         ) : (
           /* No goal set CTA */
-          <div className="p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg border-2 border-dashed border-purple-200">
+          <div className="p-6 bg-purple-900/20 border-2 border-dashed border-purple-700 rounded-lg">
             <div className="text-center">
               <Target className="w-12 h-12 text-purple-400 mx-auto mb-3" />
-              <h4 className="font-semibold text-gray-900 mb-2">Set Your Career Goal</h4>
-              <p className="text-sm text-gray-600 mb-4">
+              <h4 className="font-semibold text-white mb-2">Set Your Career Goal</h4>
+              <p className="text-sm text-gray-400 mb-4">
                 Define your target role to get personalized recommendations and learning paths.
               </p>
               <button

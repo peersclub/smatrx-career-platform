@@ -48,34 +48,34 @@ interface CredibilityInsightsCardProps {
 const insightTypeConfig = {
   strength: {
     icon: CheckCircle2,
-    color: 'text-green-600',
-    bg: 'bg-green-50',
-    border: 'border-green-200',
-    badge: 'bg-green-100 text-green-700',
+    color: 'text-gray-400',
+    bg: 'bg-gray-800/30',
+    border: 'border-gray-700',
+    badge: 'bg-gray-800 text-gray-300',
     label: 'Strength'
   },
   improvement: {
     icon: TrendingUp,
-    color: 'text-blue-600',
-    bg: 'bg-blue-50',
-    border: 'border-blue-200',
-    badge: 'bg-blue-100 text-blue-700',
+    color: 'text-gray-400',
+    bg: 'bg-gray-800/30',
+    border: 'border-gray-700',
+    badge: 'bg-gray-800 text-gray-300',
     label: 'Improvement Area'
   },
   opportunity: {
     icon: Sparkles,
-    color: 'text-purple-600',
-    bg: 'bg-purple-50',
-    border: 'border-purple-200',
-    badge: 'bg-purple-100 text-purple-700',
+    color: 'text-purple-400',
+    bg: 'bg-gray-800/30',
+    border: 'border-gray-700',
+    badge: 'bg-gray-800 text-gray-300',
     label: 'Opportunity'
   },
   warning: {
     icon: AlertTriangle,
-    color: 'text-orange-600',
-    bg: 'bg-orange-50',
-    border: 'border-orange-200',
-    badge: 'bg-orange-100 text-orange-700',
+    color: 'text-gray-400',
+    bg: 'bg-gray-800/30',
+    border: 'border-gray-700',
+    badge: 'bg-gray-800 text-gray-300',
     label: 'Warning'
   }
 }
@@ -83,35 +83,35 @@ const insightTypeConfig = {
 const impactConfig = {
   high: {
     label: 'High Impact',
-    color: 'text-red-600',
-    bg: 'bg-red-100'
+    color: 'text-white',
+    bg: 'bg-gray-800'
   },
   medium: {
     label: 'Medium Impact',
-    color: 'text-yellow-600',
-    bg: 'bg-yellow-100'
+    color: 'text-gray-300',
+    bg: 'bg-gray-800'
   },
   low: {
     label: 'Low Impact',
-    color: 'text-gray-600',
-    bg: 'bg-gray-100'
+    color: 'text-gray-400',
+    bg: 'bg-gray-800'
   }
 }
 
 const priorityConfig = {
   high: {
     label: 'High Priority',
-    color: 'text-red-600',
-    dotColor: 'bg-red-500'
+    color: 'text-white',
+    dotColor: 'bg-white'
   },
   medium: {
     label: 'Medium Priority',
-    color: 'text-yellow-600',
-    dotColor: 'bg-yellow-500'
+    color: 'text-gray-300',
+    dotColor: 'bg-gray-400'
   },
   low: {
     label: 'Low Priority',
-    color: 'text-gray-600',
+    color: 'text-gray-400',
     dotColor: 'bg-gray-500'
   }
 }
@@ -307,7 +307,7 @@ export function CredibilityInsightsCard({
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   className={`p-4 rounded-lg border-2 transition-all ${
                     step.completed
-                      ? 'border-green-200 bg-green-50 opacity-60'
+                      ? 'border-gray-600 bg-gray-800/30 opacity-60'
                       : 'border-gray-200 bg-white hover:border-purple-200 hover:shadow-md'
                   }`}
                 >
@@ -315,7 +315,7 @@ export function CredibilityInsightsCard({
                     {/* Checkbox/check icon */}
                     <div className="mt-0.5">
                       {step.completed ? (
-                        <CheckCircle2 className="w-5 h-5 text-green-600" />
+                        <CheckCircle2 className="w-5 h-5 text-white" />
                       ) : (
                         <div className="w-5 h-5 rounded-full border-2 border-gray-300" />
                       )}
@@ -347,7 +347,7 @@ export function CredibilityInsightsCard({
                       {/* Metadata */}
                       <div className="flex items-center gap-4 text-xs text-gray-500">
                         <div className="flex items-center gap-1">
-                          <ArrowUpRight className="w-3 h-3 text-green-600" />
+                          <ArrowUpRight className="w-3 h-3 text-white" />
                           <span>+{step.estimatedImpact} points</span>
                         </div>
                         <div className="flex items-center gap-1">

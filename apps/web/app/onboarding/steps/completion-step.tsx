@@ -8,7 +8,9 @@ import {
   Users,
   Target,
   ArrowRight,
-  PartyPopper
+  PartyPopper,
+  BookOpen,
+  UserPlus
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
@@ -61,9 +63,12 @@ export default function CompletionStep({ user, progressPercentage, onComplete }:
 
       {/* Congratulations Message */}
       <div className="mb-8">
-        <h2 className="text-4xl font-bold mb-3">
-          🎉 Congratulations{user.name ? `, ${user.name}` : ''}!
-        </h2>
+        <div className="flex items-center justify-center gap-2 mb-3">
+          <PartyPopper className="w-8 h-8 text-purple-400" />
+          <h2 className="text-4xl font-bold">
+            Congratulations{user.name ? `, ${user.name}` : ''}!
+          </h2>
+        </div>
         <p className="text-xl text-gray-400">
           You've completed {progressPercentage}% of your profile setup
         </p>
@@ -112,19 +117,28 @@ export default function CompletionStep({ user, progressPercentage, onComplete }:
       {/* Additional Actions */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
         <Card className="p-4 hover:border-purple-500 transition-colors cursor-pointer">
-          <h4 className="font-medium mb-1">📚 Browse Learning Paths</h4>
+          <div className="flex items-center gap-2 mb-1">
+            <BookOpen className="w-5 h-5 text-purple-400" />
+            <h4 className="font-medium">Browse Learning Paths</h4>
+          </div>
           <p className="text-sm text-gray-400">
             Discover courses to upskill
           </p>
         </Card>
         <Card className="p-4 hover:border-pink-500 transition-colors cursor-pointer">
-          <h4 className="font-medium mb-1">🎯 Set Career Goals</h4>
+          <div className="flex items-center gap-2 mb-1">
+            <Target className="w-5 h-5 text-pink-400" />
+            <h4 className="font-medium">Set Career Goals</h4>
+          </div>
           <p className="text-sm text-gray-400">
             Define your next milestone
           </p>
         </Card>
         <Card className="p-4 hover:border-cyan-500 transition-colors cursor-pointer">
-          <h4 className="font-medium mb-1">👥 Join Community</h4>
+          <div className="flex items-center gap-2 mb-1">
+            <UserPlus className="w-5 h-5 text-cyan-400" />
+            <h4 className="font-medium">Join Community</h4>
+          </div>
           <p className="text-sm text-gray-400">
             Connect with peers
           </p>

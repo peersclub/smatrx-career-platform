@@ -16241,21 +16241,26 @@ export namespace Prisma {
   export type LearningPathAvgAggregateOutputType = {
     estimatedHours: number | null
     estimatedWeeks: number | null
+    estimatedDuration: number | null
   }
 
   export type LearningPathSumAggregateOutputType = {
     estimatedHours: number | null
     estimatedWeeks: number | null
+    estimatedDuration: number | null
   }
 
   export type LearningPathMinAggregateOutputType = {
     id: string | null
     userId: string | null
     goalId: string | null
+    name: string | null
     title: string | null
     description: string | null
+    targetRole: string | null
     estimatedHours: number | null
     estimatedWeeks: number | null
+    estimatedDuration: number | null
     difficulty: string | null
     status: string | null
     completedAt: Date | null
@@ -16267,10 +16272,13 @@ export namespace Prisma {
     id: string | null
     userId: string | null
     goalId: string | null
+    name: string | null
     title: string | null
     description: string | null
+    targetRole: string | null
     estimatedHours: number | null
     estimatedWeeks: number | null
+    estimatedDuration: number | null
     difficulty: string | null
     status: string | null
     completedAt: Date | null
@@ -16282,12 +16290,16 @@ export namespace Prisma {
     id: number
     userId: number
     goalId: number
+    name: number
     title: number
     description: number
+    targetRole: number
     estimatedHours: number
     estimatedWeeks: number
+    estimatedDuration: number
     difficulty: number
     status: number
+    recommendations: number
     completedAt: number
     createdAt: number
     updatedAt: number
@@ -16298,21 +16310,26 @@ export namespace Prisma {
   export type LearningPathAvgAggregateInputType = {
     estimatedHours?: true
     estimatedWeeks?: true
+    estimatedDuration?: true
   }
 
   export type LearningPathSumAggregateInputType = {
     estimatedHours?: true
     estimatedWeeks?: true
+    estimatedDuration?: true
   }
 
   export type LearningPathMinAggregateInputType = {
     id?: true
     userId?: true
     goalId?: true
+    name?: true
     title?: true
     description?: true
+    targetRole?: true
     estimatedHours?: true
     estimatedWeeks?: true
+    estimatedDuration?: true
     difficulty?: true
     status?: true
     completedAt?: true
@@ -16324,10 +16341,13 @@ export namespace Prisma {
     id?: true
     userId?: true
     goalId?: true
+    name?: true
     title?: true
     description?: true
+    targetRole?: true
     estimatedHours?: true
     estimatedWeeks?: true
+    estimatedDuration?: true
     difficulty?: true
     status?: true
     completedAt?: true
@@ -16339,12 +16359,16 @@ export namespace Prisma {
     id?: true
     userId?: true
     goalId?: true
+    name?: true
     title?: true
     description?: true
+    targetRole?: true
     estimatedHours?: true
     estimatedWeeks?: true
+    estimatedDuration?: true
     difficulty?: true
     status?: true
+    recommendations?: true
     completedAt?: true
     createdAt?: true
     updatedAt?: true
@@ -16441,12 +16465,16 @@ export namespace Prisma {
     id: string
     userId: string
     goalId: string | null
-    title: string
+    name: string
+    title: string | null
     description: string | null
+    targetRole: string | null
     estimatedHours: number | null
     estimatedWeeks: number | null
+    estimatedDuration: number | null
     difficulty: string | null
     status: string
+    recommendations: JsonValue | null
     completedAt: Date | null
     createdAt: Date
     updatedAt: Date
@@ -16475,12 +16503,16 @@ export namespace Prisma {
     id?: boolean
     userId?: boolean
     goalId?: boolean
+    name?: boolean
     title?: boolean
     description?: boolean
+    targetRole?: boolean
     estimatedHours?: boolean
     estimatedWeeks?: boolean
+    estimatedDuration?: boolean
     difficulty?: boolean
     status?: boolean
+    recommendations?: boolean
     completedAt?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -16495,12 +16527,16 @@ export namespace Prisma {
     id?: boolean
     userId?: boolean
     goalId?: boolean
+    name?: boolean
     title?: boolean
     description?: boolean
+    targetRole?: boolean
     estimatedHours?: boolean
     estimatedWeeks?: boolean
+    estimatedDuration?: boolean
     difficulty?: boolean
     status?: boolean
+    recommendations?: boolean
     completedAt?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -16512,12 +16548,16 @@ export namespace Prisma {
     id?: boolean
     userId?: boolean
     goalId?: boolean
+    name?: boolean
     title?: boolean
     description?: boolean
+    targetRole?: boolean
     estimatedHours?: boolean
     estimatedWeeks?: boolean
+    estimatedDuration?: boolean
     difficulty?: boolean
     status?: boolean
+    recommendations?: boolean
     completedAt?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -16529,18 +16569,22 @@ export namespace Prisma {
     id?: boolean
     userId?: boolean
     goalId?: boolean
+    name?: boolean
     title?: boolean
     description?: boolean
+    targetRole?: boolean
     estimatedHours?: boolean
     estimatedWeeks?: boolean
+    estimatedDuration?: boolean
     difficulty?: boolean
     status?: boolean
+    recommendations?: boolean
     completedAt?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type LearningPathOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "goalId" | "title" | "description" | "estimatedHours" | "estimatedWeeks" | "difficulty" | "status" | "completedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["learningPath"]>
+  export type LearningPathOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "userId" | "goalId" | "name" | "title" | "description" | "targetRole" | "estimatedHours" | "estimatedWeeks" | "estimatedDuration" | "difficulty" | "status" | "recommendations" | "completedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["learningPath"]>
   export type LearningPathInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
     goal?: boolean | LearningPath$goalArgs<ExtArgs>
@@ -16569,12 +16613,16 @@ export namespace Prisma {
       id: string
       userId: string
       goalId: string | null
-      title: string
+      name: string
+      title: string | null
       description: string | null
+      targetRole: string | null
       estimatedHours: number | null
       estimatedWeeks: number | null
+      estimatedDuration: number | null
       difficulty: string | null
       status: string
+      recommendations: Prisma.JsonValue | null
       completedAt: Date | null
       createdAt: Date
       updatedAt: Date
@@ -17008,12 +17056,16 @@ export namespace Prisma {
     readonly id: FieldRef<"LearningPath", 'String'>
     readonly userId: FieldRef<"LearningPath", 'String'>
     readonly goalId: FieldRef<"LearningPath", 'String'>
+    readonly name: FieldRef<"LearningPath", 'String'>
     readonly title: FieldRef<"LearningPath", 'String'>
     readonly description: FieldRef<"LearningPath", 'String'>
+    readonly targetRole: FieldRef<"LearningPath", 'String'>
     readonly estimatedHours: FieldRef<"LearningPath", 'Int'>
     readonly estimatedWeeks: FieldRef<"LearningPath", 'Int'>
+    readonly estimatedDuration: FieldRef<"LearningPath", 'Int'>
     readonly difficulty: FieldRef<"LearningPath", 'String'>
     readonly status: FieldRef<"LearningPath", 'String'>
+    readonly recommendations: FieldRef<"LearningPath", 'Json'>
     readonly completedAt: FieldRef<"LearningPath", 'DateTime'>
     readonly createdAt: FieldRef<"LearningPath", 'DateTime'>
     readonly updatedAt: FieldRef<"LearningPath", 'DateTime'>
@@ -37879,12 +37931,16 @@ export namespace Prisma {
     id: 'id',
     userId: 'userId',
     goalId: 'goalId',
+    name: 'name',
     title: 'title',
     description: 'description',
+    targetRole: 'targetRole',
     estimatedHours: 'estimatedHours',
     estimatedWeeks: 'estimatedWeeks',
+    estimatedDuration: 'estimatedDuration',
     difficulty: 'difficulty',
     status: 'status',
+    recommendations: 'recommendations',
     completedAt: 'completedAt',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
@@ -39336,12 +39392,16 @@ export namespace Prisma {
     id?: StringFilter<"LearningPath"> | string
     userId?: StringFilter<"LearningPath"> | string
     goalId?: StringNullableFilter<"LearningPath"> | string | null
-    title?: StringFilter<"LearningPath"> | string
+    name?: StringFilter<"LearningPath"> | string
+    title?: StringNullableFilter<"LearningPath"> | string | null
     description?: StringNullableFilter<"LearningPath"> | string | null
+    targetRole?: StringNullableFilter<"LearningPath"> | string | null
     estimatedHours?: IntNullableFilter<"LearningPath"> | number | null
     estimatedWeeks?: IntNullableFilter<"LearningPath"> | number | null
+    estimatedDuration?: IntNullableFilter<"LearningPath"> | number | null
     difficulty?: StringNullableFilter<"LearningPath"> | string | null
     status?: StringFilter<"LearningPath"> | string
+    recommendations?: JsonNullableFilter<"LearningPath">
     completedAt?: DateTimeNullableFilter<"LearningPath"> | Date | string | null
     createdAt?: DateTimeFilter<"LearningPath"> | Date | string
     updatedAt?: DateTimeFilter<"LearningPath"> | Date | string
@@ -39355,12 +39415,16 @@ export namespace Prisma {
     id?: SortOrder
     userId?: SortOrder
     goalId?: SortOrderInput | SortOrder
-    title?: SortOrder
+    name?: SortOrder
+    title?: SortOrderInput | SortOrder
     description?: SortOrderInput | SortOrder
+    targetRole?: SortOrderInput | SortOrder
     estimatedHours?: SortOrderInput | SortOrder
     estimatedWeeks?: SortOrderInput | SortOrder
+    estimatedDuration?: SortOrderInput | SortOrder
     difficulty?: SortOrderInput | SortOrder
     status?: SortOrder
+    recommendations?: SortOrderInput | SortOrder
     completedAt?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -39377,12 +39441,16 @@ export namespace Prisma {
     NOT?: LearningPathWhereInput | LearningPathWhereInput[]
     userId?: StringFilter<"LearningPath"> | string
     goalId?: StringNullableFilter<"LearningPath"> | string | null
-    title?: StringFilter<"LearningPath"> | string
+    name?: StringFilter<"LearningPath"> | string
+    title?: StringNullableFilter<"LearningPath"> | string | null
     description?: StringNullableFilter<"LearningPath"> | string | null
+    targetRole?: StringNullableFilter<"LearningPath"> | string | null
     estimatedHours?: IntNullableFilter<"LearningPath"> | number | null
     estimatedWeeks?: IntNullableFilter<"LearningPath"> | number | null
+    estimatedDuration?: IntNullableFilter<"LearningPath"> | number | null
     difficulty?: StringNullableFilter<"LearningPath"> | string | null
     status?: StringFilter<"LearningPath"> | string
+    recommendations?: JsonNullableFilter<"LearningPath">
     completedAt?: DateTimeNullableFilter<"LearningPath"> | Date | string | null
     createdAt?: DateTimeFilter<"LearningPath"> | Date | string
     updatedAt?: DateTimeFilter<"LearningPath"> | Date | string
@@ -39396,12 +39464,16 @@ export namespace Prisma {
     id?: SortOrder
     userId?: SortOrder
     goalId?: SortOrderInput | SortOrder
-    title?: SortOrder
+    name?: SortOrder
+    title?: SortOrderInput | SortOrder
     description?: SortOrderInput | SortOrder
+    targetRole?: SortOrderInput | SortOrder
     estimatedHours?: SortOrderInput | SortOrder
     estimatedWeeks?: SortOrderInput | SortOrder
+    estimatedDuration?: SortOrderInput | SortOrder
     difficulty?: SortOrderInput | SortOrder
     status?: SortOrder
+    recommendations?: SortOrderInput | SortOrder
     completedAt?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -39419,12 +39491,16 @@ export namespace Prisma {
     id?: StringWithAggregatesFilter<"LearningPath"> | string
     userId?: StringWithAggregatesFilter<"LearningPath"> | string
     goalId?: StringNullableWithAggregatesFilter<"LearningPath"> | string | null
-    title?: StringWithAggregatesFilter<"LearningPath"> | string
+    name?: StringWithAggregatesFilter<"LearningPath"> | string
+    title?: StringNullableWithAggregatesFilter<"LearningPath"> | string | null
     description?: StringNullableWithAggregatesFilter<"LearningPath"> | string | null
+    targetRole?: StringNullableWithAggregatesFilter<"LearningPath"> | string | null
     estimatedHours?: IntNullableWithAggregatesFilter<"LearningPath"> | number | null
     estimatedWeeks?: IntNullableWithAggregatesFilter<"LearningPath"> | number | null
+    estimatedDuration?: IntNullableWithAggregatesFilter<"LearningPath"> | number | null
     difficulty?: StringNullableWithAggregatesFilter<"LearningPath"> | string | null
     status?: StringWithAggregatesFilter<"LearningPath"> | string
+    recommendations?: JsonNullableWithAggregatesFilter<"LearningPath">
     completedAt?: DateTimeNullableWithAggregatesFilter<"LearningPath"> | Date | string | null
     createdAt?: DateTimeWithAggregatesFilter<"LearningPath"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"LearningPath"> | Date | string
@@ -42183,12 +42259,16 @@ export namespace Prisma {
 
   export type LearningPathCreateInput = {
     id?: string
-    title: string
+    name: string
+    title?: string | null
     description?: string | null
+    targetRole?: string | null
     estimatedHours?: number | null
     estimatedWeeks?: number | null
+    estimatedDuration?: number | null
     difficulty?: string | null
     status?: string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -42202,12 +42282,16 @@ export namespace Prisma {
     id?: string
     userId: string
     goalId?: string | null
-    title: string
+    name: string
+    title?: string | null
     description?: string | null
+    targetRole?: string | null
     estimatedHours?: number | null
     estimatedWeeks?: number | null
+    estimatedDuration?: number | null
     difficulty?: string | null
     status?: string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -42217,12 +42301,16 @@ export namespace Prisma {
 
   export type LearningPathUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
+    targetRole?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
     estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    estimatedDuration?: NullableIntFieldUpdateOperationsInput | number | null
     difficulty?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -42236,12 +42324,16 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     goalId?: NullableStringFieldUpdateOperationsInput | string | null
-    title?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
+    targetRole?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
     estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    estimatedDuration?: NullableIntFieldUpdateOperationsInput | number | null
     difficulty?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -42253,12 +42345,16 @@ export namespace Prisma {
     id?: string
     userId: string
     goalId?: string | null
-    title: string
+    name: string
+    title?: string | null
     description?: string | null
+    targetRole?: string | null
     estimatedHours?: number | null
     estimatedWeeks?: number | null
+    estimatedDuration?: number | null
     difficulty?: string | null
     status?: string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -42266,12 +42362,16 @@ export namespace Prisma {
 
   export type LearningPathUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
+    targetRole?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
     estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    estimatedDuration?: NullableIntFieldUpdateOperationsInput | number | null
     difficulty?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -42281,12 +42381,16 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     goalId?: NullableStringFieldUpdateOperationsInput | string | null
-    title?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
+    targetRole?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
     estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    estimatedDuration?: NullableIntFieldUpdateOperationsInput | number | null
     difficulty?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -45222,12 +45326,16 @@ export namespace Prisma {
     id?: SortOrder
     userId?: SortOrder
     goalId?: SortOrder
+    name?: SortOrder
     title?: SortOrder
     description?: SortOrder
+    targetRole?: SortOrder
     estimatedHours?: SortOrder
     estimatedWeeks?: SortOrder
+    estimatedDuration?: SortOrder
     difficulty?: SortOrder
     status?: SortOrder
+    recommendations?: SortOrder
     completedAt?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -45236,16 +45344,20 @@ export namespace Prisma {
   export type LearningPathAvgOrderByAggregateInput = {
     estimatedHours?: SortOrder
     estimatedWeeks?: SortOrder
+    estimatedDuration?: SortOrder
   }
 
   export type LearningPathMaxOrderByAggregateInput = {
     id?: SortOrder
     userId?: SortOrder
     goalId?: SortOrder
+    name?: SortOrder
     title?: SortOrder
     description?: SortOrder
+    targetRole?: SortOrder
     estimatedHours?: SortOrder
     estimatedWeeks?: SortOrder
+    estimatedDuration?: SortOrder
     difficulty?: SortOrder
     status?: SortOrder
     completedAt?: SortOrder
@@ -45257,10 +45369,13 @@ export namespace Prisma {
     id?: SortOrder
     userId?: SortOrder
     goalId?: SortOrder
+    name?: SortOrder
     title?: SortOrder
     description?: SortOrder
+    targetRole?: SortOrder
     estimatedHours?: SortOrder
     estimatedWeeks?: SortOrder
+    estimatedDuration?: SortOrder
     difficulty?: SortOrder
     status?: SortOrder
     completedAt?: SortOrder
@@ -45271,6 +45386,7 @@ export namespace Prisma {
   export type LearningPathSumOrderByAggregateInput = {
     estimatedHours?: SortOrder
     estimatedWeeks?: SortOrder
+    estimatedDuration?: SortOrder
   }
   export type JsonNullableListFilter<$PrismaModel = never> =
     | PatchUndefined<
@@ -48784,12 +48900,16 @@ export namespace Prisma {
 
   export type LearningPathCreateWithoutUserInput = {
     id?: string
-    title: string
+    name: string
+    title?: string | null
     description?: string | null
+    targetRole?: string | null
     estimatedHours?: number | null
     estimatedWeeks?: number | null
+    estimatedDuration?: number | null
     difficulty?: string | null
     status?: string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -48801,12 +48921,16 @@ export namespace Prisma {
   export type LearningPathUncheckedCreateWithoutUserInput = {
     id?: string
     goalId?: string | null
-    title: string
+    name: string
+    title?: string | null
     description?: string | null
+    targetRole?: string | null
     estimatedHours?: number | null
     estimatedWeeks?: number | null
+    estimatedDuration?: number | null
     difficulty?: string | null
     status?: string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -49631,12 +49755,16 @@ export namespace Prisma {
     id?: StringFilter<"LearningPath"> | string
     userId?: StringFilter<"LearningPath"> | string
     goalId?: StringNullableFilter<"LearningPath"> | string | null
-    title?: StringFilter<"LearningPath"> | string
+    name?: StringFilter<"LearningPath"> | string
+    title?: StringNullableFilter<"LearningPath"> | string | null
     description?: StringNullableFilter<"LearningPath"> | string | null
+    targetRole?: StringNullableFilter<"LearningPath"> | string | null
     estimatedHours?: IntNullableFilter<"LearningPath"> | number | null
     estimatedWeeks?: IntNullableFilter<"LearningPath"> | number | null
+    estimatedDuration?: IntNullableFilter<"LearningPath"> | number | null
     difficulty?: StringNullableFilter<"LearningPath"> | string | null
     status?: StringFilter<"LearningPath"> | string
+    recommendations?: JsonNullableFilter<"LearningPath">
     completedAt?: DateTimeNullableFilter<"LearningPath"> | Date | string | null
     createdAt?: DateTimeFilter<"LearningPath"> | Date | string
     updatedAt?: DateTimeFilter<"LearningPath"> | Date | string
@@ -51317,12 +51445,16 @@ export namespace Prisma {
 
   export type LearningPathCreateWithoutGoalInput = {
     id?: string
-    title: string
+    name: string
+    title?: string | null
     description?: string | null
+    targetRole?: string | null
     estimatedHours?: number | null
     estimatedWeeks?: number | null
+    estimatedDuration?: number | null
     difficulty?: string | null
     status?: string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -51334,12 +51466,16 @@ export namespace Prisma {
   export type LearningPathUncheckedCreateWithoutGoalInput = {
     id?: string
     userId: string
-    title: string
+    name: string
+    title?: string | null
     description?: string | null
+    targetRole?: string | null
     estimatedHours?: number | null
     estimatedWeeks?: number | null
+    estimatedDuration?: number | null
     difficulty?: string | null
     status?: string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -52165,12 +52301,16 @@ export namespace Prisma {
 
   export type LearningPathCreateWithoutMilestonesInput = {
     id?: string
-    title: string
+    name: string
+    title?: string | null
     description?: string | null
+    targetRole?: string | null
     estimatedHours?: number | null
     estimatedWeeks?: number | null
+    estimatedDuration?: number | null
     difficulty?: string | null
     status?: string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -52183,12 +52323,16 @@ export namespace Prisma {
     id?: string
     userId: string
     goalId?: string | null
-    title: string
+    name: string
+    title?: string | null
     description?: string | null
+    targetRole?: string | null
     estimatedHours?: number | null
     estimatedWeeks?: number | null
+    estimatedDuration?: number | null
     difficulty?: string | null
     status?: string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -52255,12 +52399,16 @@ export namespace Prisma {
 
   export type LearningPathUpdateWithoutMilestonesInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
+    targetRole?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
     estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    estimatedDuration?: NullableIntFieldUpdateOperationsInput | number | null
     difficulty?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -52273,12 +52421,16 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     goalId?: NullableStringFieldUpdateOperationsInput | string | null
-    title?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
+    targetRole?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
     estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    estimatedDuration?: NullableIntFieldUpdateOperationsInput | number | null
     difficulty?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -52368,12 +52520,16 @@ export namespace Prisma {
 
   export type LearningPathCreateWithoutProgressInput = {
     id?: string
-    title: string
+    name: string
+    title?: string | null
     description?: string | null
+    targetRole?: string | null
     estimatedHours?: number | null
     estimatedWeeks?: number | null
+    estimatedDuration?: number | null
     difficulty?: string | null
     status?: string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -52386,12 +52542,16 @@ export namespace Prisma {
     id?: string
     userId: string
     goalId?: string | null
-    title: string
+    name: string
+    title?: string | null
     description?: string | null
+    targetRole?: string | null
     estimatedHours?: number | null
     estimatedWeeks?: number | null
+    estimatedDuration?: number | null
     difficulty?: string | null
     status?: string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -52526,12 +52686,16 @@ export namespace Prisma {
 
   export type LearningPathUpdateWithoutProgressInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
+    targetRole?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
     estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    estimatedDuration?: NullableIntFieldUpdateOperationsInput | number | null
     difficulty?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -52544,12 +52708,16 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
     goalId?: NullableStringFieldUpdateOperationsInput | string | null
-    title?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
+    targetRole?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
     estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    estimatedDuration?: NullableIntFieldUpdateOperationsInput | number | null
     difficulty?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -54902,12 +55070,16 @@ export namespace Prisma {
   export type LearningPathCreateManyUserInput = {
     id?: string
     goalId?: string | null
-    title: string
+    name: string
+    title?: string | null
     description?: string | null
+    targetRole?: string | null
     estimatedHours?: number | null
     estimatedWeeks?: number | null
+    estimatedDuration?: number | null
     difficulty?: string | null
     status?: string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -55246,12 +55418,16 @@ export namespace Prisma {
 
   export type LearningPathUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
+    targetRole?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
     estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    estimatedDuration?: NullableIntFieldUpdateOperationsInput | number | null
     difficulty?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -55263,12 +55439,16 @@ export namespace Prisma {
   export type LearningPathUncheckedUpdateWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     goalId?: NullableStringFieldUpdateOperationsInput | string | null
-    title?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
+    targetRole?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
     estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    estimatedDuration?: NullableIntFieldUpdateOperationsInput | number | null
     difficulty?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -55279,12 +55459,16 @@ export namespace Prisma {
   export type LearningPathUncheckedUpdateManyWithoutUserInput = {
     id?: StringFieldUpdateOperationsInput | string
     goalId?: NullableStringFieldUpdateOperationsInput | string | null
-    title?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
+    targetRole?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
     estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    estimatedDuration?: NullableIntFieldUpdateOperationsInput | number | null
     difficulty?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -56014,12 +56198,16 @@ export namespace Prisma {
   export type LearningPathCreateManyGoalInput = {
     id?: string
     userId: string
-    title: string
+    name: string
+    title?: string | null
     description?: string | null
+    targetRole?: string | null
     estimatedHours?: number | null
     estimatedWeeks?: number | null
+    estimatedDuration?: number | null
     difficulty?: string | null
     status?: string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: Date | string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -56037,12 +56225,16 @@ export namespace Prisma {
 
   export type LearningPathUpdateWithoutGoalInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
+    targetRole?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
     estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    estimatedDuration?: NullableIntFieldUpdateOperationsInput | number | null
     difficulty?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -56054,12 +56246,16 @@ export namespace Prisma {
   export type LearningPathUncheckedUpdateWithoutGoalInput = {
     id?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
-    title?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
+    targetRole?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
     estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    estimatedDuration?: NullableIntFieldUpdateOperationsInput | number | null
     difficulty?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -56070,12 +56266,16 @@ export namespace Prisma {
   export type LearningPathUncheckedUpdateManyWithoutGoalInput = {
     id?: StringFieldUpdateOperationsInput | string
     userId?: StringFieldUpdateOperationsInput | string
-    title?: StringFieldUpdateOperationsInput | string
+    name?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     description?: NullableStringFieldUpdateOperationsInput | string | null
+    targetRole?: NullableStringFieldUpdateOperationsInput | string | null
     estimatedHours?: NullableIntFieldUpdateOperationsInput | number | null
     estimatedWeeks?: NullableIntFieldUpdateOperationsInput | number | null
+    estimatedDuration?: NullableIntFieldUpdateOperationsInput | number | null
     difficulty?: NullableStringFieldUpdateOperationsInput | string | null
     status?: StringFieldUpdateOperationsInput | string
+    recommendations?: NullableJsonNullValueInput | InputJsonValue
     completedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string

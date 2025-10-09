@@ -114,7 +114,7 @@ export default function OnboardingFlow({
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-4">
               <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-                Welcome to SMATRX
+                Welcome to Credably
               </h1>
               <span className="text-sm text-gray-400">
                 Complete your profile to get started
@@ -226,7 +226,7 @@ export default function OnboardingFlow({
             Complete your profile to unlock personalized career insights
           </p>
           <p className="text-sm text-gray-500">
-            Join thousands of professionals transforming their careers with SMATRX
+            Join thousands of professionals transforming their careers with Credably
           </p>
         </div>
       </div>

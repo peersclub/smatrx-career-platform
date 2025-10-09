@@ -134,3 +134,7 @@ packages/*/build/
 
 # Turbo
 .turbo/
+# Environment backups and setup scripts with secrets
+.env.backup
+update-oauth-env.sh
+OAUTH_SETUP_GUIDE.md

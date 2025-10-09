@@ -26,37 +26,37 @@ const componentConfig = {
   education: {
     label: 'Education',
     icon: GraduationCap,
-    color: 'bg-blue-500',
-    lightColor: 'bg-blue-100',
-    textColor: 'text-blue-700'
+    color: 'bg-white',
+    lightColor: 'bg-gray-800/50',
+    textColor: 'text-gray-400'
   },
   experience: {
     label: 'Experience',
     icon: Briefcase,
-    color: 'bg-green-500',
-    lightColor: 'bg-green-100',
-    textColor: 'text-green-700'
+    color: 'bg-white',
+    lightColor: 'bg-gray-800/50',
+    textColor: 'text-gray-400'
   },
   technical: {
     label: 'Technical',
     icon: Code,
-    color: 'bg-purple-500',
-    lightColor: 'bg-purple-100',
-    textColor: 'text-purple-700'
+    color: 'bg-white',
+    lightColor: 'bg-gray-800/50',
+    textColor: 'text-gray-400'
   },
   social: {
     label: 'Social',
     icon: Users,
-    color: 'bg-pink-500',
-    lightColor: 'bg-pink-100',
-    textColor: 'text-pink-700'
+    color: 'bg-white',
+    lightColor: 'bg-gray-800/50',
+    textColor: 'text-gray-400'
   },
   certifications: {
     label: 'Certifications',
     icon: Award,
-    color: 'bg-yellow-500',
-    lightColor: 'bg-yellow-100',
-    textColor: 'text-yellow-700'
+    color: 'bg-white',
+    lightColor: 'bg-gray-800/50',
+    textColor: 'text-gray-400'
   }
 } as const
 
@@ -117,7 +117,7 @@ export function ScoreBreakdownCard({ breakdown, className }: ScoreBreakdownCardP
                         onClick={() =>
                           setExpandedComponent(isExpanded ? null : component.key)
                         }
-                        className="p-1 hover:bg-gray-100 rounded transition-colors"
+                        className="p-1 hover:bg-gray-700 rounded transition-colors"
                       >
                         <ChevronRight
                           className={`w-4 h-4 text-gray-400 transition-transform ${
@@ -130,7 +130,7 @@ export function ScoreBreakdownCard({ breakdown, className }: ScoreBreakdownCardP
                 </div>
 
                 {/* Progress bar */}
-                <div className="relative h-2 bg-gray-200 rounded-full overflow-hidden">
+                <div className="relative h-2 bg-gray-700 rounded-full overflow-hidden">
                   <motion.div
                     className={config.color}
                     initial={{ width: 0 }}
@@ -170,14 +170,14 @@ export function ScoreBreakdownCard({ breakdown, className }: ScoreBreakdownCardP
 
         {/* Summary */}
         <motion.div
-          className="mt-6 pt-6 border-t"
+          className="mt-6 pt-6 border-t border-gray-700"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
           <div className="flex justify-between items-center">
-            <span className="font-semibold">Overall Score</span>
-            <span className="text-2xl font-bold text-purple-600">
+            <span className="font-semibold text-gray-300">Overall Score</span>
+            <span className="text-2xl font-bold text-white">
               {Math.round(
                 components.reduce((sum, c) => sum + c.score * c.weight, 0)
               )}

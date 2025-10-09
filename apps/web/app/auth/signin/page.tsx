@@ -3,10 +3,12 @@
 import { signIn } from 'next-auth/react';
 import { Button } from '@smatrx/ui';
 import { Card } from '@smatrx/ui';
-import { Github, Linkedin, Mail, ArrowLeft } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowLeft, Star } from 'lucide-react';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
+
+const LAST_PROVIDER_KEY = 'credably_last_auth_provider';
 
 export default function SignInPage() {
   const searchParams = useSearchParams();
@@ -14,9 +16,20 @@ export default function SignInPage() {
   const error = searchParams.get('error');
   const provider = searchParams.get('provider');
   const [isLoading, setIsLoading] = useState<string | null>(null);
+  const [lastUsedProvider, setLastUsedProvider] = useState<string | null>(null);
+
+  // Load last used provider from localStorage
+  useEffect(() => {
+    const stored = localStorage.getItem(LAST_PROVIDER_KEY);
+    if (stored) {
+      setLastUsedProvider(stored);
+    }
+  }, []);
 
   const handleSignIn = (provider: string) => {
     setIsLoading(provider);
+    // Save the provider to localStorage
+    localStorage.setItem(LAST_PROVIDER_KEY, provider);
     signIn(provider, {
       callbackUrl,
     });
@@ -40,7 +53,7 @@ export default function SignInPage() {
         <Card className="p-8 bg-gray-900/50 backdrop-blur-lg border-gray-800">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent mb-2">
-              Welcome to SMATRX
+              Welcome to Credably
             </h1>
             <p className="text-gray-400">
               {provider && isLoading ? 
@@ -63,35 +76,59 @@ export default function SignInPage() {
           )}
 
           <div className="space-y-4">
-            <Button
-              onClick={() => handleSignIn('github')}
-              disabled={isLoading !== null}
-              className="w-full justify-center gap-3"
-              variant="outline"
-            >
-              <Github className="w-5 h-5" />
-              {isLoading === 'github' ? 'Connecting...' : 'Continue with GitHub'}
-            </Button>
+            <div className="relative">
+              <Button
+                onClick={() => handleSignIn('github')}
+                disabled={isLoading !== null}
+                className={`w-full justify-center gap-3 ${lastUsedProvider === 'github' ? 'ring-2 ring-purple-500' : ''}`}
+                variant="outline"
+              >
+                <Github className="w-5 h-5" />
+                {isLoading === 'github' ? 'Connecting...' : 'Continue with GitHub'}
+              </Button>
+              {lastUsedProvider === 'github' && (
+                <div className="absolute -top-2 -right-2 flex items-center gap-1 bg-purple-600 text-white text-xs px-2 py-1 rounded-full">
+                  <Star className="w-3 h-3" />
+                  Last Used
+                </div>
+              )}
+            </div>
 
-            <Button
-              onClick={() => handleSignIn('linkedin')}
-              disabled={isLoading !== null}
-              className="w-full justify-center gap-3"
-              variant="outline"
-            >
-              <Linkedin className="w-5 h-5" />
-              {isLoading === 'linkedin' ? 'Connecting...' : 'Continue with LinkedIn'}
-            </Button>
+            <div className="relative">
+              <Button
+                onClick={() => handleSignIn('linkedin')}
+                disabled={isLoading !== null}
+                className={`w-full justify-center gap-3 ${lastUsedProvider === 'linkedin' ? 'ring-2 ring-purple-500' : ''}`}
+                variant="outline"
+              >
+                <Linkedin className="w-5 h-5" />
+                {isLoading === 'linkedin' ? 'Connecting...' : 'Continue with LinkedIn'}
+              </Button>
+              {lastUsedProvider === 'linkedin' && (
+                <div className="absolute -top-2 -right-2 flex items-center gap-1 bg-purple-600 text-white text-xs px-2 py-1 rounded-full">
+                  <Star className="w-3 h-3" />
+                  Last Used
+                </div>
+              )}
+            </div>
 
-            <Button
-              onClick={() => handleSignIn('google')}
-              disabled={isLoading !== null}
-              className="w-full justify-center gap-3"
-              variant="outline"
-            >
-              <Mail className="w-5 h-5" />
-              {isLoading === 'google' ? 'Connecting...' : 'Continue with Google'}
-            </Button>
+            <div className="relative">
+              <Button
+                onClick={() => handleSignIn('google')}
+                disabled={isLoading !== null}
+                className={`w-full justify-center gap-3 ${lastUsedProvider === 'google' ? 'ring-2 ring-purple-500' : ''}`}
+                variant="outline"
+              >
+                <Mail className="w-5 h-5" />
+                {isLoading === 'google' ? 'Connecting...' : 'Continue with Google'}
+              </Button>
+              {lastUsedProvider === 'google' && (
+                <div className="absolute -top-2 -right-2 flex items-center gap-1 bg-purple-600 text-white text-xs px-2 py-1 rounded-full">
+                  <Star className="w-3 h-3" />
+                  Last Used
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="mt-8 text-center text-sm text-gray-500">

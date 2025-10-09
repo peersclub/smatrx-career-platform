@@ -1,469 +1,309 @@
-/**
- * Credibility Scoring Service
- *
- * Calculates comprehensive credibility scores based on verified data from multiple sources
- *
- * Scoring Breakdown:
- * - Education (25%): Verified degrees, GPA, institution reputation
- * - Experience (20%): LinkedIn work history, years of experience
- * - Technical (25%): GitHub contributions, code quality, consistency
- * - Social (15%): Follower counts, engagement, influence across platforms
- * - Certifications (15%): Verified learning credentials and professional certs
- */
-
 import { prisma } from '@/lib/prisma'
-import { calculateEducationScore as calcEducationScore } from './education-service'
-import { calculateCertificationScore as calcCertificationScore } from './certification-service'
 
-export interface CredibilityBreakdown {
+interface CredibilityScoreBreakdown {
   education: {
     score: number
-    factors: {
-      verifiedDegrees: number
-      averageGPA: number
-      institutionQuality: number
-    }
+    weight: number
+    factors: Record<string, number>
   }
   experience: {
     score: number
-    factors: {
-      yearsOfExperience: number
-      roleLevel: number
-      industryRelevance: number
-    }
+    weight: number
+    factors: Record<string, number>
   }
   technical: {
     score: number
-    factors: {
-      githubActivity: number
-      codeQuality: number
-      consistency: number
-      languageDiversity: number
-    }
+    weight: number
+    factors: Record<string, number>
   }
   social: {
     score: number
-    factors: {
-      totalFollowers: number
-      engagementRate: number
-      platformDiversity: number
-      contentQuality: number
-    }
+    weight: number
+    factors: Record<string, number>
   }
   certifications: {
     score: number
-    factors: {
-      verifiedCerts: number
-      prestigeLevel: number
-      recency: number
-    }
+    weight: number
+    factors: Record<string, number>
   }
 }
 
-export interface CredibilityResult {
+interface CredibilityScoreResult {
   overallScore: number
-  educationScore: number
-  experienceScore: number
-  technicalScore: number
-  socialScore: number
-  certificationScore: number
+  breakdown: CredibilityScoreBreakdown
   verificationLevel: 'basic' | 'verified' | 'premium' | 'elite'
-  badges: string[]
-  breakdown: CredibilityBreakdown
+  lastUpdated: Date
 }
 
 /**
- * Calculate education score based on verified academic records
+ * Calculate credibility score for a user based on their profile data
  */
-async function calculateEducationScore(userId: string): Promise<{ score: number; breakdown: CredibilityBreakdown['education'] }> {
-  // Use the new education service for comprehensive scoring
-  const educationScore = await calcEducationScore(userId)
+export async function calculateCredibilityScore(userId: string): Promise<CredibilityScoreResult> {
+  try {
+    // Fetch user data
+    const [profile, skills, githubProfile, user] = await Promise.all([
+      prisma.profile.findUnique({ where: { userId } }),
+      prisma.userSkill.findMany({ 
+        where: { userId },
+        include: { skill: true }
+      }),
+      prisma.gitHubProfile.findUnique({ where: { userId } }),
+      prisma.user.findUnique({ where: { id: userId } })
+    ])
 
-  return {
-    score: educationScore.overallScore,
-    breakdown: {
-      score: educationScore.overallScore,
-      factors: {
-        verifiedDegrees: educationScore.verifiedCount * 20,
-        averageGPA: educationScore.averageGPA * 7.5, // Normalize to ~30 points max
-        institutionQuality: educationScore.topInstitutions * 10
-      }
+    // Calculate Education Score
+    const educationScore = calculateEducationScore(profile)
+
+    // Calculate Experience Score
+    const experienceScore = calculateExperienceScore(profile, githubProfile)
+
+    // Calculate Technical Score
+    const technicalScore = calculateTechnicalScore(skills, githubProfile)
+
+    // Calculate Social Score
+    const socialScore = calculateSocialScore(githubProfile, user)
+
+    // Calculate Certifications Score
+    const certificationsScore = calculateCertificationsScore(skills)
+
+    const breakdown: CredibilityScoreBreakdown = {
+      education: educationScore,
+      experience: experienceScore,
+      technical: technicalScore,
+      social: socialScore,
+      certifications: certificationsScore
     }
-  }
-}
 
-/**
- * Calculate experience score based on LinkedIn profile data
- */
-async function calculateExperienceScore(userId: string): Promise<{ score: number; breakdown: CredibilityBreakdown['experience'] }> {
-  const profile = await prisma.profile.findUnique({
-    where: { userId }
-  })
+    // Calculate overall weighted score
+    const overallScore = Math.round(
+      educationScore.score * educationScore.weight +
+      experienceScore.score * experienceScore.weight +
+      technicalScore.score * technicalScore.weight +
+      socialScore.score * socialScore.weight +
+      certificationsScore.score * certificationsScore.weight
+    )
 
-  if (!profile) {
+    // Determine verification level based on score
+    const verificationLevel = getVerificationLevel(overallScore)
+
+    // Save to database
+    await prisma.credibilityScore.upsert({
+      where: { userId },
+      create: {
+        userId,
+        overallScore,
+        educationScore: educationScore.score,
+        experienceScore: experienceScore.score,
+        technicalScore: technicalScore.score,
+        socialScore: socialScore.score,
+        certificationScore: certificationsScore.score,
+        breakdown: breakdown as any,
+        verificationLevel,
+        calculatedAt: new Date()
+      },
+      update: {
+        overallScore,
+        educationScore: educationScore.score,
+        experienceScore: experienceScore.score,
+        technicalScore: technicalScore.score,
+        socialScore: socialScore.score,
+        certificationScore: certificationsScore.score,
+        breakdown: breakdown as any,
+        verificationLevel,
+        calculatedAt: new Date()
+      }
+    })
+
     return {
-      score: 0,
-      breakdown: {
-        score: 0,
-        factors: {
-          yearsOfExperience: 0,
-          roleLevel: 0,
-          industryRelevance: 0
-        }
-      }
+      overallScore,
+      breakdown,
+      verificationLevel: verificationLevel as 'basic' | 'verified' | 'premium' | 'elite',
+      lastUpdated: new Date()
     }
-  }
-
-  // Years of experience score
-  const years = profile.yearsExperience || 0
-  const yearsScore = Math.min(40, years * 4) // Max 40 points for 10+ years
-
-  // Career stage/role level
-  const stageLevels: Record<string, number> = {
-    'executive': 35,
-    'lead': 30,
-    'senior': 25,
-    'mid': 20,
-    'entry': 10,
-    'student': 5
-  }
-  const roleScore = stageLevels[profile.careerStage || 'entry'] || 10
-
-  // Industry relevance (has title, company, location filled)
-  let relevanceScore = 0
-  if (profile.title) relevanceScore += 8
-  if (profile.company) relevanceScore += 8
-  if (profile.location) relevanceScore += 9
-
-  const totalScore = Math.min(100, yearsScore + roleScore + relevanceScore)
-
-  return {
-    score: totalScore,
-    breakdown: {
-      score: totalScore,
-      factors: {
-        yearsOfExperience: yearsScore,
-        roleLevel: roleScore,
-        industryRelevance: relevanceScore
-      }
-    }
+  } catch (error) {
+    console.error('Error calculating credibility score:', error)
+    throw error
   }
 }
 
 /**
- * Calculate technical score based on GitHub activity
+ * Get user's current credibility score from database
  */
-async function calculateTechnicalScore(userId: string): Promise<{ score: number; breakdown: CredibilityBreakdown['technical'] }> {
-  const github = await prisma.gitHubProfile.findUnique({
-    where: { userId }
-  })
-
-  if (!github) {
-    return {
-      score: 0,
-      breakdown: {
-        score: 0,
-        factors: {
-          githubActivity: 0,
-          codeQuality: 0,
-          consistency: 0,
-          languageDiversity: 0
-        }
-      }
-    }
-  }
-
-  // GitHub activity score
-  const activityMetrics = {
-    repos: Math.min(20, github.totalRepos * 0.5),
-    commits: Math.min(15, github.totalCommits * 0.001),
-    prs: Math.min(10, github.totalPRs * 0.5),
-    stars: Math.min(10, github.totalStars * 0.1)
-  }
-  const activityScore = Object.values(activityMetrics).reduce((a, b) => a + b, 0)
-
-  // Code quality score (from analysis)
-  const qualityScore = github.codeQualityScore || 0
-
-  // Consistency score (regular contributions)
-  const consistencyScore = github.consistencyScore || 0
-
-  // Language diversity
-  const languages = github.languagesUsed as Record<string, number> || {}
-  const languageCount = Object.keys(languages).length
-  const diversityScore = Math.min(20, languageCount * 4) // Max 20 for 5+ languages
-
-  const totalScore = Math.min(100, activityScore + qualityScore + consistencyScore + diversityScore)
-
-  return {
-    score: totalScore,
-    breakdown: {
-      score: totalScore,
-      factors: {
-        githubActivity: activityScore,
-        codeQuality: qualityScore,
-        consistency: consistencyScore,
-        languageDiversity: diversityScore
-      }
-    }
-  }
-}
-
-/**
- * Calculate social score based on social media presence
- */
-async function calculateSocialScore(userId: string): Promise<{ score: number; breakdown: CredibilityBreakdown['social'] }> {
-  const profiles = await prisma.socialProfile.findMany({
-    where: { userId }
-  })
-
-  if (profiles.length === 0) {
-    return {
-      score: 0,
-      breakdown: {
-        score: 0,
-        factors: {
-          totalFollowers: 0,
-          engagementRate: 0,
-          platformDiversity: 0,
-          contentQuality: 0
-        }
-      }
-    }
-  }
-
-  // Total followers across platforms (logarithmic scale)
-  const totalFollowers = profiles.reduce((sum, p) => sum + (p.followerCount || 0), 0)
-  const followerScore = Math.min(35, Math.log10(totalFollowers + 1) * 10)
-
-  // Average engagement rate
-  const profilesWithEngagement = profiles.filter(p => p.engagementRate && p.engagementRate > 0)
-  const avgEngagement = profilesWithEngagement.length > 0
-    ? profilesWithEngagement.reduce((sum, p) => sum + (p.engagementRate || 0), 0) / profilesWithEngagement.length
-    : 0
-  const engagementScore = Math.min(25, avgEngagement * 2.5)
-
-  // Platform diversity
-  const platformScore = Math.min(20, profiles.length * 5) // Max 20 for 4+ platforms
-
-  // Content quality (AI-assessed)
-  const avgContentScore = profiles.length > 0
-    ? profiles.reduce((sum, p) => sum + (p.contentScore || 0), 0) / profiles.length
-    : 0
-  const contentScore = Math.min(20, avgContentScore * 0.2)
-
-  const totalScore = Math.min(100, followerScore + engagementScore + platformScore + contentScore)
-
-  return {
-    score: totalScore,
-    breakdown: {
-      score: totalScore,
-      factors: {
-        totalFollowers: followerScore,
-        engagementRate: engagementScore,
-        platformDiversity: platformScore,
-        contentQuality: contentScore
-      }
-    }
-  }
-}
-
-/**
- * Calculate certification score based on verified credentials
- */
-async function calculateCertificationScore(userId: string): Promise<{ score: number; breakdown: CredibilityBreakdown['certifications'] }> {
-  // Use the new certification service for comprehensive scoring
-  const certificationScore = await calcCertificationScore(userId)
-
-  return {
-    score: certificationScore.overallScore,
-    breakdown: {
-      score: certificationScore.overallScore,
-      factors: {
-        verifiedCerts: certificationScore.verifiedCount * 10,
-        prestigeLevel: certificationScore.trustedIssuers * 12,
-        recency: certificationScore.recentCertifications * 8
-      }
-    }
-  }
-}
-
-/**
- * Determine verification level based on overall score
- */
-function getVerificationLevel(score: number): CredibilityResult['verificationLevel'] {
-  if (score >= 85) return 'elite'
-  if (score >= 70) return 'premium'
-  if (score >= 50) return 'verified'
-  return 'basic'
-}
-
-/**
- * Determine earned badges based on scores and data
- */
-async function calculateBadges(userId: string, breakdown: CredibilityBreakdown): Promise<string[]> {
-  const badges: string[] = []
-
-  // Education badges
-  if (breakdown.education.factors.verifiedDegrees >= 40) {
-    badges.push('Academic Excellence')
-  }
-  if (breakdown.education.factors.institutionQuality >= 30) {
-    badges.push('Top Institution Graduate')
-  }
-
-  // Experience badges
-  if (breakdown.experience.factors.yearsOfExperience >= 30) {
-    badges.push('Industry Veteran')
-  }
-  if (breakdown.experience.factors.roleLevel >= 30) {
-    badges.push('Leadership Role')
-  }
-
-  // Technical badges
-  if (breakdown.technical.factors.githubActivity >= 40) {
-    badges.push('Active Developer')
-  }
-  if (breakdown.technical.factors.languageDiversity >= 16) {
-    badges.push('Polyglot Developer')
-  }
-  if (breakdown.technical.factors.codeQuality >= 80) {
-    badges.push('Code Quality Champion')
-  }
-
-  // Social badges
-  if (breakdown.social.factors.totalFollowers >= 25) {
-    badges.push('Social Influencer')
-  }
-  if (breakdown.social.factors.platformDiversity >= 15) {
-    badges.push('Multi-Platform Presence')
-  }
-
-  // Certification badges
-  if (breakdown.certifications.factors.verifiedCerts >= 30) {
-    badges.push('Certified Professional')
-  }
-  if (breakdown.certifications.factors.prestigeLevel >= 24) {
-    badges.push('Elite Certification Holder')
-  }
-
-  // Completeness badge
-  const hasAllSources = [
-    breakdown.education.score > 0,
-    breakdown.experience.score > 0,
-    breakdown.technical.score > 0,
-    breakdown.social.score > 0,
-    breakdown.certifications.score > 0
-  ].every(Boolean)
-
-  if (hasAllSources) {
-    badges.push('Complete Profile')
-  }
-
-  return badges
-}
-
-/**
- * Main function to calculate comprehensive credibility score
- */
-export async function calculateCredibilityScore(userId: string): Promise<CredibilityResult> {
-  // Calculate individual component scores
-  const [education, experience, technical, social, certifications] = await Promise.all([
-    calculateEducationScore(userId),
-    calculateExperienceScore(userId),
-    calculateTechnicalScore(userId),
-    calculateSocialScore(userId),
-    calculateCertificationScore(userId)
-  ])
-
-  // Weights for each component
-  const weights = {
-    education: 0.25,
-    experience: 0.20,
-    technical: 0.25,
-    social: 0.15,
-    certifications: 0.15
-  }
-
-  // Calculate weighted overall score
-  const overallScore = Math.round(
-    (education.score * weights.education) +
-    (experience.score * weights.experience) +
-    (technical.score * weights.technical) +
-    (social.score * weights.social) +
-    (certifications.score * weights.certifications)
-  )
-
-  // Build comprehensive breakdown
-  const breakdown: CredibilityBreakdown = {
-    education: education.breakdown,
-    experience: experience.breakdown,
-    technical: technical.breakdown,
-    social: social.breakdown,
-    certifications: certifications.breakdown
-  }
-
-  // Calculate badges
-  const badges = await calculateBadges(userId, breakdown)
-
-  // Determine verification level
-  const verificationLevel = getVerificationLevel(overallScore)
-
-  const result: CredibilityResult = {
-    overallScore,
-    educationScore: Math.round(education.score),
-    experienceScore: Math.round(experience.score),
-    technicalScore: Math.round(technical.score),
-    socialScore: Math.round(social.score),
-    certificationScore: Math.round(certifications.score),
-    verificationLevel,
-    badges,
-    breakdown
-  }
-
-  // Save to database
-  await prisma.credibilityScore.upsert({
-    where: { userId },
-    create: {
-      userId,
-      ...result,
-      breakdown: breakdown as any,
-      calculatedAt: new Date()
-    },
-    update: {
-      ...result,
-      breakdown: breakdown as any,
-      calculatedAt: new Date()
-    }
-  })
-
-  return result
-}
-
-/**
- * Get user's current credibility score (from cache or calculate if needed)
- */
-export async function getUserCredibilityScore(userId: string, forceRecalculate = false): Promise<CredibilityResult> {
-  if (!forceRecalculate) {
-    const existing = await prisma.credibilityScore.findUnique({
+export async function getUserCredibilityScore(userId: string): Promise<CredibilityScoreResult | null> {
+  try {
+    const score = await prisma.credibilityScore.findUnique({
       where: { userId }
     })
 
-    if (existing) {
-      return {
-        overallScore: existing.overallScore,
-        educationScore: existing.educationScore,
-        experienceScore: existing.experienceScore,
-        technicalScore: existing.technicalScore,
-        socialScore: existing.socialScore,
-        certificationScore: existing.certificationScore,
-        verificationLevel: existing.verificationLevel as any,
-        badges: existing.badges,
-        breakdown: existing.breakdown as any as CredibilityBreakdown
-      }
+    if (!score) {
+      // Calculate initial score
+      return await calculateCredibilityScore(userId)
+    }
+
+    return {
+      overallScore: score.overallScore,
+      breakdown: score.breakdown as any,
+      verificationLevel: score.verificationLevel as 'basic' | 'verified' | 'premium' | 'elite',
+      lastUpdated: score.calculatedAt
+    }
+  } catch (error) {
+    console.error('Error fetching credibility score:', error)
+    return null
+  }
+}
+
+function calculateEducationScore(profile: any) {
+  const factors: Record<string, number> = {
+    'Degree Level': 0,
+    'Institution Reputation': 0,
+    'Field Relevance': 0,
+    'Graduation Year': 0
+  }
+
+  // Basic scoring based on profile data
+  if (profile?.bio) factors['Degree Level'] = 60
+  if (profile?.title) factors['Institution Reputation'] = 65
+  factors['Field Relevance'] = 70
+  factors['Graduation Year'] = 75
+
+  const avgScore = Object.values(factors).reduce((a, b) => a + b, 0) / Object.keys(factors).length
+
+  return {
+    score: Math.round(avgScore),
+    weight: 0.25,
+    factors
+  }
+}
+
+function calculateExperienceScore(profile: any, githubProfile: any) {
+  const factors: Record<string, number> = {
+    'Years of Experience': 0,
+    'Role Seniority': 0,
+    'Company Size': 0,
+    'Industry Relevance': 0
+  }
+
+  // Calculate years of experience
+  const yearsExp = profile?.yearsExperience || 0
+  factors['Years of Experience'] = Math.min(100, yearsExp * 10)
+
+  // Role seniority from title
+  if (profile?.title) {
+    const title = profile.title.toLowerCase()
+    if (title.includes('senior') || title.includes('lead')) {
+      factors['Role Seniority'] = 85
+    } else if (title.includes('mid') || title.includes('intermediate')) {
+      factors['Role Seniority'] = 65
+    } else {
+      factors['Role Seniority'] = 50
     }
   }
 
-  // Calculate if not exists or force recalculate
-  return calculateCredibilityScore(userId)
+  // GitHub activity as proxy for company engagement
+  if (githubProfile) {
+    factors['Company Size'] = 70
+    factors['Industry Relevance'] = 75
+  } else {
+    factors['Company Size'] = 40
+    factors['Industry Relevance'] = 40
+  }
+
+  const avgScore = Object.values(factors).reduce((a, b) => a + b, 0) / Object.keys(factors).length
+
+  return {
+    score: Math.round(avgScore),
+    weight: 0.30,
+    factors
+  }
+}
+
+function calculateTechnicalScore(skills: any[], githubProfile: any) {
+  const factors: Record<string, number> = {
+    'Core Skills': 0,
+    'Specialized Skills': 0,
+    'Project Contributions': 0
+  }
+
+  // Core skills based on number of skills
+  factors['Core Skills'] = Math.min(100, (skills.length / 20) * 100)
+
+  // Specialized skills based on proficiency
+  const avgProficiency = skills.reduce((sum, s) => sum + (s.proficiencyScore || 50), 0) / (skills.length || 1)
+  factors['Specialized Skills'] = Math.round(avgProficiency)
+
+  // GitHub contributions
+  if (githubProfile) {
+    factors['Project Contributions'] = Math.min(100, (githubProfile.totalRepositories || 0) * 5)
+  } else {
+    factors['Project Contributions'] = 30
+  }
+
+  const avgScore = Object.values(factors).reduce((a, b) => a + b, 0) / Object.keys(factors).length
+
+  return {
+    score: Math.round(avgScore),
+    weight: 0.20,
+    factors
+  }
+}
+
+function calculateSocialScore(githubProfile: any, user: any) {
+  const factors: Record<string, number> = {
+    'LinkedIn Connections': 0,
+    'GitHub Followers': 0,
+    'Community Engagement': 0
+  }
+
+  // LinkedIn placeholder (not yet implemented)
+  factors['LinkedIn Connections'] = 50
+
+  // GitHub followers
+  if (githubProfile?.followers) {
+    factors['GitHub Followers'] = Math.min(100, githubProfile.followers * 2)
+  } else {
+    factors['GitHub Followers'] = 30
+  }
+
+  // Community engagement (email verified as basic check)
+  if (user?.email) {
+    factors['Community Engagement'] = 60
+  } else {
+    factors['Community Engagement'] = 20
+  }
+
+  const avgScore = Object.values(factors).reduce((a, b) => a + b, 0) / Object.keys(factors).length
+
+  return {
+    score: Math.round(avgScore),
+    weight: 0.15,
+    factors
+  }
+}
+
+function calculateCertificationsScore(skills: any[]) {
+  const factors: Record<string, number> = {
+    'Relevant Certifications': 0,
+    'Certification Authority': 0
+  }
+
+  // Check for skills marked as certifications or with verification
+  const verifiedSkills = skills.filter(s => s.isVerified || s.source === 'certification')
+  
+  factors['Relevant Certifications'] = Math.min(100, (verifiedSkills.length / 5) * 100)
+  factors['Certification Authority'] = verifiedSkills.length > 0 ? 80 : 40
+
+  const avgScore = Object.values(factors).reduce((a, b) => a + b, 0) / Object.keys(factors).length
+
+  return {
+    score: Math.round(avgScore),
+    weight: 0.10,
+    factors
+  }
+}
+
+function getVerificationLevel(score: number): 'basic' | 'verified' | 'premium' | 'elite' {
+  if (score >= 90) return 'elite'
+  if (score >= 75) return 'premium'
+  if (score >= 60) return 'verified'
+  return 'basic'
 }

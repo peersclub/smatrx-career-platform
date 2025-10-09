@@ -17,29 +17,29 @@ interface CredibilityScoreCardProps {
 const verificationLevelConfig = {
   basic: {
     label: 'Basic',
-    color: 'bg-gray-500',
-    textColor: 'text-gray-700',
+    color: 'bg-gray-800',
+    textColor: 'text-gray-300',
     icon: Shield,
     badgeVariant: 'secondary' as const
   },
   verified: {
     label: 'Verified',
-    color: 'bg-blue-500',
-    textColor: 'text-blue-700',
+    color: 'bg-gray-800',
+    textColor: 'text-gray-300',
     icon: Award,
     badgeVariant: 'default' as const
   },
   premium: {
     label: 'Premium',
-    color: 'bg-purple-500',
-    textColor: 'text-purple-700',
+    color: 'bg-gray-800',
+    textColor: 'text-gray-300',
     icon: Star,
     badgeVariant: 'default' as const
   },
   elite: {
     label: 'Elite',
-    color: 'bg-yellow-500',
-    textColor: 'text-yellow-600',
+    color: 'bg-gray-800',
+    textColor: 'text-gray-300',
     icon: Crown,
     badgeVariant: 'default' as const
   }
@@ -102,12 +102,9 @@ export function CredibilityScoreCard({
   const progress = (displayScore / 100) * circumference
   const dashOffset = circumference - progress
 
-  // Determine color based on score
+  // Determine color based on score - using white for emphasis
   const getScoreColor = (score: number) => {
-    if (score >= 80) return '#10b981' // green
-    if (score >= 60) return '#8b5cf6' // purple
-    if (score >= 40) return '#3b82f6' // blue
-    return '#6b7280' // gray
+    return '#ffffff' // white for all scores
   }
 
   return (
@@ -174,9 +171,9 @@ export function CredibilityScoreCard({
             <motion.div
               className={`flex items-center gap-1 text-sm ${
                 hasIncreased
-                  ? 'text-green-600'
+                  ? 'text-white'
                   : hasDecreased
-                  ? 'text-red-600'
+                  ? 'text-gray-400'
                   : 'text-gray-500'
               }`}
               initial={{ opacity: 0, y: 10 }}

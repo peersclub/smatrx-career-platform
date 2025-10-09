@@ -20,23 +20,23 @@ interface DataCompletenessCardProps {
 const priorityConfig = {
   critical: {
     icon: AlertCircle,
-    color: 'text-red-500',
-    bg: 'bg-red-50',
-    border: 'border-red-200',
+    color: 'text-red-400',
+    bg: 'bg-red-900/20',
+    border: 'border-red-800',
     label: 'Critical'
   },
   important: {
     icon: Circle,
-    color: 'text-yellow-500',
-    bg: 'bg-yellow-50',
-    border: 'border-yellow-200',
+    color: 'text-yellow-400',
+    bg: 'bg-yellow-900/20',
+    border: 'border-yellow-800',
     label: 'Important'
   },
   optional: {
     icon: Circle,
     color: 'text-gray-400',
-    bg: 'bg-gray-50',
-    border: 'border-gray-200',
+    bg: 'bg-gray-800/50',
+    border: 'border-gray-700',
     label: 'Optional'
   }
 }
@@ -185,13 +185,15 @@ export function DataCompletenessCard({
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <button
-              onClick={() => onAction?.('all')}
-              className="w-full px-4 py-3 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-700 transition-colors flex items-center justify-center gap-2"
-            >
-              Complete Profile
-              <ArrowRight className="w-4 h-4" />
-            </button>
+            <div className="flex justify-center">
+              <button
+                onClick={() => onAction?.('all')}
+                className="px-6 py-3 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2"
+              >
+                Complete Profile
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
           </motion.div>
         )}
       </CardContent>

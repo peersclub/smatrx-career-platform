@@ -17,7 +17,10 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url)
     const forceRecalculate = searchParams.get('force') === 'true'
 
-    const score = await getUserCredibilityScore(session.user.id, forceRecalculate)
+    // If force recalculate, use calculateCredibilityScore instead
+    const score = forceRecalculate 
+      ? await calculateCredibilityScore(session.user.id)
+      : await getUserCredibilityScore(session.user.id)
 
     return NextResponse.json({
       success: true,

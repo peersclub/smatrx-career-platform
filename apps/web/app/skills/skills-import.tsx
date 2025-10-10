@@ -70,11 +70,11 @@ export default function SkillsImport({ userId, recentImports }: SkillsImportProp
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'completed':
-        return <CheckCircle className="w-4 h-4 text-green-500" />;
+        return <CheckCircle className="w-4 h-4 text-gray-400" />;
       case 'failed':
-        return <XCircle className="w-4 h-4 text-red-500" />;
+        return <XCircle className="w-4 h-4 text-gray-400" />;
       case 'processing':
-        return <Loader2 className="w-4 h-4 text-yellow-500 animate-spin" />;
+        return <Loader2 className="w-4 h-4 text-gray-400 animate-spin" />;
       default:
         return <Clock className="w-4 h-4 text-gray-500" />;
     }
@@ -83,13 +83,13 @@ export default function SkillsImport({ userId, recentImports }: SkillsImportProp
   const getStatusLabel = (status: string) => {
     switch (status) {
       case 'completed':
-        return { text: 'Completed', className: 'bg-green-900/30 text-green-400 border-green-700' };
+        return { text: 'Done', className: 'bg-gray-800 text-white border-gray-700' };
       case 'failed':
-        return { text: 'Failed', className: 'bg-red-900/30 text-red-400 border-red-700' };
+        return { text: 'Failed', className: 'bg-gray-800 text-gray-400 border-gray-700' };
       case 'processing':
-        return { text: 'Processing', className: 'bg-yellow-900/30 text-yellow-400 border-yellow-700' };
+        return { text: 'Processing', className: 'bg-gray-800 text-gray-300 border-gray-700' };
       default:
-        return { text: 'Pending', className: 'bg-gray-900/30 text-gray-400 border-gray-700' };
+        return { text: 'Pending', className: 'bg-gray-800 text-gray-400 border-gray-700' };
     }
   };
 
@@ -207,35 +207,31 @@ export default function SkillsImport({ userId, recentImports }: SkillsImportProp
         </Card>
       </div>
 
-      {/* Recent Imports */}
+      {/* Recent Imports - Compact Version */}
       {recentImports.length > 0 && (
-        <Card className="p-6">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="font-semibold">Recent Imports</h3>
-            <span className="text-sm text-gray-500">Last 5 imports</span>
+        <Card className="p-4">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-sm font-semibold text-gray-300">Recent Imports</h3>
+            <span className="text-xs text-gray-500">{recentImports.length} total</span>
           </div>
-          <div className="space-y-3">
+          <div className="space-y-2">
             {recentImports.map((imp) => {
               const statusLabel = getStatusLabel(imp.status);
               return (
-                <div key={imp.id} className="flex items-center justify-between p-3 bg-gray-800/30 rounded-lg">
-                  <div className="flex items-center gap-3">
+                <div key={imp.id} className="flex items-center justify-between py-2 px-3 bg-gray-800/30 hover:bg-gray-800/50 rounded-lg transition-colors">
+                  <div className="flex items-center gap-2 flex-1 min-w-0">
                     {getStatusIcon(imp.status)}
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="font-medium capitalize">{imp.source}</span>
-                        <span className={`text-xs px-2 py-0.5 rounded-full border ${statusLabel.className}`}>
-                          {statusLabel.text}
-                        </span>
-                      </div>
-                      <div className="text-xs text-gray-500 mt-1">
-                        {formatTimestamp(imp.startedAt)}
-                      </div>
-                    </div>
+                    <span className="font-medium capitalize text-sm">{imp.source}</span>
+                    <span className={`text-xs px-2 py-0.5 rounded border ${statusLabel.className}`}>
+                      {statusLabel.text}
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      {formatTimestamp(imp.startedAt)}
+                    </span>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 flex-shrink-0">
                     {imp.error && (
-                      <span className="text-xs text-red-400 max-w-[200px] truncate" title={imp.error}>
+                      <span className="text-xs text-gray-400 max-w-[150px] truncate" title={imp.error}>
                         {imp.error}
                       </span>
                     )}
@@ -244,11 +240,10 @@ export default function SkillsImport({ userId, recentImports }: SkillsImportProp
                         size="sm"
                         variant="outline"
                         onClick={() => handleRetry(imp.source)}
-                        className="text-xs"
+                        className="text-xs px-2 py-1 h-7"
                         disabled={isImporting !== null}
                       >
-                        <RefreshCw className="w-3 h-3 mr-1" />
-                        Retry
+                        <RefreshCw className="w-3 h-3" />
                       </Button>
                     )}
                   </div>

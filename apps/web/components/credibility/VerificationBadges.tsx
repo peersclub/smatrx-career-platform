@@ -23,7 +23,7 @@ export interface VerificationBadge {
 }
 
 interface VerificationBadgesProps {
-  badges: VerificationBadge[]
+  badges?: VerificationBadge[]
   className?: string
 }
 
@@ -75,8 +75,31 @@ const badgeColors = {
   }
 }
 
-export function VerificationBadges({ badges, className }: VerificationBadgesProps) {
+export function VerificationBadges({ badges = [], className }: VerificationBadgesProps) {
   const earnedCount = badges.filter(b => b.earned).length
+
+  // Show empty state if no badges
+  if (badges.length === 0) {
+    return (
+      <Card className={className}>
+        <CardHeader>
+          <CardTitle>Verification Badges</CardTitle>
+          <CardDescription>
+            Complete actions to earn verification badges
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="text-center py-8">
+            <Lock className="w-12 h-12 mx-auto mb-3 text-gray-600 opacity-50" />
+            <p className="text-sm text-gray-400 mb-2">No badges yet</p>
+            <p className="text-xs text-gray-500">
+              Connect your accounts and complete your profile to unlock badges
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+    )
+  }
 
   return (
     <Card className={className}>

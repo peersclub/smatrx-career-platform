@@ -49,53 +49,53 @@ export default function DashboardContent({ userName, data }: DashboardContentPro
       <div className="mb-8">
         <h2 className="text-xl font-semibold mb-4">Quick Actions</h2>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-          <Link href="/skills/import">
-            <Card className={`p-6 hover:border-purple-500 transition-colors cursor-pointer ${data.hasGitHub ? 'opacity-50' : ''}`}>
-              <Github className="w-8 h-8 mb-2 text-purple-400" />
+          <Link href="/skills/import" className="h-full">
+            <Card className={`p-6 h-full hover:border-purple-500 transition-colors cursor-pointer flex flex-col ${data.hasGitHub ? 'opacity-50' : ''}`}>
+              <Github className="w-8 h-8 mb-3 text-purple-400" />
               <h3 className="font-semibold mb-1">
-                {data.hasGitHub ? '✓ GitHub Connected' : 'Import from GitHub'}
+                Import from GitHub
               </h3>
               <p className="text-sm text-gray-400">
-                {data.hasGitHub ? 'Sync your repositories' : 'Analyze your repositories'}
+                Analyze your repositories
               </p>
             </Card>
           </Link>
           
-          <Link href="/skills/import">
-            <Card className={`p-6 hover:border-pink-500 transition-colors cursor-pointer ${data.hasLinkedIn ? 'opacity-50' : ''}`}>
-              <Linkedin className="w-8 h-8 mb-2 text-purple-400" />
+          <Link href="/skills/import" className="h-full">
+            <Card className={`p-6 h-full hover:border-purple-500 transition-colors cursor-pointer flex flex-col ${data.hasLinkedIn ? 'opacity-50' : ''}`}>
+              <Linkedin className="w-8 h-8 mb-3 text-purple-400" />
               <h3 className="font-semibold mb-1">
-                {data.hasLinkedIn ? '✓ LinkedIn Connected' : 'Import from LinkedIn'}
+                Import from LinkedIn
               </h3>
               <p className="text-sm text-gray-400">
-                {data.hasLinkedIn ? 'Update your profile' : 'Sync your profile'}
+                Sync your profile
               </p>
             </Card>
           </Link>
           
-          <Link href="/resume/upload">
-            <Card className={`p-6 hover:border-purple-500 transition-colors cursor-pointer ${data.hasResume ? 'opacity-50' : ''}`}>
-              <FileText className="w-8 h-8 mb-2 text-purple-400" />
+          <Link href="/resume/upload" className="h-full">
+            <Card className={`p-6 h-full hover:border-purple-500 transition-colors cursor-pointer flex flex-col ${data.hasResume ? 'opacity-50' : ''}`}>
+              <FileText className="w-8 h-8 mb-3 text-purple-400" />
               <h3 className="font-semibold mb-1">
-                {data.hasResume ? '✓ Resume Uploaded' : 'Upload Resume'}
+                Upload Resume
               </h3>
               <p className="text-sm text-gray-400">
-                {data.hasResume ? 'Update your resume' : 'Extract skills from CV'}
+                Extract skills from CV
               </p>
             </Card>
           </Link>
           
-          <Link href="/dashboard/career-planner?section=learning">
-            <Card className="p-6 hover:border-purple-500 transition-colors cursor-pointer bg-purple-900/20 border-purple-800">
-              <Sparkles className="w-8 h-8 mb-2 text-purple-400" />
+          <Link href="/dashboard/career-planner?section=learning" className="h-full">
+            <Card className="p-6 h-full hover:border-purple-500 transition-colors cursor-pointer flex flex-col bg-purple-900/20 border-purple-800">
+              <Sparkles className="w-8 h-8 mb-3 text-purple-400" />
               <h3 className="font-semibold mb-1">AI Course Finder</h3>
               <p className="text-sm text-gray-400">Get personalized recommendations</p>
             </Card>
           </Link>
           
-          <Link href="/dashboard/career-planner">
-            <Card className="p-6 hover:border-purple-500 transition-colors cursor-pointer">
-              <Target className="w-8 h-8 mb-2 text-purple-400" />
+          <Link href="/dashboard/career-planner" className="h-full">
+            <Card className="p-6 h-full hover:border-purple-500 transition-colors cursor-pointer flex flex-col">
+              <Target className="w-8 h-8 mb-3 text-purple-400" />
               <h3 className="font-semibold mb-1">Career Planner</h3>
               <p className="text-sm text-gray-400">Plan your career path</p>
             </Card>

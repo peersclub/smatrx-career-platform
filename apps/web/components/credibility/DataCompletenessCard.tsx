@@ -11,8 +11,8 @@ interface MissingDataItem {
 }
 
 interface DataCompletenessCardProps {
-  completeness: number // 0-100
-  missingData: MissingDataItem[]
+  completeness?: number // 0-100
+  missingData?: MissingDataItem[]
   onAction?: (category: string) => void
   className?: string
 }
@@ -42,8 +42,8 @@ const priorityConfig = {
 }
 
 export function DataCompletenessCard({
-  completeness,
-  missingData,
+  completeness = 0,
+  missingData = [],
   onAction,
   className
 }: DataCompletenessCardProps) {

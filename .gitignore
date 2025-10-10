@@ -100,7 +100,9 @@ dist
 
 # Gatsby files
 .cache/
-public
+# Ignore Gatsby public build output, but not Next.js app/public routes
+/public
+!apps/web/app/public/
 
 # Storybook build outputs
 .out

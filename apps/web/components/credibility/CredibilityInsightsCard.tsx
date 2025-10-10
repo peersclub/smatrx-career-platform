@@ -37,10 +37,10 @@ interface NextStep {
 }
 
 interface CredibilityInsightsCardProps {
-  insights: InsightItem[]
-  nextSteps: NextStep[]
+  insights?: InsightItem[]
+  nextSteps?: NextStep[]
   aiGenerated?: boolean
-  lastAnalyzed?: Date
+  lastAnalyzed?: Date | string
   onActionClick?: (insightId: string) => void
   className?: string
 }
@@ -117,8 +117,8 @@ const priorityConfig = {
 }
 
 export function CredibilityInsightsCard({
-  insights,
-  nextSteps,
+  insights = [],
+  nextSteps = [],
   aiGenerated = false,
   lastAnalyzed,
   onActionClick,
@@ -140,10 +140,11 @@ export function CredibilityInsightsCard({
     return priorityOrder[a.priority] - priorityOrder[b.priority]
   })
 
-  const formatLastAnalyzed = (date?: Date) => {
+  const formatLastAnalyzed = (date?: Date | string) => {
     if (!date) return 'Never'
     const now = new Date()
-    const diffMs = now.getTime() - date.getTime()
+    const dateObj = typeof date === 'string' ? new Date(date) : date
+    const diffMs = now.getTime() - dateObj.getTime()
     const diffHours = Math.floor(diffMs / (1000 * 60 * 60))
     const diffDays = Math.floor(diffHours / 24)
 
@@ -152,7 +153,7 @@ export function CredibilityInsightsCard({
     if (diffHours < 24) return `${diffHours} hours ago`
     if (diffDays === 1) return 'Yesterday'
     if (diffDays < 7) return `${diffDays} days ago`
-    return date.toLocaleDateString()
+    return dateObj.toLocaleDateString()
   }
 
   return (

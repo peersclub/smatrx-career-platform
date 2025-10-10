@@ -7,10 +7,12 @@ import { DataCompletenessCard } from '@/components/credibility/DataCompletenessC
 import { CredibilityInsightsCard } from '@/components/credibility/CredibilityInsightsCard'
 import Navigation from '@/components/navigation'
 import { motion } from 'framer-motion'
-import { RefreshCw, Download, Share2, Info, Shield } from 'lucide-react'
+import { RefreshCw, Download, Share2, Info, Shield, Loader2 } from 'lucide-react'
 import { Button } from '@smatrx/ui'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { LoadingState } from '@/components/loading-state'
+import { ErrorAlert } from '@/components/error-alert'
 
 // Mock data - will be replaced with React Query hooks
 const mockCredibilityData = {
@@ -240,10 +242,46 @@ interface CredibilityDashboardClientProps {
 }
 
 export default function CredibilityDashboardClient({ user }: CredibilityDashboardClientProps) {
+  const [credibilityData, setCredibilityData] = useState<any>(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
   const [isRefreshing, setIsRefreshing] = useState(false)
   const [isExporting, setIsExporting] = useState(false)
   const [isSharing, setIsSharing] = useState(false)
   const [shareUrl, setShareUrl] = useState<string | null>(null)
+
+  // Fetch credibility data on mount
+  useEffect(() => {
+    fetchCredibilityData()
+  }, [])
+
+  const fetchCredibilityData = async () => {
+    try {
+      setIsLoading(true)
+      setError(null)
+      const response = await fetch('/api/credibility/calculate')
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch credibility data')
+      }
+      
+      const data = await response.json()
+      
+      if (data.success && data.score) {
+        setCredibilityData(data.score)
+      } else {
+        // If no score exists, use mock data as fallback
+        setCredibilityData(mockCredibilityData)
+      }
+    } catch (err) {
+      console.error('Error fetching credibility data:', err)
+      setError('Failed to load credibility data')
+      // Use mock data as fallback
+      setCredibilityData(mockCredibilityData)
+    } finally {
+      setIsLoading(false)
+    }
+  }
 
   const handleRefresh = async () => {
     setIsRefreshing(true)
@@ -254,10 +292,14 @@ export default function CredibilityDashboardClient({ user }: CredibilityDashboar
       const data = await response.json()
       
       if (data.success) {
-        // Show success message
+        // Update credibility data with the new score
+        if (data.data) {
+          setCredibilityData(data.data)
+        } else {
+          // Re-fetch to get the latest data
+          await fetchCredibilityData()
+        }
         alert('Credibility score refreshed successfully!')
-        // Reload the page to show updated data
-        window.location.reload()
       } else {
         alert('Failed to refresh credibility score')
       }
@@ -304,13 +346,17 @@ export default function CredibilityDashboardClient({ user }: CredibilityDashboar
         setShareUrl(data.shareUrl)
         // Copy to clipboard
         await navigator.clipboard.writeText(data.shareUrl)
-        alert('Share link copied to clipboard!')
+        alert(`✅ Share link copied to clipboard!\n\n${data.shareUrl}\n\nShare this link to showcase your credibility.`)
       } else {
-        alert(data.error || 'Failed to generate share link')
+        // Show detailed error message
+        const errorMsg = data.error || 'Failed to generate share link'
+        const detailMsg = data.details ? `\n\nDetails: ${data.details}` : ''
+        alert(`❌ ${errorMsg}${detailMsg}`)
+        console.error('Share error:', data)
       }
     } catch (error) {
       console.error('Error sharing:', error)
-      alert('Failed to generate share link')
+      alert('❌ Failed to generate share link. Please check the console for details.')
     } finally {
       setIsSharing(false)
     }
@@ -325,6 +371,23 @@ export default function CredibilityDashboardClient({ user }: CredibilityDashboar
     console.log('Insight action clicked:', insightId)
     // TODO: Handle insight-specific actions
   }
+
+  // Show loading state
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+        <Navigation user={user} variant="authenticated" />
+        <div className="pt-24 pb-8 px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <LoadingState message="Loading your credibility data..." size="lg" />
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // Use fetched data or fallback to mock data
+  const data = credibilityData || mockCredibilityData
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
@@ -422,10 +485,10 @@ export default function CredibilityDashboardClient({ user }: CredibilityDashboar
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <CredibilityScoreCard
-              overallScore={mockCredibilityData.overallScore}
-              verificationLevel={mockCredibilityData.verificationLevel}
-              previousScore={mockCredibilityData.previousScore}
-              lastUpdated={mockCredibilityData.lastUpdated}
+              overallScore={data.overallScore}
+              verificationLevel={data.verificationLevel}
+              previousScore={data.previousScore}
+              lastUpdated={data.lastUpdated}
             />
           </motion.div>
 
@@ -435,7 +498,7 @@ export default function CredibilityDashboardClient({ user }: CredibilityDashboar
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <ScoreBreakdownCard breakdown={mockCredibilityData.breakdown} />
+            <ScoreBreakdownCard breakdown={data.breakdown} />
           </motion.div>
         </div>
 
@@ -446,7 +509,7 @@ export default function CredibilityDashboardClient({ user }: CredibilityDashboar
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <VerificationBadges badges={mockCredibilityData.badges} />
+            <VerificationBadges badges={data.badges} />
           </motion.div>
 
           <motion.div
@@ -455,8 +518,8 @@ export default function CredibilityDashboardClient({ user }: CredibilityDashboar
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             <DataCompletenessCard
-              completeness={mockCredibilityData.completeness}
-              missingData={mockCredibilityData.missingData}
+              completeness={data.completeness}
+              missingData={data.missingData}
               onAction={handleActionClick}
             />
           </motion.div>
@@ -469,10 +532,10 @@ export default function CredibilityDashboardClient({ user }: CredibilityDashboar
           transition={{ duration: 0.5, delay: 0.7 }}
         >
           <CredibilityInsightsCard
-            insights={mockCredibilityData.insights}
-            nextSteps={mockCredibilityData.nextSteps}
+            insights={data.insights}
+            nextSteps={data.nextSteps}
             aiGenerated={true}
-            lastAnalyzed={mockCredibilityData.lastAnalyzed}
+            lastAnalyzed={data.lastAnalyzed}
             onActionClick={handleInsightAction}
           />
         </motion.div>

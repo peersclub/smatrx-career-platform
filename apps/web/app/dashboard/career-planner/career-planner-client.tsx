@@ -7,12 +7,13 @@ import { LearningPathCard, type LearningPath } from '@/components/career-planner
 import CourseRecommendations from '@/components/learning/CourseRecommendations'
 import Navigation from '@/components/navigation'
 import { motion } from 'framer-motion'
-import { Compass, Target, TrendingUp, BookOpen, Sparkles, User, Briefcase, MapPin, DollarSign, Calendar, GraduationCap, Edit } from 'lucide-react'
+import { Compass, Target, TrendingUp, BookOpen, Sparkles, User, Briefcase, MapPin, DollarSign, Calendar, GraduationCap, Edit, Loader2 } from 'lucide-react'
 import { Button } from '@smatrx/ui'
 import { Badge } from '@smatrx/ui'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
+import { useToast } from '@/hooks/use-toast'
 
 // Mock data - will be replaced with React Query hooks
 const mockCareerPlannerData = {
@@ -346,7 +347,10 @@ interface CareerPlannerClientProps {
 export default function CareerPlannerClient({ user }: CareerPlannerClientProps) {
   const router = useRouter()
   const searchParams = useSearchParams()
+  const { showToast } = useToast()
   const [activeSection, setActiveSection] = useState<ActiveSection>('overview')
+  const [learningPaths, setLearningPaths] = useState<LearningPath[]>([])
+  const [isLoadingPaths, setIsLoadingPaths] = useState(false)
 
   // Sync URL with active section
   useEffect(() => {
@@ -355,6 +359,48 @@ export default function CareerPlannerClient({ user }: CareerPlannerClientProps) 
       setActiveSection(section)
     }
   }, [searchParams])
+
+  // Fetch learning paths on mount
+  useEffect(() => {
+    fetchLearningPaths()
+  }, [])
+
+  const fetchLearningPaths = async () => {
+    setIsLoadingPaths(true)
+    try {
+      const response = await fetch('/api/learning/paths?userProgress=true')
+      const data = await response.json()
+      
+      if (data.success && data.paths) {
+        // Transform API data to match LearningPath interface
+        const transformedPaths = data.paths.map((path: any) => ({
+          id: path.id,
+          name: path.name,
+          description: path.description || '',
+          targetSkill: path.resources?.targetSkill || path.targetRole || '',
+          estimatedDuration: `${path.estimatedDuration || 12} weeks`,
+          difficulty: path.difficulty || 'intermediate',
+          prerequisites: path.resources?.prerequisites || [],
+          outcomes: path.resources?.outcomes || [],
+          popularity: path.resources?.popularity || 0,
+          aiGenerated: path.resources?.aiGenerated || true,
+          resources: path.resources?.resources || [],
+          progress: path.userProgress?.percentage || 0,
+          isStarted: !!path.userProgress,
+        }))
+        setLearningPaths(transformedPaths)
+      }
+    } catch (error) {
+      console.error('Error fetching learning paths:', error)
+      showToast({
+        title: 'Error',
+        description: 'Failed to load learning paths',
+        variant: 'destructive',
+      })
+    } finally {
+      setIsLoadingPaths(false)
+    }
+  }
 
   const navigateToSection = (section: ActiveSection) => {
     setActiveSection(section)
@@ -373,12 +419,71 @@ export default function CareerPlannerClient({ user }: CareerPlannerClientProps) 
     console.log('Starting learning for skill:', skillId)
   }
 
-  const handleStartPath = (pathId: string) => {
-    console.log('Starting learning path:', pathId)
+  const handleStartPath = async (pathId: string) => {
+    try {
+      const response = await fetch(`/api/learning/paths/${pathId}/start`, {
+        method: 'POST',
+      })
+      const data = await response.json()
+      
+      if (data.success) {
+        showToast({
+          title: 'Learning Path Started!',
+          description: data.isNew 
+            ? 'Your progress is now being tracked' 
+            : 'Welcome back! Continue where you left off',
+        })
+        // Refresh learning paths to show updated progress
+        await fetchLearningPaths()
+      } else {
+        throw new Error(data.error || 'Failed to start learning path')
+      }
+    } catch (error) {
+      console.error('Error starting learning path:', error)
+      showToast({
+        title: 'Error',
+        description: 'Failed to start learning path. Please try again.',
+        variant: 'destructive',
+      })
+    }
   }
 
-  const handleResourceClick = (resourceId: string) => {
-    console.log('Opening resource:', resourceId)
+  const handleResourceClick = async (resourceId: string, pathId?: string) => {
+    // Find the resource to get its URL
+    const path = learningPaths.find(p => 
+      p.resources?.some((r: any) => r.id === resourceId)
+    )
+    const resource = path?.resources?.find((r: any) => r.id === resourceId)
+    
+    if (resource && (resource as any).url) {
+      // Open resource in new tab
+      window.open((resource as any).url, '_blank')
+      
+      // Track resource access if we have a pathId
+      if (pathId) {
+        try {
+          await fetch(`/api/learning/paths/${pathId}/resources`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+              resourceId, 
+              action: 'view' 
+            }),
+          })
+          // Silently refresh to update progress
+          fetchLearningPaths()
+        } catch (error) {
+          console.error('Error tracking resource:', error)
+          // Don't show error to user, tracking is optional
+        }
+      }
+    } else {
+      showToast({
+        title: 'Resource Not Available',
+        description: 'This resource link is not available yet.',
+        variant: 'destructive',
+      })
+    }
   }
 
   const totalSkills = mockCareerPlannerData.skillGap.have.length + 
@@ -435,7 +540,7 @@ export default function CareerPlannerClient({ user }: CareerPlannerClientProps) 
             </div>
             <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-xl p-6 text-center">
               <div className="text-3xl font-bold text-white mb-2">
-                {mockCareerPlannerData.learningPaths.length}
+                {learningPaths.length}
               </div>
               <div className="text-sm text-gray-400">Learning Paths</div>
             </div>
@@ -513,7 +618,7 @@ export default function CareerPlannerClient({ user }: CareerPlannerClientProps) 
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       You're currently a <span className="text-white font-semibold">{mockCareerPlannerData.profile.currentRole}</span> with {readinessPercent}% readiness 
                       for your target role of <span className="text-white font-semibold">{mockCareerPlannerData.targetRole.role}</span>. 
-                      We've identified {mockCareerPlannerData.recommendations.length} matching opportunities and {mockCareerPlannerData.learningPaths.length} learning 
+                      We've identified {mockCareerPlannerData.recommendations.length} matching opportunities and {learningPaths.length} learning 
                       paths to help you achieve your goals.
                     </p>
                     <div className="flex flex-wrap gap-3">
@@ -863,16 +968,30 @@ export default function CareerPlannerClient({ user }: CareerPlannerClientProps) 
                   <h2 className="text-2xl font-bold mb-2">Curated Learning Paths</h2>
                   <p className="text-gray-400">Structured paths to master essential skills</p>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {mockCareerPlannerData.learningPaths.map((path) => (
-                    <LearningPathCard
-                      key={path.id}
-                      path={path}
-                      onStartPath={handleStartPath}
-                      onResourceClick={handleResourceClick}
-                    />
-                  ))}
-                </div>
+                
+                {isLoadingPaths ? (
+                  <div className="flex items-center justify-center py-12">
+                    <Loader2 className="w-8 h-8 animate-spin text-purple-500" />
+                    <span className="ml-3 text-gray-400">Loading learning paths...</span>
+                  </div>
+                ) : learningPaths.length > 0 ? (
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {learningPaths.map((path) => (
+                      <LearningPathCard
+                        key={path.id}
+                        path={path}
+                        onStartPath={handleStartPath}
+                        onResourceClick={(resourceId) => handleResourceClick(resourceId, path.id)}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-12 bg-gray-800/30 rounded-xl border border-gray-700">
+                    <BookOpen className="w-12 h-12 mx-auto mb-4 text-gray-600 opacity-50" />
+                    <p className="text-gray-400 mb-2">No learning paths available</p>
+                    <p className="text-sm text-gray-500">Check back later for curated learning paths</p>
+                  </div>
+                )}
               </div>
             </motion.div>
           )}

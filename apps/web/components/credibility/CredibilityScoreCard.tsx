@@ -10,7 +10,7 @@ interface CredibilityScoreCardProps {
   overallScore: number
   verificationLevel: 'basic' | 'verified' | 'premium' | 'elite'
   previousScore?: number
-  lastUpdated: Date
+  lastUpdated: Date | string
   className?: string
 }
 
@@ -83,9 +83,10 @@ export function CredibilityScoreCard({
   const TrendIcon = hasIncreased ? TrendingUp : hasDecreased ? TrendingDown : Minus
 
   // Format last updated time
-  const formatLastUpdated = (date: Date) => {
+  const formatLastUpdated = (date: Date | string) => {
     const now = new Date()
-    const diffMs = now.getTime() - date.getTime()
+    const dateObj = typeof date === 'string' ? new Date(date) : date
+    const diffMs = now.getTime() - dateObj.getTime()
     const diffHours = Math.floor(diffMs / (1000 * 60 * 60))
     const diffDays = Math.floor(diffHours / 24)
 
@@ -94,7 +95,7 @@ export function CredibilityScoreCard({
     if (diffHours < 24) return `${diffHours} hours ago`
     if (diffDays === 1) return '1 day ago'
     if (diffDays < 7) return `${diffDays} days ago`
-    return date.toLocaleDateString()
+    return dateObj.toLocaleDateString()
   }
 
   // Calculate circle progress

@@ -76,16 +76,18 @@ interface InsightsData {
 
 export default function SkillsInsights({ skills, userId }: SkillsInsightsProps) {
   const [insights, setInsights] = useState<InsightsData | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [requestingVerification, setRequestingVerification] = useState(false);
   const { showToast } = useToast();
 
-  useEffect(() => {
-    generateInsights();
-  }, [skills]);
+  // Don't auto-fetch on mount - use default insights instead
+  // useEffect(() => {
+  //   generateInsights();
+  // }, [skills]);
 
   const generateInsights = async () => {
+    setLoading(true);
     setError(null);
     try {
       const response = await fetch('/api/skills/insights', {
@@ -132,9 +134,10 @@ export default function SkillsInsights({ skills, userId }: SkillsInsightsProps) 
     }
   };
 
-  if (loading) {
-    return <LoadingState message="Analyzing your skills..." size="lg" />;
-  }
+  // Removed automatic loading state - now uses default insights immediately
+  // if (loading) {
+  //   return <LoadingState message="Analyzing your skills..." size="lg" />;
+  // }
 
   if (error) {
     return (
@@ -200,94 +203,132 @@ export default function SkillsInsights({ skills, userId }: SkillsInsightsProps) 
 
   const data = insights || defaultInsights;
   
-  // Ensure all properties exist
+  // Ensure all properties exist, with fallbacks to user's actual skills
   const safeData = {
-    skillStrength: data.skillStrength || { score: 0, label: 'Starting', description: 'Import skills to begin' },
-    topSkills: data.topSkills || [],
+    skillStrength: data.skillStrength || defaultInsights.skillStrength,
+    topSkills: (data.topSkills && data.topSkills.length > 0) ? data.topSkills : defaultInsights.topSkills,
     careerReadiness: {
-      score: data.careerReadiness?.score || 0,
-      readyFor: data.careerReadiness?.readyFor || [],
-      gaps: data.careerReadiness?.gaps || []
+      score: data.careerReadiness?.score || defaultInsights.careerReadiness.score,
+      readyFor: (data.careerReadiness?.readyFor && data.careerReadiness.readyFor.length > 0) 
+        ? data.careerReadiness.readyFor 
+        : defaultInsights.careerReadiness.readyFor,
+      gaps: (data.careerReadiness?.gaps && data.careerReadiness.gaps.length > 0)
+        ? data.careerReadiness.gaps
+        : defaultInsights.careerReadiness.gaps
     },
-    recommendations: data.recommendations || [],
-    industryComparison: data.industryComparison || { averageScore: 65, userScore: 0, percentile: 0 },
-    verificationStatus: data.verificationStatus || { verified: 0, pending: 0, unverified: 0 }
+    recommendations: (data.recommendations && data.recommendations.length > 0) 
+      ? data.recommendations 
+      : defaultInsights.recommendations,
+    industryComparison: data.industryComparison || defaultInsights.industryComparison,
+    verificationStatus: data.verificationStatus || defaultInsights.verificationStatus
   };
 
   return (
     <div className="space-y-6">
       {/* Skills Strength Overview */}
-      <Card className="p-6 bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-800">
-        <div className="flex items-start justify-between">
+      <Card className="p-6 bg-gray-800/30 border-gray-700">
+        <div className="flex items-start justify-between mb-4">
           <div>
             <h3 className="text-2xl font-bold mb-2 flex items-center gap-2">
-              <Brain className="w-8 h-8 text-purple-400" />
+              <Brain className="w-8 h-8 text-gray-400" />
               Skills Analysis
             </h3>
             <p className="text-gray-400 mb-4">{safeData.skillStrength.description}</p>
             <div className="flex items-center gap-4">
-              <div className="text-4xl font-bold text-purple-400">
+              <div className="text-4xl font-bold text-white">
                 {safeData.skillStrength.score}%
               </div>
-              <Badge variant="outline" className="text-purple-400 border-purple-400">
+              <Badge variant="outline" className="bg-gray-800 text-gray-300 border-gray-700">
                 {safeData.skillStrength.label}
               </Badge>
             </div>
           </div>
           <div className="text-right">
             <div className="text-sm text-gray-500 mb-2">Industry Percentile</div>
-            <div className="text-3xl font-bold text-pink-400">
+            <div className="text-3xl font-bold text-white">
               Top {safeData.industryComparison.percentile}%
             </div>
           </div>
         </div>
+        
+        {/* Optional AI Enhancement Button */}
+        {!insights && !loading && (
+          <div className="pt-4 border-t border-gray-700">
+            <Button
+              onClick={generateInsights}
+              variant="outline"
+              size="sm"
+              className="gap-2"
+            >
+              <Sparkles className="w-4 h-4" />
+              Get AI-Powered Insights
+            </Button>
+            <p className="text-xs text-gray-500 mt-2">
+              Get enhanced recommendations and market insights (optional)
+            </p>
+          </div>
+        )}
+        
+        {loading && (
+          <div className="pt-4 border-t border-gray-700">
+            <div className="flex items-center gap-2 text-sm text-gray-400">
+              <Loader2 className="w-4 h-4 animate-spin" />
+              Generating AI insights...
+            </div>
+          </div>
+        )}
       </Card>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Top Skills & Market Trends */}
         <Card className="p-6">
           <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <TrendingUp className="w-5 h-5 text-green-500" />
+            <TrendingUp className="w-5 h-5 text-gray-400" />
             Top Skills & Market Trends
           </h3>
-          <div className="space-y-4">
-            {(safeData.topSkills || []).map((skill, idx) => (
-              <div key={idx} className="flex items-center justify-between p-4 bg-gray-800/50 rounded-lg">
-                <div>
-                  <h4 className="font-medium">{skill.name}</h4>
-                  <p className="text-sm text-gray-500">{skill.category}</p>
-                </div>
-                <div className="flex items-center gap-4">
-                  <Badge 
-                    variant={skill.marketDemand === 'high' ? 'default' : 'secondary'}
-                    className={skill.marketDemand === 'high' ? 'bg-green-500' : ''}
-                  >
-                    {skill.marketDemand} demand
-                  </Badge>
-                  <div className="flex items-center gap-1 text-green-400">
-                    <TrendingUp className="w-4 h-4" />
-                    <span className="text-sm">+{skill.growthTrend}%</span>
+          {safeData.topSkills && safeData.topSkills.length > 0 ? (
+            <div className="space-y-4">
+              {safeData.topSkills.map((skill, idx) => (
+                <div key={idx} className="flex items-center justify-between p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+                  <div>
+                    <h4 className="font-medium text-white">{skill.name}</h4>
+                    <p className="text-sm text-gray-400">{skill.category}</p>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <Badge variant="outline" className="bg-gray-800 text-gray-300 border-gray-700">
+                      {skill.marketDemand} demand
+                    </Badge>
+                    <div className="flex items-center gap-1 text-gray-400">
+                      <TrendingUp className="w-4 h-4" />
+                      <span className="text-sm">+{skill.growthTrend}%</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-8">
+              <TrendingUp className="w-12 h-12 mx-auto mb-3 text-gray-600 opacity-50" />
+              <p className="text-sm text-gray-400 mb-2">No skills imported yet</p>
+              <p className="text-xs text-gray-500">Import skills from GitHub, LinkedIn, or your resume to see market trends</p>
+            </div>
+          )}
         </Card>
 
         {/* Career Readiness */}
         <Card className="p-6">
           <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <Target className="w-5 h-5 text-blue-500" />
+            <Target className="w-5 h-5 text-gray-400" />
             Career Readiness
           </h3>
           <div className="mb-6">
             <div className="flex justify-between text-sm mb-2">
-              <span>Ready for next level</span>
-              <span>{safeData.careerReadiness.score}%</span>
+              <span className="text-gray-300">Ready for next level</span>
+              <span className="text-white">{safeData.careerReadiness.score}%</span>
             </div>
             <div className="w-full bg-gray-700 rounded-full h-2">
               <div 
-                className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full transition-all"
+                className="bg-white h-2 rounded-full transition-all"
                 style={{ width: `${safeData.careerReadiness.score}%` }}
               />
             </div>
@@ -295,10 +336,10 @@ export default function SkillsInsights({ skills, userId }: SkillsInsightsProps) 
           <div className="space-y-3">
             {safeData.careerReadiness.readyFor && safeData.careerReadiness.readyFor.length > 0 && (
               <div>
-                <p className="text-sm text-gray-500 mb-2">You're ready for:</p>
+                <p className="text-sm text-gray-400 mb-2">You're ready for:</p>
                 <div className="flex flex-wrap gap-2">
                   {safeData.careerReadiness.readyFor.map((role, idx) => (
-                    <Badge key={idx} variant="outline" className="text-blue-400 border-blue-400">
+                    <Badge key={idx} variant="outline" className="bg-gray-800 text-white border-gray-700">
                       {role}
                     </Badge>
                   ))}
@@ -307,10 +348,10 @@ export default function SkillsInsights({ skills, userId }: SkillsInsightsProps) 
             )}
             {safeData.careerReadiness.gaps && safeData.careerReadiness.gaps.length > 0 && (
               <div>
-                <p className="text-sm text-gray-500 mb-2">Skills to develop:</p>
+                <p className="text-sm text-gray-400 mb-2">Skills to develop:</p>
                 <div className="flex flex-wrap gap-2">
                   {safeData.careerReadiness.gaps.map((gap, idx) => (
-                    <Badge key={idx} variant="outline" className="text-orange-400 border-orange-400">
+                    <Badge key={idx} variant="outline" className="bg-gray-800 text-gray-400 border-gray-700">
                       {gap}
                     </Badge>
                   ))}
@@ -325,7 +366,7 @@ export default function SkillsInsights({ skills, userId }: SkillsInsightsProps) 
       <Card className="p-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-xl font-semibold flex items-center gap-2">
-            <Shield className="w-5 h-5 text-green-500" />
+            <Shield className="w-5 h-5 text-gray-400" />
             Skill Verification Status
           </h3>
           <Button
@@ -349,23 +390,23 @@ export default function SkillsInsights({ skills, userId }: SkillsInsightsProps) 
         </div>
 
         <div className="grid grid-cols-3 gap-4 mb-6">
-          <div className="text-center p-4 bg-green-900/20 rounded-lg border border-green-800">
-            <div className="text-2xl font-bold text-green-400">{safeData.verificationStatus.verified}</div>
-            <p className="text-sm text-gray-500">Verified</p>
+          <div className="text-center p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <div className="text-2xl font-bold text-white">{safeData.verificationStatus.verified}</div>
+            <p className="text-sm text-gray-400">Verified</p>
           </div>
-          <div className="text-center p-4 bg-yellow-900/20 rounded-lg border border-yellow-800">
-            <div className="text-2xl font-bold text-yellow-400">{safeData.verificationStatus.pending}</div>
-            <p className="text-sm text-gray-500">Pending</p>
+          <div className="text-center p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+            <div className="text-2xl font-bold text-gray-300">{safeData.verificationStatus.pending}</div>
+            <p className="text-sm text-gray-400">Pending</p>
           </div>
-          <div className="text-center p-4 bg-gray-900/20 rounded-lg border border-gray-800">
+          <div className="text-center p-4 bg-gray-800/50 rounded-lg border border-gray-700">
             <div className="text-2xl font-bold text-gray-400">{safeData.verificationStatus.unverified}</div>
             <p className="text-sm text-gray-500">Unverified</p>
           </div>
         </div>
 
-        <div className="p-4 bg-blue-900/20 rounded-lg border border-blue-800">
-          <p className="text-sm text-blue-300 flex items-start gap-2">
-            <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+        <div className="p-4 bg-gray-800/30 rounded-lg border border-gray-700">
+          <p className="text-sm text-gray-300 flex items-start gap-2">
+            <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0 text-gray-400" />
             Industry experts can verify your skills to boost credibility. Verified skills get 3x more visibility to recruiters.
           </p>
         </div>
@@ -374,41 +415,52 @@ export default function SkillsInsights({ skills, userId }: SkillsInsightsProps) 
       {/* AI Recommendations */}
       <Card className="p-6">
         <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-          <Sparkles className="w-5 h-5 text-purple-500" />
+          <Sparkles className="w-5 h-5 text-purple-400" />
           AI-Powered Recommendations
         </h3>
-        <div className="space-y-4">
-          {(safeData.recommendations || []).map((rec, idx) => (
-            <div key={idx} className="flex items-start gap-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-800/70 transition-colors">
-              <div className="flex-shrink-0">
-                {rec.type === 'skill' && <Zap className="w-5 h-5 text-yellow-500" />}
-                {rec.type === 'certification' && <Award className="w-5 h-5 text-blue-500" />}
-                {rec.type === 'project' && <BarChart3 className="w-5 h-5 text-green-500" />}
-              </div>
-              <div className="flex-1">
-                <h4 className="font-medium mb-1">{rec.title}</h4>
-                <p className="text-sm text-gray-500">{rec.description}</p>
-              </div>
-              <Badge 
-                variant={rec.priority === 'high' ? 'default' : 'secondary'}
-                className={rec.priority === 'high' ? 'bg-red-500' : ''}
-              >
-                {rec.priority} priority
-              </Badge>
+        {safeData.recommendations && safeData.recommendations.length > 0 ? (
+          <>
+            <div className="space-y-4">
+              {safeData.recommendations.map((rec, idx) => (
+                <div key={idx} className="flex items-start gap-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700 hover:bg-gray-800/70 transition-colors">
+                  <div className="flex-shrink-0">
+                    {rec.type === 'skill' && <Zap className="w-5 h-5 text-gray-400" />}
+                    {rec.type === 'certification' && <Award className="w-5 h-5 text-gray-400" />}
+                    {rec.type === 'project' && <BarChart3 className="w-5 h-5 text-gray-400" />}
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-medium mb-1 text-white">{rec.title}</h4>
+                    <p className="text-sm text-gray-400">{rec.description}</p>
+                  </div>
+                  <Badge variant="outline" className={`${
+                    rec.priority === 'high' 
+                      ? 'bg-gray-800 text-white border-gray-700' 
+                      : 'bg-gray-800 text-gray-400 border-gray-700'
+                  }`}>
+                    {rec.priority}
+                  </Badge>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
 
-        <div className="mt-6 p-4 bg-purple-900/20 rounded-lg border border-purple-800">
-          <p className="text-sm text-purple-300 mb-3">
-            Want personalized learning paths based on your goals?
-          </p>
-          <div className="flex justify-center">
-            <Button variant="outline" className="gap-2">
-              Create Learning Plan <ArrowRight className="w-4 h-4" />
-            </Button>
+            <div className="mt-6 p-4 bg-gray-800/30 rounded-lg border border-gray-700">
+              <p className="text-sm text-gray-300 mb-3">
+                Want personalized learning paths based on your goals?
+              </p>
+              <div className="flex justify-center">
+                <Button variant="outline" className="gap-2">
+                  Create Learning Plan <ArrowRight className="w-4 h-4" />
+                </Button>
+              </div>
+            </div>
+          </>
+        ) : (
+          <div className="text-center py-8">
+            <Sparkles className="w-12 h-12 mx-auto mb-3 text-gray-600 opacity-50" />
+            <p className="text-sm text-gray-400 mb-2">No recommendations yet</p>
+            <p className="text-xs text-gray-500">Import more skills to get AI-powered recommendations for career growth</p>
           </div>
-        </div>
+        )}
       </Card>
     </div>
   );

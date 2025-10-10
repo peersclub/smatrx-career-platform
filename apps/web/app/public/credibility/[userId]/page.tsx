@@ -78,7 +78,7 @@ async function getPublicCredibilityData(userId: string, token?: string) {
     const totalSkills = skills.length;
     const verifiedSkills = skills.filter((s) => s.verified).length;
     const avgProficiency = skills.length > 0
-      ? Math.round(skills.reduce((acc, s) => acc + s.proficiencyScore, 0) / skills.length)
+      ? Math.round(skills.reduce((acc, s) => acc + (s.proficiencyScore || 0), 0) / skills.length)
       : 0;
 
     // Calculate profile completeness
@@ -126,11 +126,11 @@ async function getPublicCredibilityData(userId: string, token?: string) {
       skills: skills.map((s) => ({
         id: s.id,
         name: s.skill.name,
-        category: s.skill.category,
-        proficiencyScore: s.proficiencyScore,
+        category: s.skill.categoryId, // Use categoryId, not category
+        proficiencyScore: s.proficiencyScore || 0, // Default to 0 if null
         yearsExperience: s.yearsExperience,
         verified: s.verified,
-        endorsements: s.endorsements,
+        endorsements: s.endorsements || 0, // Default to 0 if null
         lastUsed: s.lastUsed,
       })),
       education: education.map((e) => ({
@@ -159,8 +159,8 @@ async function getPublicCredibilityData(userId: string, token?: string) {
             profileUrl: githubProfile.profileUrl,
             totalRepos: githubProfile.totalRepos,
             totalStars: githubProfile.totalStars,
-            totalContributions: githubProfile.totalContributions,
-            topLanguages: githubProfile.topLanguages as string[],
+            totalContributions: githubProfile.totalCommits, // Use totalCommits
+            topLanguages: Object.keys((githubProfile.languagesUsed as any) || {}), // Extract from languagesUsed JSON
           }
         : null,
       stats: {

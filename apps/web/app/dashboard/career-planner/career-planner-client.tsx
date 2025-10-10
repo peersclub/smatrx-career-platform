@@ -392,11 +392,7 @@ export default function CareerPlannerClient({ user }: CareerPlannerClientProps) 
       }
     } catch (error) {
       console.error('Error fetching learning paths:', error)
-      showToast({
-        title: 'Error',
-        description: 'Failed to load learning paths',
-        variant: 'destructive',
-      })
+      showToast('error', 'Failed to load learning paths')
     } finally {
       setIsLoadingPaths(false)
     }
@@ -427,12 +423,12 @@ export default function CareerPlannerClient({ user }: CareerPlannerClientProps) 
       const data = await response.json()
       
       if (data.success) {
-        showToast({
-          title: 'Learning Path Started!',
-          description: data.isNew 
-            ? 'Your progress is now being tracked' 
-            : 'Welcome back! Continue where you left off',
-        })
+        showToast(
+          'success',
+          data.isNew 
+            ? 'Learning Path Started! Your progress is now being tracked' 
+            : 'Welcome back! Continue where you left off'
+        )
         // Refresh learning paths to show updated progress
         await fetchLearningPaths()
       } else {
@@ -440,11 +436,7 @@ export default function CareerPlannerClient({ user }: CareerPlannerClientProps) 
       }
     } catch (error) {
       console.error('Error starting learning path:', error)
-      showToast({
-        title: 'Error',
-        description: 'Failed to start learning path. Please try again.',
-        variant: 'destructive',
-      })
+      showToast('error', 'Failed to start learning path. Please try again.')
     }
   }
 
@@ -478,11 +470,7 @@ export default function CareerPlannerClient({ user }: CareerPlannerClientProps) 
         }
       }
     } else {
-      showToast({
-        title: 'Resource Not Available',
-        description: 'This resource link is not available yet.',
-        variant: 'destructive',
-      })
+      showToast('error', 'This resource link is not available yet.')
     }
   }
 

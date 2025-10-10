@@ -7,6 +7,9 @@ import {
 } from '@/lib/services/career-recommendations'
 import { NextResponse } from 'next/server'
 
+export const runtime = 'nodejs'
+export const dynamic = 'force-dynamic'
+
 /**
  * GET /api/career/recommendations
  * Get user's career recommendations (cached or generate new)
